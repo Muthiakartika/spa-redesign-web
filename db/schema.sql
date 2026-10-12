@@ -1,4 +1,5 @@
--- Blog database (Neon Postgres) for the admin at /admin/.
+-- Database (Neon Postgres) for the admin at /admin/: articles, edited
+-- treatment pages and redirects.
 -- `npm run blog:setup` runs this file and then loads the seven built-in
 -- articles. It is safe to run again: nothing is dropped or overwritten.
 -- (One statement per `;`-terminated block; the setup script splits on that.)
@@ -24,7 +25,9 @@ create table if not exists posts (
 );
 
 -- The heading above the article body, when it should differ from the title
--- (owner, 5 Oct 2026). Empty: the title is shown. Not in the live table.
+-- (owner, 5 Oct 2026). No longer used since 12 Oct 2026: the owner removed
+-- the field and the repeated title, the banner h1 is the only title. The
+-- column stays so old rows keep their value. Not in the live table.
 alter table posts add column if not exists heading text;
 
 -- Whether the article page prints its publish date (owner, 9 Oct 2026).
@@ -39,3 +42,28 @@ create index if not exists posts_status_published_idx
 -- The admin dashboard: last edited first.
 create index if not exists posts_updated_idx
     on posts (updated_at desc);
+
+-- Treatment pages edited in /admin/treatments/ (owner, 12 Oct 2026). One row
+-- per page that differs from its built-in version (src/content/treatments/);
+-- no row = the built-in version. `body` is the page's element tree, `seo` the
+-- SEO texts that differ from src/data/treatments/ ({ title?, description? }).
+-- The app also creates it on first use (src/lib/treatments/content.ts).
+create table if not exists page_content (
+    path text primary key,
+    body jsonb not null,
+    seo jsonb,
+    updated_at timestamptz not null default now()
+);
+
+-- Redirects added in /admin/redirects/ (owner, 12 Oct 2026). Every change is
+-- published as a small JSON file in R2 that src/proxy.ts answers from, so it
+-- is live at once. The app also creates it on first use
+-- (src/lib/redirects/store.ts).
+create table if not exists redirects (
+    id uuid primary key default gen_random_uuid(),
+    source text unique not null,
+    destination text not null,
+    status_code integer not null default 301 check (status_code in (301, 302)),
+    created_at timestamptz not null default now(),
+    updated_at timestamptz not null default now()
+);

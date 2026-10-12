@@ -9,8 +9,6 @@ export type Post = {
   id: string;
   slug: string;
   title: string;
-  /** The heading above the body when it differs from the title; null shows the title. */
-  heading: string | null;
   excerpt: string | null;
   cover_image: string | null;
   content_html: string;
@@ -39,7 +37,6 @@ export type PostRow = Pick<Post, "id" | "slug" | "title" | "status" | "category"
 /** What the admin editor sends when it saves. */
 export type PostInput = {
   title: string;
-  heading: string | null;
   slug: string;
   excerpt: string | null;
   cover_image: string | null;

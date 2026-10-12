@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "@tiptap/extension-image";
+import { TableKit } from "@tiptap/extension-table";
 import TextAlign from "@tiptap/extension-text-align";
 import { Placeholder } from "@tiptap/extensions";
 import { EditorContent, useEditor } from "@tiptap/react";
@@ -58,11 +59,14 @@ export default function RichTextEditor({
     shouldRerenderOnTransaction: true,
     extensions: [
       StarterKit.configure({
-        heading: { levels: [2, 3, 4] },
+        heading: { levels: [2, 3, 4, 5] },
         link: { openOnClick: false, autolink: true },
       }),
       Image.configure({ inline: false }),
       TextAlign.configure({ types: ["heading", "paragraph"] }),
+      // Tables (owner, 12 Oct 2026). Not resizable: the article column sets
+      // the width, so the saved HTML carries no pixel widths.
+      TableKit.configure({ table: { resizable: false } }),
       Placeholder.configure({ placeholder: "Write your article here…" }),
     ],
     content: initialContent || "",
@@ -96,6 +100,7 @@ export default function RichTextEditor({
   };
 
   const chain = () => editor.chain().focus();
+  const inTable = editor.isActive("table");
 
   return (
     <div className="rte">
@@ -129,6 +134,20 @@ export default function RichTextEditor({
           onClick={() => chain().toggleHeading({ level: 3 }).run()}
         >
           H3
+        </Btn>
+        <Btn
+          title="Heading H4"
+          active={editor.isActive("heading", { level: 4 })}
+          onClick={() => chain().toggleHeading({ level: 4 }).run()}
+        >
+          H4
+        </Btn>
+        <Btn
+          title="Heading H5"
+          active={editor.isActive("heading", { level: 5 })}
+          onClick={() => chain().toggleHeading({ level: 5 }).run()}
+        >
+          H5
         </Btn>
         <span className="rte-sep" />
         <Btn title="Bullet list" active={editor.isActive("bulletList")} onClick={() => chain().toggleBulletList().run()}>
@@ -173,6 +192,14 @@ export default function RichTextEditor({
         <Btn title="Insert image" disabled={!canUpload} onClick={() => fileInputRef.current?.click()}>
           🖼 Image
         </Btn>
+        <Btn
+          title="Insert table (3 × 3, first row as headings)"
+          active={inTable}
+          disabled={inTable}
+          onClick={() => chain().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}
+        >
+          ▦ Table
+        </Btn>
         <span className="rte-sep" />
         <Btn title="Undo" disabled={!editor.can().undo()} onClick={() => chain().undo().run()}>
           ↺
@@ -181,6 +208,49 @@ export default function RichTextEditor({
           ↻
         </Btn>
       </div>
+
+      {inTable && (
+        <div className="rte-toolbar rte-table-bar" role="toolbar" aria-label="Table">
+          <span className="rte-bar-label">Table</span>
+          <Btn title="Add row above" onClick={() => chain().addRowBefore().run()}>
+            + Row above
+          </Btn>
+          <Btn title="Add row below" onClick={() => chain().addRowAfter().run()}>
+            + Row below
+          </Btn>
+          <Btn title="Delete row" onClick={() => chain().deleteRow().run()}>
+            − Row
+          </Btn>
+          <span className="rte-sep" />
+          <Btn title="Add column left" onClick={() => chain().addColumnBefore().run()}>
+            + Col left
+          </Btn>
+          <Btn title="Add column right" onClick={() => chain().addColumnAfter().run()}>
+            + Col right
+          </Btn>
+          <Btn title="Delete column" onClick={() => chain().deleteColumn().run()}>
+            − Col
+          </Btn>
+          <span className="rte-sep" />
+          <Btn title="First row as headings (on / off)" onClick={() => chain().toggleHeaderRow().run()}>
+            Heading row
+          </Btn>
+          <Btn
+            title="Merge the selected cells"
+            disabled={!editor.can().mergeCells()}
+            onClick={() => chain().mergeCells().run()}
+          >
+            Merge
+          </Btn>
+          <Btn title="Split a merged cell" disabled={!editor.can().splitCell()} onClick={() => chain().splitCell().run()}>
+            Split
+          </Btn>
+          <span className="rte-sep" />
+          <Btn title="Delete the whole table" onClick={() => chain().deleteTable().run()}>
+            🗑 Delete table
+          </Btn>
+        </div>
+      )}
 
       <EditorContent editor={editor} />
 

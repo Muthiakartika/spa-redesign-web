@@ -29,6 +29,17 @@ let client: AwsClient | null = null;
 
 /** Store `body` under `key` (e.g. "blog/1790-photo.webp") and return its public URL. */
 export async function putImage(key: string, body: Uint8Array<ArrayBuffer>, contentType: string): Promise<string> {
+  // File names are unique per upload, so browsers and Cloudflare may keep them for good.
+  return putObject(key, body, contentType, "public, max-age=31536000, immutable");
+}
+
+/** Store any file in the bucket, with its own Cache-Control, and return its public URL. */
+export async function putObject(
+  key: string,
+  body: Uint8Array<ArrayBuffer>,
+  contentType: string,
+  cacheControl: string
+): Promise<string> {
   if (!isStorageConfigured()) throw new Error("Image storage is not configured: set the R2_* variables.");
   const env = process.env;
   client ??= new AwsClient({
@@ -41,11 +52,7 @@ export async function putImage(key: string, body: Uint8Array<ArrayBuffer>, conte
   const res = await client.fetch(`${endpoint}/${env.R2_BUCKET}/${key}`, {
     method: "PUT",
     body,
-    headers: {
-      "Content-Type": contentType,
-      // File names are unique per upload, so browsers and Cloudflare may keep them for good.
-      "Cache-Control": "public, max-age=31536000, immutable",
-    },
+    headers: { "Content-Type": contentType, "Cache-Control": cacheControl },
   });
   if (!res.ok) {
     const detail = (await res.text().catch(() => "")).match(/<Message>([^<]*)<\/Message>/)?.[1];

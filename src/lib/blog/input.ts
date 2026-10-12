@@ -16,7 +16,6 @@ export function readPostInput(body: unknown): { input: PostInput } | { error: st
   return {
     input: {
       title,
-      heading: optional(b.heading),
       slug: makeSlug(text(b.slug) || title) || `post-${Date.now()}`,
       excerpt: optional(b.excerpt),
       cover_image: optional(b.cover_image),

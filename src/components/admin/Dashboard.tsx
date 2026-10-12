@@ -1,12 +1,11 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element -- static brand images, as on the live admin */
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { BlogSetup } from "@/lib/blog/setup";
 import type { PostRow } from "@/lib/blog/types";
 import AdminNotice from "./AdminNotice";
+import AdminShell from "./AdminShell";
 
 const fmt = (d: string | null) =>
   d ? new Date(d).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }) : "—";
@@ -40,7 +39,6 @@ export default function Dashboard({
   setup: BlogSetup;
   loadError?: string;
 }) {
-  const router = useRouter();
   const [posts, setPosts] = useState(initialPosts);
   const [busyId, setBusyId] = useState<string | null>(null);
   const [confirmPost, setConfirmPost] = useState<PostRow | null>(null);
@@ -59,12 +57,6 @@ export default function Dashboard({
     return () => window.removeEventListener("keydown", onKey);
   }, [confirmPost, busyId]);
 
-  const logout = async () => {
-    await fetch("/api/admin/logout/", { method: "POST" });
-    router.replace("/admin/login/");
-    router.refresh();
-  };
-
   const remove = async (post: PostRow) => {
     setBusyId(post.id);
     setError("");
@@ -80,47 +72,15 @@ export default function Dashboard({
   };
 
   return (
-    <div className="adm-page">
-      <div className="adm-bg" aria-hidden="true">
-        <span className="adm-glow adm-glow-a" />
-        <span className="adm-glow adm-glow-b" />
-        <img className="adm-watermark" src="/images/logo/sbm.webp" alt="" />
-      </div>
-
-      <header className="adm-topbar">
-        <div className="adm-topbar-inner">
-          <Link href="/admin/" className="adm-brand">
-            <img src="/images/logo/SMBtitle.svg" alt="Spa Bali Moon" width="444" height="80" />
-            <span className="adm-eyebrow">Content Studio</span>
-          </Link>
-          <div className="adm-top-actions">
-            <Link href="/admin/new/" className="adm-btn adm-btn-primary">
-              <PlusIcon />
-              New Article
-            </Link>
-            <button type="button" className="adm-btn adm-btn-ghost" onClick={logout}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path
-                  d="M14.5 8.2V6.4A1.9 1.9 0 0 0 12.6 4.5H6.4A1.9 1.9 0 0 0 4.5 6.4v11.2a1.9 1.9 0 0 0 1.9 1.9h6.2a1.9 1.9 0 0 0 1.9-1.9v-1.8"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M10 12h9.5m0 0-2.7-2.7M19.5 12l-2.7 2.7"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              Log Out
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <main className="adm-dash">
+    <AdminShell
+      active="articles"
+      actions={
+        <Link href="/admin/new/" className="adm-btn adm-btn-primary">
+          <PlusIcon />
+          New Article
+        </Link>
+      }
+    >
         <div className="adm-dash-head">
           <div>
             <h1>Manage Blog</h1>
@@ -267,7 +227,6 @@ export default function Dashboard({
             </table>
           </div>
         )}
-      </main>
 
       {confirmPost && (
         <div className="adm-overlay" role="dialog" aria-modal="true" aria-labelledby="adm-del-title">
@@ -299,6 +258,6 @@ export default function Dashboard({
           </div>
         </div>
       )}
-    </div>
+    </AdminShell>
   );
 }

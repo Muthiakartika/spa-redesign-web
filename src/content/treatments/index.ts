@@ -1,56 +1,60 @@
-import type { ComponentType } from "react";
-import AntiCelluliteMassagePage from "./anti-cellulite-massage";
-import BalineseMassagePage from "./balinese-massage";
-import BodyScrubPage from "./body-scrub";
-import CoconutOilMassagePage from "./coconut-oil-massage";
-import CoupleSpaPage from "./couple-spa";
-import CreambathPage from "./creambath";
-import DaySpaPage from "./day-spa";
-import DeepTissueMassagePage from "./deep-tissue-massage";
-import EarWaxRemovalPage from "./ear-wax-removal";
-import FacialPage from "./facial";
-import FootMassagePage from "./foot-massage";
-import FootReflexologyPage from "./foot-reflexology";
-import HairBraidingPage from "./hair-braiding";
-import HeadMassagePage from "./head-massage";
-import HotStoneMassagePage from "./hot-stone-massage";
-import LymphaticDrainageMassagePage from "./lymphatic-drainage-massage";
-import ManicurePedicurePage from "./manicure-pedicure";
-import NailSpaPage from "./nail-spa";
-import ShiatsuMassagePage from "./shiatsu-massage";
-import SportMassagePage from "./sport-massage";
-import SunburnMassagePage from "./sunburn-massage";
-import ThaiMassagePage from "./thai-massage";
-import TraditionalMassagePage from "./traditional-massage";
-import WaxingSalonPage from "./waxing-salon";
+import type { TreeNode } from "@/lib/treatments/tree";
+import antiCelluliteMassage from "./anti-cellulite-massage.json";
+import balineseMassage from "./balinese-massage.json";
+import bodyScrub from "./body-scrub.json";
+import coconutOilMassage from "./coconut-oil-massage.json";
+import coupleSpa from "./couple-spa.json";
+import creambath from "./creambath.json";
+import daySpa from "./day-spa.json";
+import deepTissueMassage from "./deep-tissue-massage.json";
+import earWaxRemoval from "./ear-wax-removal.json";
+import facial from "./facial.json";
+import footMassage from "./foot-massage.json";
+import footReflexology from "./foot-reflexology.json";
+import hairBraiding from "./hair-braiding.json";
+import headMassage from "./head-massage.json";
+import hotStoneMassage from "./hot-stone-massage.json";
+import lymphaticDrainageMassage from "./lymphatic-drainage-massage.json";
+import manicurePedicure from "./manicure-pedicure.json";
+import nailSpa from "./nail-spa.json";
+import shiatsuMassage from "./shiatsu-massage.json";
+import sportMassage from "./sport-massage.json";
+import sunburnMassage from "./sunburn-massage.json";
+import thaiMassage from "./thai-massage.json";
+import traditionalMassage from "./traditional-massage.json";
+import waxingSalon from "./waxing-salon.json";
 
 /**
- * Body of every treatment page, keyed by slug. Each file is generated from
- * the live page (tools/live-port) and composes the shared live sections.
+ * The original body of every treatment page, keyed by slug: the element tree
+ * of the page as built from the live site (tools/live-port), written as data
+ * by tools/treatments/tsx-to-json.mjs. A page edited in /admin/ is rendered
+ * from its saved copy instead (lib/treatments/content.ts); "Restore original"
+ * there brings this one back. (JSON imports are typed too narrowly for
+ * TreeNode, hence the cast.)
  */
-export const treatmentPages: Record<string, ComponentType> = {
-  "anti-cellulite-massage": AntiCelluliteMassagePage,
-  "balinese-massage": BalineseMassagePage,
-  "body-scrub": BodyScrubPage,
-  "coconut-oil-massage": CoconutOilMassagePage,
-  "couple-spa": CoupleSpaPage,
-  "creambath": CreambathPage,
-  "day-spa": DaySpaPage,
-  "deep-tissue-massage": DeepTissueMassagePage,
-  "ear-wax-removal": EarWaxRemovalPage,
-  "facial": FacialPage,
-  "foot-massage": FootMassagePage,
-  "foot-reflexology": FootReflexologyPage,
-  "hair-braiding": HairBraidingPage,
-  "head-massage": HeadMassagePage,
-  "hot-stone-massage": HotStoneMassagePage,
-  "lymphatic-drainage-massage": LymphaticDrainageMassagePage,
-  "manicure-pedicure": ManicurePedicurePage,
-  "nail-spa": NailSpaPage,
-  "shiatsu-massage": ShiatsuMassagePage,
-  "sport-massage": SportMassagePage,
-  "sunburn-massage": SunburnMassagePage,
-  "thai-massage": ThaiMassagePage,
-  "traditional-massage": TraditionalMassagePage,
-  "waxing-salon": WaxingSalonPage,
-};
+export const treatmentSeeds = {
+  "anti-cellulite-massage": antiCelluliteMassage,
+  "balinese-massage": balineseMassage,
+  "body-scrub": bodyScrub,
+  "coconut-oil-massage": coconutOilMassage,
+  "couple-spa": coupleSpa,
+  "creambath": creambath,
+  "day-spa": daySpa,
+  "deep-tissue-massage": deepTissueMassage,
+  "ear-wax-removal": earWaxRemoval,
+  "facial": facial,
+  "foot-massage": footMassage,
+  "foot-reflexology": footReflexology,
+  "hair-braiding": hairBraiding,
+  "head-massage": headMassage,
+  "hot-stone-massage": hotStoneMassage,
+  "lymphatic-drainage-massage": lymphaticDrainageMassage,
+  "manicure-pedicure": manicurePedicure,
+  "nail-spa": nailSpa,
+  "shiatsu-massage": shiatsuMassage,
+  "sport-massage": sportMassage,
+  "sunburn-massage": sunburnMassage,
+  "thai-massage": thaiMassage,
+  "traditional-massage": traditionalMassage,
+  "waxing-salon": waxingSalon,
+} as unknown as Record<string, TreeNode>;

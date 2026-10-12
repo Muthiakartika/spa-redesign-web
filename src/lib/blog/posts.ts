@@ -193,9 +193,9 @@ export async function ensureUniqueSlug(base: string, excludeId?: string): Promis
 /** Insert a new article and return it. */
 export async function insertPost(input: PostInput, publishedAt: string | null): Promise<Post> {
   const rows = await getSql()`
-    INSERT INTO posts (title, heading, slug, excerpt, cover_image, content_html, category, tags, author, status,
+    INSERT INTO posts (title, slug, excerpt, cover_image, content_html, category, tags, author, status,
                        seo_title, seo_description, show_date, published_at)
-    VALUES (${input.title}, ${input.heading}, ${input.slug}, ${input.excerpt}, ${input.cover_image}, ${input.content_html},
+    VALUES (${input.title}, ${input.slug}, ${input.excerpt}, ${input.cover_image}, ${input.content_html},
             ${input.category}, ${input.tags}, ${input.author}, ${input.status},
             ${input.seo_title}, ${input.seo_description}, ${input.show_date}, ${publishedAt})
     RETURNING *`;
@@ -206,7 +206,7 @@ export async function insertPost(input: PostInput, publishedAt: string | null): 
 export async function updatePost(id: string, input: PostInput, publishedAt: string | null): Promise<Post | null> {
   const rows = await getSql()`
     UPDATE posts SET
-      title = ${input.title}, heading = ${input.heading}, slug = ${input.slug}, excerpt = ${input.excerpt},
+      title = ${input.title}, slug = ${input.slug}, excerpt = ${input.excerpt},
       cover_image = ${input.cover_image}, content_html = ${input.content_html},
       category = ${input.category}, tags = ${input.tags}, author = ${input.author},
       status = ${input.status}, seo_title = ${input.seo_title}, seo_description = ${input.seo_description},

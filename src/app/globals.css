@@ -22,11 +22,15 @@
 @source not "../components/sections";
 @source not "../components/pricelist";
 @source not "../content";
-/* The blog admin and its server code use no Tailwind (src/styles/admin.css),
-   and article HTML (seed-posts.json) is full of ordinary words. */
+/* The admin and its server code use no Tailwind (src/styles/admin.css),
+   and article HTML (seed-posts.json) is full of ordinary words. The
+   treatment page renderer only passes the live class names on. */
 @source not "../components/admin";
 @source not "../app/admin";
 @source not "../lib/blog";
+@source not "../lib/treatments";
+@source not "../lib/redirects";
+@source not "../components/treatments";
 @source not "../data/guide/seed-posts.json";
 
 /*

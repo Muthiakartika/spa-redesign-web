@@ -1458,6 +1458,74 @@ baris seperti di hero beranda.
   "Book Now" di live, karena padding-top banner live 300px. Di laptop dengan
   viewport lebih pendek dari ±910px, tombol masih di bawah lipatan pertama.
 
+## Admin: halaman treatment, tabel, redirect (12 Oktober)
+
+Permintaan pemilik: konten treatment bisa diedit di admin (semuanya), opsi
+tabel di editor artikel, dan pengaturan redirect URL. Admin kini punya tiga
+tab: Articles, Treatments, Redirects (`AdminShell`).
+
+- **Treatment pages (`/admin/treatments/`).** Isi 24 halaman treatment kini
+  berupa data: `src/content/treatments/<slug>.json` (pohon elemen yang sama
+  dengan file `.tsx` lama, dibuat oleh `tools/treatments/tsx-to-json.mjs`;
+  file `.tsx`-nya dihapus) dan dirender oleh
+  `src/components/treatments/TreatmentBody.tsx`. HTML ke-24 halaman dicek
+  identik byte demi byte dengan sebelumnya (dari `page-wrapper` sampai
+  footer). Yang bisa diedit per section ditentukan
+  `src/lib/treatments/fields.ts`: semua teks, harga sesi, paket, bullet,
+  FAQ, highlight, foto (upload ke R2, otomatis WebP; foto banner juga dibuat
+  versi HP `-sm`), plus SEO title/description. Dekorasi, spacing dan class
+  tetap dari file bawaan (`merge.ts` hanya menyalin field konten), jadi layout
+  tidak bisa rusak dari admin. Simpanan ada di tabel Neon `page_content`
+  (satu baris per halaman yang diedit); "Restore original" menghapus barisnya.
+  Simpan → `revalidatePath` + purge Cloudflare untuk URL itu.
+  Guest reviews dan kartu slider "Other treatments" dipakai semua halaman,
+  jadi tidak diedit di sini.
+- `/seminyak/[slug]/` tidak lagi memakai `dynamicParams = false`: dengan itu
+  `next start` menjawab 404 untuk halaman yang baru di-refresh admin (Next
+  16.3, NoFallbackError). Slug tak dikenal tetap 404 lewat `notFound()`,
+  sama seperti `/guide/[slug]/`.
+- **Tabel di editor artikel.** `@tiptap/extension-table` (TableKit, tidak
+  resizable). Tombol "▦ Table" + toolbar tabel (tambah/hapus baris & kolom,
+  heading row, merge/split, hapus tabel). `sanitizeHtml` mengizinkan
+  colgroup/col/colspan/rowspan, membuang lebar dari editor, dan membungkus
+  tiap tabel dengan `div.post-table` (scroll ke samping di HP). Gaya tabel di
+  `custom.css`.
+- **Redirects (`/admin/redirects/`).** Tabel Neon `redirects`. Langsung
+  aktif tanpa deploy (permintaan pemilik): tiap simpan/hapus menulis daftar
+  redirect sebagai `site/redirects.json` di R2 (`lib/redirects/publish.ts`)
+  dan mem-purge alamat lamanya di Cloudflare. `src/proxy.ts` menjawab dari
+  daftar itu: disimpan di memori, diperbarui di latar tiap 30 detik, jadi
+  tanpa query database per kunjungan (tanpa R2 ia membaca tabel Neon
+  langsung). Diukur di dev: redirect baru aktif ±9 detik, yang dihapus hilang
+  ±28 detik. Membuka halaman admin juga menyamakan ulang file itu dengan
+  database. Alamat yang sudah ada di daftar bawaan (`src/data/redirects.ts`,
+  juga di Cloudflare Bulk Redirects) ditolak, begitu juga /admin, /api,
+  /images…; rantai A→B→C otomatis diratakan. Daftar bawaan (97) tampil
+  read-only. (Versi pertama membaca redirect di `next.config.ts` saat build
+  dan butuh deploy tiap perubahan; diganti hari yang sama.)
+
+## Artikel blog: heading, judul ganda, link (12 Oktober)
+
+Catatan pemilik setelah melihat admin baru:
+
+1. **Heading sampai H5.** Editor punya tombol H2–H5 (TipTap `levels: [2, 3,
+   4, 5]`). H4/H5 di halaman artikel: Literata, tidak tebal, 1.2em / 1.05em.
+2. **Field "Article Heading" dihapus, judul tidak muncul dua kali.** Judul di
+   bawah tanggal (`h2.blog-details__title`, dari 5 Oktober) dibuang; h1 di
+   banner satu-satunya judul, isi artikel mulai 24px di bawah baris
+   kategori/tanggal. Kolom `posts.heading` tetap ada di Neon tapi tidak dipakai
+   lagi (tidak dibaca, tidak ditulis).
+3. **H2 tebal, H3 tidak.** Tema memberi h2 weight 300 dan h3 500, jadi di live
+   H2 tampak tipis. Kini di `.blog-details__rich` H2 700, H3–H5 400; editor
+   disamakan. H2 yang terbungkus dua baris tidak lagi berjarak 65px (line-height
+   1.3).
+4. **Link di artikel terlihat.** Sebelumnya warnanya sama dengan teks (tema).
+   Kini emas gelap #8A6F1C (kontras 4.8:1 di putih) dengan garis bawah emas
+   #B88C35, hover lebih gelap + garis lebih tebal; font ikut paragraf (tema
+   memberi semua link Literata + inline-block). Hanya link internal yang tampil
+   sebagai link; link ke situs lain tetap dijadikan teks biasa oleh
+   `sanitizeHtml`, seperti sejak awal.
+
 ## Draf: beranda v2 di `/home-v2/` (30 September)
 
 Duplikat beranda dengan layout sedikit diubah; isi, warna, huruf dan dekorasi
