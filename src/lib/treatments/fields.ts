@@ -28,6 +28,8 @@ export type Field = {
   /** "items": the fields of one item, and what one item is called. */
   fields?: Field[];
   itemLabel?: string;
+  /** "textarea": may hold links, written [words](/address/) in the admin. */
+  links?: boolean;
   /** Inside "items": left out of the item when empty. */
   optional?: boolean;
   /** "items": exactly as many as now (one per icon), no adding or removing. */
@@ -57,11 +59,20 @@ const sessionFields: Field[] = [
   { key: "details", label: "Points", kind: "list", optional: true },
 ];
 
+/** A paragraph that may link to other pages. */
+const paragraph: Field = {
+  key: "text",
+  label: "Paragraph",
+  kind: "textarea",
+  links: true,
+  hint: "To add a link, write [the words](/seminyak/deep-tissue-massage/).",
+};
+
 const textAndPhoto: SectionSchema = {
   label: "Text & photo",
   fields: [
     ...heading(),
-    { key: "text", label: "Paragraph", kind: "textarea" },
+    paragraph,
     { key: "featuresLeft", label: "Bullet points, left column", kind: "list" },
     { key: "featuresRight", label: "Bullet points, right column", kind: "list" },
     { key: "image", label: "Photo", kind: "image", maxWidth: 1200 },
@@ -101,7 +112,7 @@ export const SECTIONS: Record<string, SectionSchema> = {
     label: "Introduction",
     fields: [
       ...heading(),
-      { key: "text", label: "Paragraph", kind: "textarea" },
+      paragraph,
       { key: "feature1Title", label: "Highlight 1, title", kind: "text" },
       { key: "feature1Text", label: "Highlight 1, text", kind: "textarea" },
       { key: "feature2Title", label: "Highlight 2, title", kind: "text" },
@@ -114,7 +125,7 @@ export const SECTIONS: Record<string, SectionSchema> = {
     label: "Session prices",
     fields: [
       ...heading(),
-      { key: "text", label: "Paragraph", kind: "textarea" },
+      paragraph,
       {
         key: "sessions",
         label: "Sessions",
@@ -140,7 +151,7 @@ export const SECTIONS: Record<string, SectionSchema> = {
     label: "Packages",
     fields: [
       ...heading(),
-      { key: "text", label: "Paragraph", kind: "textarea" },
+      paragraph,
       {
         key: "packages",
         label: "Packages",
@@ -203,6 +214,11 @@ export const SECTIONS: Record<string, SectionSchema> = {
         ],
       },
     ],
+  },
+  TreatmentLinks: {
+    label: "Treatment links",
+    fields: [{ key: "title", label: "Heading", kind: "text" }, paragraph],
+    note: "The list of treatments under the text comes from the website menu.",
   },
   ServiceSlider: {
     label: "Other treatments",

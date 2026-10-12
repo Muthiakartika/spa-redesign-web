@@ -51,3 +51,48 @@ export function sameContent(a: unknown, b: unknown): boolean {
         : v;
   return JSON.stringify(canon(a)) === JSON.stringify(canon(b));
 }
+
+/**
+ * Paragraphs with links. On the page such a text is a fragment of strings and
+ * <Link> elements; in the admin it is written as plain text with
+ * [words](/address/) for each link. A text without links stays a string.
+ */
+type LinkNode = { type: "Link"; props: { prefetch: false; href: string }; children: [string] };
+
+const isLinkNode = (v: unknown): v is LinkNode =>
+  isNode(v) &&
+  v.type === "Link" &&
+  typeof v.props?.href === "string" &&
+  Array.isArray(v.children) &&
+  v.children.length === 1 &&
+  typeof v.children[0] === "string";
+
+/** A fragment made only of text and links, or null. */
+export function linkedTextParts(value: unknown): (string | LinkNode)[] | null {
+  if (!isJsx(value) || value.$jsx.type !== "Fragment") return null;
+  const parts = value.$jsx.children ?? [];
+  return parts.every((p) => typeof p === "string" || isLinkNode(p)) ? (parts as (string | LinkNode)[]) : null;
+}
+
+/** The admin's way of writing a text: links become [words](/address/). */
+export function toMarkup(value: unknown): string {
+  if (typeof value === "string") return value;
+  const parts = linkedTextParts(value);
+  if (!parts) return "";
+  return parts.map((p) => (typeof p === "string" ? p : `[${p.children[0]}](${p.props.href})`)).join("");
+}
+
+/** Back from the admin's text: a string, or a fragment when it has [words](/address/) links. */
+export function fromMarkup(text: string): TreeValue {
+  const pattern = /\[([^\]\n]+)\]\(([^)\s]+)\)/g;
+  const parts: (string | LinkNode)[] = [];
+  let last = 0;
+  for (const m of text.matchAll(pattern)) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    parts.push({ type: "Link", props: { prefetch: false, href: m[2] }, children: [m[1]] });
+    last = m.index + m[0].length;
+  }
+  if (!parts.length) return text;
+  if (last < text.length) parts.push(text.slice(last));
+  return { $jsx: { type: "Fragment", children: parts as (TreeNode | string)[] } };
+}

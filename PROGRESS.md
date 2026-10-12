@@ -1480,6 +1480,13 @@ tab: Articles, Treatments, Redirects (`AdminShell`).
   Simpan → `revalidatePath` + purge Cloudflare untuk URL itu.
   Guest reviews dan kartu slider "Other treatments" dipakai semua halaman,
   jadi tidak diedit di sini.
+- Digabung dengan commit SEO `c376f57` (10 Oktober, sudah live): ke-24
+  halaman dikonversi ulang dari versi `.tsx` terbarunya dan HTML-nya dicek
+  identik dengan versi itu. Dua hal baru dari commit itu: paragraf dengan
+  link (`text` Sports Massage) disimpan sebagai fragment teks + `Link`, dan di
+  admin ditulis `[kata](/alamat/)` (field `links: true`); bagian "Seminyak
+  Spa Treatments" di Day Spa kini komponen `TreatmentLinks` (daftar dari
+  `treatmentMenu`, judul dan teksnya bisa diedit).
 - `/seminyak/[slug]/` tidak lagi memakai `dynamicParams = false`: dengan itu
   `next start` menjawab 404 untuk halaman yang baru di-refresh admin (Next
   16.3, NoFallbackError). Slug tak dikenal tetap 404 lewat `notFound()`,

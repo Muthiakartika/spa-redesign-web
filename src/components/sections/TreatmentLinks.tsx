@@ -1,0 +1,41 @@
+import Link from "next/link";
+import type { ReactNode } from "react";
+import { treatmentMenu } from "@/data/navigation";
+
+/**
+ * "Seminyak Spa Treatments" on /seminyak/day-spa/ (SEO, 10 Oct): a heading,
+ * a line of text, and a link to every treatment page from the menu except
+ * `exclude` (the page it is on). A component of its own so the page body can
+ * be data (src/content/treatments/day-spa.json) that /admin/ edits.
+ */
+export default function TreatmentLinks({
+  title,
+  text,
+  exclude,
+}: {
+  title: ReactNode;
+  text: ReactNode;
+  exclude?: string;
+}) {
+  return (
+    <section className="day-spa-links pt-100 pb-100">
+      <div className="container">
+        <div className="section-header center mb-40">
+          <h2 className="title">{title}</h2>
+          <p>{text}</p>
+        </div>
+        <ul className="day-spa-links__list">
+          {treatmentMenu
+            .filter((t) => t.href !== exclude)
+            .map((t) => (
+              <li key={t.href}>
+                <Link prefetch={false} href={t.href}>
+                  {t.label}
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </div>
+    </section>
+  );
+}

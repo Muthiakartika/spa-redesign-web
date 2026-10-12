@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { createElement, Fragment, type ComponentType, type ReactNode } from "react";
 import AboutIntro from "@/components/sections/AboutIntro";
 import AboutSplit from "@/components/sections/AboutSplit";
@@ -8,6 +9,7 @@ import PageBanner from "@/components/sections/PageBanner";
 import ReserveCta from "@/components/sections/ReserveCta";
 import ServiceSlider from "@/components/sections/ServiceSlider";
 import SessionOptions from "@/components/sections/SessionOptions";
+import TreatmentLinks from "@/components/sections/TreatmentLinks";
 import TreatmentPricing from "@/components/sections/TreatmentPricing";
 import TreatmentTestimonials from "@/components/sections/TreatmentTestimonials";
 import DecorationMotion from "@/components/ui/DecorationMotion";
@@ -24,10 +26,13 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   FaqSection,
   FloralDecoration,
   Funfacts,
+  // A link inside a paragraph (lib/treatments/fields.ts: textarea fields).
+  Link,
   PageBanner,
   ReserveCta,
   ServiceSlider,
   SessionOptions,
+  TreatmentLinks,
   TreatmentPricing,
   TreatmentTestimonials,
 };

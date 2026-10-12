@@ -144,12 +144,39 @@
       }
     },
     {
+      "type": "TreatmentLinks",
+      "props": {
+        "title": "Seminyak Spa Treatments",
+        "text": {
+          "$jsx": {
+            "type": "Fragment",
+            "children": [
+              "Choose a treatment to see its prices and session options, or",
+              " ",
+              {
+                "type": "Link",
+                "props": {
+                  "prefetch": false,
+                  "href": "/seminyak/"
+                },
+                "children": [
+                  "view the full Seminyak price list"
+                ]
+              },
+              "."
+            ]
+          }
+        },
+        "exclude": "/seminyak/day-spa/"
+      }
+    },
+    {
       "type": "FaqSection",
       "props": {
         "paperDecoration": true,
         "imageTitle": "Your Seminyak Day Spa",
         "subTitle": "Frequently Asked Questions",
-        "title": "Everything You Need to Know",
+        "title": "Day Spa Seminyak: FAQs",
         "items": [
           {
             "question": "What does a day spa in Seminyak usually include?",

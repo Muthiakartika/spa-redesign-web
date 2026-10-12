@@ -1,5 +1,5 @@
 import { SECTIONS, type Field } from "./fields";
-import { isJsx, isNode, type TreeNode, type TreeValue } from "./tree";
+import { isJsx, isNode, linkedTextParts, type TreeNode, type TreeValue } from "./tree";
 
 /**
  * Put edited content into a page's built-in tree. Only the fields listed in
@@ -44,6 +44,7 @@ function clean(field: Field, value: unknown, where: string, o: Options, inItem =
     case "link":
     case "image": {
       if (value === undefined || value === null) return inItem ? "" : undefined;
+      if (field.links && typeof value !== "string") return cleanLinkedText(field, value, fail);
       if (typeof value !== "string") return fail(`${field.label} must be text.`);
       const text = value.trim();
       if (!text) {
@@ -102,6 +103,26 @@ function clean(field: Field, value: unknown, where: string, o: Options, inItem =
       return out;
     }
   }
+}
+
+/** A paragraph with links: only text and links to allowed addresses, rebuilt clean. */
+function cleanLinkedText(field: Field, value: unknown, fail: (message: string) => undefined): TreeValue | undefined {
+  const parts = linkedTextParts(value);
+  if (!parts) return fail(`${field.label} must be text.`);
+  const children: (TreeNode | string)[] = [];
+  for (const part of parts) {
+    if (typeof part === "string") {
+      if (part.length > MAX_TEXT) return fail(`${field.label} is too long.`);
+      children.push(part);
+      continue;
+    }
+    const href = part.props.href.trim();
+    const words = part.children[0].trim();
+    if (!words) return fail(`${field.label} has a link without words.`);
+    if (!isAllowedLink(href)) return fail(`${field.label}: the link “${words}” must start with / or https://.`);
+    children.push({ type: "Link", props: { prefetch: false, href }, children: [words] });
+  }
+  return { $jsx: { type: "Fragment", children } };
 }
 
 function mergeNode(seed: TreeNode, edited: unknown, where: string, o: Options): TreeNode {

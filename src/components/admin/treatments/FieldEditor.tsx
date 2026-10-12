@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- previews of site and uploaded photos */
 import { useId, useState, type ChangeEvent, type ReactNode } from "react";
 import type { Field } from "@/lib/treatments/fields";
-import { sameContent, type TreeValue } from "@/lib/treatments/tree";
+import { fromMarkup, sameContent, toMarkup, type TreeValue } from "@/lib/treatments/tree";
 
 /** Uploads one photo for this field and returns its address (TreatmentEditor supplies it). */
 export type PhotoUploader = (file: File, field: Field) => Promise<string>;
@@ -162,7 +162,8 @@ export default function FieldEditor({ field, value, original, hasOriginal, onCha
       );
 
     case "textarea": {
-      const text = asText(value);
+      // A paragraph with links is shown as text with [words](/address/).
+      const text = field.links ? toMarkup(value) : asText(value);
       return (
         <div className={`te-field te-field-${field.kind}`}>
           {head}
@@ -172,7 +173,7 @@ export default function FieldEditor({ field, value, original, hasOriginal, onCha
             rows={Math.min(10, Math.max(3, Math.ceil(text.length / 85)))}
             value={text}
             placeholder={field.placeholder}
-            onChange={(e) => onChange(e.target.value)}
+            onChange={(e) => onChange(field.links ? fromMarkup(e.target.value) : e.target.value)}
           />
           {hint}
         </div>

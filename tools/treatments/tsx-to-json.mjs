@@ -25,6 +25,16 @@ function fail(file, node, what) {
   throw new Error(`${file}:${line + 1}: unsupported ${what}: ${node.getText().slice(0, 80)}`);
 }
 
+/** HTML entities in JSX text and attribute strings, which JSX decodes (&amp; → &). */
+const ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: "\u00a0" };
+function decodeEntities(text) {
+  return text.replace(/&(#x[0-9a-f]+|#[0-9]+|[a-z]+);/gi, (whole, code) => {
+    if (code[0] === "#") return String.fromCodePoint(code[1] === "x" || code[1] === "X" ? parseInt(code.slice(2), 16) : Number(code.slice(1)));
+    if (code in ENTITIES) return ENTITIES[code];
+    throw new Error(`Unknown HTML entity ${whole}: add it to ENTITIES`);
+  });
+}
+
 /** JSX text the way React's JSX transform trims it. */
 function jsxText(raw) {
   const lines = raw.split(/\r\n|\n|\r/);
@@ -35,7 +45,7 @@ function jsxText(raw) {
     if (i !== lines.length - 1) s = s.replace(/ +$/, "");
     if (s) out += (out && i !== 0 ? " " : "") + s;
   });
-  return out;
+  return decodeEntities(out);
 }
 
 function tagName(file, name) {
@@ -66,7 +76,7 @@ function attributes(file, attrs) {
     const name = attr.name.getText();
     const init = attr.initializer;
     if (!init) props[name] = true;
-    else if (ts.isStringLiteral(init)) props[name] = init.text;
+    else if (ts.isStringLiteral(init)) props[name] = decodeEntities(init.text);
     else if (ts.isJsxExpression(init)) props[name] = value(file, init.expression);
     else fail(file, init, "attribute value");
   }
@@ -165,11 +175,44 @@ function pinTreatmentLayout(node) {
   for (const v of Object.values(node)) if (v && typeof v === "object") pinTreatmentLayout(v);
 }
 
+/**
+ * Two more steps that leave the HTML unchanged but make the data editable:
+ * a SessionOptions without props (balinese-massage) gets the component's
+ * defaults written out, so the admin shows and saves real values; and the
+ * `image` of a package, which TreatmentPricing never shows (it uses
+ * `images[i]`), is dropped.
+ */
+const SESSION_DEFAULTS = {
+  subTitle: "Flexible Sessions",
+  title: "Balinese Massage Session",
+  text: "Pick a session that fits your schedule and how much time you want to spend relaxing. Longer sessions give our therapists more time to work across the body and focus on areas that need extra attention.",
+  icon: "/images/spa/Balinese.svg",
+  sessions: [
+    { duration: "1 Hour", price: "IDR 159K", details: ["Full-body relaxation", "Everyday muscle tension", "Guests with limited time"] },
+    { duration: "1.5 Hour", price: "IDR 239K", details: ["More complete full-body care", "Extra focus on tense areas", "Guests wanting deeper relaxation"] },
+    { duration: "2 Hour", price: "IDR 330K", details: ["Extended full-body treatment", "More time for problem areas", "Guests seeking longer relaxation"] },
+  ],
+};
+function writeOutDefaults(node) {
+  if (Array.isArray(node)) return node.forEach(writeOutDefaults);
+  if (!node || typeof node !== "object") return;
+  if (node.type === "SessionOptions" && !node.props) node.props = structuredClone(SESSION_DEFAULTS);
+  if (node.type === "TreatmentPricing" && Array.isArray(node.props?.packages)) {
+    node.props.packages = node.props.packages.map((pkg) => {
+      const rest = { ...pkg };
+      delete rest.image;
+      return rest;
+    });
+  }
+  for (const v of Object.values(node)) if (v && typeof v === "object") writeOutDefaults(v);
+}
+
 const only = process.argv[2];
 const files = readdirSync(DIR).filter((f) => f.endsWith(".tsx") && (!only || f === `${only}.tsx`));
 for (const file of files) {
   const tree = pageTree(file);
   pinTreatmentLayout(tree);
+  writeOutDefaults(tree);
   const out = join(DIR, file.replace(/\.tsx$/, ".json"));
   writeFileSync(out, JSON.stringify(tree, null, 2) + "\n");
   console.log("wrote", out.replace(/\\/g, "/").replace(/.*src\//, "src/"));
