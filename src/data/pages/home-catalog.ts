@@ -284,7 +284,7 @@ export const catalog: CatalogItem[] = [
     id: "ear-candle",
     name: "Ear Candle",
     category: "beauty",
-    href: "/seminyak/ear-wax-removal/",
+    href: "/seminyak/ear-candle/",
     image: "/images/listmenu/earcandle.webp",
     desc: "A traditional ear candle treatment focused on comfort and gentle relaxation.",
     options: [

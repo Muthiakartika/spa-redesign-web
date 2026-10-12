@@ -19,7 +19,7 @@ import coupleSpa from "./couple-spa";
 import coconutOilMassage from "./coconut-oil-massage";
 import creambath from "./creambath";
 import deepTissueMassage from "./deep-tissue-massage";
-import earWaxRemoval from "./ear-wax-removal";
+import earCandle from "./ear-candle";
 import facial from "./facial";
 import footMassage from "./foot-massage";
 import footReflexology from "./foot-reflexology";
@@ -46,7 +46,7 @@ import daySpa from "./day-spa";
   coconutOilMassage,
   creambath,
   deepTissueMassage,
-  earWaxRemoval,
+  earCandle,
   facial,
   footMassage,
   footReflexology,

@@ -1,13 +1,13 @@
 // ⚠️  Content in this file was copied word-for-word from spabalimoon.com (September 2026).
 // Please do not rewrite texts or prices without checking migration/migration-audit.md first.
 //
-// Page: https://spabalimoon.com/seminyak/ear-wax-removal/
+// Page: https://spabalimoon.com/seminyak/ear-candle/ (was /seminyak/ear-wax-removal/ until 12 October 2026)
 
 import { priceOf } from "../pricelist";
 import type { Treatment } from "../types";
 
-const earWaxRemoval: Treatment = {
-  slug: "ear-wax-removal",
+const earCandle: Treatment = {
+  slug: "ear-candle",
   name: "Ear Candle",
   category: "beauty",
   shortDescription: "A traditional ear candle treatment focused on comfort and gentle relaxation.",
@@ -180,4 +180,4 @@ const earWaxRemoval: Treatment = {
   },
 };
 
-export default earWaxRemoval;
+export default earCandle;

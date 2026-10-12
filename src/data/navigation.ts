@@ -68,7 +68,7 @@ export const treatmentMenu: (NavItem & { keywords: string })[] = [
   { label: "Coconut Oil Massage", href: "/seminyak/coconut-oil-massage/", keywords: "virgin coconut oil massage natural nourishment" },
   { label: "Cream Bath", href: "/seminyak/creambath/", keywords: "cream bath creambath hair scalp wellness" },
   { label: "Deep Tissue Massage", href: "/seminyak/deep-tissue-massage/", keywords: "deep tissue massage muscle recovery tension stiffness" },
-  { label: "Ear Candle", href: "/seminyak/ear-wax-removal/", keywords: "ear candle ear candling gentle ear care" },
+  { label: "Ear Candle", href: "/seminyak/ear-candle/", keywords: "ear candle ear candling gentle ear care" },
   { label: "Facial", href: "/seminyak/facial/", keywords: "facial bali moon skin rejuvenation mask skincare" },
   { label: "Foot Massage", href: "/seminyak/foot-massage/", keywords: "foot massage feet relaxation" },
   { label: "Foot Reflexology", href: "/seminyak/foot-reflexology/", keywords: "foot reflexology pressure points feet" },

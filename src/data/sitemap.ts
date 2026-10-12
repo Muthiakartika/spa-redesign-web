@@ -24,7 +24,7 @@ export const sitemapPages: SitemapEntry[] = [
   { loc: "https://spabalimoon.com/seminyak/creambath/", lastmod: "2026-07-06T06:37:10+00:00", image: "https://spabalimoon.com/images/services/creambath/creambath-1.webp" },
   { loc: "https://spabalimoon.com/seminyak/day-spa/", lastmod: "2026-07-06T06:39:18+00:00", image: "https://spabalimoon.com/images/services/dayspaseminyak/dayspa-1.webp" },
   { loc: "https://spabalimoon.com/seminyak/deep-tissue-massage/", lastmod: "2026-07-07T05:25:27+00:00", image: "https://spabalimoon.com/images/services/deeptissuemassage/deeptissuemassage-1.webp" },
-  { loc: "https://spabalimoon.com/seminyak/ear-wax-removal/", lastmod: "2026-07-06T06:22:17+00:00", image: "https://spabalimoon.com/images/services/earcandle/earcandle-1.webp" },
+  { loc: "https://spabalimoon.com/seminyak/ear-candle/", lastmod: "2026-10-12T00:00:00+00:00", image: "https://spabalimoon.com/images/services/earcandle/earcandle-1.webp" },
   { loc: "https://spabalimoon.com/seminyak/facial/", lastmod: "2026-07-06T06:17:36+00:00", image: "https://spabalimoon.com/images/services/balimoonfacial/balimoonfacial-1.webp" },
   { loc: "https://spabalimoon.com/seminyak/foot-massage/", lastmod: "2026-07-07T06:14:25+00:00", image: "https://spabalimoon.com/images/services/footmassage/footmassage-1.webp" },
   { loc: "https://spabalimoon.com/seminyak/foot-reflexology/", lastmod: "2026-07-07T05:22:52+00:00", image: "https://spabalimoon.com/images/services/footreflexology/footreflexology-1.webp" },

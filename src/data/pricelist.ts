@@ -545,7 +545,7 @@
   {
     id: "ear-candle",
     category: "beauty",
-    pageSlug: "ear-wax-removal",
+    pageSlug: "ear-candle",
     image: { src: "/images/beauty/cards/earcandle.webp", alt: "Ear Candle", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 159_000 },

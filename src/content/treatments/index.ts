@@ -7,7 +7,7 @@ import coupleSpa from "./couple-spa.json";
 import creambath from "./creambath.json";
 import daySpa from "./day-spa.json";
 import deepTissueMassage from "./deep-tissue-massage.json";
-import earWaxRemoval from "./ear-wax-removal.json";
+import earCandle from "./ear-candle.json";
 import facial from "./facial.json";
 import footMassage from "./foot-massage.json";
 import footReflexology from "./foot-reflexology.json";
@@ -41,7 +41,7 @@ export const treatmentSeeds = {
   "creambath": creambath,
   "day-spa": daySpa,
   "deep-tissue-massage": deepTissueMassage,
-  "ear-wax-removal": earWaxRemoval,
+  "ear-candle": earCandle,
   "facial": facial,
   "foot-massage": footMassage,
   "foot-reflexology": footReflexology,
