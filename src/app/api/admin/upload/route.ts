@@ -2,7 +2,8 @@ import { denyUnlessAdmin } from "@/lib/blog/session";
 import { STORAGE_MISSING } from "@/lib/blog/setup";
 import { isStorageConfigured, putImage } from "@/lib/blog/storage";
 
-const MAX_BYTES = 5 * 1024 * 1024;
+// Vercel refuses a request body over 4.5MB before this route runs.
+const MAX_BYTES = 4 * 1024 * 1024;
 
 // Photos only. SVG is left out on purpose: it can carry script.
 const EXTENSIONS: Record<string, string> = {
@@ -37,12 +38,12 @@ export async function POST(request: Request) {
   const ext = EXTENSIONS[contentType];
   if (!ext) return Response.json({ error: "File must be a JPG, PNG, WebP, GIF or AVIF image." }, { status: 400 });
   if (Number(request.headers.get("content-length") || 0) > MAX_BYTES) {
-    return Response.json({ error: "Image must be 5MB or smaller." }, { status: 400 });
+    return Response.json({ error: "Image must be 4MB or smaller." }, { status: 400 });
   }
 
   const body = new Uint8Array(await request.arrayBuffer());
   if (!body.length) return Response.json({ error: "File is empty." }, { status: 400 });
-  if (body.length > MAX_BYTES) return Response.json({ error: "Image must be 5MB or smaller." }, { status: 400 });
+  if (body.length > MAX_BYTES) return Response.json({ error: "Image must be 4MB or smaller." }, { status: 400 });
 
   const pairKey = request.headers.get("x-pair-key");
   if (pairKey !== null) {

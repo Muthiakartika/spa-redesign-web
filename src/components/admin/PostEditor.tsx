@@ -199,7 +199,8 @@ export default function PostEditor({ initialPost, setup }: { initialPost: Post |
     setUploadingCover(true);
     setError("");
     try {
-      set("coverImage", await uploadImage(file));
+      // Full width as the article's banner: 1920 wide, like the built-in covers.
+      set("coverImage", await uploadImage(file, 1920));
     } catch (err) {
       setError("Failed to upload cover: " + (err instanceof Error ? err.message : err));
     } finally {
@@ -401,7 +402,7 @@ export default function PostEditor({ initialPost, setup }: { initialPost: Post |
                 disabled={uploadingCover || !setup.storage}
               />
             </label>
-            <p className="pe-hint">Also the banner photo at the top of the article. JPG, PNG or WebP, up to 5MB.</p>
+            <p className="pe-hint">Also the banner photo at the top of the article. JPG, PNG or WebP; large photos are resized to 1920px wide.</p>
           </div>
 
           <div className="pe-card">
