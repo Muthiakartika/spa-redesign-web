@@ -19,12 +19,18 @@
  * over the last line (any other www URL → the same path on spabalimoon.com).
  * Line format (no header row): source, target, status, preserve query string,
  * include subdomains, subpath matching, preserve path suffix.
+ *
+ * Each old URL gets one line for spabalimoon.com and one for www, never
+ * "include subdomains": that also matches images.spabalimoon.com (the R2
+ * bucket), where /blog → /guide sent every uploaded article photo
+ * (blog/<name>.webp) to a 404.
  */
 import { writeFileSync } from "node:fs";
 import { liveRedirects } from "../../src/data/redirects.ts";
 import { sitemapPages } from "../../src/data/sitemap.ts";
 
 const HOST = "spabalimoon.com";
+const HOSTS = [HOST, `www.${HOST}`];
 const ORIGIN = `https://${HOST}`;
 const trim = (path) => (path.length > 1 ? path.replace(/\/$/, "") : path);
 
@@ -35,9 +41,11 @@ function patternPrefix(path) {
   return match[1];
 }
 
-const lines = new Map(); // source path → CSV line
+const lines = new Map(); // source path → its CSV lines, one per host
 function add(source, target, preserveSuffix) {
-  const line = [`${HOST}${source}`, `${ORIGIN}${target}`, 301, "TRUE", "TRUE", "TRUE", preserveSuffix ? "TRUE" : "FALSE"].join(",");
+  const line = HOSTS.map((host) =>
+    [`${host}${source}`, `${ORIGIN}${target}`, 301, "TRUE", "FALSE", "TRUE", preserveSuffix ? "TRUE" : "FALSE"].join(",")
+  ).join("\n");
   const existing = lines.get(source);
   if (existing && existing !== line) throw new Error(`Two redirects for ${source}:\n  ${existing}\n  ${line}`);
   lines.set(source, line);
@@ -64,6 +72,6 @@ for (const source of lines.keys()) {
 }
 
 // Last line: any other www URL → the same path on spabalimoon.com.
-const csv = [...lines.values(), [`www.${HOST}`, ORIGIN, 301, "TRUE", "FALSE", "TRUE", "TRUE"].join(",")];
-writeFileSync(new URL("bulk-redirects.csv", import.meta.url), `${csv.join("\n")}\n`);
-console.log(`tools/cloudflare/bulk-redirects.csv: ${csv.length} redirects.`);
+const csv = [...lines.values(), [`www.${HOST}`, ORIGIN, 301, "TRUE", "FALSE", "TRUE", "TRUE"].join(",")].join("\n");
+writeFileSync(new URL("bulk-redirects.csv", import.meta.url), `${csv}\n`);
+console.log(`tools/cloudflare/bulk-redirects.csv: ${csv.split("\n").length} redirects.`);

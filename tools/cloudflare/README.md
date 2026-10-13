@@ -6,6 +6,11 @@
 answers before Vercel's http → https redirect, so an old URL reaches its final
 address in one hop for `http://` and `https://`, with or without `www`.
 
+Each old URL has its own line for `spabalimoon.com` and for `www`, with
+"include subdomains" off. With it on (the first list, 2026-10-08), the lines
+also matched `images.spabalimoon.com`, the R2 bucket: `/blog → /guide` sent
+every uploaded article photo (`blog/…`) to a 404.
+
 ## Regenerate
 
 ```bash
@@ -31,4 +36,10 @@ Cloudflare with the new CSV (delete all, upload the file).
 curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" http://www.spabalimoon.com/spa-treatments/
 ```
 
-should print `301 https://spabalimoon.com/seminyak/`.
+should print `301 https://spabalimoon.com/seminyak/`, and
+
+```bash
+curl -s -o /dev/null -w "%{http_code} %{redirect_url}\n" https://images.spabalimoon.com/blog/x.webp
+```
+
+`404` with no redirect (the list must not touch the image host).
