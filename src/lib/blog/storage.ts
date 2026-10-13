@@ -49,11 +49,15 @@ export async function putObject(
     region: "auto",
   });
   const endpoint = (env.R2_ENDPOINT || `https://${env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`).replace(/\/$/, "");
-  const res = await client.fetch(`${endpoint}/${env.R2_BUCKET}/${key}`, {
+  const signed = await client.sign(`${endpoint}/${env.R2_BUCKET}/${key}`, {
     method: "PUT",
     body,
     headers: { "Content-Type": contentType, "Cache-Control": cacheControl },
   });
+  // Sent as url + init with the bytes themselves, not as the signed Request:
+  // Next's fetch rebuilds a Request around its body stream, which drops
+  // Content-Length, and R2 refuses a PUT without it.
+  const res = await fetch(signed.url, { method: "PUT", headers: signed.headers, body });
   if (!res.ok) {
     const detail = (await res.text().catch(() => "")).match(/<Message>([^<]*)<\/Message>/)?.[1];
     throw new Error(`R2 upload failed: ${detail || `HTTP ${res.status}`}`);
