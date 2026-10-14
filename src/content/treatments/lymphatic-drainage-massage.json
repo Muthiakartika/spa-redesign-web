@@ -57,7 +57,7 @@
             "text": "Every session follows gentle lymphatic drainage principles, with longer durations allowing our therapists to work more thoroughly across different drainage pathways. Each treatment offers a calm, unhurried experience, whether you're easing fluid retention after travel or simply enjoying deeper relaxation.",
             "packages": [
               {
-                "price": "IDR 300K",
+                "price": "IDR 300.000",
                 "name": "1 Hour",
                 "treatments": [
                   "First lymphatic massage",
@@ -66,7 +66,7 @@
                 ]
               },
               {
-                "price": "IDR 440K",
+                "price": "IDR 440.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Full-body lymphatic drainage",
@@ -75,7 +75,7 @@
                 ]
               },
               {
-                "price": "IDR 580K",
+                "price": "IDR 580.000",
                 "name": "2 Hours",
                 "treatments": [
                   "Comprehensive body treatment",

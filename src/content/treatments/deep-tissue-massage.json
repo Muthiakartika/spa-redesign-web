@@ -56,7 +56,7 @@
             "text": "The right session length depends on your treatment goals and the number of areas requiring attention. Shorter sessions work well for focused areas, while longer sessions allow more time for detailed muscle work.",
             "packages": [
               {
-                "price": "IDR 269K",
+                "price": "IDR 269.000",
                 "name": "1 Hour",
                 "treatments": [
                   "Neck, shoulder, or back tension",
@@ -65,7 +65,7 @@
                 ]
               },
               {
-                "price": "IDR 359K",
+                "price": "IDR 359.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Multiple areas with muscle tightness",

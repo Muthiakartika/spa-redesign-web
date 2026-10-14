@@ -22,7 +22,7 @@ const cards = POPULAR.map((name) => {
     image: slide.image,
     icon: slide.icon,
     desc: item?.desc ?? "",
-    // "From IDR 159K | 1 Hour" -> "From IDR 159K"
+    // "From IDR 159.000 | 1 Hour" -> "From IDR 159.000"
     price: slide.price?.split("|")[0].trim() ?? null,
   };
 });

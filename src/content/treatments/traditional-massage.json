@@ -58,7 +58,7 @@
             "text": "Our Traditional Massage session provides enough time for therapists to work through areas that hold tension. Choose a shorter treatment for focused relaxation or a longer session for more complete body care.",
             "packages": [
               {
-                "price": "IDR 90K",
+                "price": "IDR 90.000",
                 "name": "30 Minutes",
                 "treatments": [
                   "Quick relief for one tense area",
@@ -67,7 +67,7 @@
                 ]
               },
               {
-                "price": "IDR 169K",
+                "price": "IDR 169.000",
                 "name": "1 Hour",
                 "treatments": [
                   "Mild muscle stiffness",
@@ -76,7 +76,7 @@
                 ]
               },
               {
-                "price": "IDR 259K",
+                "price": "IDR 259.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Multiple tension areas",
@@ -85,7 +85,7 @@
                 ]
               },
               {
-                "price": "IDR 339K",
+                "price": "IDR 339.000",
                 "name": "2 Hours",
                 "treatments": [
                   "Deeper muscle comfort",

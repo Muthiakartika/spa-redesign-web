@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import MenuIntro, { halves, menuItems } from "@/components/home/MenuIntro";
-import { durationLabel, durationOf, shortPrice, startingOption, thousands } from "@/components/home/price";
+import { displayPrice, durationLabel, durationOf, priceValue, startingOption } from "@/components/home/price";
 import { catalogCategories, type CatalogCategory, type CatalogItem, type CatalogOption } from "@/data/pages/home-catalog";
 
 /** A row of the menu: a catalog card, or a price page's treatment with the
@@ -31,15 +31,15 @@ const cleanLabel = (label: string) => label.replace(/\s*·\s*(start from|2 pax)$
 const isTimed = (options: CatalogOption[]) => options.some((o) => durationOf(o.label) !== null);
 const priceOf = (options: CatalogOption[], minutes: number) => options.find((o) => durationOf(o.label) === minutes)?.price;
 
-/** "from 165K" when the options differ in price, else the one price. */
+/** "from IDR 165.000" when the options differ in price, else the one price. */
 function fromPrice(options: CatalogOption[]) {
   return {
-    amount: shortPrice(startingOption(options).price),
+    amount: displayPrice(startingOption(options).price),
     from: new Set(options.map((o) => o.price)).size > 1,
   };
 }
 
-/** Options that share a price, in menu order: "Chocolate, Coconut, … · 169K". */
+/** Options that share a price, in menu order: "Chocolate, Coconut, … · IDR 169.000". */
 function byPrice(options: CatalogOption[]) {
   const groups: { labels: string[]; price: string }[] = [];
   for (const o of options) {
@@ -200,12 +200,12 @@ type Note = { text: string; minutes: number | null };
 function priceAt(item: MenuItem, minutes: number): Price {
   if (isTimed(item.options)) {
     const own = priceOf(item.options, minutes);
-    return { minutes, amount: own ? shortPrice(own) : null, from: false };
+    return { minutes, amount: own ? displayPrice(own) : null, from: false };
   }
   const theirs = (item.children ?? []).map((c) => priceOf(c.options, minutes)).filter((p): p is string => !!p);
   if (!theirs.length) return { minutes, amount: null, from: false };
-  const lowest = theirs.reduce((a, b) => (thousands(b) < thousands(a) ? b : a));
-  return { minutes, amount: shortPrice(lowest), from: new Set(theirs).size > 1 };
+  const lowest = theirs.reduce((a, b) => (priceValue(b) < priceValue(a) ? b : a));
+  return { minutes, amount: displayPrice(lowest), from: new Set(theirs).size > 1 };
 }
 
 /** The treatments listed under a row: their price for each duration (one
@@ -215,7 +215,7 @@ function childNotes(item: MenuItem, durations: number[] | null): Note[] {
     if (durations && isTimed(child.options)) {
       return durations.flatMap((m) => {
         const price = priceOf(child.options, m);
-        return price ? [{ text: `${child.name} · ${shortPrice(price)}`, minutes: m }] : [];
+        return price ? [{ text: `${child.name} · ${displayPrice(price)}`, minutes: m }] : [];
       });
     }
     const { amount, from } = fromPrice(child.options);
@@ -247,7 +247,7 @@ function DurationRow({
     notes = [
       ...item.options
         .filter((o) => durationOf(o.label) === null)
-        .map((o) => ({ text: `${cleanLabel(o.label)} · ${shortPrice(o.price)}`, minutes: null })),
+        .map((o) => ({ text: `${cleanLabel(o.label)} · ${displayPrice(o.price)}`, minutes: null })),
       ...childNotes(item, durations),
     ];
   } else {
@@ -255,7 +255,7 @@ function DurationRow({
     prices = [{ minutes: null, ...fromPrice(options) }];
     notes = [
       ...(options.length > 1
-        ? byPrice(options).map((g) => `${g.labels.join(", ")} · ${shortPrice(g.price)}`)
+        ? byPrice(options).map((g) => `${g.labels.join(", ")} · ${displayPrice(g.price)}`)
         : options.flatMap((o) => o.details ?? [])
       ).map((text) => ({ text, minutes: null })),
       ...(item.options.length ? childNotes(item, null) : []),

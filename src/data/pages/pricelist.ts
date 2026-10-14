@@ -64,7 +64,7 @@ export const pricelistPage = {
   priceList: {
     subTitle: "Best Price",
     title: "Seminyak Massage Price List",
-    note: "Home service available — extra IDR 75K per therapist.",
+    note: "Home service available — extra IDR 75.000 per therapist.",
     tabs: [
     {
       label: "Massage",
@@ -75,7 +75,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 250K"
+              price: "IDR 250.000"
             }
           ],
           id: 1,
@@ -87,15 +87,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 199K"
+              price: "IDR 199.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 339K"
+              price: "IDR 339.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 439K"
+              price: "IDR 439.000"
             }
           ],
           id: 2,
@@ -107,19 +107,19 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 159K"
+              price: "IDR 159.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 239K"
+              price: "IDR 239.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 330K"
+              price: "IDR 330.000"
             },
             {
               time: "1 Hour Aloe Vera",
-              price: "IDR 195K"
+              price: "IDR 195.000"
             }
           ],
           id: 5,
@@ -131,19 +131,19 @@ export const pricelistPage = {
           options: [
             {
               time: "30 Minutes",
-              price: "IDR 90K"
+              price: "IDR 90.000"
             },
             {
               time: "1 Hour",
-              price: "IDR 199K"
+              price: "IDR 199.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 259K"
+              price: "IDR 259.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 339K"
+              price: "IDR 339.000"
             }
           ],
           id: 6,
@@ -155,15 +155,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 350K"
+              price: "IDR 350.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 520K"
+              price: "IDR 520.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 695K"
+              price: "IDR 695.000"
             }
           ],
           id: 12,
@@ -175,11 +175,11 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 269K"
+              price: "IDR 269.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 359K"
+              price: "IDR 359.000"
             }
           ],
           id: 13,
@@ -191,15 +191,15 @@ export const pricelistPage = {
           options: [
             {
               time: "30 Minutes",
-              price: "IDR 99K"
+              price: "IDR 99.000"
             },
             {
               time: "1 Hour",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 239K"
+              price: "IDR 239.000"
             }
           ],
           id: 15,
@@ -211,15 +211,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 159K"
+              price: "IDR 159.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 239K"
+              price: "IDR 239.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 330K"
+              price: "IDR 330.000"
             }
           ],
           id: 16,
@@ -231,15 +231,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 339K"
+              price: "IDR 339.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 499K"
+              price: "IDR 499.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 669K"
+              price: "IDR 669.000"
             }
           ],
           id: 17,
@@ -251,11 +251,11 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 199K"
+              price: "IDR 199.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 399K"
+              price: "IDR 399.000"
             }
           ],
           id: 18,
@@ -267,15 +267,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 250K"
+              price: "IDR 250.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 380K"
+              price: "IDR 380.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 495K"
+              price: "IDR 495.000"
             }
           ],
           id: 19,
@@ -287,15 +287,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 159K"
+              price: "IDR 159.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 239K"
+              price: "IDR 239.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 330K"
+              price: "IDR 330.000"
             }
           ],
           id: 20,
@@ -307,15 +307,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 300K"
+              price: "IDR 300.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 440K"
+              price: "IDR 440.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 580K"
+              price: "IDR 580.000"
             }
           ],
           id: 21,
@@ -327,15 +327,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour · Warm Candle Wax Balinese",
-              price: "IDR 269K"
+              price: "IDR 269.000"
             },
             {
               time: "1.5 Hours · Warm Candle Wax Balinese",
-              price: "IDR 399K"
+              price: "IDR 399.000"
             },
             {
               time: "2 Hours · Warm Candle Wax Balinese",
-              price: "IDR 499K"
+              price: "IDR 499.000"
             }
           ],
           children: [
@@ -345,15 +345,15 @@ export const pricelistPage = {
               options: [
                 {
                   time: "1 Hour · Four Hand Warm Candle",
-                  price: "IDR 539K"
+                  price: "IDR 539.000"
                 },
                 {
                   time: "1.5 Hours · Four Hand Warm Candle",
-                  price: "IDR 799K"
+                  price: "IDR 799.000"
                 },
                 {
                   time: "2 Hours · Four Hand Warm Candle",
-                  price: "IDR 999K"
+                  price: "IDR 999.000"
                 }
               ]
             }
@@ -367,15 +367,15 @@ export const pricelistPage = {
           options: [
             {
               time: "30 Minutes",
-              price: "IDR 119K"
+              price: "IDR 119.000"
             },
             {
               time: "1 Hour",
-              price: "IDR 219K"
+              price: "IDR 219.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 329K"
+              price: "IDR 329.000"
             }
           ],
           id: 24,
@@ -387,11 +387,11 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 269K"
+              price: "IDR 269.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 359K"
+              price: "IDR 359.000"
             }
           ],
           id: 25,
@@ -403,19 +403,19 @@ export const pricelistPage = {
           options: [
             {
               time: "30 Minutes",
-              price: "IDR 90K"
+              price: "IDR 90.000"
             },
             {
               time: "1 Hour",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 259K"
+              price: "IDR 259.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 339K"
+              price: "IDR 339.000"
             }
           ],
           id: 26,
@@ -427,15 +427,15 @@ export const pricelistPage = {
           options: [
             {
               time: "30 Minutes",
-              price: "IDR 133K"
+              price: "IDR 133.000"
             },
             {
               time: "1 Hour",
-              price: "IDR 259K"
+              price: "IDR 259.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 379K"
+              price: "IDR 379.000"
             }
           ],
           id: 27,
@@ -447,15 +447,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour",
-              price: "IDR 300K"
+              price: "IDR 300.000"
             },
             {
               time: "1.5 Hours",
-              price: "IDR 440K"
+              price: "IDR 440.000"
             },
             {
               time: "2 Hours",
-              price: "IDR 580K"
+              price: "IDR 580.000"
             }
           ],
           id: 28,
@@ -478,7 +478,7 @@ export const pricelistPage = {
           options: [
             {
               time: "Price",
-              price: "IDR 196K"
+              price: "IDR 196.000"
             }
           ],
           id: 3,
@@ -496,7 +496,7 @@ export const pricelistPage = {
           options: [
             {
               time: "Price",
-              price: "IDR 269K"
+              price: "IDR 269.000"
             }
           ],
           id: 4,
@@ -508,39 +508,39 @@ export const pricelistPage = {
           options: [
             {
               time: "Body Massage & Scrub · Start From",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Chocolate",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Coconut",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Strawberry",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Bengkoang",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Jasmine",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Green Tea",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Spa Sari",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Additional Body Mask",
-              price: "IDR 100K"
+              price: "IDR 100.000"
             }
           ],
           id: 7,
@@ -552,7 +552,7 @@ export const pricelistPage = {
           options: [
             {
               time: "30 Minutes",
-              price: "IDR 100K"
+              price: "IDR 100.000"
             }
           ],
           id: 8,
@@ -564,19 +564,19 @@ export const pricelistPage = {
           options: [
             {
               time: "Biokos",
-              price: "IDR 179K"
+              price: "IDR 179.000"
             },
             {
               time: "Mustika Ratu",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Sari Ayu",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             },
             {
               time: "Viva",
-              price: "IDR 169K"
+              price: "IDR 169.000"
             }
           ],
           id: 9,
@@ -588,27 +588,27 @@ export const pricelistPage = {
           options: [
             {
               time: "Ginseng",
-              price: "IDR 165K"
+              price: "IDR 165.000"
             },
             {
               time: "Avocado",
-              price: "IDR 165K"
+              price: "IDR 165.000"
             },
             {
               time: "Aloe Vera",
-              price: "IDR 165K"
+              price: "IDR 165.000"
             },
             {
               time: "L'Oreal",
-              price: "IDR 195K"
+              price: "IDR 195.000"
             },
             {
               time: "NR",
-              price: "IDR 165K"
+              price: "IDR 165.000"
             },
             {
               time: "Hair Mask",
-              price: "IDR 165K"
+              price: "IDR 165.000"
             }
           ],
           id: 10,
@@ -620,7 +620,7 @@ export const pricelistPage = {
           options: [
             {
               time: "30 Minutes",
-              price: "IDR 159K"
+              price: "IDR 159.000"
             }
           ],
           id: 14,
@@ -632,35 +632,35 @@ export const pricelistPage = {
           options: [
             {
               time: "Manicure & Pedicure",
-              price: "IDR 238K"
+              price: "IDR 238.000"
             },
             {
               time: "Manicure",
-              price: "IDR 99K"
+              price: "IDR 99.000"
             },
             {
               time: "Pedicure",
-              price: "IDR 139K"
+              price: "IDR 139.000"
             },
             {
               time: "Nail Color Feet & Hands",
-              price: "IDR 138K"
+              price: "IDR 138.000"
             },
             {
               time: "Nail Color Feet or Hands",
-              price: "IDR 69K"
+              price: "IDR 69.000"
             },
             {
               time: "Nail Remover Feet & Hands",
-              price: "IDR 98K"
+              price: "IDR 98.000"
             },
             {
               time: "Nail Gel Feet & Hands",
-              price: "IDR 438K"
+              price: "IDR 438.000"
             },
             {
               time: "Nail Gel Feet or Hands",
-              price: "IDR 219K"
+              price: "IDR 219.000"
             }
           ],
           id: 22,
@@ -672,31 +672,31 @@ export const pricelistPage = {
           options: [
             {
               time: "Arms",
-              price: "IDR 159K"
+              price: "IDR 159.000"
             },
             {
               time: "Under Arms",
-              price: "IDR 99K"
+              price: "IDR 99.000"
             },
             {
               time: "Back · Start From",
-              price: "IDR 139K"
+              price: "IDR 139.000"
             },
             {
               time: "Full Back",
-              price: "IDR 299K"
+              price: "IDR 299.000"
             },
             {
               time: "Half Legs",
-              price: "IDR 149K"
+              price: "IDR 149.000"
             },
             {
               time: "Full Legs",
-              price: "IDR 299K"
+              price: "IDR 299.000"
             },
             {
               time: "Waxing Brazilian",
-              price: "IDR 350K"
+              price: "IDR 350.000"
             }
           ],
           id: 29,
@@ -713,15 +713,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour · Balinese Massage · 2 Pax",
-              price: "IDR 319K"
+              price: "IDR 319.000"
             },
             {
               time: "1.5 Hours · Balinese Massage · 2 Pax",
-              price: "IDR 479K"
+              price: "IDR 479.000"
             },
             {
               time: "2 Hours · Balinese Massage · 2 Pax",
-              price: "IDR 659K"
+              price: "IDR 659.000"
             }
           ],
           id: "couple-1",
@@ -733,15 +733,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour · Traditional Massage · 2 Pax",
-              price: "IDR 339K"
+              price: "IDR 339.000"
             },
             {
               time: "1.5 Hours · Traditional Massage · 2 Pax",
-              price: "IDR 519K"
+              price: "IDR 519.000"
             },
             {
               time: "2 Hours · Traditional Massage · 2 Pax",
-              price: "IDR 679K"
+              price: "IDR 679.000"
             }
           ],
           id: "couple-2",
@@ -753,11 +753,11 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour · Deep Tissue Massage · 2 Pax",
-              price: "IDR 539K"
+              price: "IDR 539.000"
             },
             {
               time: "1.5 Hours · Deep Tissue Massage · 2 Pax",
-              price: "IDR 719K"
+              price: "IDR 719.000"
             }
           ],
           id: "couple-3",
@@ -769,15 +769,15 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour · Warm Candle Massage · 2 Pax",
-              price: "IDR 539K"
+              price: "IDR 539.000"
             },
             {
               time: "1.5 Hours · Warm Candle Massage · 2 Pax",
-              price: "IDR 799K"
+              price: "IDR 799.000"
             },
             {
               time: "2 Hours · Warm Candle Massage · 2 Pax",
-              price: "IDR 999K"
+              price: "IDR 999.000"
             }
           ],
           id: "couple-4",
@@ -796,7 +796,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Balinese Massage + 30 Mins Ear Candle · 2 Pax",
-              price: "IDR 639K"
+              price: "IDR 639.000"
             }
           ],
           id: "couple-package-a",
@@ -808,7 +808,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Balinese Massage + 1 Hour Bali Moon Facial · 2 Pax",
-              price: "IDR 709K"
+              price: "IDR 709.000"
             }
           ],
           id: "couple-package-b",
@@ -820,7 +820,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Warm Candle Massage + 30 Mins Ear Candle · 2 Pax",
-              price: "IDR 849K"
+              price: "IDR 849.000"
             }
           ],
           id: "couple-package-c",
@@ -832,7 +832,7 @@ export const pricelistPage = {
           options: [
             {
               time: "1 Hour Warm Candle Massage + 1 Hour Bali Moon Facial · 2 Pax",
-              price: "IDR 929K"
+              price: "IDR 929.000"
             }
           ],
           id: "couple-package-d",
@@ -859,7 +859,7 @@ export const pricelistPage = {
       cardTitle: "Balinese Massage",
       packages: [
         {
-          price: "IDR 449K",
+          price: "IDR 449.000",
           items: [
             {
               duration: "1 Hr",
@@ -876,7 +876,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "1 Hr",
@@ -893,7 +893,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449K",
+          price: "IDR 449.000",
           items: [
             {
               duration: "1 Hr",
@@ -910,7 +910,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 399K",
+          price: "IDR 399.000",
           items: [
             {
               duration: "1 Hr",
@@ -935,7 +935,7 @@ export const pricelistPage = {
       cardTitle: "Thai Massage",
       packages: [
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "1 Hr",
@@ -952,7 +952,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 649K",
+          price: "IDR 649.000",
           items: [
             {
               duration: "1 Hr",
@@ -969,7 +969,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449K",
+          price: "IDR 449.000",
           items: [
             {
               duration: "1 Hr",
@@ -982,7 +982,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 539K",
+          price: "IDR 539.000",
           items: [
             {
               duration: "1 Hr",
@@ -1007,7 +1007,7 @@ export const pricelistPage = {
       cardTitle: "Cream Bath",
       packages: [
         {
-          price: "IDR 649K",
+          price: "IDR 649.000",
           items: [
             {
               duration: "1 Hr",
@@ -1024,7 +1024,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "1 Hr",
@@ -1041,7 +1041,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449K",
+          price: "IDR 449.000",
           items: [
             {
               duration: "30 Mins",
@@ -1058,7 +1058,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 539K",
+          price: "IDR 539.000",
           items: [
             {
               duration: "1 Hr",
@@ -1083,7 +1083,7 @@ export const pricelistPage = {
       cardTitle: "Body Scrub",
       packages: [
         {
-          price: "IDR 439K",
+          price: "IDR 439.000",
           items: [
             {
               duration: "30 Mins",
@@ -1100,7 +1100,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "30 Mins",
@@ -1117,7 +1117,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 539K",
+          price: "IDR 539.000",
           items: [
             {
               duration: "30 Mins",
@@ -1134,7 +1134,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "30 Mins",
@@ -1159,7 +1159,7 @@ export const pricelistPage = {
       cardTitle: "Hot Stone",
       packages: [
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "1,5 Hr",
@@ -1176,7 +1176,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "1 Hr",
@@ -1193,7 +1193,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449K",
+          price: "IDR 449.000",
           items: [
             {
               duration: "1 Hr",
@@ -1206,7 +1206,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 519K",
+          price: "IDR 519.000",
           items: [
             {
               duration: "1,5 Hr",
@@ -1227,7 +1227,7 @@ export const pricelistPage = {
       cardTitle: "Bali Moon Facial",
       packages: [
         {
-          price: "IDR 439K",
+          price: "IDR 439.000",
           items: [
             {
               duration: "1 Hr",
@@ -1244,7 +1244,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 649K",
+          price: "IDR 649.000",
           items: [
             {
               duration: "1 Hr",
@@ -1261,7 +1261,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 449K",
+          price: "IDR 449.000",
           items: [
             {
               duration: "1 Hr",
@@ -1274,7 +1274,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "1 Hr",
@@ -1299,7 +1299,7 @@ export const pricelistPage = {
       cardTitle: "Mani Pedi",
       packages: [
         {
-          price: "IDR 449K",
+          price: "IDR 449.000",
           items: [
             {
               duration: "1 Hr",
@@ -1316,7 +1316,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 549K",
+          price: "IDR 549.000",
           items: [
             {
               duration: "1 Hr",
@@ -1333,7 +1333,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 299K",
+          price: "IDR 299.000",
           items: [
             {
               duration: "1 Hr",
@@ -1346,7 +1346,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 399K",
+          price: "IDR 399.000",
           items: [
             {
               duration: "30 Mins",
@@ -1372,7 +1372,7 @@ export const pricelistPage = {
       twoPax: true,
       packages: [
         {
-          price: "IDR 639K",
+          price: "IDR 639.000",
           items: [
             {
               duration: "1 Hr",
@@ -1385,7 +1385,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 709K",
+          price: "IDR 709.000",
           items: [
             {
               duration: "1 Hr",
@@ -1398,7 +1398,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 849K",
+          price: "IDR 849.000",
           items: [
             {
               duration: "1 Hr",
@@ -1411,7 +1411,7 @@ export const pricelistPage = {
           ]
         },
         {
-          price: "IDR 929K",
+          price: "IDR 929.000",
           items: [
             {
               duration: "1 Hr",
@@ -1459,7 +1459,7 @@ export const pricelistPage = {
     },
     {
       question: "4. Can I book a treatment at my hotel or villa?",
-      answer: "Many of our massage and spa treatments are available through home service in Seminyak and nearby areas. An additional outcall fee of IDR 75,000 per therapist applies."
+      answer: "Many of our massage and spa treatments are available through home service in Seminyak and nearby areas. An additional outcall fee of IDR 75.000 per therapist applies."
     },
     {
       question: "5. Can I create a custom spa package?",
@@ -1470,20 +1470,20 @@ export const pricelistPage = {
       answer: "Advance booking is recommended, particularly during busy periods. Contact us on WhatsApp with your preferred treatment and time so we can check availability."
     },
     {
-      question: "7. What does \"K\" mean in the prices?",
-      answer: "\"K\" means thousand Indonesian Rupiah. A treatment listed at 159K costs IDR 159,000. All prices on this page are in Indonesian Rupiah (IDR)."
+      question: "7. What currency are the prices in?",
+      answer: "All prices on this page are in Indonesian Rupiah (IDR). For example, IDR 159.000 is one hundred and fifty-nine thousand rupiah."
     },
     {
       question: "8. What is your cheapest treatment?",
-      answer: "The lowest-priced options are the 30-minute traditional massage and 30-minute back massage at IDR 90,000, and the 30-minute foot reflexology at IDR 99,000. For a full hour, Balinese massage at IDR 159,000 is the most affordable full-body treatment."
+      answer: "The lowest-priced options are the 30-minute traditional massage and 30-minute back massage at IDR 90.000, and the 30-minute foot reflexology at IDR 99.000. For a full hour, Balinese massage at IDR 159.000 is the most affordable full-body treatment."
     },
     {
       question: "9. Are prices per person or per booking?",
-      answer: "Individual treatments are priced per person. Couple treatments are priced for two people together; the \"2 pax\" label means the listed price covers both guests. For example, a one-hour couple Balinese massage at IDR 319,000 is the total for two people, not per person."
+      answer: "Individual treatments are priced per person. Couple treatments are priced for two people together; the \"2 pax\" label means the listed price covers both guests. For example, a one-hour couple Balinese massage at IDR 319.000 is the total for two people, not per person."
     },
     {
       question: "10. How much extra is home service?",
-      answer: "Home service costs an additional IDR 75,000 per therapist on top of the treatment price. The treatment itself is charged at the same rate as in-spa. For a couple booking with two therapists, the outcall fee is IDR 150,000 total."
+      answer: "Home service costs an additional IDR 75.000 per therapist on top of the treatment price. The treatment itself is charged at the same rate as in-spa. For a couple booking with two therapists, the outcall fee is IDR 150.000 total."
     },
     {
       question: "11. Which areas do you cover for outcall massage?",

@@ -1,5 +1,5 @@
 import { treatmentSlides } from "@/data/pages/home";
-import { startingOption, shortPrice } from "./price";
+import { displayPrice, startingOption } from "./price";
 
 export type Treatment = {
   name: string;
@@ -8,7 +8,7 @@ export type Treatment = {
   icon: string;
   /** One line about the treatment. */
   desc: string;
-  /** "From IDR 159K" (just "IDR 250K" when there is one price). */
+  /** "From IDR 159.000" (just "IDR 250.000" when there is one price). */
   price: string | null;
   group: "massage" | "beauty";
 };
@@ -39,8 +39,8 @@ export const allTreatments: Treatment[] = treatmentSlides.map((slide) => {
   const item = slide.menuItem;
   let price = slide.price?.split("|")[0].trim() ?? null;
   if (item?.options.length) {
-    const from = shortPrice(startingOption(item.options).price);
-    price = item.options.length > 1 ? `From IDR ${from}` : `IDR ${from}`;
+    const from = displayPrice(startingOption(item.options).price);
+    price = item.options.length > 1 ? `From ${from}` : from;
   }
   return {
     name: slide.name,

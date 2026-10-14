@@ -10,7 +10,7 @@ import { shortPrice, startingOption } from "@/components/home/price";
 /**
  * Homepage v2 "Browse Our Spa Treatments" — the live catalog (tabs, fee, two
  * columns A–Z, one price panel open at a time) with each treatment's price on
- * view in its row: "from 159K" (or its one price), set like the package-card
+ * view in its row: "from 159.000" (or its one price), set like the package-card
  * prices. Price and arrow are one button that opens the full list. The live
  * spa-tray picture in the bottom corner is left out: it would sit behind the
  * last prices, and the reviews right below show the same picture.

@@ -139,10 +139,10 @@ export default function OutcallPage() {
                     desc: "Designed to calm the body with steady pressure, gentle stretching, and aromatic oils.",
                     image: "/images/listmenu/balinesemassage.webp",
                     options: [
-                      { time: "1 Hour", price: "159K" },
-                      { time: "1.5 Hours", price: "239K" },
-                      { time: "2 Hours", price: "330K" },
-                      { time: "1 Hour Aloe Vera", price: "195K" },
+                      { time: "1 Hour", price: "159.000" },
+                      { time: "1.5 Hours", price: "239.000" },
+                      { time: "2 Hours", price: "330.000" },
+                      { time: "1 Hour Aloe Vera", price: "195.000" },
                     ],
                   },
                   {
@@ -151,12 +151,12 @@ export default function OutcallPage() {
                     desc: "Caring for the hair and scalp through cleansing, conditioning, and relaxation.",
                     image: "/images/listmenu/creambath.webp",
                     options: [
-                      { time: "Ginseng", price: "165K" },
-                      { time: "Avocado", price: "165K" },
-                      { time: "Aloe Vera", price: "165K" },
-                      { time: "L’Oreal", price: "195K" },
-                      { time: "NR", price: "165K" },
-                      { time: "Hair Mask", price: "165K" },
+                      { time: "Ginseng", price: "165.000" },
+                      { time: "Avocado", price: "165.000" },
+                      { time: "Aloe Vera", price: "165.000" },
+                      { time: "L’Oreal", price: "195.000" },
+                      { time: "NR", price: "165.000" },
+                      { time: "Hair Mask", price: "165.000" },
                     ],
                   },
                   {
@@ -165,9 +165,9 @@ export default function OutcallPage() {
                     desc: "Delivered by two therapists working together in synchronized movements.",
                     image: "/images/listmenu/fourhandmassage.webp",
                     options: [
-                      { time: "1 Hour", price: "339K" },
-                      { time: "1.5 Hours", price: "499K" },
-                      { time: "2 Hours", price: "669K" },
+                      { time: "1 Hour", price: "339.000" },
+                      { time: "1.5 Hours", price: "499.000" },
+                      { time: "2 Hours", price: "669.000" },
                     ],
                   },
                   {
@@ -176,9 +176,9 @@ export default function OutcallPage() {
                     desc: "Applied gently to support natural drainage and promote healthy circulation.",
                     image: "/images/listmenu/lymphaticmassage%20.webp",
                     options: [
-                      { time: "1 Hour", price: "300K" },
-                      { time: "1.5 Hours", price: "440K" },
-                      { time: "2 Hours", price: "580K" },
+                      { time: "1 Hour", price: "300.000" },
+                      { time: "1.5 Hours", price: "440.000" },
+                      { time: "2 Hours", price: "580.000" },
                     ],
                   },
                   {
@@ -187,14 +187,14 @@ export default function OutcallPage() {
                     desc: "Providing complete hand and foot care with a clean and polished finish.",
                     image: "/images/listmenu/manicurepedicure.webp",
                     options: [
-                      { time: "Manicure & Pedicure", price: "238K" },
-                      { time: "Manicure", price: "99K" },
-                      { time: "Pedicure", price: "139K" },
-                      { time: "Nail Color Feet & Hands", price: "138K" },
-                      { time: "Nail Color Feet or Hands", price: "69K" },
-                      { time: "Nail Remover Feet & Hands", price: "98K" },
-                      { time: "Nail Gel Feet & Hands", price: "438K" },
-                      { time: "Nail Gel Feet or Hands", price: "219K" },
+                      { time: "Manicure & Pedicure", price: "238.000" },
+                      { time: "Manicure", price: "99.000" },
+                      { time: "Pedicure", price: "139.000" },
+                      { time: "Nail Color Feet & Hands", price: "138.000" },
+                      { time: "Nail Color Feet or Hands", price: "69.000" },
+                      { time: "Nail Remover Feet & Hands", price: "98.000" },
+                      { time: "Nail Gel Feet & Hands", price: "438.000" },
+                      { time: "Nail Gel Feet or Hands", price: "219.000" },
                     ],
                   },
                   {
@@ -203,8 +203,8 @@ export default function OutcallPage() {
                     desc: "Targeted to ease muscle soreness, reduce stiffness, and support physical recovery.",
                     image: "/images/listmenu/sportmassage.webp",
                     options: [
-                      { time: "1 Hour", price: "269K" },
-                      { time: "1.5 Hours", price: "359K" },
+                      { time: "1 Hour", price: "269.000" },
+                      { time: "1.5 Hours", price: "359.000" },
                     ],
                   },
                   {
@@ -213,10 +213,10 @@ export default function OutcallPage() {
                     desc: "Focused on firmer pressure to help release muscle tension throughout the body.",
                     image: "/images/listmenu/traditionalmassage.webp",
                     options: [
-                      { time: "30 Minutes", price: "90K" },
-                      { time: "1 Hour", price: "169K" },
-                      { time: "1.5 Hours", price: "259K" },
-                      { time: "2 Hours", price: "339K" },
+                      { time: "30 Minutes", price: "90.000" },
+                      { time: "1 Hour", price: "169.000" },
+                      { time: "1.5 Hours", price: "259.000" },
+                      { time: "2 Hours", price: "339.000" },
                     ],
                   },
                   {
@@ -225,9 +225,9 @@ export default function OutcallPage() {
                     desc: "Performed without oil, combining assisted stretches and rhythmic pressure techniques.",
                     image: "/images/listmenu/thaimassage.webp",
                     options: [
-                      { time: "30 Minutes", price: "133K" },
-                      { time: "1 Hour", price: "259K" },
-                      { time: "1.5 Hours", price: "379K" },
+                      { time: "30 Minutes", price: "133.000" },
+                      { time: "1 Hour", price: "259.000" },
+                      { time: "1.5 Hours", price: "379.000" },
                     ],
                   },
                 ],
@@ -240,7 +240,7 @@ export default function OutcallPage() {
                     name: "Aloe Vera Massage",
                     desc: "Using cooling aloe vera to help soothe the skin and support gentle recovery.",
                     image: "/images/listmenu/aloeveramassage.webp",
-                    options: [{ time: "1 Hour", price: "250K" }],
+                    options: [{ time: "1 Hour", price: "250.000" }],
                   },
                   {
                     id: "massage-aromatherapy",
@@ -248,9 +248,9 @@ export default function OutcallPage() {
                     desc: "Essential oils combined with gentle movements promote calm and body relaxation.",
                     image: "/images/listmenu/aromatherapymassage.webp",
                     options: [
-                      { time: "1 Hour", price: "199K" },
-                      { time: "1.5 Hours", price: "339K" },
-                      { time: "2 Hours", price: "439K" },
+                      { time: "1 Hour", price: "199.000" },
+                      { time: "1.5 Hours", price: "339.000" },
+                      { time: "2 Hours", price: "439.000" },
                     ],
                   },
                   {
@@ -259,10 +259,10 @@ export default function OutcallPage() {
                     desc: "Designed to calm the body with steady pressure, gentle stretching, and aromatic oils.",
                     image: "/images/listmenu/balinesemassage.webp",
                     options: [
-                      { time: "1 Hour", price: "159K" },
-                      { time: "1.5 Hours", price: "239K" },
-                      { time: "2 Hours", price: "330K" },
-                      { time: "1 Hour Aloe Vera", price: "195K" },
+                      { time: "1 Hour", price: "159.000" },
+                      { time: "1.5 Hours", price: "239.000" },
+                      { time: "2 Hours", price: "330.000" },
+                      { time: "1 Hour Aloe Vera", price: "195.000" },
                     ],
                   },
                   {
@@ -271,10 +271,10 @@ export default function OutcallPage() {
                     desc: "Focusing on the upper body to help relieve tightness and restore comfort.",
                     image: "/images/listmenu/backmassage.webp",
                     options: [
-                      { time: "30 Minutes", price: "90K" },
-                      { time: "1 Hour", price: "199K" },
-                      { time: "1.5 Hours", price: "259K" },
-                      { time: "2 Hours", price: "339K" },
+                      { time: "30 Minutes", price: "90.000" },
+                      { time: "1 Hour", price: "199.000" },
+                      { time: "1.5 Hours", price: "259.000" },
+                      { time: "2 Hours", price: "339.000" },
                     ],
                   },
                   {
@@ -283,9 +283,9 @@ export default function OutcallPage() {
                     desc: "Targeting specific areas to help stimulate circulation and support skin firmness.",
                     image: "/images/listmenu/cellulitemassage.webp",
                     options: [
-                      { time: "1 Hour", price: "350K" },
-                      { time: "1.5 Hours", price: "520K" },
-                      { time: "2 Hours", price: "695K" },
+                      { time: "1 Hour", price: "350.000" },
+                      { time: "1.5 Hours", price: "520.000" },
+                      { time: "2 Hours", price: "695.000" },
                     ],
                   },
                   {
@@ -299,48 +299,48 @@ export default function OutcallPage() {
                         name: "Couple Massage Balinese",
                         desc: "Performed side by side using steady pressure and flowing techniques for shared relaxation.",
                         options: [
-                          { time: "1 Hour – Balinese Massage · 2 pax", price: "319K" },
-                          { time: "1.5 Hours – Balinese Massage · 2 pax", price: "479K" },
-                          { time: "2 Hours – Balinese Massage · 2 pax", price: "659K" },
+                          { time: "1 Hour – Balinese Massage · 2 pax", price: "319.000" },
+                          { time: "1.5 Hours – Balinese Massage · 2 pax", price: "479.000" },
+                          { time: "2 Hours – Balinese Massage · 2 pax", price: "659.000" },
                         ],
                       },
                       {
                         name: "Couple Traditional Massage",
                         desc: "Applied with firmer pressure to help reduce tension while relaxing together.",
                         options: [
-                          { time: "1 Hour – Traditional Massage · 2 pax", price: "339K" },
-                          { time: "1.5 Hours – Traditional Massage · 2 pax", price: "519K" },
-                          { time: "2 Hours – Traditional Massage · 2 pax", price: "679K" },
+                          { time: "1 Hour – Traditional Massage · 2 pax", price: "339.000" },
+                          { time: "1.5 Hours – Traditional Massage · 2 pax", price: "519.000" },
+                          { time: "2 Hours – Traditional Massage · 2 pax", price: "679.000" },
                         ],
                       },
                       {
                         name: "Couple Deep Tissue Massage",
                         desc: "Delivered with deeper pressure for two, aimed at easing tight muscles and improving comfort.",
                         options: [
-                          { time: "1 Hour – Deep Tissue Massage · 2 pax", price: "539K" },
-                          { time: "1.5 Hours – Deep Tissue Massage · 2 pax", price: "719K" },
+                          { time: "1 Hour – Deep Tissue Massage · 2 pax", price: "539.000" },
+                          { time: "1.5 Hours – Deep Tissue Massage · 2 pax", price: "719.000" },
                         ],
                       },
                       {
                         name: "Couple Massage Warm Candle",
                         desc: "Using gently warmed candle oils to create comfort and a deeper sense of relaxation for couples.",
                         options: [
-                          { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539K" },
-                          { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799K" },
-                          { time: "2.5 Hours – Warm Candle Massage · 2 pax", price: "999K" },
+                          { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539.000" },
+                          { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799.000" },
+                          { time: "2.5 Hours – Warm Candle Massage · 2 pax", price: "999.000" },
                         ],
                       },
                       {
                         name: "Couple Massage Packages",
                         desc: "A well-balanced couple’s massage package created for relaxing together.",
                         options: [
-                          { time: "Package A · 1.5 Hours – Balinese Massage + Ear Candle · 2 pax", price: "639K" },
+                          { time: "Package A · 1.5 Hours – Balinese Massage + Ear Candle · 2 pax", price: "639.000" },
                           {
                             time: "Package B · 2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax",
-                            price: "709K",
+                            price: "709.000",
                           },
-                          { time: "Package C · 1.5 Hours – Warm Candle + Ear Candle · 2 pax", price: "849K" },
-                          { time: "Package D · 2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax", price: "929K" },
+                          { time: "Package C · 1.5 Hours – Warm Candle + Ear Candle · 2 pax", price: "849.000" },
+                          { time: "Package D · 2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax", price: "929.000" },
                         ],
                       },
                     ],
@@ -351,8 +351,8 @@ export default function OutcallPage() {
                     desc: "Focused on deeper pressure to help release muscle knots and support better movement.",
                     image: "/images/listmenu/deeptissuemassage.webp",
                     options: [
-                      { time: "1 Hour", price: "269K" },
-                      { time: "1.5 Hours", price: "359K" },
+                      { time: "1 Hour", price: "269.000" },
+                      { time: "1.5 Hours", price: "359.000" },
                     ],
                   },
                   {
@@ -361,9 +361,9 @@ export default function OutcallPage() {
                     desc: "Delivered by two therapists working together in synchronized movements.",
                     image: "/images/listmenu/fourhandmassage.webp",
                     options: [
-                      { time: "1 Hour", price: "339K" },
-                      { time: "1.5 Hours", price: "499K" },
-                      { time: "2 Hours", price: "669K" },
+                      { time: "1 Hour", price: "339.000" },
+                      { time: "1.5 Hours", price: "499.000" },
+                      { time: "2 Hours", price: "669.000" },
                     ],
                   },
                   {
@@ -372,9 +372,9 @@ export default function OutcallPage() {
                     desc: "Performed by two therapists working in synchronized movements for deeper relaxation.",
                     image: "/images/listmenu/organicwarmcandle.webp",
                     options: [
-                      { time: "1 Hour – Four Hand Warm Candle", price: "539K" },
-                      { time: "1.5 Hours – Four Hand Warm Candle", price: "799K" },
-                      { time: "2 Hours – Four Hand Warm Candle", price: "999K" },
+                      { time: "1 Hour – Four Hand Warm Candle", price: "539.000" },
+                      { time: "1.5 Hours – Four Hand Warm Candle", price: "799.000" },
+                      { time: "2 Hours – Four Hand Warm Candle", price: "999.000" },
                     ],
                   },
                   {
@@ -383,9 +383,9 @@ export default function OutcallPage() {
                     desc: "Applying pressure to reflex points on the feet to help restore body balance.",
                     image: "/images/listmenu/footreflexology.webp",
                     options: [
-                      { time: "30 Minutes", price: "99K" },
-                      { time: "1 Hour", price: "169K" },
-                      { time: "1.5 Hours", price: "239K" },
+                      { time: "30 Minutes", price: "99.000" },
+                      { time: "1 Hour", price: "169.000" },
+                      { time: "1.5 Hours", price: "239.000" },
                     ],
                   },
                   {
@@ -394,9 +394,9 @@ export default function OutcallPage() {
                     desc: "A focused massage on the soles, heels, and ankles to ease stiffness and restore comfort.",
                     image: "/images/listmenu/footmassage.webp",
                     options: [
-                      { time: "1 Hour", price: "159K" },
-                      { time: "1.5 Hours", price: "239K" },
-                      { time: "2 Hours", price: "330K" },
+                      { time: "1 Hour", price: "159.000" },
+                      { time: "1.5 Hours", price: "239.000" },
+                      { time: "2 Hours", price: "330.000" },
                     ],
                   },
                   {
@@ -405,9 +405,9 @@ export default function OutcallPage() {
                     desc: "Focused on the head area to help release built-up stress and promote mental ease.",
                     image: "/images/listmenu/headmassage.webp",
                     options: [
-                      { time: "1 Hour", price: "159K" },
-                      { time: "1.5 Hours", price: "239K" },
-                      { time: "2 Hours", price: "330K" },
+                      { time: "1 Hour", price: "159.000" },
+                      { time: "1.5 Hours", price: "239.000" },
+                      { time: "2 Hours", price: "330.000" },
                     ],
                   },
                   {
@@ -416,8 +416,8 @@ export default function OutcallPage() {
                     desc: "Using herbal ingredients to support relaxation and encourage circulation.",
                     image: "/images/listmenu/herbalmassage.webp",
                     options: [
-                      { time: "1 Hour", price: "199K" },
-                      { time: "2 Hours", price: "399K" },
+                      { time: "1 Hour", price: "199.000" },
+                      { time: "2 Hours", price: "399.000" },
                     ],
                   },
                   {
@@ -426,9 +426,9 @@ export default function OutcallPage() {
                     desc: "Applied gently to support natural drainage and promote healthy circulation.",
                     image: "/images/listmenu/lymphaticmassage%20.webp",
                     options: [
-                      { time: "1 Hour", price: "300K" },
-                      { time: "1.5 Hours", price: "440K" },
-                      { time: "2 Hours", price: "580K" },
+                      { time: "1 Hour", price: "300.000" },
+                      { time: "1.5 Hours", price: "440.000" },
+                      { time: "2 Hours", price: "580.000" },
                     ],
                   },
                   {
@@ -437,9 +437,9 @@ export default function OutcallPage() {
                     desc: "Using natural, warmed oils to help relax the body and soften muscle tension.",
                     image: "/images/listmenu/organicwarmcandle.webp",
                     options: [
-                      { time: "1 Hour – Warm Candle Wax Balinese", price: "269K" },
-                      { time: "1.5 Hours – Warm Candle Wax Balinese", price: "399K" },
-                      { time: "2 Hours – Warm Candle Wax Balinese", price: "499K" },
+                      { time: "1 Hour – Warm Candle Wax Balinese", price: "269.000" },
+                      { time: "1.5 Hours – Warm Candle Wax Balinese", price: "399.000" },
+                      { time: "2 Hours – Warm Candle Wax Balinese", price: "499.000" },
                     ],
                   },
                   {
@@ -448,8 +448,8 @@ export default function OutcallPage() {
                     desc: "Targeted to ease muscle soreness, reduce stiffness, and support physical recovery.",
                     image: "/images/listmenu/sportmassage.webp",
                     options: [
-                      { time: "1 Hour", price: "269K" },
-                      { time: "1.5 Hours", price: "359K" },
+                      { time: "1 Hour", price: "269.000" },
+                      { time: "1.5 Hours", price: "359.000" },
                     ],
                   },
                   {
@@ -458,9 +458,9 @@ export default function OutcallPage() {
                     desc: "Using Japanese pressure-point techniques without oil to help ease body tension.",
                     image: "/images/listmenu/shiatsumassage.webp",
                     options: [
-                      { time: "30 Minutes", price: "119K" },
-                      { time: "1 Hour", price: "219K" },
-                      { time: "1.5 Hours", price: "329K" },
+                      { time: "30 Minutes", price: "119.000" },
+                      { time: "1 Hour", price: "219.000" },
+                      { time: "1.5 Hours", price: "329.000" },
                     ],
                   },
                   {
@@ -469,10 +469,10 @@ export default function OutcallPage() {
                     desc: "Focused on firmer pressure to help release muscle tension throughout the body.",
                     image: "/images/listmenu/traditionalmassage.webp",
                     options: [
-                      { time: "30 Minutes", price: "90K" },
-                      { time: "1 Hour", price: "169K" },
-                      { time: "1.5 Hours", price: "259K" },
-                      { time: "2 Hours", price: "339K" },
+                      { time: "30 Minutes", price: "90.000" },
+                      { time: "1 Hour", price: "169.000" },
+                      { time: "1.5 Hours", price: "259.000" },
+                      { time: "2 Hours", price: "339.000" },
                     ],
                   },
                   {
@@ -481,9 +481,9 @@ export default function OutcallPage() {
                     desc: "Performed without oil, combining assisted stretches and rhythmic pressure techniques.",
                     image: "/images/listmenu/thaimassage.webp",
                     options: [
-                      { time: "30 Minutes", price: "133K" },
-                      { time: "1 Hour", price: "259K" },
-                      { time: "1.5 Hours", price: "379K" },
+                      { time: "30 Minutes", price: "133.000" },
+                      { time: "1 Hour", price: "259.000" },
+                      { time: "1.5 Hours", price: "379.000" },
                     ],
                   },
                   {
@@ -492,9 +492,9 @@ export default function OutcallPage() {
                     desc: "Using pure coconut oil to help nourish the skin and promote deep relaxation.",
                     image: "/images/listmenu/coconutoilmassage.webp",
                     options: [
-                      { time: "1 Hour", price: "300K" },
-                      { time: "1.5 Hours", price: "440K" },
-                      { time: "2 Hours", price: "580K" },
+                      { time: "1 Hour", price: "300.000" },
+                      { time: "1.5 Hours", price: "440.000" },
+                      { time: "2 Hours", price: "580.000" },
                     ],
                   },
                   {
@@ -503,9 +503,9 @@ export default function OutcallPage() {
                     desc: "Using heated stones to help relax muscles and support healthy circulation.",
                     image: "/images/listmenu/hotstonemassage.webp",
                     options: [
-                      { time: "1 Hour", price: "250K" },
-                      { time: "1.5 Hours", price: "380K" },
-                      { time: "2 Hours", price: "495K" },
+                      { time: "1 Hour", price: "250.000" },
+                      { time: "1.5 Hours", price: "380.000" },
+                      { time: "2 Hours", price: "495.000" },
                     ],
                   },
                 ],
@@ -518,7 +518,7 @@ export default function OutcallPage() {
                     name: "Bali Moon Tea Tree Facial",
                     desc: "Purifying facial care for oily or blemish-prone skin using clay and tea tree–based products. Benefits:",
                     image: "/images/listmenu/balimoonteatreefacial.webp",
-                    options: [{ time: "Price", price: "196K" }],
+                    options: [{ time: "Price", price: "196.000" }],
                     benefits: [
                       "Helps control excess oil",
                       "Supports clearer-looking skin",
@@ -531,7 +531,7 @@ export default function OutcallPage() {
                     name: "Bali Moon Gold Facial",
                     desc: "Premium facial care using gold and argan oil to support skin radiance and firmness. Benefits:",
                     image: "/images/listmenu/balimoongoldfacial.webp",
-                    options: [{ time: "Price", price: "269K" }],
+                    options: [{ time: "Price", price: "269.000" }],
                     benefits: [
                       "Boosts natural glow",
                       "Improves skin smoothness and elasticity",
@@ -545,15 +545,15 @@ export default function OutcallPage() {
                     desc: "Gently exfoliating the skin to help refresh the body and leave the skin smooth and clean.",
                     image: "/images/listmenu/bodyscrub.webp",
                     options: [
-                      { time: "Body Massage & Scrub · Start From", price: "169K" },
-                      { time: "Chocolate", price: "169K" },
-                      { time: "Coconut", price: "169K" },
-                      { time: "Strawberry", price: "169K" },
-                      { time: "Bengkoang", price: "169K" },
-                      { time: "Jasmine", price: "169K" },
-                      { time: "Green Tea", price: "169K" },
-                      { time: "Spa Sari", price: "169K" },
-                      { time: "Additional Body Mask", price: "100K" },
+                      { time: "Body Massage & Scrub · Start From", price: "169.000" },
+                      { time: "Chocolate", price: "169.000" },
+                      { time: "Coconut", price: "169.000" },
+                      { time: "Strawberry", price: "169.000" },
+                      { time: "Bengkoang", price: "169.000" },
+                      { time: "Jasmine", price: "169.000" },
+                      { time: "Green Tea", price: "169.000" },
+                      { time: "Spa Sari", price: "169.000" },
+                      { time: "Additional Body Mask", price: "100.000" },
                     ],
                   },
                   {
@@ -561,7 +561,7 @@ export default function OutcallPage() {
                     name: "Foot Scrub",
                     desc: "Exfoliating the feet to help soften rough skin and leave them feeling refreshed.",
                     image: "/images/listmenu/footscrub.webp",
-                    options: [{ time: "30 Minutes", price: "100K" }],
+                    options: [{ time: "30 Minutes", price: "100.000" }],
                   },
                   {
                     id: "beauty-biokos-facial",
@@ -569,10 +569,10 @@ export default function OutcallPage() {
                     desc: "Custom facial care adjusted for dry, normal, or oily skin, including facial massage and mask application.",
                     image: "/images/listmenu/biokosfacial.webp",
                     options: [
-                      { time: "Biokos", price: "179K" },
-                      { time: "Mustika Ratu", price: "169K" },
-                      { time: "Sari Ayu", price: "169K" },
-                      { time: "Viva", price: "169K" },
+                      { time: "Biokos", price: "179.000" },
+                      { time: "Mustika Ratu", price: "169.000" },
+                      { time: "Sari Ayu", price: "169.000" },
+                      { time: "Viva", price: "169.000" },
                     ],
                   },
                   {
@@ -581,12 +581,12 @@ export default function OutcallPage() {
                     desc: "Caring for the hair and scalp through cleansing, conditioning, and relaxation.",
                     image: "/images/listmenu/creambath.webp",
                     options: [
-                      { time: "Ginseng", price: "165K" },
-                      { time: "Avocado", price: "165K" },
-                      { time: "Aloe Vera", price: "165K" },
-                      { time: "L’Oreal", price: "195K" },
-                      { time: "NR", price: "165K" },
-                      { time: "Hair Mask", price: "165K" },
+                      { time: "Ginseng", price: "165.000" },
+                      { time: "Avocado", price: "165.000" },
+                      { time: "Aloe Vera", price: "165.000" },
+                      { time: "L’Oreal", price: "195.000" },
+                      { time: "NR", price: "165.000" },
+                      { time: "Hair Mask", price: "165.000" },
                     ],
                   },
                   {
@@ -594,7 +594,7 @@ export default function OutcallPage() {
                     name: "Ear Candle",
                     desc: "Providing a traditional ear candle experience focused on comfort and gentle relaxation.",
                     image: "/images/listmenu/earcandle.webp",
-                    options: [{ time: "30 Minutes", price: "159K" }],
+                    options: [{ time: "30 Minutes", price: "159.000" }],
                   },
                   {
                     id: "beauty-eyelash",
@@ -602,9 +602,9 @@ export default function OutcallPage() {
                     desc: "Enhancing the appearance of lashes with a simple and neat beauty treatment.",
                     image: "/images/listmenu/eyelash.webp",
                     options: [
-                      { time: "Normal Eyelash", price: "299K" },
-                      { time: "Volume", price: "359K" },
-                      { time: "Mega Volume", price: "399K" },
+                      { time: "Normal Eyelash", price: "299.000" },
+                      { time: "Volume", price: "359.000" },
+                      { time: "Mega Volume", price: "399.000" },
                     ],
                   },
                   {
@@ -613,14 +613,14 @@ export default function OutcallPage() {
                     desc: "Providing complete hand and foot care with a clean and polished finish.",
                     image: "/images/listmenu/manicurepedicure.webp",
                     options: [
-                      { time: "Manicure & Pedicure", price: "238K" },
-                      { time: "Manicure", price: "99K" },
-                      { time: "Pedicure", price: "139K" },
-                      { time: "Nail Color Feet & Hands", price: "138K" },
-                      { time: "Nail Color Feet or Hands", price: "69K" },
-                      { time: "Nail Remover Feet & Hands", price: "98K" },
-                      { time: "Nail Gel Feet & Hands", price: "438K" },
-                      { time: "Nail Gel Feet or Hands", price: "219K" },
+                      { time: "Manicure & Pedicure", price: "238.000" },
+                      { time: "Manicure", price: "99.000" },
+                      { time: "Pedicure", price: "139.000" },
+                      { time: "Nail Color Feet & Hands", price: "138.000" },
+                      { time: "Nail Color Feet or Hands", price: "69.000" },
+                      { time: "Nail Remover Feet & Hands", price: "98.000" },
+                      { time: "Nail Gel Feet & Hands", price: "438.000" },
+                      { time: "Nail Gel Feet or Hands", price: "219.000" },
                     ],
                   },
                   {
@@ -629,13 +629,13 @@ export default function OutcallPage() {
                     desc: "Removing unwanted hair using olive oil hot wax for smooth and well-cared-for skin.",
                     image: "/images/listmenu/waxing.webp",
                     options: [
-                      { time: "Arms", price: "159K" },
-                      { time: "Under Arms", price: "99K" },
-                      { time: "Back", price: "Start from 139K" },
-                      { time: "Full Back", price: "299K" },
-                      { time: "Half Legs", price: "149K" },
-                      { time: "Full Legs", price: "299K" },
-                      { time: "Waxing Brazilian", price: "350K" },
+                      { time: "Arms", price: "159.000" },
+                      { time: "Under Arms", price: "99.000" },
+                      { time: "Back", price: "Start from 139.000" },
+                      { time: "Full Back", price: "299.000" },
+                      { time: "Half Legs", price: "149.000" },
+                      { time: "Full Legs", price: "299.000" },
+                      { time: "Waxing Brazilian", price: "350.000" },
                     ],
                   },
                 ],
@@ -649,9 +649,9 @@ export default function OutcallPage() {
                     desc: "Designed for two to relax together while easing the body and sharing a calm moment.",
                     image: "/images/listmenu/couplebalinesemassage.webp",
                     options: [
-                      { time: "1 Hour – Balinese Massage · 2 pax", price: "319K" },
-                      { time: "1.5 Hours – Balinese Massage · 2 pax", price: "479K" },
-                      { time: "2 Hours – Balinese Massage · 2 pax", price: "659K" },
+                      { time: "1 Hour – Balinese Massage · 2 pax", price: "319.000" },
+                      { time: "1.5 Hours – Balinese Massage · 2 pax", price: "479.000" },
+                      { time: "2 Hours – Balinese Massage · 2 pax", price: "659.000" },
                     ],
                   },
                   {
@@ -660,8 +660,8 @@ export default function OutcallPage() {
                     desc: "Delivered with deeper pressure for two, aimed at easing tight muscles and improving comfort.",
                     image: "/images/listmenu/coupledeeptissumassage.webp",
                     options: [
-                      { time: "1 Hour – Deep Tissue Massage · 2 pax", price: "539K" },
-                      { time: "1.5 Hours – Deep Tissue Massage · 2 pax", price: "719K" },
+                      { time: "1 Hour – Deep Tissue Massage · 2 pax", price: "539.000" },
+                      { time: "1.5 Hours – Deep Tissue Massage · 2 pax", price: "719.000" },
                     ],
                   },
                   {
@@ -670,9 +670,9 @@ export default function OutcallPage() {
                     desc: "Applied with firmer pressure to help reduce tension while relaxing together.",
                     image: "/images/listmenu/coupletraditionalmassage.webp",
                     options: [
-                      { time: "1 Hour – Traditional Massage · 2 pax", price: "339K" },
-                      { time: "1.5 Hours – Traditional Massage · 2 pax", price: "519K" },
-                      { time: "2 Hours – Traditional Massage · 2 pax", price: "679K" },
+                      { time: "1 Hour – Traditional Massage · 2 pax", price: "339.000" },
+                      { time: "1.5 Hours – Traditional Massage · 2 pax", price: "519.000" },
+                      { time: "2 Hours – Traditional Massage · 2 pax", price: "679.000" },
                     ],
                   },
                   {
@@ -681,9 +681,9 @@ export default function OutcallPage() {
                     desc: "Using gently warmed candle oils to create comfort and a deeper sense of relaxation for couples.",
                     image: "/images/listmenu/couplewarmcandle.webp",
                     options: [
-                      { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539K" },
-                      { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799K" },
-                      { time: "2.5 Hours – Warm Candle Massage · 2 pax", price: "999K" },
+                      { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539.000" },
+                      { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799.000" },
+                      { time: "2.5 Hours – Warm Candle Massage · 2 pax", price: "999.000" },
                     ],
                   },
                 ],
@@ -697,28 +697,28 @@ export default function OutcallPage() {
                     desc: "",
                     // One photo per package, as on /seminyak/ (live repeats A=B and C=D).
                     image: "/images/listmenu/couplemassagepackage.webp",
-                    options: [{ time: "1.5 Hours – Balinese Massage + Ear Candle · 2 pax", price: "639K" }],
+                    options: [{ time: "1.5 Hours – Balinese Massage + Ear Candle · 2 pax", price: "639.000" }],
                   },
                   {
                     id: "couple-package-b",
                     name: "Couple Massage Package B",
                     desc: "",
                     image: "/images/listmenu/couplebalinesemassage.webp",
-                    options: [{ time: "2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax", price: "709K" }],
+                    options: [{ time: "2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax", price: "709.000" }],
                   },
                   {
                     id: "couple-package-c",
                     name: "Couple Massage Package C",
                     desc: "",
                     image: "/images/listmenu/couplewarmcandle.webp",
-                    options: [{ time: "1.5 Hours – Warm Candle + Ear Candle · 2 pax", price: "849K" }],
+                    options: [{ time: "1.5 Hours – Warm Candle + Ear Candle · 2 pax", price: "849.000" }],
                   },
                   {
                     id: "couple-package-d",
                     name: "Couple Massage Package D",
                     desc: "",
                     image: "/images/listmenu/couplemassage.webp",
-                    options: [{ time: "2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax", price: "929K" }],
+                    options: [{ time: "2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax", price: "929.000" }],
                   },
                 ],
               },
@@ -773,7 +773,7 @@ export default function OutcallPage() {
           <ReserveCta
             bottomSpacing={0}
             title="Home Service Massage in Seminyak and Beyond"
-            text="Professional treatments at your home, hotel, or villa for an extra IDR 75,000 per therapist around Seminyak. Our therapists bring everything the session needs, including oils and fresh linen."
+            text="Professional treatments at your home, hotel, or villa for an extra IDR 75.000 per therapist around Seminyak. Our therapists bring everything the session needs, including oils and fresh linen."
             closingText="For in-spa treatments, bookings are made on-site at your preferred time."
             backgroundImage="/images/outcall/outcall-5.webp"
           />

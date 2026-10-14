@@ -58,7 +58,7 @@
             "text": "Enjoy a complete Thai Massage experience combined with other relaxing treatments at Spa Bali Moon. Each package is created to provide a balanced wellness session, combining traditional Thai techniques with facial, nail, and body treatments.",
             "packages": [
               {
-                "price": "IDR 549K",
+                "price": "IDR 549.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -67,7 +67,7 @@
                 ]
               },
               {
-                "price": "IDR 649K",
+                "price": "IDR 649.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -76,7 +76,7 @@
                 ]
               },
               {
-                "price": "IDR 449K",
+                "price": "IDR 449.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -84,7 +84,7 @@
                 ]
               },
               {
-                "price": "IDR 539K",
+                "price": "IDR 539.000",
                 "name": "Package D",
                 "treatments": [
                   "1 Hr Thai Massage",
@@ -99,7 +99,7 @@
                 "props": {
                   "sessions": [
                     {
-                      "price": "IDR 133K",
+                      "price": "IDR 133.000",
                       "duration": "30 Minutes",
                       "details": [
                         "Focused stretching session",
@@ -108,7 +108,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 259K",
+                      "price": "IDR 259.000",
                       "duration": "1 Hour",
                       "details": [
                         "More complete body treatment",
@@ -117,7 +117,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 379K",
+                      "price": "IDR 379.000",
                       "duration": "1.5 Hours",
                       "details": [
                         "Extended full-body session",

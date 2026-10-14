@@ -65,7 +65,7 @@
                 "text": "Balinese massage is often combined with treatments such as facials, cream baths, and nail care to create a more complete spa experience. Our treatment packages are created for guests looking to relax, refresh, and make the most of their massage time in Bali.",
                 "packages": [
                   {
-                    "price": "IDR 449K",
+                    "price": "IDR 449.000",
                     "name": "Package A",
                     "treatments": [
                       "1 Hr Balinese Massage",
@@ -74,7 +74,7 @@
                     ]
                   },
                   {
-                    "price": "IDR 549K",
+                    "price": "IDR 549.000",
                     "name": "Package B",
                     "treatments": [
                       "1 Hr Balinese Massage",
@@ -83,7 +83,7 @@
                     ]
                   },
                   {
-                    "price": "IDR 449K",
+                    "price": "IDR 449.000",
                     "name": "Package C",
                     "treatments": [
                       "1 Hr Balinese Massage",
@@ -92,7 +92,7 @@
                     ]
                   },
                   {
-                    "price": "IDR 399K",
+                    "price": "IDR 399.000",
                     "name": "Package D",
                     "treatments": [
                       "1 Hr Balinese Massage",
@@ -112,7 +112,7 @@
                       "sessions": [
                         {
                           "duration": "1 Hour",
-                          "price": "IDR 159K",
+                          "price": "IDR 159.000",
                           "details": [
                             "Full-body relaxation",
                             "Everyday muscle tension",
@@ -121,7 +121,7 @@
                         },
                         {
                           "duration": "1.5 Hour",
-                          "price": "IDR 239K",
+                          "price": "IDR 239.000",
                           "details": [
                             "More complete full-body care",
                             "Extra focus on tense areas",
@@ -130,7 +130,7 @@
                         },
                         {
                           "duration": "2 Hour",
-                          "price": "IDR 330K",
+                          "price": "IDR 330.000",
                           "details": [
                             "Extended full-body treatment",
                             "More time for problem areas",
@@ -405,7 +405,7 @@
                 "standardSpacing": true,
                 "backgroundImage": "/images/services/balinesemassage/balinesemassage-12.webp",
                 "title": "Enjoy Balinese Massage Wherever You Stay",
-                "text": "Available at our Seminyak spa, or as home service at your villa or hotel for an extra IDR 75,000 per therapist. Our therapists adjust the pressure to suit you, gentle through to firm.",
+                "text": "Available at our Seminyak spa, or as home service at your villa or hotel for an extra IDR 75.000 per therapist. Our therapists adjust the pressure to suit you, gentle through to firm.",
                 "closingText": "Reserve a session that fits your plans, in our spa or at your villa."
               }
             }

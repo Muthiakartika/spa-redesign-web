@@ -58,7 +58,7 @@
             "text": "Every couple enjoys relaxation differently, which is why we offer several massage styles for two. Whether you prefer gentle Balinese techniques, deeper muscle work, or a warm candle ritual, each experience is designed to help you slow down and enjoy quality time together.",
             "packages": [
               {
-                "price": "IDR 639K",
+                "price": "IDR 639.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Balinese Massage 2 Pax",
@@ -66,7 +66,7 @@
                 ]
               },
               {
-                "price": "IDR 709K",
+                "price": "IDR 709.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Balinese Massage 2 Pax",
@@ -74,7 +74,7 @@
                 ]
               },
               {
-                "price": "IDR 849K",
+                "price": "IDR 849.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Warm Candle 2 Pax",
@@ -82,7 +82,7 @@
                 ]
               },
               {
-                "price": "IDR 929K",
+                "price": "IDR 929.000",
                 "name": "Package D",
                 "treatments": [
                   "1 Hr Warm Candle 2 Pax",
@@ -99,7 +99,7 @@
                       "title": "Couple Balinese Massage",
                       "sessions": [
                         {
-                          "price": "IDR 319K",
+                          "price": "IDR 319.000",
                           "duration": "1 Hour · 2 Guests",
                           "details": [
                             "Full-body relaxation",
@@ -108,7 +108,7 @@
                           ]
                         },
                         {
-                          "price": "IDR 479K",
+                          "price": "IDR 479.000",
                           "duration": "1.5 Hours · 2 Guests",
                           "details": [
                             "More time for full-body care",
@@ -117,7 +117,7 @@
                           ]
                         },
                         {
-                          "price": "IDR 659K",
+                          "price": "IDR 659.000",
                           "duration": "2 Hours · 2 Guests",
                           "details": [
                             "Extended full-body treatment",
@@ -131,7 +131,7 @@
                       "title": "Couple Traditional Massage",
                       "sessions": [
                         {
-                          "price": "IDR 339K",
+                          "price": "IDR 339.000",
                           "duration": "1 Hour · 2 Guests",
                           "details": [
                             "Full-body traditional massage",
@@ -140,7 +140,7 @@
                           ]
                         },
                         {
-                          "price": "IDR 519K",
+                          "price": "IDR 519.000",
                           "duration": "1.5 Hours · 2 Guests",
                           "details": [
                             "More time across the full body",
@@ -149,7 +149,7 @@
                           ]
                         },
                         {
-                          "price": "IDR 679K",
+                          "price": "IDR 679.000",
                           "duration": "2 Hours · 2 Guests",
                           "details": [
                             "Extended traditional bodywork",
@@ -163,7 +163,7 @@
                       "title": "Couple Deep Tissue Massage",
                       "sessions": [
                         {
-                          "price": "IDR 539K",
+                          "price": "IDR 539.000",
                           "duration": "1 Hour · 2 Guests",
                           "details": [
                             "Firm targeted pressure",
@@ -172,7 +172,7 @@
                           ]
                         },
                         {
-                          "price": "IDR 719K",
+                          "price": "IDR 719.000",
                           "duration": "1.5 Hours · 2 Guests",
                           "details": [
                             "More time for deeper bodywork",
@@ -186,7 +186,7 @@
                       "title": "Couple Warm Candle Massage",
                       "sessions": [
                         {
-                          "price": "IDR 539K",
+                          "price": "IDR 539.000",
                           "duration": "1 Hour · 2 Guests",
                           "details": [
                             "Warm candle oil massage",
@@ -195,7 +195,7 @@
                           ]
                         },
                         {
-                          "price": "IDR 799K",
+                          "price": "IDR 799.000",
                           "duration": "1.5 Hours · 2 Guests",
                           "details": [
                             "Extended warm oil massage",
@@ -204,7 +204,7 @@
                           ]
                         },
                         {
-                          "price": "IDR 999K",
+                          "price": "IDR 999.000",
                           "duration": "2 Hours · 2 Guests",
                           "details": [
                             "Longer warm candle treatment",

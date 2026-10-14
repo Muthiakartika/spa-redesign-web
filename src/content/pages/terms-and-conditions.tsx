@@ -256,7 +256,7 @@ export default function TermsPage() {
                     Home Service Transport
                   </h2>
                   <p style={{ fontFamily: "var(--text-font)", fontSize: "15px", color: "#5f5a54", lineHeight: "1.75" }}>
-                    For home service treatments, a transport fee of 75k applies to accommodations within Seminyak. Fees
+                    For home service treatments, a transport fee of IDR 75.000 applies to accommodations within Seminyak. Fees
                     for locations outside Seminyak vary depending on distance and travel time, and can be confirmed via
                     WhatsApp prior to booking.
                   </p>

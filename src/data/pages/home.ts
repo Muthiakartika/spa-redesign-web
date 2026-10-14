@@ -4,6 +4,7 @@
 //
 // Page: https://spabalimoon.com/
 
+import { priceValue } from "@/lib/price";
 import { catalog, type CatalogItem } from "./home-catalog";
 
 /**
@@ -16,7 +17,7 @@ export const home = {
   seo: {
     title: "Seminyak Spa & Balinese Massage | Spa Bali Moon",
     description:
-      "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 23 treatments from IDR 69K, couples packages, open daily 9am–11pm.",
+      "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 23 treatments from IDR 69.000, couples packages, open daily 9am–11pm.",
     /** The live homepage's JSON-LD, value for value (rating as shown on the live site). */
     schema: {
       "@context": "https://schema.org",
@@ -85,7 +86,7 @@ export const home = {
   catalog: {
     subTitle: "Our Spa Menu",
     title: "Browse Our Spa Treatments",
-    fee: { label: "Home Service Fee", value: "Extra 75K/Therapist" },
+    fee: { label: "Home Service Fee", value: "Extra IDR 75.000/Therapist" },
   },
 
   packageIntro: {
@@ -105,7 +106,7 @@ export const home = {
       {
         treatment: "Balinese Massage",
         name: "Package A",
-        price: "449K",
+        price: "449.000",
         items: [
           ["1 Hr", "Balinese Massage"],
           ["1 Hr", "Mani & Pedi"],
@@ -115,7 +116,7 @@ export const home = {
       {
         treatment: "Balinese Massage",
         name: "Package B",
-        price: "549K",
+        price: "549.000",
         items: [
           ["1 Hr", "Balinese Massage"],
           ["1 Hr", "Mani & Pedi"],
@@ -125,7 +126,7 @@ export const home = {
       {
         treatment: "Balinese Massage",
         name: "Package C",
-        price: "449K",
+        price: "449.000",
         items: [
           ["1 Hr", "Balinese Massage"],
           ["30 Mins", "Cream bath"],
@@ -135,7 +136,7 @@ export const home = {
       {
         treatment: "Balinese Massage",
         name: "Package D",
-        price: "399K",
+        price: "399.000",
         items: [
           ["1 Hr", "Balinese Massage"],
           ["30 Mins", "Manicure"],
@@ -363,19 +364,15 @@ const MENU_NAME: Record<string, string> = {
 
 /** Cards with no spa-menu entry: their own link and starting price. */
 const NOT_IN_MENU: Record<string, { href: string; price: string }> = {
-  "Hair Braiding": { href: "/seminyak/hair-braiding/", price: "IDR 279K" },
-  "Nail Art": { href: "/seminyak/nail-spa/", price: "IDR 159K" },
+  "Hair Braiding": { href: "/seminyak/hair-braiding/", price: "IDR 279.000" },
+  "Nail Art": { href: "/seminyak/nail-spa/", price: "IDR 159.000" },
 };
 
 const withIdr = (p: string) => (/^IDR/i.test(p) ? p : `IDR ${p}`);
-const thousands = (p: string) => {
-  const m = /([\d.]+)\s*K/i.exec(p || "");
-  return m ? Number(m[1]) : Number.POSITIVE_INFINITY;
-};
 const isDuration = (label: string) =>
   /\b(hour|hours|minute|minutes|min|mins)\b/i.test(label || "");
 
-/** "From IDR 159K | 1 Hour" — the cheapest option, with its duration when it has one. */
+/** "From IDR 159.000 | 1 Hour" — the cheapest option, with its duration when it has one. */
 function fromPrice(item: CatalogItem | undefined, name: string): string | null {
   const options = item?.options ?? [];
   if (!options.length) {
@@ -383,7 +380,7 @@ function fromPrice(item: CatalogItem | undefined, name: string): string | null {
     return own ? `From ${withIdr(own)}` : null;
   }
   const cheapest = options.reduce((a, b) =>
-    thousands(b.price) < thousands(a.price) ? b : a
+    priceValue(b.price) < priceValue(a.price) ? b : a
   );
   const from = `From ${withIdr(cheapest.price)}`;
   return isDuration(cheapest.label) ? `${from} | ${cheapest.label}` : from;

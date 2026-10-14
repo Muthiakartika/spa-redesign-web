@@ -57,7 +57,7 @@
             "text": "Our Virgin Cold Press Coconut Oil Massage is available in multiple session durations, making it easy to choose the treatment that best fits your schedule. Each session uses pure cold-pressed coconut oil to support skin hydration while enhancing the comfort of the massage.",
             "packages": [
               {
-                "price": "IDR 300K",
+                "price": "IDR 300.000",
                 "name": "1 Hour",
                 "treatments": [
                   "First-time guests",
@@ -66,7 +66,7 @@
                 ]
               },
               {
-                "price": "IDR 440K",
+                "price": "IDR 440.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Deeper relaxation",
@@ -75,7 +75,7 @@
                 ]
               },
               {
-                "price": "IDR 580K",
+                "price": "IDR 580.000",
                 "name": "2 Hours",
                 "treatments": [
                   "A complete wellness experience",

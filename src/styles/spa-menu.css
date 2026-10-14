@@ -36,7 +36,7 @@
 
 /* ------------------------------------------------------------------------
    Spa menu: the live list, with each treatment's price in its row — "from
-   159K", or its one price — set like the package-card prices (Literata 300,
+   159.000", or its one price — set like the package-card prices (Literata 300,
    26px, gold); "from" in the description's type, couple prices with the
    package cards' "2 pax" under them. Price and arrow are one button that
    opens the live price panel, a little faster.
@@ -212,6 +212,18 @@
   flex-shrink: 0;
   margin-left: auto;
   white-space: nowrap;
+}
+/* Prices are written in full with the currency (owner, 14 Oct: "IDR 250.000",
+   was "250K"), so they are smaller than the 26px above: the largest size at
+   which each price still fits beside its treatment's name, measured on the
+   three price lists at every width. The line height stays (rows keep theirs). */
+.lh .v2-menu--durations .v2-price__amount {
+  font-size: 18px;
+}
+@media (min-width: 768px) and (max-width: 991px), (min-width: 1400px) {
+  .lh .v2-menu--durations .v2-price__amount {
+    font-size: 20px;
+  }
 }
 /* A new price fades up when the duration changes. */
 .lh .v2-menu--durations .v2-price__amount {

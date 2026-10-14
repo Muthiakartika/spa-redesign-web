@@ -453,6 +453,33 @@
 .pricing-block-five .inner-box h4.price {
   font-weight: 300;
 }
+/* Prices (owner, 14 Oct) are written in full with the currency ("IDR
+   449.000", was "449K"), so some are smaller to keep each card's layout:
+   - treatment pages: the package-card and session-card prices from 768px up
+     (at live's 55px "449K" was already wide). Phones keep live's sizes.
+   - Body Scrub's option chips on phones, where two sit side by side.
+   - /seminyak/ package cards at 576–767px, two to a row: the price and its
+     "2 pax" stay on one line. The line heights stay, so cards keep their height. */
+@media (min-width: 768px) {
+  .pricing-block .inner-box .package-price {
+    font-size: 38px;
+    line-height: 52px;
+  }
+  .balinese-session-options .session-option-price {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+@media (max-width: 575px) {
+  .balinese-session-options .session-option-chip__price {
+    font-size: 20px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .package-pricing-section .pricing-block-five .inner-box .price {
+    font-size: 22px;
+  }
+}
 /* /contact/ (owner, 5 Oct): the three labels beside the icons (WhatsApp
    Message, Visit anytime, Opening Times) are now h3 (were h6), with the look
    of live.css's ".cf-rail__list.jsx-contact h6" rule. */

@@ -13,7 +13,7 @@ export type MobileMenuData = { treatments: MobileMenuGroup[]; posts: MobileMenuE
  * of every page's JavaScript.
  *  - Treatments: the header's 23 treatments in their menu order and wording,
  *    split into massage and beauty as the homepage menu does, each with the
- *    homepage slider's photo and starting price ("From IDR 159K").
+ *    homepage slider's photo and starting price ("From IDR 159.000").
  *  - Blog: the blog menu from the database (titles as set in /admin/), with
  *    the cover photos. The desktop Blog dropdown lists the same entries.
  */

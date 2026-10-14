@@ -57,7 +57,7 @@
             "text": "Different session lengths allow our therapist to focus on specific areas or provide more detailed care for both the feet and lower legs. Whether you need a quick refresh or a longer recovery session, each treatment is adjusted to your comfort.",
             "packages": [
               {
-                "price": "IDR 159K",
+                "price": "IDR 159.000",
                 "name": "1 Hour",
                 "treatments": [
                   "Tired feet after sightseeing",
@@ -66,7 +66,7 @@
                 ]
               },
               {
-                "price": "IDR 239K",
+                "price": "IDR 239.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Feet and lower leg tension",
@@ -75,7 +75,7 @@
                 ]
               },
               {
-                "price": "IDR 330K",
+                "price": "IDR 330.000",
                 "name": "2 Hours",
                 "treatments": [
                   "Complete lower body relaxation",

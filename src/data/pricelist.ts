@@ -10,7 +10,7 @@
      * "Our Spa Menu" catalog and the price cards on each treatment page.
      *
      * HOW TO CHANGE A PRICE
-     *   Find the treatment below and edit `price` (in Rupiah, e.g. 159_000 = "159K").
+     *   Find the treatment below and edit `price` (in Rupiah, e.g. 159_000 = "159.000").
      *   Every page that shows this price updates automatically.
      *
      * WHY ARE THERE SEVERAL NAMES / DESCRIPTIONS?
@@ -605,7 +605,7 @@
       {
         label: "Back · Start From",
         price: 139_000,
-        // The Home Service page writes "Back" with "Start from 139K" as the price.
+        // The Home Service page writes "Back" with "Start from 139.000" as the price.
         homeServiceLabel: "Back",
         homeServicePricePrefix: "Start from",
         homeLabel: "Back (starting from)",

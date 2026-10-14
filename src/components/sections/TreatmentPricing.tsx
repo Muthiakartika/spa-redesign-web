@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
-import { stripIdr } from "@/lib/price";
+import { displayPrice } from "@/lib/price";
 import { LotusIcon } from "@/components/ui/Lotus";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -109,7 +109,7 @@ export default function TreatmentPricing({
                         <img loading="lazy" decoding="async" src="/images/pricing/shape.png" alt="image" />
                       </div>
                       <p className="price package-price">
-                        {stripIdr(e.price)} {e.suffix && <span>{e.suffix}</span>}
+                        {displayPrice(e.price)} {e.suffix && <span>{e.suffix}</span>}
                       </p>
                       <h3 className="package-name">{e.name}</h3>
                       <ul>

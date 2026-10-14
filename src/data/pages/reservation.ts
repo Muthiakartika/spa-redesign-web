@@ -34,7 +34,7 @@ export const reservationPage = {
         },
         {
           title: "Quick Booking",
-          text: "Message us via WhatsApp to confirm your treatment and address. Home service is available for an additional IDR 75,000 per therapist.",
+          text: "Message us via WhatsApp to confirm your treatment and address. Home service is available for an additional IDR 75.000 per therapist.",
         },
       ],
     },
@@ -50,5 +50,5 @@ export const reservationPage = {
     },
   ],
   buttonLabel: "Book Now",
-  note: "Home service extra 75k per therapist",
+  note: "Home service extra IDR 75.000 per therapist",
 };

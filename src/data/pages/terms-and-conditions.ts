@@ -62,7 +62,7 @@ export const termsPage: TextPage = {
     { kind: "heading", level: 3, text: "Home Service Transport" },
     {
       kind: "paragraph",
-      text: "For home service treatments, a transport fee of 75k applies to accommodations within Seminyak. Fees for locations outside Seminyak vary depending on distance and travel time, and can be confirmed via WhatsApp prior to booking.",
+      text: "For home service treatments, a transport fee of IDR 75.000 applies to accommodations within Seminyak. Fees for locations outside Seminyak vary depending on distance and travel time, and can be confirmed via WhatsApp prior to booking.",
     },
     { kind: "heading", level: 3, text: "Liability" },
     {

@@ -66,7 +66,7 @@ export const business = {
      */
     feePerTherapist: 75_000,
     /** How the fee is written in the footer. */
-    feeDisplay: "75k / therapist",
+    feeDisplay: "IDR 75.000 / therapist",
   },
 
   /**

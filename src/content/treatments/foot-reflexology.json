@@ -57,7 +57,7 @@
             "text": "Every Foot Reflexology session follows the same structured pressure-point technique, while longer durations allow additional time to work across more reflex areas at a relaxed pace. Select the option that best matches your comfort and schedule.",
             "packages": [
               {
-                "price": "IDR 99K",
+                "price": "IDR 99.000",
                 "name": "30 Minutes",
                 "treatments": [
                   "Quick relaxation",
@@ -66,7 +66,7 @@
                 ]
               },
               {
-                "price": "IDR 169K",
+                "price": "IDR 169.000",
                 "name": "1 Hour",
                 "treatments": [
                   "Complete foot reflexology session",
@@ -75,7 +75,7 @@
                 ]
               },
               {
-                "price": "IDR 239K",
+                "price": "IDR 239.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Longer reflexology experience",

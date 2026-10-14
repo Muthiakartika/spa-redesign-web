@@ -58,7 +58,7 @@
             "text": "Hot Stone Massage pairs naturally with treatments that extend relaxation from head to toe. Our carefully selected packages combine soothing warmth with facial care, body treatments, or beauty services, making them ideal for guests looking for a more complete spa experience during their stay in Bali.",
             "packages": [
               {
-                "price": "IDR 549K",
+                "price": "IDR 549.000",
                 "name": "Package A",
                 "treatments": [
                   "1.5 Hr Hot Stone",
@@ -67,7 +67,7 @@
                 ]
               },
               {
-                "price": "IDR 549K",
+                "price": "IDR 549.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Hot Stone",
@@ -76,7 +76,7 @@
                 ]
               },
               {
-                "price": "IDR 449K",
+                "price": "IDR 449.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Hot Stone",
@@ -84,7 +84,7 @@
                 ]
               },
               {
-                "price": "IDR 519K",
+                "price": "IDR 519.000",
                 "name": "Package D",
                 "treatments": [
                   "1.5 Hr Hot Stone",
@@ -98,7 +98,7 @@
                 "props": {
                   "sessions": [
                     {
-                      "price": "IDR 250K",
+                      "price": "IDR 250.000",
                       "duration": "1 Hour",
                       "details": [
                         "Full-body hot stone massage",
@@ -107,7 +107,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 380K",
+                      "price": "IDR 380.000",
                       "duration": "1.5 Hours",
                       "details": [
                         "Full-body hot stone massage",
@@ -116,7 +116,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 495K",
+                      "price": "IDR 495.000",
                       "duration": "2 Hours",
                       "details": [
                         "Extended hot stone treatment",

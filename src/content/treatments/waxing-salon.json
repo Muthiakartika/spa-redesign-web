@@ -61,7 +61,7 @@
             "text": "Every area of the body has different needs, which is why Spa Bali Moon provides various waxing options for both everyday grooming and special occasions. Each service is performed carefully to help you achieve smooth and well-maintained skin.",
             "packages": [
               {
-                "price": "IDR 159K",
+                "price": "IDR 159.000",
                 "name": "Arms",
                 "treatments": [
                   "Smooth arm hair removal",
@@ -70,7 +70,7 @@
                 ]
               },
               {
-                "price": "IDR 99K",
+                "price": "IDR 99.000",
                 "name": "Under Arms",
                 "treatments": [
                   "Quick underarm grooming",
@@ -79,7 +79,7 @@
                 ]
               },
               {
-                "price": "IDR 139K",
+                "price": "IDR 139.000",
                 "name": "Back",
                 "treatments": [
                   "Focused back waxing",
@@ -88,7 +88,7 @@
                 ]
               },
               {
-                "price": "IDR 299K",
+                "price": "IDR 299.000",
                 "name": "Full Back",
                 "treatments": [
                   "Complete back waxing",
@@ -97,7 +97,7 @@
                 ]
               },
               {
-                "price": "IDR 149K",
+                "price": "IDR 149.000",
                 "name": "Half Legs",
                 "treatments": [
                   "Lower or upper leg waxing",
@@ -106,7 +106,7 @@
                 ]
               },
               {
-                "price": "IDR 299K",
+                "price": "IDR 299.000",
                 "name": "Full Legs",
                 "treatments": [
                   "Complete leg waxing",
@@ -115,7 +115,7 @@
                 ]
               },
               {
-                "price": "IDR 350K",
+                "price": "IDR 350.000",
                 "name": "Waxing Brazilian",
                 "treatments": [
                   "Private treatment setting",

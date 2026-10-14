@@ -15,7 +15,7 @@ export const homeServicePage = {
   path: "/outcall-home-service-massage/",
   seo: {
     title: "Outcall Massage Bali - Home Service Massage - Spa Bali Moon",
-    description: "Outcall massage in Bali: Balinese, Thai and deep tissue massage at your villa or hotel. Home service fee IDR 75,000 per therapist. Book via WhatsApp.",
+    description: "Outcall massage in Bali: Balinese, Thai and deep tissue massage at your villa or hotel. Home service fee IDR 75.000 per therapist. Book via WhatsApp.",
   },
   hero: {
     eyebrow: "Outcall Spa Service",
@@ -241,7 +241,7 @@ export const homeServicePage = {
       },
     ],
     // TODO FEE-01: see migration-audit.md
-    feeNote: { before: "Home service fee: ", highlight: "IDR 75,000", after: " per therapist" },
+    feeNote: { before: "Home service fee: ", highlight: "IDR 75.000", after: " per therapist" },
   },
   faq: {
     heading: "Home Service Massage",
@@ -280,7 +280,7 @@ export const homeServicePage = {
   cta: {
     heading: "Home Service Massage in Seminyak",
     paragraphs: [
-      "Professional treatments at your home, hotel, or villa for an extra IDR 75,000 per therapist around Seminyak. Our therapists bring everything the session needs, including oils and fresh linen.",
+      "Professional treatments at your home, hotel, or villa for an extra IDR 75.000 per therapist around Seminyak. Our therapists bring everything the session needs, including oils and fresh linen.",
       "For in-spa treatments, bookings are made on-site at your preferred time.",
     ],
     image: { src: "/images/gallery/home-service/outcall-5.webp", alt: "", width: 1920, height: 898 },

@@ -57,7 +57,7 @@
             "text": "Pricing is based on hair length, allowing enough time to create neat, balanced braids while adapting the technique to your preferred style and overall hair volume.",
             "packages": [
               {
-                "price": "IDR 279K",
+                "price": "IDR 279.000",
                 "name": "Short Hair",
                 "treatments": [
                   "Bob or shoulder-length hair",
@@ -66,7 +66,7 @@
                 ]
               },
               {
-                "price": "IDR 379K",
+                "price": "IDR 379.000",
                 "name": "Medium Hair",
                 "treatments": [
                   "Most Dutch braid styles",
@@ -75,7 +75,7 @@
                 ]
               },
               {
-                "price": "IDR 469K",
+                "price": "IDR 469.000",
                 "name": "Long Hair",
                 "treatments": [
                   "Longer braid designs",

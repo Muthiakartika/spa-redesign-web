@@ -3,9 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import { useState, type CSSProperties } from "react";
 import type { PricedService } from "@/data/pages/pricelist";
-
-/** "IDR 250K" -> "250K", as the live price lists print it. */
-const shortPrice = (price: string) => price.replace(/^IDR\s*/i, "");
+import { displayPrice } from "@/lib/price";
 
 const DESC: CSSProperties = { marginTop: "2px", marginBottom: "0", fontSize: "14px", color: "#5f5a54" };
 const ROW: CSSProperties = { borderBottom: "1px solid #e1e1e1" };
@@ -209,7 +207,7 @@ function ServiceRow({
                 <li key={i} className="d-flex justify-content-between align-items-center pb-2 mb-2" style={ROW}>
                   <span style={TIME}>{o.time}</span>
                   <span className={priceClass} style={outcallPricing ? undefined : PRICE}>
-                    {shortPrice(o.price)}
+                    {displayPrice(o.price)}
                   </span>
                 </li>
               ))}
@@ -251,7 +249,7 @@ function ServiceRow({
                               }
                         }
                       >
-                        {shortPrice(o.price)}
+                        {displayPrice(o.price)}
                       </span>
                     </li>
                   ))}

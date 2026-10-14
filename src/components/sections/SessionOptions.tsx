@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import type { ReactNode } from "react";
-import { stripIdr } from "@/lib/price";
+import { displayPrice } from "@/lib/price";
 
 type Session = { duration: string; price: string; details?: string[]; icon?: string };
 
@@ -19,17 +19,17 @@ export type SessionOptionsProps = {
 const DEFAULT_SESSIONS: Session[] = [
   {
     duration: "1 Hour",
-    price: "IDR 159K",
+    price: "IDR 159.000",
     details: ["Full-body relaxation", "Everyday muscle tension", "Guests with limited time"],
   },
   {
     duration: "1.5 Hour",
-    price: "IDR 239K",
+    price: "IDR 239.000",
     details: ["More complete full-body care", "Extra focus on tense areas", "Guests wanting deeper relaxation"],
   },
   {
     duration: "2 Hour",
-    price: "IDR 330K",
+    price: "IDR 330.000",
     details: ["Extended full-body treatment", "More time for problem areas", "Guests seeking longer relaxation"],
   },
 ];
@@ -79,7 +79,7 @@ export default function SessionOptions({
                   <img loading="lazy" decoding="async" src={e.icon || icon} alt="" className="jsx-treatment-layout" />
                 </span>
                 <span className="jsx-treatment-layout session-option-chip__name">{e.duration}</span>
-                <span className="jsx-treatment-layout session-option-chip__price">{stripIdr(e.price)}</span>
+                <span className="jsx-treatment-layout session-option-chip__price">{displayPrice(e.price)}</span>
               </div>
             </div>
           ))}
@@ -124,7 +124,7 @@ export default function SessionOptions({
                         </div>
                       </div>
                       <div className="jsx-treatment-layout content">
-                        <p className="jsx-treatment-layout session-option-price">{stripIdr(e.price)}</p>
+                        <p className="jsx-treatment-layout session-option-price">{displayPrice(e.price)}</p>
                         <Duration
                           className={`jsx-treatment-layout title session-option-duration${Duration === "h4" ? " look-h3" : ""}`}
                         >

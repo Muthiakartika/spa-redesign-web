@@ -58,7 +58,7 @@
             "text": "Our Cream Bath packages combine nourishing hair care with relaxing spa treatments for a more complete wellness experience. From facial care and massage to body treatments, each combination is designed to help you refresh your hair, relax your body, and enjoy more during your spa visit in Bali.",
             "packages": [
               {
-                "price": "IDR 649K",
+                "price": "IDR 649.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Cream Bath",
@@ -67,7 +67,7 @@
                 ]
               },
               {
-                "price": "IDR 549K",
+                "price": "IDR 549.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Cream Bath",
@@ -76,7 +76,7 @@
                 ]
               },
               {
-                "price": "IDR 449K",
+                "price": "IDR 449.000",
                 "name": "Package C",
                 "treatments": [
                   "30 Mins Cream Bath",
@@ -85,7 +85,7 @@
                 ]
               },
               {
-                "price": "IDR 539K",
+                "price": "IDR 539.000",
                 "name": "Package D",
                 "treatments": [
                   "1 Hr Cream Bath",
@@ -100,7 +100,7 @@
                 "props": {
                   "sessions": [
                     {
-                      "price": "IDR 165K",
+                      "price": "IDR 165.000",
                       "duration": "Ginseng",
                       "details": [
                         "Revitalising hair care",
@@ -109,7 +109,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 165K",
+                      "price": "IDR 165.000",
                       "duration": "Avocado",
                       "details": [
                         "Nourishing hair treatment",
@@ -118,7 +118,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 165K",
+                      "price": "IDR 165.000",
                       "duration": "Aloe Vera",
                       "details": [
                         "Gentle hair and scalp care",
@@ -127,7 +127,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 195K",
+                      "price": "IDR 195.000",
                       "duration": "L'Oreal",
                       "details": [
                         "Professional hair care option",
@@ -136,7 +136,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 165K",
+                      "price": "IDR 165.000",
                       "duration": "NR",
                       "details": [
                         "Complete Creambath treatment",
@@ -145,7 +145,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 165K",
+                      "price": "IDR 165.000",
                       "duration": "Hair Mask",
                       "details": [
                         "Conditioning hair treatment",

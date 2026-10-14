@@ -41,7 +41,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/aloeveramassage.webp",
     desc: "A cooling full-body massage that soothes the skin and supports gentle recovery.",
     options: [
-      { label: "1 Hour", price: "IDR 250K" },
+      { label: "1 Hour", price: "IDR 250.000" },
     ],
   },
   {
@@ -52,9 +52,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/aromatherapymassage.webp",
     desc: "A gentle full-body massage combining essential oils with slow and calming movements.",
     options: [
-      { label: "1 Hour", price: "IDR 199K" },
-      { label: "1.5 Hours", price: "IDR 339K" },
-      { label: "2 Hours", price: "IDR 439K" },
+      { label: "1 Hour", price: "IDR 199.000" },
+      { label: "1.5 Hours", price: "IDR 339.000" },
+      { label: "2 Hours", price: "IDR 439.000" },
     ],
   },
   {
@@ -65,10 +65,10 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/backmassage.webp",
     desc: "A targeted upper-body massage focused on easing tightness and restoring comfort.",
     options: [
-      { label: "30 Minutes", price: "IDR 90K" },
-      { label: "1 Hour", price: "IDR 199K" },
-      { label: "1.5 Hours", price: "IDR 259K" },
-      { label: "2 Hours", price: "IDR 339K" },
+      { label: "30 Minutes", price: "IDR 90.000" },
+      { label: "1 Hour", price: "IDR 199.000" },
+      { label: "1.5 Hours", price: "IDR 259.000" },
+      { label: "2 Hours", price: "IDR 339.000" },
     ],
   },
   {
@@ -85,7 +85,7 @@ export const catalog: CatalogItem[] = [
       "Revives overall skin vitality",
     ],
     options: [
-      { label: "Facial Treatment", price: "IDR 269K" },
+      { label: "Facial Treatment", price: "IDR 269.000" },
     ],
   },
   {
@@ -102,7 +102,7 @@ export const catalog: CatalogItem[] = [
       "Maintains healthy hydration",
     ],
     options: [
-      { label: "Facial Treatment", price: "IDR 196K" },
+      { label: "Facial Treatment", price: "IDR 196.000" },
     ],
   },
   {
@@ -113,10 +113,10 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/balinesemassage.webp",
     desc: "A calming full-body massage with steady pressure, gentle stretches, and aromatic oils.",
     options: [
-      { label: "1 Hour", price: "IDR 159K" },
-      { label: "1.5 Hours", price: "IDR 239K" },
-      { label: "2 Hours", price: "IDR 330K" },
-      { label: "1 Hour with Aloe Vera", price: "IDR 195K" },
+      { label: "1 Hour", price: "IDR 159.000" },
+      { label: "1.5 Hours", price: "IDR 239.000" },
+      { label: "2 Hours", price: "IDR 330.000" },
+      { label: "1 Hour with Aloe Vera", price: "IDR 195.000" },
     ],
   },
   {
@@ -127,10 +127,10 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/biokosfacial.webp",
     desc: "A custom facial treatment for dry, normal, or oily skin, including a facial massage and mask.",
     options: [
-      { label: "Biokos", price: "IDR 179K" },
-      { label: "Mustika Ratu", price: "IDR 169K" },
-      { label: "Sari Ayu", price: "IDR 169K" },
-      { label: "Viva", price: "IDR 169K" },
+      { label: "Biokos", price: "IDR 179.000" },
+      { label: "Mustika Ratu", price: "IDR 169.000" },
+      { label: "Sari Ayu", price: "IDR 169.000" },
+      { label: "Viva", price: "IDR 169.000" },
     ],
   },
   {
@@ -141,15 +141,15 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/bodyscrub.webp",
     desc: "A gentle exfoliation treatment to refresh the skin and leave it smooth and clean.",
     options: [
-      { label: "Body Massage & Scrub · Start From", price: "IDR 169K" },
-      { label: "Chocolate", price: "IDR 169K" },
-      { label: "Coconut", price: "IDR 169K" },
-      { label: "Strawberry", price: "IDR 169K" },
-      { label: "Bengkoang", price: "IDR 169K" },
-      { label: "Jasmine", price: "IDR 169K" },
-      { label: "Green Tea", price: "IDR 169K" },
-      { label: "Spa Sari", price: "IDR 169K" },
-      { label: "Additional Body Mask", price: "IDR 100K" },
+      { label: "Body Massage & Scrub · Start From", price: "IDR 169.000" },
+      { label: "Chocolate", price: "IDR 169.000" },
+      { label: "Coconut", price: "IDR 169.000" },
+      { label: "Strawberry", price: "IDR 169.000" },
+      { label: "Bengkoang", price: "IDR 169.000" },
+      { label: "Jasmine", price: "IDR 169.000" },
+      { label: "Green Tea", price: "IDR 169.000" },
+      { label: "Spa Sari", price: "IDR 169.000" },
+      { label: "Additional Body Mask", price: "IDR 100.000" },
     ],
   },
   {
@@ -160,9 +160,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/cellulitemassage.webp",
     desc: "A targeted full-body massage designed to stimulate circulation and improve skin tone.",
     options: [
-      { label: "1 Hour", price: "IDR 350K" },
-      { label: "1.5 Hours", price: "IDR 520K" },
-      { label: "2 Hours", price: "IDR 695K" },
+      { label: "1 Hour", price: "IDR 350.000" },
+      { label: "1.5 Hours", price: "IDR 520.000" },
+      { label: "2 Hours", price: "IDR 695.000" },
     ],
   },
   {
@@ -174,8 +174,8 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/coupledeeptissumassage.webp",
     desc: "A deeper-pressure massage for two, focused on easing tight muscles and improving comfort.",
     options: [
-      { label: "1 Hour · 2 pax", price: "IDR 539K" },
-      { label: "1.5 Hours · 2 pax", price: "IDR 719K" },
+      { label: "1 Hour · 2 pax", price: "IDR 539.000" },
+      { label: "1.5 Hours · 2 pax", price: "IDR 719.000" },
     ],
   },
   {
@@ -187,9 +187,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplebalinesemassage.webp",
     desc: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
     options: [
-      { label: "1 Hour · 2 pax", price: "IDR 319K" },
-      { label: "1.5 Hours · 2 pax", price: "IDR 479K" },
-      { label: "2 Hours · 2 pax", price: "IDR 659K" },
+      { label: "1 Hour · 2 pax", price: "IDR 319.000" },
+      { label: "1.5 Hours · 2 pax", price: "IDR 479.000" },
+      { label: "2 Hours · 2 pax", price: "IDR 659.000" },
     ],
   },
   {
@@ -201,7 +201,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplebalinesemassage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
-      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 639K", details: ["30 Minutes Ear Candle"] },
+      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 639.000", details: ["30 Minutes Ear Candle"] },
     ],
   },
   {
@@ -213,7 +213,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplebalinesemassage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
-      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 709K", details: ["1 Hour Bali Moon Facial"] },
+      { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 709.000", details: ["1 Hour Bali Moon Facial"] },
     ],
   },
   {
@@ -225,7 +225,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplewarmcandle.webp",
     desc: "1 Hour – Warm Candle",
     options: [
-      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 849K", details: ["30 Minutes Ear Candle"] },
+      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 849.000", details: ["30 Minutes Ear Candle"] },
     ],
   },
   {
@@ -237,7 +237,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplewarmcandle.webp",
     desc: "1 Hour – Warm Candle",
     options: [
-      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 929K", details: ["1 Hour Bali Moon Facial"] },
+      { label: "1 Hour Warm Candle · 2 pax", price: "IDR 929.000", details: ["1 Hour Bali Moon Facial"] },
     ],
   },
   {
@@ -249,9 +249,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/coupletraditionalmassage.webp",
     desc: "A side-by-side massage with firmer pressure to help release tension together.",
     options: [
-      { label: "1 Hour · 2 pax", price: "IDR 339K" },
-      { label: "1.5 Hours · 2 pax", price: "IDR 519K" },
-      { label: "2 Hours · 2 pax", price: "IDR 679K" },
+      { label: "1 Hour · 2 pax", price: "IDR 339.000" },
+      { label: "1.5 Hours · 2 pax", price: "IDR 519.000" },
+      { label: "2 Hours · 2 pax", price: "IDR 679.000" },
     ],
   },
   {
@@ -263,9 +263,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/couplewarmcandle.webp",
     desc: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
     options: [
-      { label: "1 Hour · 2 pax", price: "IDR 539K" },
-      { label: "1.5 Hours · 2 pax", price: "IDR 799K" },
-      { label: "2 Hours · 2 pax", price: "IDR 999K" },
+      { label: "1 Hour · 2 pax", price: "IDR 539.000" },
+      { label: "1.5 Hours · 2 pax", price: "IDR 799.000" },
+      { label: "2 Hours · 2 pax", price: "IDR 999.000" },
     ],
   },
   {
@@ -276,8 +276,8 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/deeptissuemassage.webp",
     desc: "A focused full-body massage using deeper pressure to release knots and improve mobility.",
     options: [
-      { label: "1 Hour", price: "IDR 269K" },
-      { label: "1.5 Hours", price: "IDR 359K" },
+      { label: "1 Hour", price: "IDR 269.000" },
+      { label: "1.5 Hours", price: "IDR 359.000" },
     ],
   },
   {
@@ -288,7 +288,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/earcandle.webp",
     desc: "A traditional ear candle treatment focused on comfort and gentle relaxation.",
     options: [
-      { label: "30 Minutes", price: "IDR 159K" },
+      { label: "30 Minutes", price: "IDR 159.000" },
     ],
   },
   {
@@ -298,9 +298,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/eyelash.webp",
     desc: "A simple beauty treatment designed to enhance lash length and fullness.",
     options: [
-      { label: "Normal Eyelash", price: "IDR 299K" },
-      { label: "Volume", price: "IDR 359K" },
-      { label: "Mega Volume", price: "IDR 399K" },
+      { label: "Normal Eyelash", price: "IDR 299.000" },
+      { label: "Volume", price: "IDR 359.000" },
+      { label: "Mega Volume", price: "IDR 399.000" },
     ],
   },
   {
@@ -311,9 +311,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/footmassage.webp",
     desc: "A focused massage on the soles, heels, and ankles to ease stiffness and restore comfort.",
     options: [
-      { label: "1 Hour", price: "IDR 159K" },
-      { label: "1.5 Hours", price: "IDR 239K" },
-      { label: "2 Hours", price: "IDR 330K" },
+      { label: "1 Hour", price: "IDR 159.000" },
+      { label: "1.5 Hours", price: "IDR 239.000" },
+      { label: "2 Hours", price: "IDR 330.000" },
     ],
   },
   {
@@ -324,9 +324,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/footreflexology.webp",
     desc: "A focused lower-body massage applying pressure to reflex points on the feet.",
     options: [
-      { label: "30 Minutes", price: "IDR 99K" },
-      { label: "1 Hour", price: "IDR 169K" },
-      { label: "1.5 Hours", price: "IDR 239K" },
+      { label: "30 Minutes", price: "IDR 99.000" },
+      { label: "1 Hour", price: "IDR 169.000" },
+      { label: "1.5 Hours", price: "IDR 239.000" },
     ],
   },
   {
@@ -337,7 +337,7 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/footscrub.webp",
     desc: "A quick foot care treatment that helps remove dry skin and leaves the feet feeling softer and cleaner.",
     options: [
-      { label: "30 Minutes", price: "IDR 100K" },
+      { label: "30 Minutes", price: "IDR 100.000" },
     ],
   },
   {
@@ -348,9 +348,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/fourhandmassage.webp",
     desc: "A synchronized full-body massage delivered by two therapists working in harmony.",
     options: [
-      { label: "1 Hour", price: "IDR 339K" },
-      { label: "1.5 Hours", price: "IDR 499K" },
-      { label: "2 Hours", price: "IDR 669K" },
+      { label: "1 Hour", price: "IDR 339.000" },
+      { label: "1.5 Hours", price: "IDR 499.000" },
+      { label: "2 Hours", price: "IDR 669.000" },
     ],
   },
   {
@@ -361,9 +361,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/organicwarmcandle.webp",
     desc: "A deeply relaxing massage where two therapists work together using warmed oils.",
     options: [
-      { label: "1 Hour", price: "IDR 539K" },
-      { label: "1.5 Hours", price: "IDR 799K" },
-      { label: "2 Hours", price: "IDR 999K" },
+      { label: "1 Hour", price: "IDR 539.000" },
+      { label: "1.5 Hours", price: "IDR 799.000" },
+      { label: "2 Hours", price: "IDR 999.000" },
     ],
   },
   {
@@ -374,12 +374,12 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/creambath.webp",
     desc: "A nourishing hair treatment that cleanses, conditions, and relaxes the scalp.",
     options: [
-      { label: "Ginseng", price: "IDR 165K" },
-      { label: "Avocado", price: "IDR 165K" },
-      { label: "Aloe Vera", price: "IDR 165K" },
-      { label: "L'Oreal", price: "IDR 195K" },
-      { label: "NR", price: "IDR 165K" },
-      { label: "Hair Mask", price: "IDR 165K" },
+      { label: "Ginseng", price: "IDR 165.000" },
+      { label: "Avocado", price: "IDR 165.000" },
+      { label: "Aloe Vera", price: "IDR 165.000" },
+      { label: "L'Oreal", price: "IDR 195.000" },
+      { label: "NR", price: "IDR 165.000" },
+      { label: "Hair Mask", price: "IDR 165.000" },
     ],
   },
   {
@@ -390,9 +390,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/headmassage.webp",
     desc: "A focused head massage that helps release built-up stress and quiet the mind.",
     options: [
-      { label: "1 Hour", price: "IDR 159K" },
-      { label: "1.5 Hours", price: "IDR 239K" },
-      { label: "2 Hours", price: "IDR 330K" },
+      { label: "1 Hour", price: "IDR 159.000" },
+      { label: "1.5 Hours", price: "IDR 239.000" },
+      { label: "2 Hours", price: "IDR 330.000" },
     ],
   },
   {
@@ -403,8 +403,8 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/herbalmassage.webp",
     desc: "A comforting full-body massage with herbal ingredients to support relaxation and circulation.",
     options: [
-      { label: "1 Hour", price: "IDR 199K" },
-      { label: "2 Hours", price: "IDR 399K" },
+      { label: "1 Hour", price: "IDR 199.000" },
+      { label: "2 Hours", price: "IDR 399.000" },
     ],
   },
   {
@@ -415,9 +415,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/hotstonemassage.webp",
     desc: "A soothing full-body massage using heated stones to relax muscles and support circulation.",
     options: [
-      { label: "1 Hour", price: "IDR 250K" },
-      { label: "1.5 Hours", price: "IDR 380K" },
-      { label: "2 Hours", price: "IDR 495K" },
+      { label: "1 Hour", price: "IDR 250.000" },
+      { label: "1.5 Hours", price: "IDR 380.000" },
+      { label: "2 Hours", price: "IDR 495.000" },
     ],
   },
   {
@@ -428,9 +428,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/lymphaticmassage%20.webp",
     desc: "A gentle full-body massage that supports drainage and healthy circulation.",
     options: [
-      { label: "1 Hour", price: "IDR 300K" },
-      { label: "1.5 Hours", price: "IDR 440K" },
-      { label: "2 Hours", price: "IDR 580K" },
+      { label: "1 Hour", price: "IDR 300.000" },
+      { label: "1.5 Hours", price: "IDR 440.000" },
+      { label: "2 Hours", price: "IDR 580.000" },
     ],
   },
   {
@@ -441,14 +441,14 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/manicurepedicure.webp",
     desc: "A complete hand and foot treatment finished neatly with polish.",
     options: [
-      { label: "Manicure & Pedicure", price: "IDR 238K" },
-      { label: "Manicure", price: "IDR 99K" },
-      { label: "Pedicure", price: "IDR 139K" },
-      { label: "Nail Color Feet & Hands", price: "IDR 138K" },
-      { label: "Nail Color Feet or Hands", price: "IDR 69K" },
-      { label: "Nail Remover Feet & Hands", price: "IDR 98K" },
-      { label: "Nail Gel Feet & Hands", price: "IDR 438K" },
-      { label: "Nail Gel Feet or Hands", price: "IDR 219K" },
+      { label: "Manicure & Pedicure", price: "IDR 238.000" },
+      { label: "Manicure", price: "IDR 99.000" },
+      { label: "Pedicure", price: "IDR 139.000" },
+      { label: "Nail Color Feet & Hands", price: "IDR 138.000" },
+      { label: "Nail Color Feet or Hands", price: "IDR 69.000" },
+      { label: "Nail Remover Feet & Hands", price: "IDR 98.000" },
+      { label: "Nail Gel Feet & Hands", price: "IDR 438.000" },
+      { label: "Nail Gel Feet or Hands", price: "IDR 219.000" },
     ],
   },
   {
@@ -459,9 +459,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/organicwarmcandle.webp",
     desc: "A warming full-body massage using natural oils to soften muscles and calm the body.",
     options: [
-      { label: "1 Hour", price: "IDR 269K" },
-      { label: "1.5 Hours", price: "IDR 399K" },
-      { label: "2 Hours", price: "IDR 499K" },
+      { label: "1 Hour", price: "IDR 269.000" },
+      { label: "1.5 Hours", price: "IDR 399.000" },
+      { label: "2 Hours", price: "IDR 499.000" },
     ],
   },
   {
@@ -472,9 +472,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/shiatsumassage.webp",
     desc: "An oil-free full-body massage using Japanese pressure-point techniques to ease tension.",
     options: [
-      { label: "30 Minutes", price: "IDR 119K" },
-      { label: "1 Hour", price: "IDR 219K" },
-      { label: "1.5 Hours", price: "IDR 329K" },
+      { label: "30 Minutes", price: "IDR 119.000" },
+      { label: "1 Hour", price: "IDR 219.000" },
+      { label: "1.5 Hours", price: "IDR 329.000" },
     ],
   },
   {
@@ -485,8 +485,8 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/sportmassage.webp",
     desc: "A targeted full-body massage to ease soreness, reduce stiffness, and support recovery.",
     options: [
-      { label: "1 Hour", price: "IDR 269K" },
-      { label: "1.5 Hours", price: "IDR 359K" },
+      { label: "1 Hour", price: "IDR 269.000" },
+      { label: "1.5 Hours", price: "IDR 359.000" },
     ],
   },
   {
@@ -497,9 +497,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/thaimassage.webp",
     desc: "An oil-free full-body massage combining assisted stretches and rhythmic pressure.",
     options: [
-      { label: "30 Minutes", price: "IDR 133K" },
-      { label: "1 Hour", price: "IDR 259K" },
-      { label: "1.5 Hours", price: "IDR 379K" },
+      { label: "30 Minutes", price: "IDR 133.000" },
+      { label: "1 Hour", price: "IDR 259.000" },
+      { label: "1.5 Hours", price: "IDR 379.000" },
     ],
   },
   {
@@ -510,10 +510,10 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/traditionalmassage.webp",
     desc: "A firmer full-body massage using deeper pressure to release muscle tension.",
     options: [
-      { label: "30 Minutes", price: "IDR 90K" },
-      { label: "1 Hour", price: "IDR 169K" },
-      { label: "1.5 Hours", price: "IDR 259K" },
-      { label: "2 Hours", price: "IDR 339K" },
+      { label: "30 Minutes", price: "IDR 90.000" },
+      { label: "1 Hour", price: "IDR 169.000" },
+      { label: "1.5 Hours", price: "IDR 259.000" },
+      { label: "2 Hours", price: "IDR 339.000" },
     ],
   },
   {
@@ -524,9 +524,9 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/coconutoilmassage.webp",
     desc: "A nourishing full-body massage using pure coconut oil to promote deep relaxation.",
     options: [
-      { label: "1 Hour", price: "IDR 300K" },
-      { label: "1.5 Hours", price: "IDR 440K" },
-      { label: "2 Hours", price: "IDR 580K" },
+      { label: "1 Hour", price: "IDR 300.000" },
+      { label: "1.5 Hours", price: "IDR 440.000" },
+      { label: "2 Hours", price: "IDR 580.000" },
     ],
   },
   {
@@ -537,13 +537,13 @@ export const catalog: CatalogItem[] = [
     image: "/images/listmenu/waxing.webp",
     desc: "A professional hair removal treatment using olive oil hot wax for smooth skin.",
     options: [
-      { label: "Arms", price: "IDR 159K" },
-      { label: "Under Arms", price: "IDR 99K" },
-      { label: "Back (starting from)", price: "IDR 139K" },
-      { label: "Full Back", price: "IDR 299K" },
-      { label: "Half Legs", price: "IDR 149K" },
-      { label: "Full Legs", price: "IDR 299K" },
-      { label: "Waxing Brazilian", price: "IDR 350K" },
+      { label: "Arms", price: "IDR 159.000" },
+      { label: "Under Arms", price: "IDR 99.000" },
+      { label: "Back (starting from)", price: "IDR 139.000" },
+      { label: "Full Back", price: "IDR 299.000" },
+      { label: "Half Legs", price: "IDR 149.000" },
+      { label: "Full Legs", price: "IDR 299.000" },
+      { label: "Waxing Brazilian", price: "IDR 350.000" },
     ],
   },
 ];

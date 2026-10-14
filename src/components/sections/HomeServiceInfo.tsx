@@ -236,7 +236,7 @@ export default function HomeServiceInfo({ plain = false }: HomeServiceInfoProps)
                       fontWeight: "600",
                     }}
                   >
-                    IDR 75,000
+                    IDR 75.000
                   </span>
                   {" per therapist"}
                 </p>

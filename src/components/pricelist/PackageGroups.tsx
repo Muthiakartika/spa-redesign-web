@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
 import type { PackageGroup } from "@/data/pages/pricelist";
-
-/** "IDR 449K" -> "449K". */
-const shortPrice = (price: string) => price.replace(/^IDR\s*/i, "");
+import { displayPrice } from "@/lib/price";
 
 /**
  * The eight package groups on the price list, sorted by title as live. Each
@@ -55,7 +53,7 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
                         {group.cardTitle} <br /> Package {String.fromCharCode(65 + i)}
                       </h3>
                       <h4 className="price">
-                        {shortPrice(pack.price)}
+                        {displayPrice(pack.price)}
                         {group.twoPax && <span className="pax-note">2 pax</span>}
                       </h4>
                       <ul>

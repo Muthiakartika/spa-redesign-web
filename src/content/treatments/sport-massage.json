@@ -75,7 +75,7 @@
             "text": "Different activities place different demands on the body. A shorter session works well for focused recovery, while a longer treatment allows more time to work through multiple areas affected by training, travel, or repetitive movement.",
             "packages": [
               {
-                "price": "IDR 269K",
+                "price": "IDR 269.000",
                 "name": "1 Hour",
                 "treatments": [
                   "Targeted muscle tension",
@@ -84,7 +84,7 @@
                 ]
               },
               {
-                "price": "IDR 359K",
+                "price": "IDR 359.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Full-body recovery",

@@ -1,10 +1,10 @@
 import type { CatalogOption } from "@/data/pages/home-catalog";
+import { displayPrice, priceValue } from "@/lib/price";
 
-/** The live site prints prices without the currency: "IDR 250K" -> "250K". */
+export { displayPrice, priceValue };
+
+/** The drafts (/home-v2/, /home-v4/) stay as they were, without the currency: "IDR 250.000" -> "250.000". */
 export const shortPrice = (price: string) => price.replace(/^IDR\s*/i, "");
-
-/** "IDR 159K" -> 159, for comparing prices. */
-export const thousands = (price: string) => Number(/([\d.]+)\s*K/i.exec(price)?.[1] ?? Number.POSITIVE_INFINITY);
 
 /** Add-ons ("Additional Body Mask") are not what a treatment starts from. */
 const isAddOn = (option: CatalogOption) => /^additional\b/i.test(option.label);
@@ -12,7 +12,7 @@ const isAddOn = (option: CatalogOption) => /^additional\b/i.test(option.label);
 /** The option a treatment starts from: its cheapest, add-ons left out. */
 export function startingOption(options: CatalogOption[]): CatalogOption {
   const priced = options.filter((o) => !isAddOn(o));
-  return (priced.length ? priced : options).reduce((a, b) => (thousands(b.price) < thousands(a.price) ? b : a));
+  return (priced.length ? priced : options).reduce((a, b) => (priceValue(b.price) < priceValue(a.price) ? b : a));
 }
 
 /**

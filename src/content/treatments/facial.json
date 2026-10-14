@@ -58,7 +58,7 @@
             "text": "Bali Moon Facial is often combined with massage, hair treatments, and nail care to create a complete self-care experience. Our treatment packages are designed for guests looking to relax while giving their skin additional attention during their time in Bali.",
             "packages": [
               {
-                "price": "IDR 439K",
+                "price": "IDR 439.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -67,7 +67,7 @@
                 ]
               },
               {
-                "price": "IDR 649K",
+                "price": "IDR 649.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -76,7 +76,7 @@
                 ]
               },
               {
-                "price": "IDR 449K",
+                "price": "IDR 449.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -84,7 +84,7 @@
                 ]
               },
               {
-                "price": "IDR 549K",
+                "price": "IDR 549.000",
                 "name": "Package D",
                 "treatments": [
                   "1 Hr Bali Moon Facial",
@@ -99,7 +99,7 @@
                 "props": {
                   "sessions": [
                     {
-                      "price": "IDR 196K",
+                      "price": "IDR 196.000",
                       "duration": "Bali Moon Tea Tree Facial",
                       "details": [
                         "Helps refresh and clarify the skin",
@@ -108,7 +108,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 269K",
+                      "price": "IDR 269.000",
                       "duration": "Bali Moon Gold Facial",
                       "details": [
                         "Helps nourish and soften the skin",
@@ -315,7 +315,7 @@
             "standardSpacing": true,
             "backgroundImage": "/images/services/balimoonfacial/balimoonfacial-12.webp",
             "title": "Professional Facial Care at Your Spa, Villa, or Hotel",
-            "text": "Professional facial care at our Seminyak spa, or at your villa or hotel for an extra IDR 75,000 per therapist. Personalised skincare, without rearranging your day.",
+            "text": "Professional facial care at our Seminyak spa, or at your villa or hotel for an extra IDR 75.000 per therapist. Personalised skincare, without rearranging your day.",
             "closingText": "Reserve your appointment and give your skin the attention it deserves."
           }
         }

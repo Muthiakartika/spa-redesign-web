@@ -59,11 +59,11 @@ export type IntroSection = {
   highlights?: { title: string; text: string }[];
 };
 
-/** One price card, e.g. "1 Hour — 159K" with three bullet points. */
+/** One price card, e.g. "1 Hour — IDR 159.000" with three bullet points. */
 export type PriceCard = {
   /** Text shown on the card, e.g. "1 Hour", "Short Hair", "Chocolate" */
   label: string;
-  /** Price in Indonesian Rupiah, e.g. 159000 (shown as "159K"). */
+  /** Price in Indonesian Rupiah, e.g. 159000 (shown as "IDR 159.000"). */
   price: number;
   points?: string[];
   /** true = the card shows its own "Book Now" button */
@@ -198,7 +198,7 @@ export type PriceOption = {
   price: number;
   /** Label on the Home Service page, only when it is worded differently. */
   homeServiceLabel?: string;
-  /** Words the Home Service page writes before the price, e.g. "Start from" (→ "Start from 139K"). */
+  /** Words the Home Service page writes before the price, e.g. "Start from" (→ "Start from IDR 139.000"). */
   homeServicePricePrefix?: string;
   /** Label in the homepage catalog, only when it is worded differently. */
   homeLabel?: string;

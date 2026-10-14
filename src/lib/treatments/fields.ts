@@ -55,7 +55,7 @@ const heading = (placeholder?: string): Field[] => [
 
 const sessionFields: Field[] = [
   { key: "duration", label: "Duration", kind: "text", placeholder: "1 Hour" },
-  { key: "price", label: "Price", kind: "text", placeholder: "IDR 159K" },
+  { key: "price", label: "Price", kind: "text", placeholder: "IDR 159.000" },
   { key: "details", label: "Points", kind: "list", optional: true },
 ];
 
@@ -159,7 +159,7 @@ export const SECTIONS: Record<string, SectionSchema> = {
         itemLabel: "Package",
         fields: [
           { key: "name", label: "Name", kind: "text", placeholder: "Package A" },
-          { key: "price", label: "Price", kind: "text", placeholder: "IDR 449K" },
+          { key: "price", label: "Price", kind: "text", placeholder: "IDR 449.000" },
           { key: "suffix", label: "After the price", kind: "text", hint: "Optional, e.g. / Hr", optional: true },
           { key: "treatments", label: "Included treatments", kind: "list" },
         ],

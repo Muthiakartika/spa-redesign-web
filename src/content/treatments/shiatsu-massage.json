@@ -57,7 +57,7 @@
             "text": "Our Shiatsu Massage is available in different durations, allowing our therapists to tailor each session to your body's condition and areas of tension.",
             "packages": [
               {
-                "price": "IDR 119K",
+                "price": "IDR 119.000",
                 "name": "30 Minutes",
                 "treatments": [
                   "Neck and shoulder tension",
@@ -66,7 +66,7 @@
                 ]
               },
               {
-                "price": "IDR 219K",
+                "price": "IDR 219.000",
                 "name": "1 Hour",
                 "treatments": [
                   "Full body treatment",
@@ -75,7 +75,7 @@
                 ]
               },
               {
-                "price": "IDR 329K",
+                "price": "IDR 329.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Multiple tension areas",

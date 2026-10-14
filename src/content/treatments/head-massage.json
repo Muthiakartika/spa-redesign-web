@@ -57,7 +57,7 @@
             "text": "Whether you need a short break between activities or a longer session to fully unwind, our Head Massage is available in several durations. Each treatment can be adjusted according to your preferred pressure and the areas that need extra attention.",
             "packages": [
               {
-                "price": "IDR 159K",
+                "price": "IDR 159.000",
                 "name": "1 Hour",
                 "treatments": [
                   "First-time guests",
@@ -66,7 +66,7 @@
                 ]
               },
               {
-                "price": "IDR 239K",
+                "price": "IDR 239.000",
                 "name": "1.5 Hours",
                 "treatments": [
                   "Extended scalp massage",
@@ -75,7 +75,7 @@
                 ]
               },
               {
-                "price": "IDR 330K",
+                "price": "IDR 330.000",
                 "name": "2 Hours",
                 "treatments": [
                   "Complete relaxation",

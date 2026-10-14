@@ -84,7 +84,7 @@ export default function VillaHotelMassagePage() {
         badgeTopText="Ready When"
         badgeBottomText="You Are"
         title={<>{"Booking Your Hotel & Villa Massage"}</>}
-        text="Reserving is simple — send us your hotel or villa address and preferred time, and our therapist will arrive ready to help you relax. A small travel fee of 75k per therapist applies for home and hotel visits."
+        text="Reserving is simple — send us your hotel or villa address and preferred time, and our therapist will arrive ready to help you relax. A small travel fee of IDR 75.000 per therapist applies for home and hotel visits."
         featuresLeft={["Quick WhatsApp booking", "Flexible appointment times", "Same-day reservations"]}
         featuresRight={["Transparent pricing", "Cash & card accepted", "English-speaking team"]}
         image="/images/services/massagehotelvilla/massagehotelvilla-6.webp"
@@ -119,7 +119,7 @@ export default function VillaHotelMassagePage() {
             {
               question: "Is there an additional fee for home service?",
               answer:
-                "Yes. An additional outcall fee of IDR 75,000 per therapist applies for home service appointments in Seminyak and nearby areas.",
+                "Yes. An additional outcall fee of IDR 75.000 per therapist applies for home service appointments in Seminyak and nearby areas.",
             },
             {
               question: "How can I pay for my in-room treatment?",

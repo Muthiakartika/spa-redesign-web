@@ -4,6 +4,7 @@ import { ArrowBox, PACKAGE_ICONS } from "@/components/home/icons";
 import ScrollRow from "@/components/home/ScrollRow";
 import { LotusIcon } from "@/components/ui/Lotus";
 import { home } from "@/data/pages/home";
+import { displayPrice } from "@/lib/price";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 /**
@@ -48,7 +49,7 @@ export default function Packages() {
                     <br />
                     {` ${card.name}`}
                   </div>
-                  <div className="price look-h2">{card.price}</div>
+                  <div className="price look-h2">{displayPrice(card.price)}</div>
                   <ul>
                     {card.items.map(([duration, service]) => (
                       <li key={service}>

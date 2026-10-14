@@ -354,7 +354,7 @@
 .home-v2 .v2-ptable__name a:hover {
   color: var(--theme-color1);
 }
-/* Extras such as "1 Hour with Aloe Vera · 195K": the dotted detail type. */
+/* Extras such as "1 Hour with Aloe Vera · 195.000": the dotted detail type. */
 .home-v2 .v2-ptable__name small {
   margin-top: 4px;
   color: #6a6f73;

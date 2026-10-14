@@ -58,7 +58,7 @@
             "text": "Complete your nail care with spa treatments that help you feel refreshed from head to toe. Our packages combine professional manicure and pedicure services with massage, facial, or hair care, creating a balanced wellness experience during your stay in Bali.",
             "packages": [
               {
-                "price": "IDR 449K",
+                "price": "IDR 449.000",
                 "name": "Package A",
                 "treatments": [
                   "1 Hr Mani & Pedi",
@@ -67,7 +67,7 @@
                 ]
               },
               {
-                "price": "IDR 549K",
+                "price": "IDR 549.000",
                 "name": "Package B",
                 "treatments": [
                   "1 Hr Mani & Pedi",
@@ -76,7 +76,7 @@
                 ]
               },
               {
-                "price": "IDR 299K",
+                "price": "IDR 299.000",
                 "name": "Package C",
                 "treatments": [
                   "1 Hr Mani & Pedi",
@@ -84,7 +84,7 @@
                 ]
               },
               {
-                "price": "IDR 399K",
+                "price": "IDR 399.000",
                 "name": "Package D",
                 "treatments": [
                   "30 Mins Pedicure",
@@ -99,7 +99,7 @@
                 "props": {
                   "sessions": [
                     {
-                      "price": "IDR 238K",
+                      "price": "IDR 238.000",
                       "duration": "Manicure & Pedicure",
                       "details": [
                         "Complete hand and foot care",
@@ -108,7 +108,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 99K",
+                      "price": "IDR 99.000",
                       "duration": "Manicure",
                       "details": [
                         "Nail and cuticle care",
@@ -117,7 +117,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 139K",
+                      "price": "IDR 139.000",
                       "duration": "Pedicure",
                       "details": [
                         "Nail and cuticle care",
@@ -126,7 +126,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 138K",
+                      "price": "IDR 138.000",
                       "duration": "Nail Color Feet & Hands",
                       "details": [
                         "Nail colour application",
@@ -135,7 +135,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 69K",
+                      "price": "IDR 69.000",
                       "duration": "Nail Color Feet or Hands",
                       "details": [
                         "Nail colour application",
@@ -144,7 +144,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 98K",
+                      "price": "IDR 98.000",
                       "duration": "Nail Remover Feet & Hands",
                       "details": [
                         "Gel or nail product removal",
@@ -153,7 +153,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 438K",
+                      "price": "IDR 438.000",
                       "duration": "Nail Gel Feet & Hands",
                       "details": [
                         "Gel nail treatment",
@@ -162,7 +162,7 @@
                       ]
                     },
                     {
-                      "price": "IDR 219K",
+                      "price": "IDR 219.000",
                       "duration": "Nail Gel Feet or Hands",
                       "details": [
                         "Gel nail treatment",
