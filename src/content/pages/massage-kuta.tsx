@@ -7,15 +7,59 @@ import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
 import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
 import ServiceSlider from "@/components/sections/ServiceSlider";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
+
+/** The page's questions, also given to search engines as FAQPage data. */
+const FAQ = [
+  {
+    question: "What type of massage is best after a long day in Kuta?",
+    answer:
+      "Balinese Massage is a popular choice for general relaxation because it combines flowing massage movements, gentle stretching, and acupressure. Guests who prefer firmer pressure may prefer Traditional Massage, while Sports Massage is suitable after more physically demanding activities.",
+  },
+  {
+    question: "Can I get a massage after surfing or spending time at the beach?",
+    answer:
+      "Yes. Sports Massage is often chosen after surfing, exercise, or other physical activities because it focuses on areas affected by repetitive movement and muscle fatigue. A gentler treatment may be more suitable if the body feels particularly sensitive or exhausted.",
+  },
+  {
+    question: "Do you offer massage at hotels and villas near Kuta?",
+    answer:
+      "Yes. Selected massage and spa treatments can be arranged as home service at hotels, villas, and private accommodations in nearby areas. Availability and travel fees depend on the location and therapist availability.",
+  },
+  {
+    question: "How long do massage sessions usually last?",
+    answer:
+      "Sessions run from 30 minutes to 2 hours, depending on the treatment. Balinese massage, for example, is available for 1, 1.5 or 2 hours (IDR 159.000, IDR 239.000 and IDR 330.000 per person).",
+  },
+  {
+    question: "Can I combine a massage with another spa treatment?",
+    answer:
+      "Yes. Guests can combine selected treatments such as massage, facials, body scrubs, Cream Bath, Manicure and Pedicure, and other beauty services. Our team can help recommend combinations based on the experience you are looking for.",
+  },
+  {
+    question: "What should I prepare before my massage?",
+    answer:
+      "Comfortable clothing and a little time to relax are usually all you need. For certain treatments, your therapist may provide specific guidance before the session to help you enjoy the treatment comfortably.",
+  },
+  // Copy rewrite, 15 Oct.
+  {
+    question: "How much does a massage in Kuta cost?",
+    answer:
+      "Prices are the same as in our Seminyak spa. A one-hour Balinese massage is IDR 159.000 per person, and traditional massage starts at IDR 90.000 for 30 minutes. Outcall adds IDR 75.000 per therapist; for locations further out we confirm any extra travel cost on WhatsApp before you book.",
+  },
+];
 
 /** /massage-kuta/ — generated from the live page's component tree, section for section. */
 export default function MassageKutaPage() {
   return (
     <div className="page-wrapper lh p-massage-kuta">
+      <FaqJsonLd items={FAQ} />
       <PageBanner
         subTitle="After a Day in the Sun"
         titleSpan="Massage in Kuta, Bali:"
-        title="In-Spa and Outcall"
+        // Copy rewrite, 15 Oct: the spa is in Seminyak, so Kuta is outcall.
+        title="Outcall to Your Hotel or Villa"
+        text="Spa Bali Moon's spa is in Seminyak. In Kuta, our therapists come to your hotel, villa or home. Treatments cost the same as in the spa, plus IDR 75.000 per therapist, and the fee for locations further out is confirmed on WhatsApp before you book. Open daily 9am–11pm."
         buttonText="Book Now"
         image="/images/banners/massage-kuta.webp"
       />
@@ -43,12 +87,12 @@ export default function MassageKutaPage() {
       <AboutSplit
         subTitle="Treatment Options"
         title={<>Massage Treatments Available in Kuta</>}
-        text="The right massage depends on what your body needs. Choose Balinese Massage for traditional relaxation, Traditional Massage for firmer pressure, Thai Massage for stretching, Sport Massage after physical activity, or Lymphatic Massage for gentle, rhythmic movements."
+        text="The right massage depends on what your body needs. Choose Balinese Massage for traditional relaxation, Traditional Massage for firmer pressure, Thai Massage for stretching, Sports Massage after physical activity, or Lymphatic Massage for gentle, rhythmic movements."
         featuresLeft={[
           "Balinese Massage for full-body relaxation",
           "Traditional Massage for firmer pressure",
           "Thai Massage for stretching and mobility",
-          "Sport Massage after exercise or surfing",
+          "Sports Massage after exercise or surfing",
         ]}
         featuresRight={[
           "Lymphatic Massage for gentle, light-pressure care",
@@ -83,6 +127,8 @@ export default function MassageKutaPage() {
       <AboutSplit
         badgeTopText="Just Pick"
         badgeBottomText="a Time"
+        // No small heading: without one the section showed the default "About".
+        subTitle=""
         title={<>Booking a Massage in Kuta</>}
         text="Just share your Kuta hotel or address and a preferred time. Our friendly team will confirm quickly and send a therapist ready to help you relax."
         featuresLeft={["Same-day appointments", "Flexible timing", "Quick WhatsApp booking"]}
@@ -95,38 +141,7 @@ export default function MassageKutaPage() {
           imageTitle="Unwind In Kuta"
           subTitle="Frequently Asked Questions"
           title={<>Massage Kuta: FAQs</>}
-          items={[
-            {
-              question: "What type of massage is best after a long day in Kuta?",
-              answer:
-                "Balinese Massage is a popular choice for general relaxation because it combines flowing massage movements, gentle stretching, and acupressure. Guests who prefer firmer pressure may prefer Traditional Massage, while Sport Massage is suitable after more physically demanding activities.",
-            },
-            {
-              question: "Can I get a massage after surfing or spending time at the beach?",
-              answer:
-                "Yes. Sport Massage is often chosen after surfing, exercise, or other physical activities because it focuses on areas affected by repetitive movement and muscle fatigue. A gentler treatment may be more suitable if the body feels particularly sensitive or exhausted.",
-            },
-            {
-              question: "Do you offer massage at hotels and villas near Kuta?",
-              answer:
-                "Yes. Selected massage and spa treatments can be arranged as home service at hotels, villas, and private accommodations in nearby areas. Availability and travel fees depend on the location and therapist availability.",
-            },
-            {
-              question: "How long do massage sessions usually last?",
-              answer:
-                "Treatment durations vary depending on the service. Most massage sessions are available in options ranging from approximately one hour to longer sessions, allowing guests to choose according to their schedule and preferred level of relaxation.",
-            },
-            {
-              question: "Can I combine a massage with another spa treatment?",
-              answer:
-                "Yes. Guests can combine selected treatments such as massage, facials, body scrubs, Cream Bath, Manicure and Pedicure, and other beauty services. Our team can help recommend combinations based on the experience you are looking for.",
-            },
-            {
-              question: "What should I prepare before my massage?",
-              answer:
-                "Comfortable clothing and a little time to relax are usually all you need. For certain treatments, your therapist may provide specific guidance before the session to help you enjoy the treatment comfortably.",
-            },
-          ]}
+          items={FAQ}
           image="/images/services/massagekuta/massagekuta-7.webp"
         />
       </div>

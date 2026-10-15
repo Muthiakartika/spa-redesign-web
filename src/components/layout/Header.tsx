@@ -293,7 +293,7 @@ export default function Header({ menu }: { menu: MobileMenuData }) {
                   <li>
                     <i className="fa-light fa-location-dot" aria-hidden="true" />
                     <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">
-                      {business.address.short}
+                      {business.address.full}
                     </a>
                   </li>
                   <li>

@@ -20,14 +20,14 @@ export const contactPage = {
     eyebrow: "Questions or Bookings",
     heading: "Let’s Arrange Your Visit",
     text: "Contact Spa Bali Moon to check availability, ask about treatments and packages, or arrange a massage and spa service at our Seminyak location or through selected home service options.",
-    // TODO HOURS-01 / ADDR-02: kept exactly as written on the old Contact page.
+    // Hours and address as confirmed in the copy rewrite (15 Oct).
     items: [
       { title: "WhatsApp Message", text: "+62 878-6317-5144" },
       {
         title: "Visit anytime",
-        text: "Jl. Pangkung Sari No. 30 Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361",
+        text: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361",
       },
-      { title: "Opening Times", text: "Open Daily: 9:00 - 22:00" },
+      { title: "Opening Times", text: "Open Daily: 9:00 - 23:00" },
     ],
   },
   // TODO FUNC-01: the old form sent messages through its own backend + Cloudflare Turnstile.
@@ -49,7 +49,7 @@ export const contactPage = {
     eyebrow: "Find Us",
     name: "Spa Bali Moon",
     address: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361",
-    hours: "Open daily · 9:00 – 22:00",
+    hours: "Open daily · 9:00 – 23:00",
     directionsLabel: "Get Directions",
     // Google Maps embed from the old /contact/ page (same URL and title).
     map: {

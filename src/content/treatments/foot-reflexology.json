@@ -14,12 +14,36 @@
           "type": "PageBanner",
           "props": {
             "image": "/images/banners/foot-reflexology.webp",
-            "subTitle": "Natural Balance",
+            "subTitle": "",
             "titleSpan": "Foot Reflexology",
             "title": "in Seminyak, Bali"
           }
         }
       ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "Foot reflexology at Spa Bali Moon in Seminyak applies pressure to reflex points on the feet using a structured technique. Sessions are 30 minutes (IDR 99.000), 1 hour (IDR 169.000) or 1.5 hours (IDR 239.000) per person, at our spa or at your villa or hotel. It's a good choice after a day on your feet.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "Pressure on reflex points of the feet using a structured technique"
+          },
+          {
+            "label": "Length and price",
+            "value": "Per person: 30 minutes IDR 99.000 · 1 hour IDR 169.000 · 1.5 hours IDR 239.000"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or selected villas and hotels"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm"
+          }
+        ]
+      }
     },
     {
       "type": "AboutIntro",
@@ -28,7 +52,7 @@
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/footreflexology/footreflexology-2.webp",
         "secondaryImage": "/images/services/footreflexology/footreflexology-3.webp",
-        "subTitle": "Understanding Reflexology",
+        "subTitle": "",
         "title": "What Is Foot Reflexology and How Does It Work?",
         "text": "Foot Reflexology is a traditional wellness therapy that applies controlled pressure to specific reflex points on the feet, which are traditionally believed to correspond with different areas of the body. Using a structured reflex-point technique, the treatment helps encourage relaxation, supports circulation in the feet, and relieves the sensation of tiredness after travel, long walks, or daily activities.",
         "feature1Title": "Reflex Point Therapy",
@@ -52,7 +76,7 @@
               "/images/services/footreflexology/footreflexology-5.webp",
               "/images/services/footreflexology/footreflexology-6.webp"
             ],
-            "subTitle": "Session Options",
+            "subTitle": "",
             "title": "Choose the Session That Fits You",
             "text": "Every Foot Reflexology session follows the same structured pressure-point technique, while longer durations allow additional time to work across more reflex areas at a relaxed pace. Select the option that best matches your comfort and schedule.",
             "packages": [
@@ -131,7 +155,7 @@
         "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/footreflexology/footreflexology-7.webp",
-        "subTitle": "Benefits of Foot Reflexology",
+        "subTitle": "",
         "title": "A Simple Way to Refresh Tired Feet",
         "text": "After a day of walking, standing, travelling, or exploring Bali, your feet can start to feel tired and heavy. Foot Reflexology offers a simple way to give them focused care while creating a relaxing wellness experience. You may choose this treatment for reasons such as:",
         "featuresLeft": [
@@ -163,9 +187,7 @@
           }
         },
         "image": "/images/services/footreflexology/footreflexology-8.webp",
-        "subTitle": "Reflex Points",
-        "badgeTopText": "The Reflex",
-        "badgeBottomText": "Map",
+        "subTitle": "",
         "title": "Where Does Foot Reflexology Focus?",
         "text": "Foot Reflexology uses focused pressure on specific areas of the feet based on traditional reflexology principles. Rather than applying the same pressure everywhere, we work through different zones to create a balanced and comfortable treatment. Our session may focus on:",
         "featuresLeft": [
@@ -180,7 +202,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -188,9 +211,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/footreflexology/footreflexology-9.webp",
-        "subTitle": "The Technique",
-        "badgeTopText": "A Guided",
-        "badgeBottomText": "Sequence",
+        "subTitle": "",
         "title": "What Is a Foot Reflexology Session Like?",
         "text": "A Foot Reflexology session follows a gentle, structured approach that combines warm-up movements with focused pressure on selected reflex points. The therapist adjusts the technique throughout the treatment to keep the pressure comfortable while maintaining a steady rhythm. The session typically involves:",
         "featuresLeft": [
@@ -205,7 +226,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -220,7 +242,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/footreflexology/footreflexology-10.webp",
-            "imageTitle": "Reflex Points",
+            "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "Foot Reflexology Seminyak: FAQs",
             "items": [
@@ -243,6 +265,10 @@
               {
                 "question": "Is home service available?",
                 "answer": "Yes. The treatment is available at our spa as well as selected villas and hotels throughout Seminyak and nearby areas."
+              },
+              {
+                "question": "How much does foot reflexology cost in Seminyak?",
+                "answer": "IDR 99.000 for 30 minutes, IDR 169.000 for 1 hour and IDR 239.000 for 1.5 hours per person at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
               }
             ]
           }
@@ -261,8 +287,13 @@
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
             "title": "Step Into More Feel-Good Treatments",
-            "showFullTreatmentSlider": true,
-            "embedded": true
+            "embedded": true,
+            "related": [
+              "/seminyak/foot-massage/",
+              "/seminyak/head-massage/",
+              "/seminyak/balinese-massage/",
+              "/seminyak/lymphatic-drainage-massage/"
+            ]
           }
         }
       ]

@@ -6,6 +6,7 @@ import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
 import FaqSection from "@/components/sections/FaqSection";
 import Funfacts from "@/components/sections/Funfacts";
 import PageBanner from "@/components/sections/PageBanner";
+import QuickFacts from "@/components/sections/QuickFacts";
 import ReserveCta from "@/components/sections/ReserveCta";
 import ServiceSlider from "@/components/sections/ServiceSlider";
 import SessionOptions from "@/components/sections/SessionOptions";
@@ -29,6 +30,7 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   // A link inside a paragraph (lib/treatments/fields.ts: textarea fields).
   Link,
   PageBanner,
+  QuickFacts,
   ReserveCta,
   ServiceSlider,
   SessionOptions,

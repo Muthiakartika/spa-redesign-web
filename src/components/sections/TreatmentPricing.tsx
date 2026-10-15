@@ -76,10 +76,12 @@ export default function TreatmentPricing({
           {topContent}
           <div className="section-header__flex mb-60">
             <div>
-              <p className="sub-title wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                <LotusIcon className="icon" />
-                {subTitle}
-              </p>
+              {subTitle !== "" && (
+                <p className="sub-title wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                  <LotusIcon className="icon" />
+                  {subTitle}
+                </p>
+              )}
               <h2 className="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 {title}
               </h2>

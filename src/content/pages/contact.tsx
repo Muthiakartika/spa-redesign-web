@@ -9,6 +9,8 @@ export default function ContactPage() {
         subTitle="Ready When You Are"
         titleSpan="Book Your Spa"
         title="Experience in Seminyak"
+        // Under the H1 (copy rewrite, 15 Oct).
+        text="Spa Bali Moon is at Jl. Pangkung Sari No. 30, Petitenget, Seminyak. Open daily 9am–11pm. Message us on WhatsApp at +62 878-6317-5144 to book, or ask about treatments and packages."
         buttonText="Contact Us"
         image="/images/banners/contact.webp"
         imagePosition="40% 50%"
@@ -29,9 +31,10 @@ export default function ContactPage() {
           {
             icon: "fa-location-dot",
             title: "Visit anytime",
-            text: "Jl. Pangkung Sari No. 30 Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361",
+            text: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361",
           },
-          { icon: "fa-clock", title: "Opening Times", text: "Open Daily: 9:00 - 22:00" },
+          // Hours confirmed as 9am–11pm, as on every other page (copy rewrite, 15 Oct; was 22:00).
+          { icon: "fa-clock", title: "Opening Times", text: "Open Daily: 9:00 - 23:00" },
         ]}
       />
     </div>

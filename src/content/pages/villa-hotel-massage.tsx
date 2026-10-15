@@ -7,15 +7,52 @@ import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
 import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
 import ServiceSlider from "@/components/sections/ServiceSlider";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
+
+/** The page's questions, also given to search engines as FAQPage data. */
+const FAQ = [
+  {
+    question: "How do I book a hotel or villa massage in Seminyak?",
+    answer:
+      "Browse our treatment menu, choose your preferred service and duration, then contact us via WhatsApp with your accommodation details and preferred appointment time.",
+  },
+  {
+    question: "How long does it take for the therapist to arrive?",
+    answer:
+      "Our therapists typically arrive within 30 to 60 minutes, depending on your location, traffic, and availability at the time of booking.",
+  },
+  {
+    question: "Can I book a massage for more than one person?",
+    answer:
+      "Yes. Couples, families and groups can book several treatments at once, subject to therapist availability. Message us in advance with the number of guests.",
+  },
+  {
+    question: "Can I book more than just a massage?",
+    answer:
+      "Yes. Selected spa treatments, including facials, body scrubs, Sports Massage, reflexology, cream baths, manicures, and pedicures, may also be arranged as home service.",
+  },
+  {
+    question: "Is there an additional fee for home service?",
+    answer:
+      "Yes. An additional outcall fee of IDR 75.000 per therapist applies for home service appointments in Seminyak and nearby areas.",
+  },
+  {
+    question: "How can I pay for my in-room treatment?",
+    answer: "Payment options include cash, bank transfer, Visa, and Mastercard, subject to availability.",
+  },
+];
 
 /** /villa-hotel-massage/ — generated from the live page's component tree, section for section. */
 export default function VillaHotelMassagePage() {
   return (
     <div className="page-wrapper lh p-villa-hotel-massage">
+      <FaqJsonLd items={FAQ} />
       <PageBanner
         subTitle="In-Room Spa Service"
         titleSpan="Villa & Hotel Massage"
         title="in Seminyak, Bali"
+        // The quick answer under the H1 (copy rewrite, 15 Oct).
+        text="In-villa and hotel massage at Spa Bali Moon: a therapist comes to your room in Seminyak and nearby areas, usually within 30 to 60 minutes of booking. Treatments cost the same as in the spa, plus IDR 75.000 per therapist. Open daily 9am–11pm."
         buttonText="Book Now"
         image="/images/banners/villa-hotel-massage.webp"
       />
@@ -63,10 +100,10 @@ export default function VillaHotelMassagePage() {
         badgeTopText="Spa Comes"
         badgeBottomText="to You"
         title={<>Treatments That Work Well in Your Hotel or Villa</>}
-        text="The right treatment depends on how you want to feel after your session. A Balinese Massage offers a traditional full-body experience, Sport Massage can help ease tired muscles after physical activity, while body scrubs, facials, cream baths, and beauty treatments allow you to create a more complete in-room spa experience."
+        text="The right treatment depends on how you want to feel after your session. A Balinese Massage offers a traditional full-body experience, Sports Massage can help ease tired muscles after physical activity, while body scrubs, facials, cream baths, and beauty treatments allow you to create a more complete in-room spa experience."
         featuresLeft={[
           "Balinese Massage for traditional full-body relaxation",
-          "Sport Massage after exercise, surfing, or physical activity",
+          "Sports Massage after exercise, surfing, or physical activity",
           "Thai Massage for stretching and mobility",
           "Lymphatic Massage for gentle, light-pressure body care",
         ]}
@@ -83,8 +120,10 @@ export default function VillaHotelMassagePage() {
       <AboutSplit
         badgeTopText="Ready When"
         badgeBottomText="You Are"
+        // No small heading: without one the section showed the default "About".
+        subTitle=""
         title={<>{"Booking Your Hotel & Villa Massage"}</>}
-        text="Reserving is simple — send us your hotel or villa address and preferred time, and our therapist will arrive ready to help you relax. A small travel fee of IDR 75.000 per therapist applies for home and hotel visits."
+        text="Reserving is simple — send us your hotel or villa address and preferred time, and our therapist will arrive ready to help you relax. A travel fee of IDR 75.000 per therapist applies for home and hotel visits."
         featuresLeft={["Quick WhatsApp booking", "Flexible appointment times", "Same-day reservations"]}
         featuresRight={["Transparent pricing", "Cash & card accepted", "English-speaking team"]}
         image="/images/services/massagehotelvilla/massagehotelvilla-6.webp"
@@ -95,37 +134,7 @@ export default function VillaHotelMassagePage() {
           imageTitle="Relax In Your Room"
           subTitle="Frequently Asked Questions"
           title={<>In-Villa Massage Seminyak: FAQs</>}
-          items={[
-            {
-              question: "How do I book a hotel or villa massage in Seminyak?",
-              answer:
-                "Browse our treatment menu, choose your preferred service and duration, then contact us via WhatsApp with your accommodation details and preferred appointment time.",
-            },
-            {
-              question: "How long does it take for the therapist to arrive?",
-              answer:
-                "Our therapists typically arrive within 30 to 60 minutes, depending on your location, traffic, and availability at the time of booking.",
-            },
-            {
-              question: "Can I book a massage for more than one person?",
-              answer:
-                "Yes. Couples, families, and groups can arrange multiple treatments, subject to therapist availability. Contact us in advance so we can coordinate your booking.",
-            },
-            {
-              question: "Can I book more than just a massage?",
-              answer:
-                "Yes. Selected spa treatments, including facials, body scrubs, Sport Massage, reflexology, cream baths, manicures, and pedicures, may also be arranged as home service.",
-            },
-            {
-              question: "Is there an additional fee for home service?",
-              answer:
-                "Yes. An additional outcall fee of IDR 75.000 per therapist applies for home service appointments in Seminyak and nearby areas.",
-            },
-            {
-              question: "How can I pay for my in-room treatment?",
-              answer: "Payment options include cash, bank transfer, Visa, and Mastercard, subject to availability.",
-            },
-          ]}
+          items={FAQ}
           image="/images/services/massagehotelvilla/massagehotelvilla-7.webp"
         />
       </div>

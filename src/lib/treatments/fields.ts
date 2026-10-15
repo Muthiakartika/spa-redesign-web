@@ -76,8 +76,21 @@ const textAndPhoto: SectionSchema = {
     { key: "featuresLeft", label: "Bullet points, left column", kind: "list" },
     { key: "featuresRight", label: "Bullet points, right column", kind: "list" },
     { key: "image", label: "Photo", kind: "image", maxWidth: 1200 },
-    { key: "badgeTopText", label: "Photo badge, top line", kind: "text", placeholder: "17+ Years" },
-    { key: "badgeBottomText", label: "Photo badge, bottom line", kind: "text", placeholder: "Experience" },
+    // A section whose decorative badge was removed (showBadge: false) has none to edit.
+    {
+      key: "badgeTopText",
+      label: "Photo badge, top line",
+      kind: "text",
+      placeholder: "17+ Years",
+      hideIf: (p) => p.showBadge === false,
+    },
+    {
+      key: "badgeBottomText",
+      label: "Photo badge, bottom line",
+      kind: "text",
+      placeholder: "Experience",
+      hideIf: (p) => p.showBadge === false,
+    },
     { key: "buttonText", label: "Button text", kind: "text", placeholder: "Learn More" },
     { key: "buttonLink", label: "Button link", kind: "link", placeholder: "/seminyak/" },
   ],
@@ -105,6 +118,26 @@ export const SECTIONS: Record<string, SectionSchema> = {
         banner: true,
         maxWidth: 1920,
         hint: "A wide photo (about 1920 × 850). A phone version is cut from the middle automatically.",
+      },
+    ],
+  },
+  QuickFacts: {
+    label: "Opening & quick facts",
+    fields: [
+      {
+        ...paragraph,
+        label: "Opening paragraph",
+        hint: "Answer first: the spa, Seminyak, the price and the options. To add a link, write [the words](/seminyak/).",
+      },
+      {
+        key: "items",
+        label: "Quick facts",
+        kind: "items",
+        itemLabel: "Fact",
+        fields: [
+          { key: "label", label: "Label", kind: "text", placeholder: "Treatment" },
+          { key: "value", label: "Text", kind: "textarea" },
+        ],
       },
     ],
   },
@@ -193,7 +226,7 @@ export const SECTIONS: Record<string, SectionSchema> = {
   TreatmentTestimonials: {
     label: "Guest reviews",
     fields: [],
-    note: "The guest reviews are the same on every treatment page, so they are not edited here.",
+    note: "The six guest reviews are the same on every treatment page, so they are not edited here.",
   },
   AboutSplit: textAndPhoto,
   AboutSplitAlt: textAndPhoto,
@@ -201,7 +234,8 @@ export const SECTIONS: Record<string, SectionSchema> = {
     label: "FAQ",
     fields: [
       ...heading(),
-      { key: "imageTitle", label: "Words on the photo", kind: "text", placeholder: "Revive Your Senses" },
+      // No placeholder: left empty, the photo shows no words (copy rewrite, 15 Oct).
+      { key: "imageTitle", label: "Words on the photo", kind: "text", hint: "Optional." },
       { key: "image", label: "Photo", kind: "image", maxWidth: 1200 },
       {
         key: "items",
@@ -223,7 +257,7 @@ export const SECTIONS: Record<string, SectionSchema> = {
   ServiceSlider: {
     label: "Other treatments",
     fields: [{ key: "title", label: "Heading", kind: "text" }],
-    note: "The treatment cards in this slider are shared by every page.",
+    note: "The four treatment cards in this slider are chosen for each page in the code.",
   },
   ReserveCta: {
     label: "Closing banner",

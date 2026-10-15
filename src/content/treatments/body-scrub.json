@@ -15,12 +15,40 @@
           "props": {
             "image": "/images/banners/body-scrub.webp",
             "imagePosition": "45% 50%",
-            "subTitle": "Skin Renewal",
+            "subTitle": "",
             "titleSpan": "Body Scrub",
             "title": "in Seminyak, Bali"
           }
         }
       ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "A body scrub at Spa Bali Moon in Seminyak is a full-body exfoliation with natural scrubs inspired by traditional Balinese lulur. Choose from seven scents, IDR 169.000 per person, at our spa or at your villa or hotel. An extra body mask is IDR 100.000. It's a good way to refresh skin that's dry or dull from sun, salt water and humidity.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "Full-body exfoliation with natural scrubs inspired by traditional Balinese lulur"
+          },
+          {
+            "label": "Price per person",
+            "value": "IDR 169.000, in seven scents: chocolate, coconut, strawberry, bengkoang, jasmine, green tea, Spa Sari. Extra body mask: IDR 100.000"
+          },
+          {
+            "label": "Packages",
+            "value": "Four packages that add massage, facial, hot stone or cream bath (see below)"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm"
+          }
+        ]
+      }
     },
     {
       "type": "AboutIntro",
@@ -29,7 +57,7 @@
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/bodyscrub/bodyscrub-2.webp",
         "secondaryImage": "/images/services/bodyscrub/bodyscrub-3.webp",
-        "subTitle": "Natural Exfoliation",
+        "subTitle": "",
         "title": "Why Do So Many Guests Add a Body Scrub to Their Bali Stay?",
         "text": "Body scrub is an exfoliating treatment to remove dead skin cells, lift daily buildup, and help restore smoother skin texture. In Bali, sun exposure, saltwater, humidity, and outdoor activities can leave the skin feeling dry or dull over time. Our therapists use natural exfoliants inspired by traditional Balinese lulur rituals to gently refresh the skin while creating a relaxing treatment experience.",
         "feature1Title": "Natural Ingredients",
@@ -54,7 +82,7 @@
               "/images/services/bodyscrub/bodyscrub-6.webp",
               "/images/services/bodyscrub/bodyscrub-7.webp"
             ],
-            "subTitle": "Find Yours",
+            "subTitle": "",
             "title": "Body Scrub Packages in Seminyak",
             "text": "Body scrubs are often combined with massage, facials, and beauty treatments to create a complete wellness session. Our packages are designed for guests looking to refresh both body and mind while enjoying their time in Bali.",
             "packages": [
@@ -134,7 +162,7 @@
                     }
                   ],
                   "layout": "compact",
-                  "subTitle": "Pick Your Scent",
+                  "subTitle": "",
                   "title": "Body Scrub Options",
                   "text": "Our Body Scrub is available in a selection of natural-inspired variants, so you can enjoy the same full-body exfoliating treatment with the fragrance and blend you prefer. An additional body mask can be applied after the scrub and followed by a shower.",
                   "icon": "/images/spa/Scrub.svg"
@@ -196,9 +224,7 @@
           }
         },
         "image": "/images/services/bodyscrub/bodyscrub-3.webp",
-        "subTitle": "Treatment Timing",
-        "badgeTopText": "Reveal Your",
-        "badgeBottomText": "Glow",
+        "subTitle": "",
         "title": "When Is the Best Time to Use a Body Scrub?",
         "text": "There is no single best time to use a body scrub. It depends on your skin condition, daily activities, and spa routine. A body scrub may be especially suitable:",
         "featuresLeft": [
@@ -212,7 +238,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -221,7 +248,7 @@
         "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/bodyscrub/bodyscrub-8.webp",
-        "subTitle": "The Results",
+        "subTitle": "",
         "title": "What Are the Main Body Scrub Benefits?",
         "text": "Many guests choose body scrubs after beach days, outdoor activities, or before special occasions. A regular body scrub can help refresh the skin and support a smoother feel by:",
         "featuresLeft": [
@@ -245,9 +272,7 @@
         "leftShapeSrc": "/images/shape/step-shape-left.png",
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/bodyscrub/bodyscrub-9.webp",
-        "subTitle": "Choosing Your Scrub",
-        "badgeTopText": "Find Your",
-        "badgeBottomText": "Favourite",
+        "subTitle": "",
         "title": "Which Natural Scrub Matches Your Skin Goals?",
         "text": "Each scrub ingredient creates a slightly different treatment experience while delivering the same gentle exfoliating effect. The choice often comes down to fragrance preferences and the type of skin support you are looking for.",
         "featuresLeft": [
@@ -262,7 +287,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -270,9 +296,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/bodyscrub/bodyscrub-10.webp",
-        "subTitle": "Inside the Treatment",
-        "badgeTopText": "The Ritual",
-        "badgeBottomText": "Unfolds",
+        "subTitle": "",
         "title": "What Happens During a Body Scrub Session?",
         "text": "The treatment begins with your choice of scrub ingredients before gentle circular massage movements are used to exfoliate the body evenly. Additional attention is often given to rougher areas such as elbows, knees, and feet before the scrub is removed to reveal smoother and cleaner-feeling skin underneath. The same treatment experience is also available through our villa and hotel home service appointments.",
         "featuresLeft": [
@@ -287,7 +311,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -302,7 +327,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/bodyscrub/bodyscrub-11.webp",
-            "imageTitle": "Renew Your Skin",
+            "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "Body Scrub Seminyak: FAQs",
             "items": [
@@ -333,6 +358,14 @@
               {
                 "question": "Can body scrubs help with body acne or clogged pores?",
                 "answer": "Regular exfoliation may help reduce the accumulation of dead skin cells and impurities that can contribute to clogged pores. While it is not a medical treatment for acne, many guests find their skin feels cleaner and smoother after regular treatments."
+              },
+              {
+                "question": "How much does a body scrub cost in Seminyak?",
+                "answer": "IDR 169.000 per person at Spa Bali Moon, whichever scent you choose. An additional body mask is IDR 100.000. Home service adds IDR 75.000 per therapist."
+              },
+              {
+                "question": "Where can I get a body scrub in Seminyak?",
+                "answer": "At Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel. Book on WhatsApp, 9am to 11pm."
               }
             ]
           }
@@ -351,8 +384,13 @@
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
             "title": "Discover More Ways to Renew Your Glow",
-            "showFullTreatmentSlider": true,
-            "embedded": true
+            "embedded": true,
+            "related": [
+              "/seminyak/balinese-massage/",
+              "/seminyak/facial/",
+              "/seminyak/hot-stone-massage/",
+              "/seminyak/creambath/"
+            ]
           }
         }
       ]

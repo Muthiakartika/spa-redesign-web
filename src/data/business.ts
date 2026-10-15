@@ -28,11 +28,11 @@ export const business = {
 
   address: {
     /**
-     * Short address as written in the footer and on the Privacy Policy.
-     * TODO ADDR-01: the old mobile menu spelled it "Jl. Panggung Sari No. 30, Seminyak, Bali".
+     * Short address. Since the copy rewrite (15 Oct) the footer, the mobile menu
+     * and the Privacy Policy show the full address below instead.
      */
     short: "Jl. Pangkung Sari No. 30, Seminyak, Bali",
-    /** Full address as written on /contact/. TODO ADDR-02: confirm the official format. */
+    /** Full address as written on /contact/, used wherever the address is shown (copy rewrite, 15 Oct). */
     full: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361",
     /** Structured version for Google (schema.org). Built from the full address above. */
     street: "Jl. Pangkung Sari No. 30",
@@ -48,8 +48,8 @@ export const business = {
 
   /**
    * Opening hours as written in the footer ("Open Daily: 9am - 11pm").
-   * TODO HOURS-01: /contact/ said "Open Daily: 9:00 - 22:00". The Contact page keeps
-   * its own text (src/data/pages/contact.ts) until the owner confirms.
+   * HOURS-01: confirmed as 9am–11pm (copy rewrite, 15 Oct); /contact/ now says
+   * 9:00 - 23:00 too, and Google Maps shows the same.
    */
   openingHours: {
     label: "Open Daily",

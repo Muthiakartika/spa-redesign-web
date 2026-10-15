@@ -773,3 +773,189 @@
 .home-v2 .step-outcall a:is(:hover, :focus-visible) {
   color: var(--headings-color);
 }
+
+/* Treatment pages: the opening paragraph and quick facts under the banner
+   (copy rewrite, 15 Oct; components/sections/QuickFacts.tsx). Answer first,
+   then the facts as a short list; the page's own sections follow. */
+.quick-facts {
+  padding-top: 100px;
+}
+.quick-facts__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 40px 64px;
+  align-items: start;
+}
+.quick-facts__lead {
+  margin: 0;
+  font-family: var(--title-font);
+  font-size: 22px;
+  line-height: 1.65;
+  color: var(--headings-color);
+}
+.quick-facts__lead a {
+  color: var(--theme-color1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.quick-facts__card {
+  padding: 28px 32px;
+  border: 1px solid rgba(var(--theme-color1-rgb), 0.35);
+  border-radius: 16px;
+  background-color: var(--theme-light-background);
+}
+.quick-facts__label {
+  margin: 0 0 14px;
+  font-family: var(--title-font);
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.quick-facts__list {
+  margin: 0;
+}
+.quick-facts__row {
+  display: grid;
+  grid-template-columns: 172px minmax(0, 1fr);
+  gap: 4px 24px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(232, 227, 218, 0.9);
+}
+.quick-facts__row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.quick-facts__row:last-child {
+  padding-bottom: 0;
+}
+.quick-facts__row dt {
+  font-family: var(--title-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--headings-color);
+}
+.quick-facts__row dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+.quick-facts__part {
+  white-space: nowrap;
+}
+.quick-facts__updated {
+  margin: 16px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(232, 227, 218, 0.9);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+@media (max-width: 991px) {
+  .quick-facts__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .quick-facts {
+    padding-top: 50px;
+  }
+  .quick-facts__lead {
+    font-size: 18px;
+  }
+  .quick-facts__card {
+    padding: 22px 20px;
+  }
+  .quick-facts__row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Treatment pages, Kuta and villa: the review slider's heading and the link
+   to the rest of the reviews on Google (copy rewrite, 15 Oct). */
+.treatment-reviews__header {
+  margin-bottom: 40px;
+}
+/* "Reviews of Spa Bali Moon", not the headings' capitalised "Of". */
+.treatment-reviews__header .title {
+  text-transform: none;
+}
+.treatment-reviews__more {
+  margin: 36px 0 0;
+  text-align: center;
+}
+.treatment-reviews__more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--title-font);
+  font-size: 18px;
+  color: var(--theme-color1);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.treatment-reviews__more a:is(:hover, :focus-visible) {
+  color: var(--headings-color);
+}
+@media (max-width: 767px) {
+  .treatment-reviews__header {
+    margin-bottom: 24px;
+  }
+}
+
+/* Text & photo sections whose decorative photo badge was removed (copy
+   rewrite, 15 Oct; showBadge: false): no notch for the badge, just the
+   photo with the mask's rounded corners. */
+.about-section .image-column .inner-column .image-box.image-box--plain {
+  -webkit-mask-image: none;
+  mask-image: none;
+  border-radius: 5.263cqw;
+  overflow: hidden;
+}
+
+/* Homepage: the quick facts under the hero text (copy rewrite, 15 Oct):
+   address, hours, from-price, home-service fee, WhatsApp. Each fact stays
+   on one line; the line breaks between facts. Centred where the hero is. */
+.home-v2 .v2-hero .v2-hero__facts {
+  max-width: 560px;
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--headings-color);
+}
+.home-v2 .v2-hero .v2-hero__facts .v2-hero__fact {
+  display: inline;
+  white-space: nowrap;
+}
+.home-v2 .v2-hero .v2-hero__facts .v2-hero__facts-dot {
+  display: inline;
+  color: var(--theme-color1);
+}
+@media (min-width: 576px) and (max-width: 1199px) {
+  .home-v2 .v2-hero .v2-hero__facts {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 575px) {
+  .home-v2 .v2-hero .v2-hero__facts {
+    font-size: 13px;
+  }
+}
+
+/* /guide/: one line under each title on what the reader will learn (the
+   article's excerpt; copy rewrite, 15 Oct), at most three lines. */
+.p-guide .blog-block .inner-box .content-box .guide-card__excerpt {
+  display: -webkit-box;
+  margin: -6px 0 18px;
+  overflow: hidden;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

@@ -40,3 +40,22 @@ export const testimonials: Testimonial[] = [
   { name: "Komang Eka", text: "Spa Balimoon, nice place, very professional massage" },
   { name: "WAWAN DARMAWAN", text: "The place and service are 5 stars..comfortable and clean.." },
 ];
+
+/**
+ * The six reviews on the treatment pages and /massage-kuta/ (copy rewrite,
+ * 15 Oct): ones that fit a gentle treatment as well as a firm one, under the
+ * heading "Reviews of Spa Bali Moon" because they are about the spa, not the
+ * treatment on the page. Texts exactly as in the list above; names as the
+ * rewrite writes them.
+ */
+export const treatmentPageReviews: Testimonial[] = [
+  { name: "Bea Tan", text: "Enjoyed our treatment by Sumi and Fera. Highly recommended!" },
+  { name: "Trisna Faris", text: "I felt so relaxed after my session. Perfect way to end the day" },
+  { name: "Elena Lagovskaya", text: "Good quality massage and good price" },
+  { name: "Willy Coppenolle", text: "Best spa in Bali for me, it's affordable, its professional. Very Recommended" },
+  { name: "Wawan Darmawan", text: "The place and service are 5 stars..comfortable and clean.." },
+  { name: "Soojung Park", text: "Real good massage, best massage place to end your trip. Thank you" },
+];
+
+/** Spa Bali Moon on Google Maps (the place in the /contact/ map), where the rest of the reviews are. */
+export const googleReviewsUrl = "https://www.google.com/maps?cid=16249037415237189663";

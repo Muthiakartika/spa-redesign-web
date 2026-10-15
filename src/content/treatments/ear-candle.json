@@ -15,12 +15,36 @@
           "props": {
             "image": "/images/banners/ear-candle.webp",
             "imagePosition": "35% 50%",
-            "subTitle": "Gentle Ear Care",
+            "subTitle": "",
             "titleSpan": "Ear Candle Treatment",
             "title": "in Seminyak, Bali"
           }
         }
       ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "An ear candle treatment at Spa Bali Moon in Seminyak is a 30-minute relaxation session: a hollow candle at the outer ear creates gentle warmth, with light massage around the ears, temples, jaw and neck. It costs IDR 159.000 per person, at our spa or at your villa or hotel. It is a relaxation treatment, not a way to clean your ears.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "A relaxation treatment: a hollow candle at the outer ear with warmth and light massage around the ears, temples, jaw and neck"
+          },
+          {
+            "label": "Length and price",
+            "value": "30 minutes, IDR 159.000 per person"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm"
+          }
+        ]
+      }
     },
     {
       "type": "AboutIntro",
@@ -29,7 +53,7 @@
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/earcandle/earcandle-2.webp",
         "secondaryImage": "/images/services/earcandle/earcandle-3.webp",
-        "subTitle": "Wellness for the Senses",
+        "subTitle": "",
         "title": "What Is an Ear Candle Treatment?",
         "text": "Ear Candle, also known as Ear Candling, is a traditional wellness treatment that uses a hollow candle placed at the outer ear area while gentle warmth creates a calming sensation. Often combined with light massage around the ears, temples, and neck, this treatment is chosen by guests looking for a relaxing moment after travelling, long flights, or busy daily routines.",
         "feature1Title": "Gentle Warmth",
@@ -51,7 +75,7 @@
             "images": [
               "/images/services/earcandle/earcandle-4.webp"
             ],
-            "subTitle": "Treatment Overview",
+            "subTitle": "",
             "title": "One Relaxing Ear Candle Session",
             "text": "Our Ear Candle treatment is offered in one session that provides a calm and comfortable wellness experience. The treatment is suitable for first-time guests and can also be combined with other spa services during your visit.",
             "packages": [
@@ -112,7 +136,7 @@
         "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/earcandle/earcandle-5.webp",
-        "subTitle": "Common Uses",
+        "subTitle": "",
         "title": "When Is Ear Candle Commonly Chosen?",
         "text": "Ear Candle is often chosen as a gentle wellness treatment during a relaxing spa visit. It may be suitable for guests looking to unwind after travel, take a short break from a busy schedule, or enjoy a calming treatment around the ears and head. Common reasons they choose Ear Candle include:",
         "featuresLeft": [
@@ -144,9 +168,7 @@
           }
         },
         "image": "/images/services/earcandle/earcandle-6.webp",
-        "subTitle": "Treatment Focus",
-        "badgeTopText": "Beyond the",
-        "badgeBottomText": "Ear",
+        "subTitle": "",
         "title": "Areas Included During an Ear Candle Session",
         "text": "During an Ear Candle session, gentle attention may be given to the outer ear and nearby areas for a more relaxing experience. Depending on the treatment, this may include:",
         "featuresLeft": [
@@ -161,7 +183,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -169,11 +192,9 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/earcandle/earcandle-7.webp",
-        "subTitle": "Step by Step",
-        "badgeTopText": "Handled With",
-        "badgeBottomText": "Care",
-        "title": "How Does an Ear Wax Candle Work?",
-        "text": "An ear wax candle session follows a simple and gentle process designed to create a relaxing experience. Firstly, we make sure you are comfortably positioned before placing the hollow candle near the outer ear. During the session, the candle is carefully monitored, and gentle massage may be included to help you relax. This treatment typically involves:",
+        "subTitle": "",
+        "title": "How Does an Ear Candle Session Work?",
+        "text": "An ear candle session follows a simple and gentle process designed to create a relaxing experience. Firstly, we make sure you are comfortably positioned before placing the hollow candle near the outer ear. During the session, the candle is carefully monitored, and gentle massage may be included to help you relax. This treatment typically involves:",
         "featuresLeft": [
           "Positioning the hollow candle near the outer ear",
           "Gently lighting the candle at the opposite end",
@@ -186,7 +207,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -201,7 +223,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/earcandle/earcandle-8.webp",
-            "imageTitle": "Gentle Ear Care",
+            "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "Ear Candle Seminyak: FAQs",
             "items": [
@@ -211,7 +233,7 @@
               },
               {
                 "question": "Does Ear Candle remove earwax?",
-                "answer": "Ear Candle is often associated with earwax removal, but it should be viewed as a relaxation treatment rather than a replacement for professional ear cleaning or medical care."
+                "answer": "No. Ear candling is a relaxation treatment and does not remove earwax. If you think your ears are blocked, see a doctor."
               },
               {
                 "question": "Is Ear Candle safe?",
@@ -219,7 +241,7 @@
               },
               {
                 "question": "How long does Ear Candle treatment take?",
-                "answer": "A typical session takes around 20 - 30 minutes, depending on the treatment flow and guest comfort."
+                "answer": "The session is 30 minutes."
               },
               {
                 "question": "Can I enjoy Ear Candle after travelling or flying?",
@@ -228,6 +250,14 @@
               {
                 "question": "Can Ear Candle be combined with other spa treatments?",
                 "answer": "Yes. Many guests combine Ear Candle with massages or other wellness treatments for a more complete relaxation session."
+              },
+              {
+                "question": "How much does an ear candle treatment cost in Seminyak?",
+                "answer": "IDR 159.000 per person for the 30-minute session at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
+              },
+              {
+                "question": "Where can I get an ear candle treatment in Seminyak?",
+                "answer": "At Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel. Book on WhatsApp, 9am to 11pm."
               }
             ]
           }
@@ -246,8 +276,13 @@
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
             "title": "Explore More Ways to Feel Restored",
-            "showFullTreatmentSlider": true,
-            "embedded": true
+            "embedded": true,
+            "related": [
+              "/seminyak/head-massage/",
+              "/seminyak/facial/",
+              "/seminyak/balinese-massage/",
+              "/seminyak/foot-reflexology/"
+            ]
           }
         }
       ]

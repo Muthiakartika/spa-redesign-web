@@ -96,3 +96,32 @@ export function fromMarkup(text: string): TreeValue {
   if (last < text.length) parts.push(text.slice(last));
   return { $jsx: { type: "Fragment", children: parts as (TreeNode | string)[] } };
 }
+
+/** The questions and answers of a page's FAQ sections, for its FAQPage structured data. */
+export function faqItems(tree: TreeNode): { question: string; answer: string }[] {
+  const out: { question: string; answer: string }[] = [];
+  const walk = (node: TreeNode) => {
+    const items = node.type === "FaqSection" ? node.props?.items : null;
+    if (Array.isArray(items)) {
+      for (const item of items) {
+        const { question, answer } = (item ?? {}) as Record<string, unknown>;
+        if (typeof question === "string" && typeof answer === "string" && question.trim() && answer.trim()) {
+          out.push({ question: question.trim(), answer: answer.trim() });
+        }
+      }
+    }
+    for (const child of node.children ?? []) if (typeof child !== "string") walk(child);
+  };
+  walk(tree);
+  return out;
+}
+
+/** A copy of the tree with `props` added to every element of the given type. */
+export function withProps(tree: TreeNode, type: string, props: Record<string, TreeValue>): TreeNode {
+  const visit = (node: TreeNode): TreeNode => ({
+    ...node,
+    ...(node.type === type ? { props: { ...(node.props ?? {}), ...props } } : {}),
+    ...(node.children ? { children: node.children.map((c) => (typeof c === "string" ? c : visit(c))) } : {}),
+  });
+  return visit(tree);
+}

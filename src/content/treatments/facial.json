@@ -15,12 +15,40 @@
           "props": {
             "image": "/images/banners/facial.webp",
             "imagePosition": "55% 50%",
-            "subTitle": "Skin Rejuvenation",
+            "subTitle": "",
             "titleSpan": "Facial",
             "title": "in Seminyak: Bali Moon Facial Treatments"
           }
         }
       ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "The Bali Moon Facial at Spa Bali Moon in Seminyak is a cleanse, steam, red clay scrub, Argan Oil lymphatic facial massage and a mask matched to your skin. Choose the Tea Tree Facial (IDR 196.000) for oily or blemish-prone skin, or the Gold Facial (IDR 269.000) for dull or dry skin, per person, at our spa or at your villa or hotel.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "Bali Moon Facial: cleanse, steam, red clay scrub, Argan Oil lymphatic facial massage, mask, rose water toning"
+          },
+          {
+            "label": "Price per person",
+            "value": "Tea Tree Facial (oily or blemish-prone skin) IDR 196.000 · Gold Facial (dull or dry skin) IDR 269.000"
+          },
+          {
+            "label": "Packages",
+            "value": "Four packages that add massage, cream bath or body scrub (see below)"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm"
+          }
+        ]
+      }
     },
     {
       "type": "AboutIntro",
@@ -29,7 +57,7 @@
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/balimoonfacial/balimoonfacial-2.webp",
         "secondaryImage": "/images/services/balimoonfacial/balimoonfacial-3.webp",
-        "subTitle": "A Personalized Experience",
+        "subTitle": "",
         "title": "What Makes Bali Moon Facial Different?",
         "text": "Bali Moon Facial is our signature facial treatment designed to refresh, hydrate, and support healthy-looking skin while providing a relaxing spa experience. The treatment combines gentle cleansing, steaming, exfoliation, lymphatic facial massage using Argan Oil, and a targeted mask selected according to your skin's needs.",
         "feature1Title": "Tea Tree Mask",
@@ -54,7 +82,7 @@
               "/images/services/balimoonfacial/balimoonfacial-6.webp",
               "/images/services/balimoonfacial/balimoonfacial-7.webp"
             ],
-            "subTitle": "Find Yours",
+            "subTitle": "",
             "title": "Facial Packages in Seminyak",
             "text": "Bali Moon Facial is often combined with massage, hair treatments, and nail care to create a complete self-care experience. Our treatment packages are designed for guests looking to relax while giving their skin additional attention during their time in Bali.",
             "packages": [
@@ -118,9 +146,9 @@
                       ]
                     }
                   ],
-                  "subTitle": "Your Skin Moment",
+                  "subTitle": "",
                   "title": "Bali Moon Facial Options",
-                  "text": "We offers two facial treatment options, giving you a simple choice depending on the type of facial you prefer. Both treatments follow our complete facial care routine and are available as individual sessions.",
+                  "text": "We offer two facial treatment options, giving you a simple choice depending on the type of facial you prefer. Both treatments follow our complete facial care routine and are available as individual sessions.",
                   "icon": "/images/spa/Balinese.svg"
                 }
               }
@@ -172,7 +200,7 @@
         "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/balimoonfacial/balimoonfacial-8.webp",
-        "subTitle": "Skin Goals",
+        "subTitle": "",
         "title": "What Does a Facial Help With?",
         "text": "While every skin type behaves differently, regular facial treatments are commonly used to help manage surface impurities, maintain hydration, and support overall skin condition. Guests choose facial treatments for a variety of skincare goals, such as:",
         "featuresLeft": [
@@ -204,9 +232,7 @@
           }
         },
         "image": "/images/services/balimoonfacial/balimoonfacial-9.webp",
-        "subTitle": "Your Skin Type",
-        "badgeTopText": "Made for",
-        "badgeBottomText": "Your Skin",
+        "subTitle": "",
         "title": "Which Mask is Right for Your Skin?",
         "text": "The right mask depends on what your skin needs at the time of your treatment. Tea Tree and Gold masks offer different benefits, making them suitable for different skin types and concerns. We can help you choose the most appropriate option based on your skin's condition:",
         "featuresLeft": [
@@ -221,7 +247,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -229,9 +256,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/balimoonfacial/balimoonfacial-10.webp",
-        "subTitle": "Inside the Treatment",
-        "badgeTopText": "Layer by",
-        "badgeBottomText": "Layer",
+        "subTitle": "",
         "title": "What to Expect During Your Facial",
         "text": "Your facial follows a series of carefully selected steps designed to cleanse, exfoliate, nourish, and refresh your skin:",
         "featuresLeft": [
@@ -246,7 +271,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -261,7 +287,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/balimoonfacial/balimoonfacial-11.webp",
-            "imageTitle": "Refresh Your Skin",
+            "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "Facial Seminyak: FAQs",
             "items": [
@@ -279,7 +305,19 @@
               },
               {
                 "question": "Where Can I Get a Bali Moon Facial in Seminyak?",
-                "answer": "You can enjoy a Bali Moon Facial at Spa Bali Moon in Seminyak, Bali, as a relaxing spa experience designed to combine professional facial care with the calming atmosphere of a Balinese spa."
+                "answer": "You can enjoy a Bali Moon Facial at Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, Bali, as a relaxing spa experience designed to combine professional facial care with the calming atmosphere of a Balinese spa."
+              },
+              {
+                "question": "How much does a facial cost in Seminyak?",
+                "answer": "The Bali Moon Tea Tree Facial is IDR 196.000 and the Bali Moon Gold Facial is IDR 269.000 per person at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
+              },
+              {
+                "question": "Which facial is right for my skin?",
+                "answer": "Choose Tea Tree for oily, congested or blemish-prone skin. Choose Gold for dry, dehydrated or dull skin, or skin that feels tired after sun. For combination skin, tell us how it feels and we'll suggest one."
+              },
+              {
+                "question": "What happens during the Bali Moon Facial?",
+                "answer": "Milk cleanser, warm steam, a red clay scrub, an Argan Oil lymphatic facial massage, a Tea Tree or Gold mask, and a rose water toner to finish."
               }
             ]
           }
@@ -298,8 +336,13 @@
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
             "title": "Complete Your Glow Beyond a Facial",
-            "showFullTreatmentSlider": true,
-            "embedded": true
+            "embedded": true,
+            "related": [
+              "/seminyak/body-scrub/",
+              "/seminyak/creambath/",
+              "/seminyak/head-massage/",
+              "/seminyak/lymphatic-drainage-massage/"
+            ]
           }
         }
       ]

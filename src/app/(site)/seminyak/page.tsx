@@ -6,6 +6,7 @@ import FaqSection from "@/components/sections/FaqSection";
 import PackageIntro from "@/components/sections/PackageIntro";
 import PageBanner from "@/components/sections/PageBanner";
 import ReserveCta from "@/components/sections/ReserveCta";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import Testimonials from "@/components/sections/Testimonials";
 import VideoSection from "@/components/sections/VideoSection";
 import { pricelistPage as page } from "@/data/pages/pricelist";
@@ -36,6 +37,7 @@ export default function PricelistPage() {
   const { menu } = page;
   return (
     <div className="page-wrapper lh p-pricelist">
+      <FaqJsonLd items={page.faq.items} />
       <PageBanner {...page.banner} />
       <VideoSection {...menu} firstStat={stat(menu.firstStat)} secondStat={stat(menu.secondStat)} />
       <div className="jsx-pricelist pricing-package-section">

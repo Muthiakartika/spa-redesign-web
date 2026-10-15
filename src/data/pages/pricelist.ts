@@ -43,6 +43,8 @@ export const pricelistPage = {
     subTitle: "Find Your Treatment",
     titleSpan: "Massage in Seminyak:",
     title: "Prices, Treatments & Packages",
+    // The quick answer under the H1 (copy rewrite, 15 Oct).
+    text: "Massage at Spa Bali Moon in Seminyak starts at IDR 90.000 for 30 minutes. A one-hour Balinese massage is IDR 159.000 per person, and a couple's massage starts at IDR 319.000 for two. Open daily 9am–11pm at Jl. Pangkung Sari No. 30. Home service adds IDR 75.000 per therapist.",
     buttonText: "Book Now",
     image: "/images/banners/pricelist.webp",
     imagePosition: "70% 50%",
@@ -383,7 +385,7 @@ export const pricelistPage = {
           image: "/images/listmenu/shiatsumassage.webp"
         },
         {
-          name: "Sport Massage",
+          name: "Sports Massage",
           desc: "A focused massage designed to relieve muscle tightness and support mobility.",
           options: [
             {
@@ -1448,7 +1450,7 @@ export const pricelistPage = {
     items: [
     {
       question: "1. How do I choose the right treatment?",
-      answer: "Start with what you want from your visit. Balinese Massage is a popular choice for general relaxation, while Sport Massage and Deep Tissue Massage are better suited to muscle tightness and recovery. Our team can also recommend a treatment based on how your body feels and what you would like to achieve."
+      answer: "Start with what you want from your visit. Balinese Massage is a popular choice for general relaxation, while Sports Massage and Deep Tissue Massage are better suited to muscle tightness and recovery. Our team can also recommend a treatment based on how your body feels and what you would like to achieve."
     },
     {
       question: "2. Can I combine several treatments into one visit?",
@@ -1456,11 +1458,11 @@ export const pricelistPage = {
     },
     {
       question: "3. Are the prices listed for each treatment?",
-      answer: "Yes. Our treatment menu provides clear pricing for individual services and packages, making it easier to compare your options before booking."
+      answer: "Yes. Every treatment and package on this page has its price listed, in Indonesian rupiah (IDR)."
     },
     {
       question: "4. Can I book a treatment at my hotel or villa?",
-      answer: "Many of our massage and spa treatments are available through home service in Seminyak and nearby areas. An additional outcall fee of IDR 75.000 per therapist applies."
+      answer: "Yes. Many of our massage and spa treatments are available as home service in Seminyak and nearby areas. An extra IDR 75.000 per therapist applies."
     },
     {
       question: "5. Can I create a custom spa package?",

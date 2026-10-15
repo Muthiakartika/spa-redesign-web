@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
+import { Fragment } from "react";
 import { ICON_BOXES } from "@/components/home/icons";
 import { LotusIcon } from "@/components/ui/Lotus";
 import RowButton from "@/components/ui/RowButton";
@@ -55,6 +56,23 @@ export default function Hero() {
               {hero.title} <span>{hero.highlightedTitle}</span>
             </h1>
             <p className="v2-hero__text">{hero.text}</p>
+            {/* Quick facts under the opening (copy rewrite, 15 Oct). Each fact
+                stays on one line; the line breaks between them. */}
+            <p className="v2-hero__facts">
+              {hero.facts.map((fact, i) => (
+                <Fragment key={fact}>
+                  {i > 0 ? (
+                    <>
+                      {" "}
+                      <span className="v2-hero__facts-dot" aria-hidden="true">
+                        ·
+                      </span>{" "}
+                    </>
+                  ) : null}
+                  <span className="v2-hero__fact">{fact}</span>
+                </Fragment>
+              ))}
+            </p>
             <div className="v2-hero__actions">
               <RowButton href={whatsappChatUrl} icon="whatsapp" label="Book on WhatsApp" note={business.phoneDisplay} />
               <RowButton href="/seminyak/" icon="tag" label="View Price List" note="Every treatment and price" />

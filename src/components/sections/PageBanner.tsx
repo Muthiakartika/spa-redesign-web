@@ -95,18 +95,21 @@ export default function PageBanner({
             />
             <div className={`${S} container`}>
               <div className={`${S}  banner-two__content`}>
-                <p data-animation="fadeInUp" data-delay=".3s" className={`${S} sub-title`}>
-                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className={S}>
-                    <g clipPath="url(#clip0_1_451)" className={S}>
-                      <LotusPaths25 fill="white" className={S} />
-                    </g>
-                  </svg>
-                  {subTitle}
-                </p>
+                {subTitle !== "" && (
+                  <p data-animation="fadeInUp" data-delay=".3s" className={`${S} sub-title`}>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className={S}>
+                      <g clipPath="url(#clip0_1_451)" className={S}>
+                        <LotusPaths25 fill="white" className={S} />
+                      </g>
+                    </svg>
+                    {subTitle}
+                  </p>
+                )}
                 <h1 data-animation="fadeInUp" data-delay=".5s" className={`${S} title`}>
                   <span className={S}>{titleSpan}</span> {title}
                 </h1>
-                {text && <p className={`${S} text`}>{text}</p>}
+                {/* "IDR" never ends a line without its amount. */}
+                {text && <p className={`${S} text`}>{text.replace(/IDR /g, "IDR ")}</p>}
                 {actions ? (
                   <div className={`${S} banner-two__actions mt-50`}>{actions}</div>
                 ) : (

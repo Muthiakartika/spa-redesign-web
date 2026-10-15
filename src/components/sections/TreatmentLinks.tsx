@@ -7,15 +7,21 @@ import { treatmentMenu } from "@/data/navigation";
  * a line of text, and a link to every treatment page from the menu except
  * `exclude` (the page it is on). A component of its own so the page body can
  * be data (src/content/treatments/day-spa.json) that /admin/ edits.
+ *
+ * `only` (treatment page addresses) lists just those, in menu order: the
+ * five most requested since the copy rewrite (15 Oct), with the text linking
+ * to the full price list, instead of the whole menu again.
  */
 export default function TreatmentLinks({
   title,
   text,
   exclude,
+  only,
 }: {
   title: ReactNode;
   text: ReactNode;
   exclude?: string;
+  only?: string[];
 }) {
   return (
     <section className="day-spa-links pt-100 pb-100">
@@ -26,7 +32,7 @@ export default function TreatmentLinks({
         </div>
         <ul className="day-spa-links__list">
           {treatmentMenu
-            .filter((t) => t.href !== exclude)
+            .filter((t) => t.href !== exclude && (!only || only.includes(t.href)))
             .map((t) => (
               <li key={t.href}>
                 <Link prefetch={false} href={t.href}>

@@ -21,7 +21,7 @@
               "props": {
                 "image": "/images/banners/balinese-massage.webp",
                 "shapeImage": "/images/shape/banner-two-shape.png",
-                "subTitle": "Ancient Healing",
+                "subTitle": "",
                 "titleSpan": "Balinese Massage",
                 "title": "in Seminyak, Bali"
               }
@@ -35,7 +35,7 @@
             "secondaryImage": "/images/services/balinesemassage/balinesemassage-3.webp",
             "leftShapeSrc": "/images/shape/about-two-left.png",
             "rightShapeSrc": "/images/shape/about-two-right.png",
-            "subTitle": "A Traditional Wellness",
+            "subTitle": "",
             "title": "What Makes Balinese Massage Unique?",
             "text": "Balinese massage is a traditional treatment influenced by healing practices from Bali, Java, India, and China. The treatment combines acupressure, gentle stretching, skin rolling, and flowing strokes to help reduce tension, improve circulation, and encourage relaxation. Our therapists adapt the pressure and focus areas according to your comfort and preferences.",
             "feature1Title": "Traditional Techniques",
@@ -60,7 +60,7 @@
                   "/images/services/balinesemassage/balinesemassage-6.webp",
                   "/images/services/balinesemassage/balinesemassage-7.webp"
                 ],
-                "subTitle": "Find Yours",
+                "subTitle": "",
                 "title": "Balinese Massage Packages in Seminyak",
                 "text": "Balinese massage is often combined with treatments such as facials, cream baths, and nail care to create a more complete spa experience. Our treatment packages are created for guests looking to relax, refresh, and make the most of their massage time in Bali.",
                 "packages": [
@@ -105,7 +105,7 @@
                   "$jsx": {
                     "type": "SessionOptions",
                     "props": {
-                      "subTitle": "Flexible Sessions",
+                      "subTitle": "",
                       "title": "Balinese Massage Session",
                       "text": "Pick a session that fits your schedule and how much time you want to spend relaxing. Longer sessions give our therapists more time to work across the body and focus on areas that need extra attention.",
                       "icon": "/images/spa/Balinese.svg",
@@ -203,7 +203,7 @@
                 "image": "/images/services/balinesemassage/balinesemassage-8.webp",
                 "leftShapeSrc": null,
                 "rightShapeSrc": "/images/shape/about-right-shape.png",
-                "subTitle": "The Benefits",
+                "subTitle": "",
                 "title": "Why Guests Choose Balinese Massage",
                 "text": "Our Balinese massage is commonly chosen by travellers, office workers, and active individuals because it combines relaxation techniques with muscle-focused work in a single treatment. Find the benefits that make Balinese massage a favourite among our guests:",
                 "featuresLeft": [
@@ -243,9 +243,7 @@
                     }
                   }
                 },
-                "subTitle": "Suitable For",
-                "badgeTopText": "Your Ideal",
-                "badgeBottomText": "Match",
+                "subTitle": "",
                 "title": "Who Is Balinese Massage Best For?",
                 "text": "This treatment is suitable for many different lifestyles and travel situations. Our therapists frequently recommend Balinese massage for guests looking for:",
                 "featuresLeft": [
@@ -260,7 +258,8 @@
                 ],
                 "buttonText": "Book Now",
                 "buttonLink": "https://wa.me/6287863175144",
-                "treatmentLayout": true
+                "treatmentLayout": true,
+                "showBadge": false
               }
             }
           ]
@@ -277,9 +276,7 @@
                 "image": "/images/services/balinesemassage/balinesemassage-10.webp",
                 "leftShapeSrc": "/images/shape/leaf/4a.png",
                 "rightShapeSrc": "/images/shape/banner-three-shape2.png",
-                "subTitle": "The Experience",
-                "badgeTopText": "Feel The",
-                "badgeBottomText": "Difference",
+                "subTitle": "",
                 "title": "What to Expect from a Balinese Massage",
                 "text": "A Balinese massage session begins with a short consultation regarding pressure preferences and areas that require extra attention. Massage oil is used to support smooth movements and muscle relaxation. The same treatment experience is also available through our home service for guests staying in villas, hotels, or private accommodations. Here’s what you can expect during your Balinese massage experience:",
                 "featuresLeft": [
@@ -294,7 +291,8 @@
                 ],
                 "buttonText": "Book Now",
                 "buttonLink": "https://wa.me/6287863175144",
-                "treatmentLayout": true
+                "treatmentLayout": true,
+                "showBadge": false
               }
             }
           ]
@@ -348,6 +346,18 @@
                   {
                     "question": "What are the benefits of a Balinese massage?",
                     "answer": "Balinese massage may help reduce muscle tension, improve blood circulation, encourage relaxation, ease everyday stress, and leave the body feeling refreshed. Many guests also find it beneficial after long flights or busy travel itineraries."
+                  },
+                  {
+                    "question": "How much does a Balinese massage cost in Seminyak?",
+                    "answer": "IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
+                  },
+                  {
+                    "question": "Which massage is best if I've never had one before?",
+                    "answer": "Balinese massage is often recommended for first-time guests because it combines relaxation, gentle stretching and traditional massage techniques suitable for most people. You can ask for lighter or firmer pressure at any point."
+                  },
+                  {
+                    "question": "How long should a Balinese massage be?",
+                    "answer": "One hour covers the whole body. Choose 1.5 or 2 hours if you want more time on tense areas or a slower, more unhurried session."
                   }
                 ]
               }
@@ -367,8 +377,13 @@
                 "title": "Explore Beyond Your Balinese Massage",
                 "leftShapeSrc": "/images/shape/service-shape-left.png",
                 "rightShapeSrc": "/images/shape/service-shape-right.png",
-                "showFullTreatmentSlider": true,
-                "embedded": true
+                "embedded": true,
+                "related": [
+                  "/seminyak/hot-stone-massage/",
+                  "/seminyak/foot-reflexology/",
+                  "/seminyak/body-scrub/",
+                  "/seminyak/facial/"
+                ]
               }
             }
           ]
@@ -412,6 +427,34 @@
           ]
         }
       ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "Balinese massage at Spa Bali Moon in Seminyak is a full-body massage with steady pressure, gentle stretching and aromatic oils. Sessions are 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person, at our spa or at your villa or hotel. It's the treatment we recommend most often for first-time guests.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "Full-body massage with steady pressure, gentle stretching and aromatic oils"
+          },
+          {
+            "label": "Length and price",
+            "value": "Per person: 1 hour IDR 159.000 · 1.5 hours IDR 239.000 · 2 hours IDR 330.000"
+          },
+          {
+            "label": "Packages",
+            "value": "From IDR 399.000: Balinese massage with manicure and pedicure, cream bath or facial (four packages, see below)"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm"
+          }
+        ]
+      }
     }
   ]
 }

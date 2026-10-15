@@ -638,7 +638,7 @@ export default function PrivacyPolicyPage() {
                             Address
                           </div>
                           <span style={{ fontFamily: "var(--text-font)", fontSize: "14px", color: "#707070" }}>
-                            Jl. Pangkung Sari No. 30, Seminyak, Bali
+                            Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361
                           </span>
                         </div>
                       </div>

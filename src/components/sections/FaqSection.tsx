@@ -59,7 +59,8 @@ export default function FaqSection({
             <div className={`${S} col-xxl-6 image-column`}>
               <div className={`${S} inner-column gsap__parallax`}>
                 <img loading="lazy" decoding="async" src={image} alt="Spa facial treatment" className={S} />
-                {imageTitleAsHeading ? (
+                {/* Empty words on the photo are left out (treatment pages, 15 Oct). */}
+                {imageTitle === "" ? null : imageTitleAsHeading ? (
                   <h2 className={`${S} title`}>{imageTitle}</h2>
                 ) : (
                   <div className={`${S} title look-h2`}>{imageTitle}</div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Faq from "@/components/home/Faq";
 import HomeLayout from "@/components/home/HomeLayout";
 import AllTreatmentsSlider from "@/components/home/AllTreatmentsSlider";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import MenuDurations from "@/components/home/MenuDurations";
 import { home } from "@/data/pages/home";
 import { buildMetadata } from "@/lib/seo";
@@ -31,6 +32,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(home.seo.schema).replace(/</g, "\\u003c") }}
       />
+      <FaqJsonLd items={home.faq.items} />
       <HomeLayout
         className="home-v3"
         aboutSubTitle="About Us"
@@ -40,9 +42,10 @@ export default function HomePage() {
             title="Massage & Spa Treatments in Seminyak"
             text={
               <>
-                {/* Kept together so a narrow phone breaks at the comma, not
-                    before "outcall." alone. */}
-                23 massages and spa services, <span style={{ whiteSpace: "nowrap" }}>in-call or outcall.</span>
+                {/* Copy rewrite, 15 Oct. The last words kept together so a
+                    narrow phone does not leave one alone on a line. */}
+                23 massage and spa treatments, at our Seminyak spa or at your villa or hotel.{" "}
+                <span style={{ whiteSpace: "nowrap" }}>Prices are per person.</span>
               </>
             }
           />

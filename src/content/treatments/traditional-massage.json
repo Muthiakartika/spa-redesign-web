@@ -14,12 +14,36 @@
           "type": "PageBanner",
           "props": {
             "image": "/images/banners/traditional-massage.webp",
-            "subTitle": "Firm Body Care",
+            "subTitle": "",
             "titleSpan": "Traditional Massage",
             "title": "in Seminyak, Bali"
           }
         }
       ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "Traditional massage at Spa Bali Moon in Seminyak is a firm, hands-on massage that uses kneading and focused pressure to release muscle tension. Sessions are 30 minutes (IDR 90.000), 1 hour (IDR 169.000), 1.5 hours (IDR 259.000) or 2 hours (IDR 339.000) per person, at our spa or at your villa or hotel. It is our lowest-priced massage at 30 minutes.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "Firm, hands-on full-body massage using kneading and focused pressure to release muscle tension"
+          },
+          {
+            "label": "Length and price",
+            "value": "Per person: 30 minutes IDR 90.000 · 1 hour IDR 169.000 · 1.5 hours IDR 259.000 · 2 hours IDR 339.000"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm"
+          }
+        ]
+      }
     },
     {
       "type": "AboutIntro",
@@ -28,7 +52,7 @@
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/traditionalmassage/traditionalmassage-2.webp",
         "secondaryImage": "/images/services/traditionalmassage/traditionalmassage-3.webp",
-        "subTitle": "Traditional Wellness Support",
+        "subTitle": "",
         "title": "What Makes Traditional Massage Different?",
         "text": "Traditional Massage is a hands-on body treatment that uses firmer pressure, kneading movements, and focused techniques to release muscle tension throughout the body. Unlike lighter relaxation massages, this treatment works more directly on areas that feel stiff or overworked, helping improve comfort, mobility, and overall body relaxation.",
         "feature1Title": "Firm Pressure",
@@ -53,7 +77,7 @@
               "/images/services/traditionalmassage/traditionalmassage-5.webp",
               "/images/services/traditionalmassage/traditionalmassage-6.webp"
             ],
-            "subTitle": "Select Yours",
+            "subTitle": "",
             "title": "Our Session Options",
             "text": "Our Traditional Massage session provides enough time for therapists to work through areas that hold tension. Choose a shorter treatment for focused relaxation or a longer session for more complete body care.",
             "packages": [
@@ -141,9 +165,9 @@
         "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/traditionalmassage/traditionalmassage-7.webp",
-        "subTitle": "Gentle Relief",
+        "subTitle": "",
         "title": "Why Do Guests Choose Traditional Massage?",
-        "text": "Traditional Massage is popular among guests who prefer a stronger touch compared to gentle relaxation treatments. It is often selected after busy schedules, long journeys, physical activities, or when the body feels heavy from daily tension.",
+        "text": "Traditional Massage offers a more focused and firm approach for guests who enjoy feeling deeper pressure during their treatment. Its traditional techniques make it a suitable option for those looking for hands-on bodywork as part of their regular wellness routine. Guests may choose Traditional Massage for other reasons such as:",
         "featuresLeft": [
           "Helps ease stiff and tired muscles",
           "Supports better body comfort",
@@ -173,11 +197,9 @@
           }
         },
         "image": "/images/services/traditionalmassage/traditionalmassage-8.webp",
-        "subTitle": "Treatment Focus",
-        "badgeTopText": "Relief Where",
-        "badgeBottomText": "You Feel It",
+        "subTitle": "",
         "title": "Which Areas Receive the Most Attention?",
-        "text": "Muscle tension often develops in areas that carry repeated pressure throughout the day. During Traditional Massage, our therapists adjust their approach based on your body condition and focus on areas that need extra care.",
+        "text": "Traditional Massage can be adapted to different parts of the body depending on where you would like the treatment to focus. We work through each area with appropriate pressure and technique, giving extra attention where needed. Common areas of focus are:",
         "featuresLeft": [
           "Back from prolonged sitting or activity",
           "Shoulders and neck from daily posture",
@@ -190,7 +212,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -198,11 +221,9 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/traditionalmassage/traditionalmassage-9.webp",
-        "subTitle": "The Approach",
-        "badgeTopText": "A Timeless",
-        "badgeBottomText": "Technique",
+        "subTitle": "",
         "title": "Inside a Traditional Massage Session",
-        "text": "Traditional Massage combines firm hand movements with warm oil application to create smoother and more comfortable techniques. Our therapists use kneading, pressing, and acupressure-inspired movements to release areas of tightness while maintaining communication throughout the session. Pressure can be adjusted based on your comfort and body response.",
+        "text": "Our therapists move gradually from one area to another, checking your comfort and adapting the treatment as the session progresses. The approach may involve:",
         "featuresLeft": [
           "Warm oil preparation",
           "Kneading techniques",
@@ -215,7 +236,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -230,7 +252,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/traditionalmassage/traditionalmassage-10.webp",
-            "imageTitle": "Traditional Massage",
+            "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "Traditional Massage Seminyak: FAQs",
             "items": [
@@ -253,6 +275,10 @@
               {
                 "question": "Should I choose Traditional Massage or Deep Tissue Massage?",
                 "answer": "Traditional Massage is ideal for guests wanting firm full-body pressure and general muscle relief. Deep Tissue Massage is more targeted toward deeper layers and specific long-term tension areas."
+              },
+              {
+                "question": "How much does a traditional massage cost in Seminyak?",
+                "answer": "IDR 90.000 for 30 minutes, IDR 169.000 for 1 hour, IDR 259.000 for 1.5 hours and IDR 339.000 for 2 hours per person at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
               }
             ]
           }
@@ -271,8 +297,13 @@
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
             "title": "Go Beyond Traditional Massage",
-            "showFullTreatmentSlider": true,
-            "embedded": true
+            "embedded": true,
+            "related": [
+              "/seminyak/deep-tissue-massage/",
+              "/seminyak/balinese-massage/",
+              "/seminyak/thai-massage/",
+              "/seminyak/foot-reflexology/"
+            ]
           }
         }
       ]

@@ -111,6 +111,6 @@ export const privacyPolicyPage: TextPage = {
     { kind: "heading", level: 6, text: "WhatsApp" },
     { kind: "link", label: "+62 878-6317-5144", href: "whatsapp" },
     { kind: "heading", level: 6, text: "Address" },
-    { kind: "paragraph", text: "Jl. Pangkung Sari No. 30, Seminyak, Bali" },
+    { kind: "paragraph", text: "Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Kerobokan Kuta Utara, Badung, Bali 80361" },
   ],
 };

@@ -8,12 +8,12 @@
 export type SitemapEntry = { loc: string; lastmod: string; image?: string };
 
 export const sitemapPages: SitemapEntry[] = [
-  { loc: "https://spabalimoon.com/", lastmod: "2026-07-08T01:37:02+00:00" },
+  { loc: "https://spabalimoon.com/", lastmod: "2026-10-15T00:00:00+00:00" },
   { loc: "https://spabalimoon.com/contact/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/contact.webp" },
   { loc: "https://spabalimoon.com/guide/", lastmod: "2026-07-06T08:14:14+00:00", image: "https://spabalimoon.com/images/blog/blog-1.webp" },
   { loc: "https://spabalimoon.com/massage-kuta/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/massage-kuta.webp" },
   { loc: "https://spabalimoon.com/outcall-home-service-massage/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/outcall-home-service-massage.webp" },
-  { loc: "https://spabalimoon.com/privacy-policy/", lastmod: "2026-03-24T07:03:50+00:00", image: "https://spabalimoon.com/images/bg/page-title-bg.jpg" },
+  { loc: "https://spabalimoon.com/privacy-policy/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/bg/page-title-bg.jpg" },
   { loc: "https://spabalimoon.com/reservation/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/reservation.webp" },
   { loc: "https://spabalimoon.com/seminyak/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/pricelist.webp" },
   { loc: "https://spabalimoon.com/seminyak/anti-cellulite-massage/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/anti-cellulite-massage.webp" },
@@ -22,7 +22,7 @@ export const sitemapPages: SitemapEntry[] = [
   { loc: "https://spabalimoon.com/seminyak/coconut-oil-massage/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/coconut-oil-massage.webp" },
   { loc: "https://spabalimoon.com/seminyak/couple-spa/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/couple-spa.webp" },
   { loc: "https://spabalimoon.com/seminyak/creambath/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/creambath.webp" },
-  { loc: "https://spabalimoon.com/seminyak/day-spa/", lastmod: "2026-07-06T06:39:18+00:00", image: "https://spabalimoon.com/images/services/dayspaseminyak/dayspa-1.webp" },
+  { loc: "https://spabalimoon.com/seminyak/day-spa/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/services/dayspaseminyak/dayspa-1.webp" },
   { loc: "https://spabalimoon.com/seminyak/deep-tissue-massage/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/deep-tissue-massage.webp" },
   { loc: "https://spabalimoon.com/seminyak/ear-candle/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/ear-candle.webp" },
   { loc: "https://spabalimoon.com/seminyak/facial/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/facial.webp" },

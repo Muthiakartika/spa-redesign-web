@@ -16,6 +16,8 @@ export type AboutSplitAltProps = {
   image?: string;
   badgeTopText?: string | null;
   badgeBottomText?: ReactNode;
+  /** false: no badge on the photo (a decorative one removed in the copy rewrite, 15 Oct). */
+  showBadge?: boolean;
   paperDecoration?: boolean;
   treatmentLayout?: boolean;
   leftShapeSrc?: string | null;
@@ -47,6 +49,7 @@ export default function AboutSplitAlt({
   image = "/images/about/about-image.png",
   badgeTopText,
   badgeBottomText = "Experience",
+  showBadge = true,
   paperDecoration = true,
   treatmentLayout = false,
   leftShapeSrc,
@@ -104,20 +107,23 @@ export default function AboutSplitAlt({
                   float: "left",
                 }}
               >
-                <div className="image-box">
+                {/* Without its badge the photo loses the notch the badge sat in. */}
+                <div className={showBadge ? "image-box" : "image-box image-box--plain"}>
                   <img loading="lazy" decoding="async" src={image} alt="Spa treatment" />
                 </div>
-                <div className="info info--gold">
-                  <p className="info-line">
-                    {badgeTopText || (
-                      <>
-                        <span className="count">17</span> <span>+</span>
-                        {" Years"}
-                      </>
-                    )}
-                  </p>
-                  <p className="info-line title">{badgeBottomText}</p>
-                </div>
+                {showBadge && (
+                  <div className="info info--gold">
+                    <p className="info-line">
+                      {badgeTopText || (
+                        <>
+                          <span className="count">17</span> <span>+</span>
+                          {" Years"}
+                        </>
+                      )}
+                    </p>
+                    <p className="info-line title">{badgeBottomText}</p>
+                  </div>
+                )}
               </div>
             </div>
             <div className="col-lg-7 content-column">
@@ -128,10 +134,12 @@ export default function AboutSplitAlt({
                 }}
               >
                 <div className="section-header">
-                  <p className="sub-title wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                    <LotusIcon className="icon" />
-                    {subTitle}
-                  </p>
+                  {subTitle !== "" && (
+                    <p className="sub-title wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                      <LotusIcon className="icon" />
+                      {subTitle}
+                    </p>
+                  )}
                   <h2 className="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     {title}
                   </h2>

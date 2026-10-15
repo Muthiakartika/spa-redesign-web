@@ -33,12 +33,29 @@ export function ensurePageContentTable() {
 
 const missingTable = (e: unknown) => (e as { code?: string })?.code === "42P01";
 
+/**
+ * Saves made in /admin/ before the copy rewrite (15 Oct 2026) are not used:
+ * the rewrite changed the text and the sections of every treatment page, and
+ * a saved copy wins over both (or, once the sections differ, is shown as it
+ * was saved). The owner's edits in those saves (Sport, Sunburn, Thai,
+ * Traditional, Waxing: paragraphs, lists and FAQs, as live at this moment)
+ * were copied into src/content/treatments/ first, so nothing is lost. Any
+ * later save is used as usual. The old rows stay in the table and are
+ * replaced by the page's next save.
+ */
+const SAVED_BEFORE_IGNORED = "2026-10-15T08:04:00Z";
+
+/** When the built-in pages were last changed: the copy rewrite. Shown as "Last updated". */
+export const BUILT_IN_UPDATED_AT = SAVED_BEFORE_IGNORED;
+
 type SavedRow = { body: TreeNode; seo: Partial<TreatmentSeo> | null; updated_at: string | null };
 
 async function readSaved(slug: string): Promise<SavedRow | null> {
   if (!isDatabaseConfigured()) return null;
   try {
-    const rows = await getSql()`SELECT body, seo, updated_at FROM page_content WHERE path = ${treatmentPath(slug)}`;
+    const rows = await getSql()`
+      SELECT body, seo, updated_at FROM page_content
+      WHERE path = ${treatmentPath(slug)} AND updated_at >= ${SAVED_BEFORE_IGNORED}`;
     if (!rows.length) return null;
     const row = rows[0];
     return { body: row.body as TreeNode, seo: row.seo as SavedRow["seo"], updated_at: toTimestamp(row.updated_at) };
@@ -60,6 +77,8 @@ export type TreatmentContent = {
   original: { tree: TreeNode; seo: TreatmentSeo };
   /** When it was last saved in /admin/; null while it is the built-in version. */
   editedAt: string | null;
+  /** The later of that save and the last change to the built-in version. */
+  updatedAt: string;
 };
 
 /** One treatment page as the site shows it. Null for an unknown slug. Cached per request. */
@@ -75,6 +94,10 @@ export const getTreatmentContent = cache(async (slug: string): Promise<Treatment
     seo: { ...treatment.seo, ...(saved?.seo ?? {}) },
     original: { tree: seed, seo: treatment.seo },
     editedAt: saved ? saved.updated_at : null,
+    updatedAt:
+      saved?.updated_at && Date.parse(saved.updated_at) > Date.parse(BUILT_IN_UPDATED_AT)
+        ? saved.updated_at
+        : BUILT_IN_UPDATED_AT,
   };
 });
 
@@ -82,7 +105,9 @@ export const getTreatmentContent = cache(async (slug: string): Promise<Treatment
 export async function listEditedTreatments(): Promise<Record<string, string>> {
   if (!isDatabaseConfigured()) return {};
   try {
-    const rows = await getSql()`SELECT path, updated_at FROM page_content WHERE path LIKE '/seminyak/%'`;
+    const rows = await getSql()`
+      SELECT path, updated_at FROM page_content
+      WHERE path LIKE '/seminyak/%' AND updated_at >= ${SAVED_BEFORE_IGNORED}`;
     return Object.fromEntries(
       rows.map((r) => [String(r.path).replace(/^\/seminyak\/|\/$/g, ""), toTimestamp(r.updated_at) ?? ""])
     );

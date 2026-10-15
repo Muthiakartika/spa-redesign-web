@@ -215,7 +215,7 @@ export default function Footer() {
                   <dt>Address</dt>
                   <dd>
                     <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">
-                      {business.address.short}
+                      {business.address.full}
                     </a>
                   </dd>
                 </div>

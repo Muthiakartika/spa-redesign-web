@@ -15,12 +15,40 @@
           "props": {
             "image": "/images/banners/nail-spa.webp",
             "imagePosition": "60% 50%",
-            "subTitle": "Creative Design",
+            "subTitle": "",
             "titleSpan": "Nail Art & Gel Nails",
             "title": "in Seminyak"
           }
         }
       ]
+    },
+    {
+      "type": "QuickFacts",
+      "props": {
+        "text": "Gel nails and nail art at Spa Bali Moon in Seminyak start at IDR 159.000 for a manicure with colour and IDR 219.000 for gel nails, per person. Most appointments take 45 to 90 minutes, and gel typically lasts two to three weeks. Bring a photo of the design you want.",
+        "items": [
+          {
+            "label": "Treatment",
+            "value": "Gel nails and nail art, from simple colour to custom designs"
+          },
+          {
+            "label": "Price per person",
+            "value": "Manicure with colour IDR 159.000 · Pedicure with colour IDR 169.000 · Nail gel IDR 219.000 (hands or feet)"
+          },
+          {
+            "label": "Time",
+            "value": "Most appointments take 45 to 90 minutes, depending on the design"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp, 9am–11pm. Bring a reference photo if you have one"
+          }
+        ]
+      }
     },
     {
       "type": "AboutIntro",
@@ -29,7 +57,7 @@
         "rightShapeSrc": "/images/shape/about-two-right.png",
         "primaryImage": "/images/services/nailart/nailart-2.webp",
         "secondaryImage": "/images/services/nailart/nailart-3.webp",
-        "subTitle": "Personal Style",
+        "subTitle": "",
         "title": "Why Do Many Guests Choose Gel Nail Art?",
         "text": "Gel Nail Art combines creative design with a durable gel finish that helps nails stay neat and polished for longer than regular nail polish. Many guests choose this treatment before holidays, weddings, special events, or simply to enjoy beautiful nails throughout their stay in Bali. At Spa Bali Moon, every design is applied carefully to protect the natural nail while creating a personalised look that matches your style.",
         "feature1Title": "Long Lasting Finish",
@@ -53,7 +81,7 @@
               "/images/services/nailart/nailart-5.webp",
               "/images/services/nailart/nailart-6.webp"
             ],
-            "subTitle": "Service Options",
+            "subTitle": "",
             "title": "Choose the Finish You Prefer",
             "text": "Our nail services include fresh colour, decorative nail art, and long lasting gel finishes, giving you different options to suit your personal style and any occasion.",
             "packages": [
@@ -132,7 +160,7 @@
         "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/nailart/nailart-7.webp",
-        "subTitle": "Beauty Benefits",
+        "subTitle": "",
         "title": "What Makes Gel Nail Art So Popular?",
         "text": "Gel Nail Art offers a practical way to add colour and personality to your nails while maintaining a neat, polished look. It can suit different styles and occasions, from simple everyday designs to more creative looks for holidays or special events. People often choose gel nails for reasons such as:",
         "featuresLeft": [
@@ -164,9 +192,7 @@
           }
         },
         "image": "/images/services/nailart/nailart-8.webp",
-        "subTitle": "Design Possibilities",
-        "badgeTopText": "Your Signature",
-        "badgeBottomText": "Set",
+        "subTitle": "",
         "title": "Find Nail Art Style That Matches You",
         "text": "Your nail design can be simple, elegant, playful, or more detailed depending on the look you have in mind. We can work from your inspiration and adapt the design to suit your natural nails, preferred colours, and occasion. Some popular styles are:",
         "featuresLeft": [
@@ -180,7 +206,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -188,9 +215,7 @@
       "props": {
         "rightShapeSrc": "/images/shape/banner-three-shape2.png",
         "image": "/images/services/nailart/nailart-9.webp",
-        "subTitle": "Application Process",
-        "badgeTopText": "Built Layer",
-        "badgeBottomText": "by Layer",
+        "subTitle": "",
         "title": "How Is Gel Nail Art Applied?",
         "text": "Gel Nail Art is applied through a step-by-step process that prepares the nails before the colour and design are added. Each layer is carefully finished and cured to create a smooth, polished result while keeping the application neat and comfortable. The process typically involves:",
         "featuresLeft": [
@@ -205,7 +230,8 @@
         ],
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -220,7 +246,7 @@
             "removeTopPadding": true,
             "paperDecoration": true,
             "image": "/images/services/nailart/nailart-10.webp",
-            "imageTitle": "Gel Nail Art",
+            "imageTitle": "",
             "subTitle": "Frequently Asked Questions",
             "title": "Gel Nails & Nail Art Seminyak: FAQs",
             "items": [
@@ -247,6 +273,10 @@
               {
                 "question": "What is nail art?",
                 "answer": "Nail art is the decoration of fingernails or toenails using colours, patterns, designs, or other decorative details. It can be added to natural nails or applied over gel or polish."
+              },
+              {
+                "question": "How much does gel nail art cost in Seminyak?",
+                "answer": "A manicure with colour is IDR 159.000, a pedicure with colour IDR 169.000 and nail gel IDR 219.000 for hands or feet at Spa Bali Moon. Gel on both hands and feet is IDR 438.000."
               }
             ]
           }
@@ -265,8 +295,13 @@
             "leftShapeSrc": "/images/shape/service-shape-left.png",
             "rightShapeSrc": "/images/shape/service-shape-right.png",
             "title": "Explore More Ways to Perfect Your Bali Glow",
-            "showFullTreatmentSlider": true,
-            "embedded": true
+            "embedded": true,
+            "related": [
+              "/seminyak/manicure-pedicure/",
+              "/seminyak/foot-reflexology/",
+              "/seminyak/creambath/",
+              "/seminyak/waxing-salon/"
+            ]
           }
         }
       ]

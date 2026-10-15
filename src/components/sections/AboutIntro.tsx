@@ -111,10 +111,13 @@ export default function AboutIntro({
             <div className="col-xl-5 content-column">
               <div className="inner-column">
                 <div className="section-header mb-50">
-                  <p className="sub-title wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                    <LotusIcon className="icon" />
-                    {subTitle}
-                  </p>
+                  {/* An empty small heading is left out (treatment pages, 15 Oct). */}
+                  {subTitle !== "" && (
+                    <p className="sub-title wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                      <LotusIcon className="icon" />
+                      {subTitle}
+                    </p>
+                  )}
                   <h2 className="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     {title}
                   </h2>

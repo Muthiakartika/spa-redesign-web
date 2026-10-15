@@ -7,7 +7,7 @@
     {
       "type": "PageBanner",
       "props": {
-        "subTitle": "Take the Day Slowly",
+        "subTitle": "",
         "titleSpan": "Day Spa in",
         "title": "Seminyak",
         "buttonText": "Book Now",
@@ -15,9 +15,37 @@
       }
     },
     {
+      "type": "QuickFacts",
+      "props": {
+        "text": "Spa Bali Moon is a day spa in Seminyak, at Jl. Pangkung Sari No. 30, open daily from 9am to 11pm. In one visit you can combine a massage with a facial, body scrub, cream bath, reflexology or a manicure and pedicure, in a private room. Treatments start from IDR 69.000 per person, and spa packages from IDR 399.000.",
+        "items": [
+          {
+            "label": "What it is",
+            "value": "A visit that combines massage, facial, body scrub, cream bath, reflexology, manicure or pedicure"
+          },
+          {
+            "label": "Where",
+            "value": "Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak. Private rooms, including rooms for couples"
+          },
+          {
+            "label": "Prices",
+            "value": "Treatments from IDR 69.000 per person; spa packages from IDR 399.000 (see the price list)"
+          },
+          {
+            "label": "Hours",
+            "value": "Open daily, 9am–11pm"
+          },
+          {
+            "label": "Booking",
+            "value": "WhatsApp; advance booking recommended"
+          }
+        ]
+      }
+    },
+    {
       "type": "AboutIntro",
       "props": {
-        "subTitle": "A Little More Time",
+        "subTitle": "",
         "title": "What Makes a Day Spa Visit Different?",
         "text": "A day spa visit gives you time to enjoy more than one form of care without having to rush from one appointment to the next. At Spa Bali Moon, a visit can include a traditional Balinese massage, facial, body scrub, Cream Bath, reflexology, or beauty service depending on what you are looking for.",
         "feature1Title": "Care from Head to Toe",
@@ -60,7 +88,7 @@
         {
           "type": "AboutSplit",
           "props": {
-            "subTitle": "Shape the Visit",
+            "subTitle": "",
             "title": "How Can You Spend Your Day at the Spa?",
             "text": "There is no single way to enjoy a day spa in Seminyak. A guest recovering from a long flight may begin with a gentle massage, while someone preparing for a special occasion may prefer to focus on skin and beauty care.",
             "featuresLeft": [
@@ -87,9 +115,7 @@
       "type": "AboutSplitAlt",
       "props": {
         "paperDecoration": false,
-        "subTitle": "Make a Day of It",
-        "badgeTopText": "Longer Spa",
-        "badgeBottomText": "Visit",
+        "subTitle": "",
         "title": "Is a Longer Spa Visit Worth the Time?",
         "text": "Giving yourself more than an hour allows different types of care to work together. A massage can help your body release physical tension, while a facial or body scrub brings attention to the skin.",
         "featuresLeft": [
@@ -105,7 +131,8 @@
         "buttonText": "Book Now",
         "buttonLink": "https://wa.me/6287863175144",
         "image": "/images/services/dayspaseminyak/dayspa-5.webp",
-        "treatmentLayout": true
+        "treatmentLayout": true,
+        "showBadge": false
       }
     },
     {
@@ -117,8 +144,6 @@
         {
           "type": "AboutSplit",
           "props": {
-            "badgeTopText": "Expert",
-            "badgeBottomText": "Therapists",
             "title": "Skilled Therapists in a Comfortable Seminyak Space",
             "text": "Our therapists are trained to deliver treatments with attention and care, adjusting each session to your body's condition. Located in the heart of Seminyak, Spa Bali Moon offers a calm and welcoming environment with private rooms, including spaces for couples — plus home service options so you can enjoy our day spa in your villa or hotel.",
             "featuresLeft": [
@@ -132,7 +157,9 @@
               "Home service available"
             ],
             "image": "/images/services/dayspaseminyak/dayspa-6.webp",
-            "treatmentLayout": true
+            "treatmentLayout": true,
+            "showBadge": false,
+            "subTitle": ""
           }
         }
       ]
@@ -167,14 +194,20 @@
             ]
           }
         },
-        "exclude": "/seminyak/day-spa/"
+        "only": [
+          "/seminyak/balinese-massage/",
+          "/seminyak/thai-massage/",
+          "/seminyak/sport-massage/",
+          "/seminyak/creambath/",
+          "/seminyak/manicure-pedicure/"
+        ]
       }
     },
     {
       "type": "FaqSection",
       "props": {
         "paperDecoration": true,
-        "imageTitle": "Your Seminyak Day Spa",
+        "imageTitle": "",
         "subTitle": "Frequently Asked Questions",
         "title": "Day Spa Seminyak: FAQs",
         "items": [
@@ -205,6 +238,14 @@
           {
             "question": "How can I arrange a home service booking?",
             "answer": "Send us a message on WhatsApp with your preferred treatments, location, date, and time. Our team will confirm availability and provide the details needed for your appointment."
+          },
+          {
+            "question": "How much does a day spa package cost in Seminyak?",
+            "answer": "Spa Bali Moon's Balinese massage packages range from IDR 399.000 to IDR 549.000 and combine a Balinese massage with a manicure and pedicure, cream bath or facial. You can also build your own package. Message us on WhatsApp."
+          },
+          {
+            "question": "Where is Spa Bali Moon and when is it open?",
+            "answer": "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Seminyak, and open daily from 9am to 11pm."
           }
         ],
         "image": "/images/services/dayspaseminyak/dayspa-7.webp"
@@ -230,8 +271,13 @@
         {
           "type": "ServiceSlider",
           "props": {
-            "showFullTreatmentSlider": true,
-            "embedded": true
+            "embedded": true,
+            "related": [
+              "/seminyak/balinese-massage/",
+              "/seminyak/facial/",
+              "/seminyak/body-scrub/",
+              "/seminyak/creambath/"
+            ]
           }
         }
       ]

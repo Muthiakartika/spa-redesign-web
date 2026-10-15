@@ -51,6 +51,9 @@ export default function GuideArchive({ posts }: { posts: PostSummary[] }) {
                         <h2 className="title look-h4">
                           <Link href={href}>{post.title}</Link>
                         </h2>
+                        {/* What the reader will learn: the article's excerpt
+                            from /admin/ (copy rewrite, 15 Oct). */}
+                        {post.excerpt ? <p className="guide-card__excerpt">{post.excerpt}</p> : null}
                         {/* The hidden title makes the link text say which
                             article it opens (a bare "Read More" is flagged).
                             The div keeps it on a line of its own, at the

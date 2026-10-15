@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import TreatmentBody from "@/components/treatments/TreatmentBody";
 import { treatments } from "@/data/treatments";
 import { buildMetadata } from "@/lib/seo";
 import { getTreatmentContent } from "@/lib/treatments/content";
+import { faqItems, withProps } from "@/lib/treatments/tree";
 
 /**
  * Treatment pages: /seminyak/balinese-massage/, /seminyak/facial/, …
@@ -44,5 +46,11 @@ export default async function TreatmentPage({ params }: Props) {
   const { slug } = await params;
   const content = await getTreatmentContent(slug);
   if (!content) notFound();
-  return <TreatmentBody tree={content.tree} />;
+  return (
+    <>
+      <FaqJsonLd items={faqItems(content.tree)} />
+      {/* The quick facts end with the date the page last changed. */}
+      <TreatmentBody tree={withProps(content.tree, "QuickFacts", { updated: content.updatedAt })} />
+    </>
+  );
 }

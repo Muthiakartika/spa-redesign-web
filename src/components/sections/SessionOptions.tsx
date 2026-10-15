@@ -51,18 +51,20 @@ export default function SessionOptions({
   return (
     <div className={"jsx-treatment-layout " + `balinese-session-options${className ? ` ${className}` : ""}`}>
       <div className="jsx-treatment-layout session-options__header">
-        <p data-wow-delay="00ms" data-wow-duration="1500ms" className="jsx-treatment-layout sub-title wow fadeInUp">
-          <span aria-hidden="true" className="jsx-treatment-layout session-options__logo-mark">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="/images/logo/SMBtitle.svg"
-              alt=""
-              className="jsx-treatment-layout"
-            />
-          </span>
-          {subTitle}
-        </p>
+        {subTitle !== "" && (
+          <p data-wow-delay="00ms" data-wow-duration="1500ms" className="jsx-treatment-layout sub-title wow fadeInUp">
+            <span aria-hidden="true" className="jsx-treatment-layout session-options__logo-mark">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="/images/logo/SMBtitle.svg"
+                alt=""
+                className="jsx-treatment-layout"
+              />
+            </span>
+            {subTitle}
+          </p>
+        )}
         <h2 data-wow-delay="200ms" data-wow-duration="1500ms" className="jsx-treatment-layout title wow fadeInUp">
           {title}
         </h2>

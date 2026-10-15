@@ -20,6 +20,8 @@ export type AboutSplitProps = {
   rightDecoration?: ReactNode;
   badgeTopText?: string | null;
   badgeBottomText?: ReactNode;
+  /** false: no badge on the photo (a decorative one removed in the copy rewrite, 15 Oct). */
+  showBadge?: boolean;
 };
 
 /** The gold tick in front of every list item. */
@@ -50,6 +52,7 @@ export default function AboutSplit({
   rightDecoration,
   badgeTopText,
   badgeBottomText = "Experience",
+  showBadge = true,
 }: AboutSplitProps) {
   const leftShape = leftShapeSrc || leftLeafShape(image, "/images/shape/about-left-shape.png"),
     rightShape = rightShapeSrc || rightLeafShape(image, "/images/shape/about-right-shape.png"),
@@ -84,10 +87,12 @@ export default function AboutSplit({
             <div className="col-lg-7 content-column">
               <div className="inner-column">
                 <div className="section-header">
-                  <p className="sub-title wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                    <LotusIcon className="icon" />
-                    {subTitle}
-                  </p>
+                  {subTitle !== "" && (
+                    <p className="sub-title wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                      <LotusIcon className="icon" />
+                      {subTitle}
+                    </p>
+                  )}
                   <h2 className="title wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                     {title}
                   </h2>
@@ -135,20 +140,23 @@ export default function AboutSplit({
                 data-wow-delay="200ms"
                 data-wow-duration="1500ms"
               >
-                <div className="image-box">
+                {/* Without its badge the photo loses the notch the badge sat in. */}
+                <div className={showBadge ? "image-box" : "image-box image-box--plain"}>
                   <img loading="lazy" decoding="async" src={image} alt="Spa treatment" />
                 </div>
-                <div className="info info--gold">
-                  <p className="info-line">
-                    {badgeTopText || (
-                      <>
-                        <span className="count">17</span> <span>+</span>
-                        {" Years"}
-                      </>
-                    )}
-                  </p>
-                  <p className="info-line title">{badgeBottomText}</p>
-                </div>
+                {showBadge && (
+                  <div className="info info--gold">
+                    <p className="info-line">
+                      {badgeTopText || (
+                        <>
+                          <span className="count">17</span> <span>+</span>
+                          {" Years"}
+                        </>
+                      )}
+                    </p>
+                    <p className="info-line title">{badgeBottomText}</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

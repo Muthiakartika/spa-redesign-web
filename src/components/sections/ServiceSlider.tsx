@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { allTreatments } from "@/components/home/treatments";
 import { LotusIcon } from "@/components/ui/Lotus";
 import { catalog, type CatalogItem } from "@/data/pages/home-catalog";
 
@@ -323,6 +324,10 @@ const Arrow = () => (
  * three fixed cards (foot reflexology, head massage, hot stone) and, with
  * `showFullTreatmentSlider`, thirteen more from the spa menu. Three per view
  * from 991px, rewinds at the end, 5s autoplay.
+ *
+ * `related` (treatment page addresses) shows just those cards instead: each
+ * treatment page names its own four since the copy rewrite (15 Oct), so the
+ * pages no longer repeat the same sixteen.
  */
 export default function ServiceSlider({
   subTitle = "Services",
@@ -336,6 +341,7 @@ export default function ServiceSlider({
   paperBackground = false,
   additionalTreatmentIds = [],
   showFullTreatmentSlider = false,
+  related,
   embedded = false,
   leftShapeSrc,
   rightShapeSrc,
@@ -345,13 +351,22 @@ export default function ServiceSlider({
   paperBackground?: boolean;
   additionalTreatmentIds?: string[];
   showFullTreatmentSlider?: boolean;
+  /** Treatment page addresses ("/seminyak/body-scrub/"): only these cards, in this order. */
+  related?: string[];
   embedded?: boolean;
   leftShapeSrc?: string;
   rightShapeSrc?: string;
 }) {
-  const extra = (showFullTreatmentSlider ? FULL_SLIDER : additionalTreatmentIds)
-    .map((id) => catalog.find((c) => c.id === id))
-    .filter((c): c is CatalogItem => !!c && !!SLIDE_ICONS[c.id]);
+  const relatedCards = related?.flatMap((href) => allTreatments.find((t) => t.href === href) ?? []);
+  const extra = relatedCards
+    ? []
+    : (showFullTreatmentSlider ? FULL_SLIDER : additionalTreatmentIds)
+        .map((id) => catalog.find((c) => c.id === id))
+        .filter((c): c is CatalogItem => !!c && !!SLIDE_ICONS[c.id]);
+  // The related cards in the shape of the added ones: photo, icon, name, line.
+  const cards = relatedCards
+    ? relatedCards.map((t) => ({ id: t.href, name: t.name, href: t.href, image: t.image, icon: t.icon, desc: t.desc }))
+    : extra.map((t) => ({ id: t.id, name: t.name, href: t.href || "/contact/", image: t.image, icon: SLIDE_ICONS[t.id], desc: t.desc }));
 
   return (
     <section
@@ -417,7 +432,7 @@ export default function ServiceSlider({
           }}
           className="swiper service-slider-two"
         >
-          {FIXED.map(({ item, alt, icon }) => (
+          {(relatedCards ? [] : FIXED).map(({ item, alt, icon }) => (
             <SwiperSlide key={item.id} className="swiper-slide service-block-two">
               <div className="inner-box">
                 <div className="image-box">
@@ -443,7 +458,7 @@ export default function ServiceSlider({
               </div>
             </SwiperSlide>
           ))}
-          {extra.map((t) => (
+          {cards.map((t) => (
             <SwiperSlide key={t.id} className="swiper-slide service-block-two">
               <div className="inner-box">
                 <div className="image-box">
@@ -455,7 +470,7 @@ export default function ServiceSlider({
                       loading="lazy"
                       decoding="async"
                       className="service-treatment-icon"
-                      src={SLIDE_ICONS[t.id]}
+                      src={t.icon}
                       alt=""
                       aria-hidden="true"
                     />
@@ -463,7 +478,7 @@ export default function ServiceSlider({
                 </div>
                 <div className="content">
                   <h3 className="title">
-                    <Link prefetch={false} href={t.href || "/contact/"}>
+                    <Link prefetch={false} href={t.href}>
                       {t.name}
                     </Link>
                   </h3>
@@ -472,7 +487,7 @@ export default function ServiceSlider({
                 <div className="shape">
                   <img loading="lazy" decoding="async" src="/images/service/shape.png" alt="" aria-hidden="true" />
                 </div>
-                <Link prefetch={false} href={t.href || "/contact/"} className="arry-icon" aria-label={`View ${t.name}`}>
+                <Link prefetch={false} href={t.href} className="arry-icon" aria-label={`View ${t.name}`}>
                   <Arrow />
                 </Link>
               </div>

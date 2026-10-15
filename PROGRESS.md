@@ -1533,6 +1533,41 @@ Catatan pemilik setelah melihat admin baru:
    sebagai link; link ke situs lain tetap dijadikan teks biasa oleh
    `sanitizeHtml`, seperti sejak awal.
 
+## Copy rewrite (15 Oktober, belum di-deploy)
+
+Dokumen klien `spabalimoon-rewritten-copy.md` (12 Okt) diterapkan; ringkasan,
+keputusan, daftar konfirmasi pemilik, dan draf teks artikel guide ada di
+`migration/copy-rewrite-2026-10.md`.
+
+- **24 halaman treatment** diubah lewat data JSON (skrip sekali jalan, tidak
+  disimpan): section baru `QuickFacts` di bawah banner (paragraf pembuka +
+  kotak "Quick facts" + "Last updated"; bisa diedit di admin), label dekoratif
+  dihapus (kicker, frasa banner, badge foto → `showBadge: false` dan foto tanpa
+  lekukan `image-box--plain`, tulisan di foto FAQ), 6 ulasan + judul "Reviews
+  of Spa Bali Moon" + link Google (`treatmentPageReviews`), 4 related treatment
+  per halaman (`ServiceSlider related`), FAQ baru di akhir daftar + jawaban
+  yang diganti, FAQPage JSON-LD. Day Spa: 5 link treatment populer
+  (`TreatmentLinks only`).
+- **Simpanan admin lama diabaikan**: 5 halaman yang pernah disimpan pemilik
+  (Sport, Sunburn, Thai, Traditional, Waxing) — editannya (paragraf, list,
+  FAQ) disalin dulu ke JSON dari live, lalu simpanan sebelum
+  2026-10-15 08:04 UTC tidak dipakai (`SAVED_BEFORE_IGNORED` di
+  `lib/treatments/content.ts`). Dicek ulang 08:04 UTC: live tidak berubah
+  sejak salinan pertama.
+- **Halaman utama**: beranda (baris fakta di hero, teks About, intro
+  treatment, FAQ), `/seminyak/`, outcall, villa, Kuta (H1 + meta baru),
+  `/contact/` (jam 9:00 - 23:00, alamat lengkap). Quick answer di teks banner
+  di bawah H1. FAQPage JSON-LD di semua; schema DaySpa beranda + alamat, jam,
+  priceRange, geo.
+- Format harga tetap "IDR 300.000" (gaya situs sejak 14 Okt), bukan "300K".
+- Alamat lengkap di footer, menu HP, Privacy Policy. "Sports Massage" di semua
+  halaman. Kartu `/guide/` menampilkan excerpt; artikel menampilkan
+  "Updated <tanggal>". Redirect lama slimming/flight langsung ke artikel
+  terbaru (CSV Cloudflare dibuat ulang, perlu di-upload).
+- Dicek: `tsc` dan eslint bersih, 33 halaman 200 dengan H1/quick facts/6
+  ulasan/4 related/JSON-LD valid, tampilan desktop (Edge headless 1440px) dan
+  HP 375px tanpa scroll horizontal.
+
 ## Foto banner baru dari pemilik (15 Oktober)
 
 Sumber: folder klien `1. Gambar 1` (31 JPEG, semuanya 1920×850). Dua di

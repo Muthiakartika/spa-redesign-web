@@ -8,20 +8,73 @@ import { menuTabs } from "@/components/pricelist/menuTabs";
 import HomeServiceInfo from "@/components/sections/HomeServiceInfo";
 import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
+import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import RowButton from "@/components/ui/RowButton";
 import { business } from "@/data/business";
 import { whatsappChatUrl } from "@/lib/whatsapp";
+
+/** The page's questions, also given to search engines as FAQPage data. */
+const FAQ = [
+  {
+    question: "What is an outcall massage?",
+    answer:
+      "An outcall massage is a professional treatment delivered by a therapist who travels to you, rather than you visiting the spa. Our therapists come to your villa, hotel room, or private residence with everything needed for the session. It is also known as home service or mobile massage.",
+  },
+  {
+    question: "Do I need to prepare anything?",
+    answer:
+      "No. Our therapists bring the massage bed, clean linens, towels, and oils. All you need is a space of roughly two by two metres and a bedroom, terrace, or living area all work well. If you have a preference for where the session takes place, tell us when you book.",
+  },
+  {
+    question: "What does the therapist bring?",
+    answer:
+      "A portable massage bed, freshly laundered linens and towels, professional massage oils, and any equipment specific to your chosen treatment. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else.",
+  },
+  {
+    question: "How long does setup take?",
+    answer:
+      "Around five to ten minutes on arrival, and a similar time to pack down afterwards. Your treatment time begins once setup is complete, so a booked 60-minute massage is a full 60 minutes of treatment.",
+  },
+  {
+    question: "Which areas do you cover for home service?",
+    answer:
+      "Our spa is in Seminyak, and home service is available across Seminyak, Kerobokan, Petitenget, Canggu, and North Kuta. We also travel to Kuta, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar, and Ubud, subject to therapist availability and travel time. Message us with your location and we will confirm.",
+  },
+  {
+    question: "What if my hotel doesn't allow outside therapists?",
+    answer:
+      "Some hotels and resorts restrict external therapists, particularly larger properties with their own spa. Please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your property does not permit home service, you are very welcome at our Seminyak spa instead.",
+  },
+  {
+    question: "Which massage is best after a long flight?",
+    answer:
+      "A one-hour Balinese or aromatherapy massage suits most guests arriving in Bali. Both use steady, flowing pressure rather than deep work, which helps with circulation and sleep after a long journey. Foot reflexology is a good shorter option if your legs and feet feel swollen.",
+  },
+  // Copy rewrite, 15 Oct.
+  {
+    question: "How much does outcall massage cost in Bali?",
+    answer:
+      "Treatments cost the same as in the spa, plus IDR 75.000 per therapist. For example, a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 at your villa, per person. A couple booking with two therapists pays IDR 150.000 in outcall fees.",
+  },
+  {
+    question: "Can I book an outcall massage on the same day?",
+    answer:
+      "Often, yes, depending on therapist availability. Send your location and preferred time on WhatsApp and we'll confirm.",
+  },
+];
 
 /** /outcall-home-service-massage/ — generated from the live page's component tree, section for section. */
 export default function OutcallPage() {
   return (
     <div className="page-wrapper lh p-outcall-home-service-massage">
+      <FaqJsonLd items={FAQ} />
       <div className="outcall-page">
         <PageBanner
           subTitle="Outcall Spa Service"
           titleSpan="Outcall Massage in Bali:"
           title="Home Service to Your Villa or Hotel"
-          text="Experience our traditional massage and spa treatments in the comfort of your home, hotel, or villa."
+          // The opening, answer first (copy rewrite, 15 Oct).
+          text="Outcall massage at Spa Bali Moon: a therapist comes to your villa, hotel or home in Seminyak and nearby areas, with everything the session needs. Treatments cost the same as in our spa, plus IDR 75.000 per therapist. Open daily 9am–11pm."
           openingText="OPENING TIMES: Open Daily: 9:00 - 23:00"
           image="/images/banners/outcall-home-service-massage.webp"
           // The homepage hero's two row buttons in place of the one "Book Now"
@@ -49,15 +102,7 @@ export default function OutcallPage() {
         <AboutIntro
           subTitle="Spa Bali Moon in Seminyak, Bali"
           title={<>Outcall Balinese Massage in Bali</>}
-          text={
-            <>
-              Find an authentic Balinese massage without the hassle. Let the stress of the week ease away as you enjoy a
-              quiet, well-prepared session that fits naturally into your day.
-              <span style={{ display: "block", marginTop: "16px" }}>
-                Explore treatment and package options that can be customized to your preferences.
-              </span>
-            </>
-          }
+          text="A Balinese massage at your villa or hotel: steady pressure, gentle stretching and aromatic oils, in a place where you're already comfortable. Choose a single treatment or a package, and send us your location and time on WhatsApp."
           feature1Title="Easy Booking via WhatsApp"
           feature1Text={
             <>
@@ -199,7 +244,7 @@ export default function OutcallPage() {
                   },
                   {
                     id: "popular-sports",
-                    name: "Sport Massage",
+                    name: "Sports Massage",
                     desc: "Targeted to ease muscle soreness, reduce stiffness, and support physical recovery.",
                     image: "/images/listmenu/sportmassage.webp",
                     options: [
@@ -444,7 +489,7 @@ export default function OutcallPage() {
                   },
                   {
                     id: "massage-sports",
-                    name: "Sport Massage",
+                    name: "Sports Massage",
                     desc: "Targeted to ease muscle soreness, reduce stiffness, and support physical recovery.",
                     image: "/images/listmenu/sportmassage.webp",
                     options: [
@@ -730,43 +775,7 @@ export default function OutcallPage() {
           <FaqSection
             subTitle="Frequently Asked Questions"
             title={<>Outcall Massage Bali: FAQs</>}
-            items={[
-              {
-                question: "What is an outcall massage?",
-                answer:
-                  "An outcall massage is a professional treatment delivered by a therapist who travels to you, rather than you visiting the spa. Our therapists come to your villa, hotel room, or private residence with everything needed for the session. It is also known as home service or mobile massage.",
-              },
-              {
-                question: "Do I need to prepare anything?",
-                answer:
-                  "No. Our therapists bring the massage bed, clean linens, towels, and oils. All you need is a space of roughly two by two metres and a bedroom, terrace, or living area all work well. If you have a preference for where the session takes place, tell us when you book.",
-              },
-              {
-                question: "What does the therapist bring?",
-                answer:
-                  "A portable massage bed, freshly laundered linens and towels, professional massage oils, and any equipment specific to your chosen treatment. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else.",
-              },
-              {
-                question: "How long does setup take?",
-                answer:
-                  "Around five to ten minutes on arrival, and a similar time to pack down afterwards. Your treatment time begins once setup is complete, so a booked 60-minute massage is a full 60 minutes of treatment.",
-              },
-              {
-                question: "Which areas do you cover for home service?",
-                answer:
-                  "Our spa is in Seminyak, and home service is available across Seminyak, Kerobokan, Petitenget, Canggu, and North Kuta. We also travel to Kuta, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar, and Ubud, subject to therapist availability and travel time. Message us with your location and we will confirm.",
-              },
-              {
-                question: "What if my hotel doesn't allow outside therapists?",
-                answer:
-                  "Some hotels and resorts restrict external therapists, particularly larger properties with their own spa. Please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your property does not permit home service, you are very welcome at our Seminyak spa instead.",
-              },
-              {
-                question: "Which massage is best after a long flight?",
-                answer:
-                  "A one-hour Balinese or aromatherapy massage suits most guests arriving in Bali. Both use steady, flowing pressure rather than deep work, which helps with circulation and sleep after a long journey. Foot reflexology is a good shorter option if your legs and feet feel swollen.",
-              },
-            ]}
+            items={FAQ}
             showImage={false}
             columns={2}
           />

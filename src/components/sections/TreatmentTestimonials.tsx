@@ -6,7 +6,7 @@ import type { Swiper as SwiperInstance } from "swiper";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReviewText from "@/components/ui/ReviewText";
-import { testimonials } from "@/data/testimonials";
+import { googleReviewsUrl, treatmentPageReviews as testimonials } from "@/data/testimonials";
 
 /** Gold quote mark above each review. */
 const Quote = () => (
@@ -24,8 +24,9 @@ const Quote = () => (
 /**
  * Review slider on a paper band — the live treatment-page variant of
  * "testimonial-section-two": torn edges, a leaf on the right, no bullets,
- * loop, autoHeight and 5s autoplay. (The live component can show Google
- * reviews; its review feed is empty, so it always shows these reviews.)
+ * loop, autoHeight and 5s autoplay. Since the copy rewrite (15 Oct) it shows
+ * six chosen reviews under "Reviews of Spa Bali Moon" (they are about the
+ * spa, not the treatment on the page) and links to the rest on Google.
  */
 export default function TreatmentTestimonials({
   paperDecoration = true,
@@ -84,6 +85,9 @@ export default function TreatmentTestimonials({
         />
       </div>
       <div className="container">
+        <div className="section-header center treatment-reviews__header">
+          <h2 className="title">Reviews of Spa Bali Moon</h2>
+        </div>
         <div className="outer-box">
           <Swiper
             modules={[Autoplay]}
@@ -122,6 +126,12 @@ export default function TreatmentTestimonials({
             ))}
           </Swiper>
         </div>
+        <p className="treatment-reviews__more">
+          <a href={googleReviewsUrl} target="_blank" rel="noopener noreferrer">
+            Read more reviews on Google
+            <i className="fa-regular fa-arrow-right-long" aria-hidden="true" />
+          </a>
+        </p>
       </div>
     </section>
   );

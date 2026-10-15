@@ -16,6 +16,8 @@ export type GuidePostSummary = {
   /** False hides this article's date; missing (seed rows) shows it. */
   show_date?: boolean | null;
   published_at?: string | null;
+  /** Last saved in /admin/. */
+  updated_at?: string | null;
 };
 
 export type GuidePostFull = GuidePostSummary & {
@@ -30,6 +32,13 @@ const FALLBACK_IMAGE = "/images/resource/news-details.jpg";
 /** "December 9, 2024", as the live site prints dates. */
 const formatDate = (iso?: string | null) =>
   iso ? new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }) : "";
+
+/** The last save, when it falls on a later day than the publish date (copy rewrite, 15 Oct: "last updated"). */
+const updatedDate = (post: GuidePostSummary) =>
+  post.updated_at && post.published_at && formatDate(post.updated_at) !== formatDate(post.published_at) &&
+  Date.parse(post.updated_at) > Date.parse(post.published_at)
+    ? post.updated_at
+    : null;
 
 /**
  * A blog article — the live "blog-details": the post, a sidebar with a live
@@ -107,6 +116,14 @@ export default function GuidePost({
                         <i className={`${S} fas fa-calendar-alt`} />{" "}
                         <time dateTime={post.published_at} className={S}>
                           {formatDate(post.published_at)}
+                        </time>
+                      </li>
+                    )}
+                    {post.show_date !== false && updatedDate(post) && (
+                      <li className={S}>
+                        Updated{" "}
+                        <time dateTime={updatedDate(post)!} className={S}>
+                          {formatDate(updatedDate(post))}
                         </time>
                       </li>
                     )}

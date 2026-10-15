@@ -4,6 +4,7 @@
 //
 // Page: https://spabalimoon.com/
 
+import { business } from "@/data/business";
 import { priceValue } from "@/lib/price";
 import { catalog, type CatalogItem } from "./home-catalog";
 
@@ -18,7 +19,7 @@ export const home = {
     title: "Seminyak Spa & Balinese Massage | Spa Bali Moon",
     description:
       "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 23 treatments from IDR 69.000, couples packages, open daily 9am–11pm.",
-    /** The live homepage's JSON-LD, value for value (rating as shown on the live site). */
+    /** The live homepage's JSON-LD (rating as shown on the live site), plus the address, hours and prices. */
     schema: {
       "@context": "https://schema.org",
       "@type": "DaySpa",
@@ -27,6 +28,29 @@ export const home = {
       image: "https://spabalimoon.com/images/home/homepage-1.webp",
       email: "info@spabalimoon.com",
       areaServed: "Seminyak, Bali",
+      // Copy rewrite, 15 Oct: the local-business facts the page states, so
+      // search and AI answers read the same address, hours and prices.
+      telephone: business.phoneDisplay,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Jl. Pangkung Sari No. 30, Petitenget",
+        addressLocality: business.address.locality,
+        addressRegion: business.address.region,
+        postalCode: business.address.postalCode,
+        addressCountry: business.address.country,
+      },
+      // Where Google Maps places the spa (the /contact/ map).
+      geo: { "@type": "GeoCoordinates", latitude: -8.6780657, longitude: 115.1607164 },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: business.openingHours.opens,
+        closes: business.openingHours.closes,
+      },
+      // Lowest and highest prices on the spa menu (the highest is for two guests).
+      priceRange: "IDR 69.000 – IDR 999.000",
+      currenciesAccepted: "IDR",
+      sameAs: [business.social.facebook, business.social.instagram],
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: 4.2,
@@ -41,6 +65,14 @@ export const home = {
     title: "Seminyak Spa & Balinese Massage at",
     highlightedTitle: "Spa Bali Moon",
     text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, facials, and beauty services at our Seminyak spa, with home service also available for hotels and villas in nearby areas.",
+    /** The quick facts under the opening (copy rewrite, 15 Oct), one line on wide screens. */
+    facts: [
+      "Jl. Pangkung Sari No. 30, Seminyak",
+      "Open daily 9am–11pm",
+      "Treatments from IDR 69.000 per person",
+      "Home service: add IDR 75.000 per therapist",
+      "Book on WhatsApp +62 878-6317-5144",
+    ],
   },
 
   steps: {
@@ -65,7 +97,8 @@ export const home = {
   about: {
     subTitle: "Beyond Relaxation",
     title: "Why Visitors Choose Spa Bali Moon for Massage in Bali",
-    text: "After long flights, sightseeing, surfing, or time in the tropical sun, your body needs time to recover. We offer massage, beauty, and body care treatments that ease muscle tension, refresh tired skin, and help you feel refreshed with treatments chosen to suit your body and your time in Bali. Here’s what makes us a trusted choice:",
+    // Copy rewrite, 15 Oct.
+    text: "After a long flight, a day of surfing or too long in the sun, your body needs time to recover. Spa Bali Moon offers massage, facials and body care to ease tight muscles and refresh tired skin, and we'll help you pick the treatment that suits how you feel.",
     /** Shown in two lists of three. */
     features: [
       "Established since 2009",
@@ -192,7 +225,7 @@ export const home = {
       {
         question: "2. Can I enjoy the treatments without visiting the spa?",
         answer:
-          "Yes. Many of our massage and spa treatments are available as home service for villas, hotels, and private residences around Seminyak.",
+          "Yes. Many of our massage and spa treatments are available as home service at villas, hotels and private residences around Seminyak, for an extra IDR 75.000 per therapist.",
       },
       {
         question: "3. Which massage is best if I've never had one before?",
@@ -213,6 +246,22 @@ export const home = {
         question: "6. Is Spa Bali Moon a licensed spa?",
         answer:
           "Yes. We are an established spa operating from a physical location at Jl. Pangkung Sari No. 30, Seminyak, and have served guests in Bali since 2009. Our home service is delivered by the same therapists who work in our spa, and you are welcome to visit us in person before booking.",
+      },
+      // Copy rewrite, 15 Oct: the questions people search, answered with
+      // facts already on the site.
+      {
+        question: "7. How much does a massage cost in Seminyak?",
+        answer:
+          "A one-hour Balinese massage at Spa Bali Moon costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and couple massages start at IDR 319.000 for two people. All prices are in Indonesian rupiah and are on our price list.",
+      },
+      {
+        question: "8. Where is Spa Bali Moon?",
+        answer:
+          "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Seminyak, Bali. We also come to your villa or hotel in Seminyak and nearby areas.",
+      },
+      {
+        question: "9. What are your opening hours?",
+        answer: "We're open daily, 9am to 11pm. Book on WhatsApp at +62 878-6317-5144.",
       },
     ],
   },
