@@ -1573,10 +1573,14 @@ mendapat foto baru dan tetap memakai banner lamanya.
   dan lastmod 15 Oktober; `/reservation/` kini punya foto.
 - **Halaman treatment yang pernah disimpan di `/admin/treatments/`** menyimpan
   path banner lama di Neon (`page_content`), dan nilai tersimpan menang atas
-  JSON. Halaman seperti itu tetap memakai banner lama sampai fotonya diganti
-  di editor atau "Restore original". Per 15 Oktober ke-24 halaman live masih
-  menampilkan banner bawaan, tapi itu tidak membuktikan halamannya belum
-  pernah disimpan.
+  JSON. Setelah deploy, 5 halaman (Sport, Sunburn, Thai, Traditional, Waxing
+  — teksnya memang sudah diedit pemilik) masih banner lama; 27 halaman lain
+  sudah benar. Perbaikan di `src/lib/treatments/merge.ts`: editor hanya
+  bisa mengganti foto dengan upload (alamat R2), jadi foto `/images/…` di
+  halaman tersimpan pasti foto bawaan saat disimpan; kini foto bawaan
+  terbaru yang dipakai (tampil dan saat disimpan ulang). Teks hasil edit
+  tetap, foto hasil upload tetap. Diuji dengan halaman tersimpan tiruan
+  (path lama + teks diedit): gagal tanpa perbaikan, lolos dengannya.
 
 ## Draf: beranda v2 di `/home-v2/` (30 September)
 

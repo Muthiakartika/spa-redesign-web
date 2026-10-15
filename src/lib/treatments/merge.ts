@@ -20,9 +20,13 @@ export class TreeMismatch extends Error {}
 
 type Options = { check: boolean; errors: string[]; imageBases: string[] };
 
+/** One of the site's own photos in /public/images, not an uploaded one. */
+const isSitePhoto = (value: unknown): boolean =>
+  typeof value === "string" && /^\/images\/[A-Za-z0-9/_.-]+$/.test(value.trim()) && !value.includes("..");
+
 /** A site photo (/images/…) or one uploaded to the image storage. */
 function isAllowedImage(value: string, imageBases: string[]) {
-  if (/^\/images\/[A-Za-z0-9/_.-]+$/.test(value) && !value.includes("..")) return true;
+  if (isSitePhoto(value)) return true;
   return imageBases.some((base) => value.startsWith(`${base}/`) && /^[A-Za-z0-9/_.:-]+$/.test(value));
 }
 
@@ -135,6 +139,11 @@ function mergeNode(seed: TreeNode, edited: unknown, where: string, o: Options): 
     const label = `${schema.label}`;
     for (const field of schema.fields) {
       if (field.hideIf?.(props)) continue;
+      // The editor only changes a photo by uploading one, so a site photo
+      // (/images/…) in an edited page is the built-in one it had when it was
+      // saved. The current built-in photo is used instead, so a new photo in
+      // the code (the owner's banners of 15 Oct) also reaches edited pages.
+      if (field.kind === "image" && isSitePhoto(editedProps[field.key]) && typeof props[field.key] === "string") continue;
       const value = o.check ? clean(field, editedProps[field.key], label, o) : (editedProps[field.key] as TreeValue | undefined);
       if (value === undefined) delete props[field.key];
       else props[field.key] = value;
