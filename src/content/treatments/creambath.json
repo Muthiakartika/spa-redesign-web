@@ -93,7 +93,8 @@
                   "1 Hr Cream Bath",
                   "1 Hr Thai Massage",
                   "1 Hr Bali Moon Facial"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 549.000",
@@ -102,7 +103,8 @@
                   "1 Hr Cream Bath",
                   "1 Hr Hot Stone",
                   "30 Mins Reflexology"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 449.000",
@@ -111,7 +113,8 @@
                   "30 Mins Cream Bath",
                   "1 Hr Balinese Massage",
                   "1 Hr Bali Moon Facial"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 539.000",
@@ -120,7 +123,8 @@
                   "1 Hr Cream Bath",
                   "1 Hr Thai Massage",
                   "30 Mins Body Scrub"
-                ]
+                ],
+                "suffix": "per person"
               }
             ],
             "topContent": {

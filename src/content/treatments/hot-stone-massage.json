@@ -36,7 +36,7 @@
           },
           {
             "label": "Packages",
-            "value": "Four packages from IDR 449.000 (hot stone with body scrub, cream bath, facial or pedicure)"
+            "value": "Four packages from IDR 449.000 per person (hot stone with body scrub, cream bath, facial or pedicure)"
           },
           {
             "label": "Where",
@@ -92,7 +92,8 @@
                   "1.5 Hr Hot Stone",
                   "30 Mins Body Scrub",
                   "30 Mins Head Massage"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 549.000",
@@ -101,7 +102,8 @@
                   "1 Hr Hot Stone",
                   "1 Hr Cream Bath",
                   "30 Mins Reflexology"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 449.000",
@@ -109,7 +111,8 @@
                 "treatments": [
                   "1 Hr Hot Stone",
                   "1 Hr Bali Moon Facial"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 519.000",
@@ -117,7 +120,8 @@
                 "treatments": [
                   "1.5 Hr Hot Stone",
                   "30 Mins Pedicure"
-                ]
+                ],
+                "suffix": "per person"
               }
             ],
             "topContent": {

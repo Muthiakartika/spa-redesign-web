@@ -92,7 +92,8 @@
                   "1 Hr Thai Massage",
                   "1 Hr Bali Moon Facial",
                   "30 Mins Manicure"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 649.000",
@@ -101,7 +102,8 @@
                   "1 Hr Thai Massage",
                   "1 Hr Cream Bath",
                   "1 Hr Bali Moon Facial"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 449.000",
@@ -109,7 +111,8 @@
                 "treatments": [
                   "1 Hr Thai Massage",
                   "1 Hr Bali Moon Facial"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 539.000",
@@ -118,7 +121,8 @@
                   "1 Hr Thai Massage",
                   "1 Hr Cream Bath",
                   "30 Mins Body Scrub"
-                ]
+                ],
+                "suffix": "per person"
               }
             ],
             "topContent": {

@@ -36,6 +36,13 @@ quick answer, duration FAQ, cost FAQ), /contact/ (9:00 - 23:00, full address,
 line under the H1). FAQPage data on all of them; the homepage business data
 now has the address, hours, price range and map position.
 
+**Added without waiting for the owner** (the developer will tell them):
+waxing is offered as home service (the outcall price list lists it);
+package prices say "per person" (couple packages "for two guests" / "2 pax")
+on the treatment pages, /seminyak/ and the homepage, and in the Day Spa,
+Balinese and Hot Stone texts; every other page shows "Page updated <date>"
+after the footer copyright (the date of the page in `src/data/sitemap.ts`).
+
 **Site-wide**: full address in the footer, phone menu and Privacy Policy;
 "Sports Massage" on the Kuta, villa, outcall and price-list pages; guide
 cards show the article's excerpt; articles show "Updated <date>"; the two old
@@ -66,16 +73,15 @@ Already in place before this work: the outcall price list shows the home
 service fee once; footer labels are not headings; FAQ numbers are drawn by
 CSS, not in the heading text; the two 404 guide URLs already redirect.
 
-## For the owner to confirm before publishing
+## For the owner to know (all already on the pages)
 
 1. Therapists "usually arrive within 30 to 60 minutes" in every area
    (villa banner).
 2. Same-day outcall "depending on therapist availability" (outcall FAQ).
-3. Package prices: per person or per booking? Not stated anywhere yet.
+3. Package prices are shown per person (couple packages for two guests).
 4. Hair braiding extensions: "message us on WhatsApp for the price".
-5. **Waxing as home service:** the waxing page still says nothing. The outcall
-   price list does list waxing, so probably yes; one line can be added once
-   confirmed.
+5. Waxing is offered at the guest's villa or hotel (+ IDR 75.000 per
+   therapist), as the outcall price list already implied.
 6. Safety lines (doctor for painful or one-sided leg swelling; no sunburn
    treatment on blistered skin).
 7. The six reviews and their names (texts are exact; names as the document
@@ -96,9 +102,8 @@ CSS, not in the heading text; the two 404 guide URLs already redirect.
   professional check the claims.
 - If a treatment page is edited in /admin/ before this goes live, check it
   again after deploying.
-- Not done: a visible "last updated" date on the homepage, /seminyak/,
-  outcall, villa, Kuta, contact and reservation (treatment pages and guide
-  articles have one).
+- When a page's text changes later, update its date in `src/data/sitemap.ts`:
+  the footer's "Page updated" reads it.
 
 ## Draft: two sentences under each guide article's first heading
 

@@ -25,7 +25,7 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Waxing at Spa Bali Moon in Seminyak uses olive oil hot wax in a private treatment setting, for women and men. Prices start at IDR 99.000 for under arms, IDR 299.000 for full legs and IDR 350.000 for a Brazilian wax. Book on WhatsApp.",
+        "text": "Waxing at Spa Bali Moon in Seminyak uses olive oil hot wax in a private treatment setting, for women and men. Prices start at IDR 99.000 for under arms, IDR 299.000 for full legs and IDR 350.000 for a Brazilian wax. It is also available at your villa or hotel, for an extra IDR 75.000 per therapist. Book on WhatsApp.",
         "items": [
           {
             "label": "Treatment",
@@ -41,7 +41,7 @@
           },
           {
             "label": "Where",
-            "value": "Spa Bali Moon, Seminyak"
+            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
           },
           {
             "label": "Booking",
@@ -317,7 +317,7 @@
               },
               {
                 "question": "How much does waxing cost in Seminyak?",
-                "answer": "Under arms is IDR 99.000, half legs IDR 149.000, arms IDR 159.000, full back IDR 299.000, full legs IDR 299.000 and Brazilian wax IDR 350.000 at Spa Bali Moon. Back waxing starts from IDR 139.000."
+                "answer": "Under arms is IDR 99.000, half legs IDR 149.000, arms IDR 159.000, full back IDR 299.000, full legs IDR 299.000 and Brazilian wax IDR 350.000 at Spa Bali Moon. Back waxing starts from IDR 139.000. Home service adds IDR 75.000 per therapist."
               }
             ]
           }

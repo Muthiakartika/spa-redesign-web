@@ -103,7 +103,8 @@
                 "treatments": [
                   "1 Hr Balinese Massage 2 Pax",
                   "30 Mins Ear Candle 2 Pax"
-                ]
+                ],
+                "suffix": "for two guests"
               },
               {
                 "price": "IDR 709.000",
@@ -111,7 +112,8 @@
                 "treatments": [
                   "1 Hr Balinese Massage 2 Pax",
                   "1 Hr Bali Moon Facial 2 Pax"
-                ]
+                ],
+                "suffix": "for two guests"
               },
               {
                 "price": "IDR 849.000",
@@ -119,7 +121,8 @@
                 "treatments": [
                   "1 Hr Warm Candle 2 Pax",
                   "30 Mins Ear Candle 2 Pax"
-                ]
+                ],
+                "suffix": "for two guests"
               },
               {
                 "price": "IDR 929.000",
@@ -127,7 +130,8 @@
                 "treatments": [
                   "1 Hr Warm Candle 2 Pax",
                   "1 Hr Bali Moon Facial 2 Pax"
-                ]
+                ],
+                "suffix": "for two guests"
               }
             ],
             "topContent": {

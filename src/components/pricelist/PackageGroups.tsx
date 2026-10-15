@@ -54,7 +54,8 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
                       </h3>
                       <h4 className="price">
                         {displayPrice(pack.price)}
-                        {group.twoPax && <span className="pax-note">2 pax</span>}
+                        {/* Couple prices are for two; the others per person (copy rewrite, 15 Oct). */}
+                        <span className="pax-note">{group.twoPax ? "2 pax" : "per person"}</span>
                       </h4>
                       <ul>
                         {pack.items.map((item, j) => (

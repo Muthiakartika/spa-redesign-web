@@ -2,13 +2,32 @@
 
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, type FormEvent, type ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import { business } from "@/data/business";
 import { footerDaySpaLink, footerHomeServices, legalLinks } from "@/data/navigation";
+import { sitemapPages } from "@/data/sitemap";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 type Status = "idle" | "loading" | "success" | "error";
+
+const pathOf = (url: string) => new URL(url, business.url).pathname.replace(/(.)\/$/, "$1");
+
+/**
+ * "Page updated October 15, 2026" after the copyright (copy rewrite, 15 Oct:
+ * a date on every page), from the sitemap's date for the page. Treatment
+ * pages show theirs in the quick facts and guide articles under the title,
+ * so they are left out here, as is /guide/, a list of dated articles.
+ */
+const PAGE_UPDATED = new Map(
+  sitemapPages
+    .map((p) => [pathOf(p.loc), p.lastmod] as const)
+    .filter(([path]) => path !== "/guide" && !/^\/seminyak\/[^/]+$/.test(path))
+);
+
+const formatDate = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 
 /** Instagram and Facebook, drawn like the other line icons. */
 const SOCIAL = [
@@ -74,6 +93,7 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  const updated = PAGE_UPDATED.get(pathOf(usePathname() || "/"));
 
   async function subscribe(e: FormEvent) {
     e.preventDefault();
@@ -289,6 +309,14 @@ export default function Footer() {
             <Link prefetch={false} href="/">
               {business.name}
             </Link>
+            {updated ? (
+              <>
+                {" "}
+                <span className="site-footer__updated">
+                  · Page updated <time dateTime={updated}>{formatDate(updated)}</time>
+                </span>
+              </>
+            ) : null}
           </p>
           <ul className="site-footer__legal">
             {legalLinks.map((l) => (

@@ -1567,6 +1567,15 @@ keputusan, daftar konfirmasi pemilik, dan draf teks artikel guide ada di
 - Dicek: `tsc` dan eslint bersih, 33 halaman 200 dengan H1/quick facts/6
   ulasan/4 related/JSON-LD valid, tampilan desktop (Edge headless 1440px) dan
   HP 375px tanpa scroll horizontal.
+- **Tambahan (permintaan: masukkan semua, pemilik diberi tahu belakangan):**
+  waxing tersedia sebagai home service (daftar harga outcall memuatnya);
+  "per person" di kartu paket (treatment, `/seminyak/`, beranda; couple "for
+  two guests" / "2 pax") dan di teks paket Day Spa, Balinese, Hot Stone;
+  halaman lain menampilkan "Page updated <tanggal>" di baris copyright footer,
+  dari `lastmod` di `src/data/sitemap.ts` (treatment pages, artikel dan
+  `/guide/` dilewati karena punya tanggal sendiri). Perbaikan: di Balinese
+  blok quick facts sempat jatuh di akhir halaman (halaman dibungkus satu
+  `DecorationMotion`); kini tepat di bawah banner.
 
 ## Foto banner baru dari pemilik (15 Oktober)
 

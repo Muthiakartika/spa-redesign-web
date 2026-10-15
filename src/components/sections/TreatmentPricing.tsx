@@ -111,7 +111,9 @@ export default function TreatmentPricing({
                         <img loading="lazy" decoding="async" src="/images/pricing/shape.png" alt="image" />
                       </div>
                       <p className="price package-price">
-                        {displayPrice(e.price)} {e.suffix && <span>{e.suffix}</span>}
+                        {displayPrice(e.price)}{" "}
+                        {/* "per person" / "for two guests" (copy rewrite, 15 Oct): a line of its own. */}
+                        {e.suffix && <span className="package-price__note">{e.suffix}</span>}
                       </p>
                       <h3 className="package-name">{e.name}</h3>
                       <ul>

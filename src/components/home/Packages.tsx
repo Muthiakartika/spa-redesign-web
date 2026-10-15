@@ -49,7 +49,11 @@ export default function Packages() {
                     <br />
                     {` ${card.name}`}
                   </div>
-                  <div className="price look-h2">{displayPrice(card.price)}</div>
+                  <div className="price look-h2">
+                    {displayPrice(card.price)}
+                    {/* As on /seminyak/ (copy rewrite, 15 Oct). */}
+                    <span className="pax-note">per person</span>
+                  </div>
                   <ul>
                     {card.items.map(([duration, service]) => (
                       <li key={service}>

@@ -959,3 +959,17 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+
+/* Package cards on treatment pages: "per person" or "for two guests" on a
+   line of its own under the price (copy rewrite, 15 Oct; the price itself
+   does not wrap), in the "2 pax" note's type. */
+.pricing-block .inner-box .package-price .package-price__note {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--text-font);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: normal;
+  color: var(--headings-color);
+}

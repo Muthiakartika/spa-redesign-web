@@ -29,6 +29,34 @@
           ]
         },
         {
+          "type": "QuickFacts",
+          "props": {
+            "text": "Balinese massage at Spa Bali Moon in Seminyak is a full-body massage with steady pressure, gentle stretching and aromatic oils. Sessions are 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person, at our spa or at your villa or hotel. It's the treatment we recommend most often for first-time guests.",
+            "items": [
+              {
+                "label": "Treatment",
+                "value": "Full-body massage with steady pressure, gentle stretching and aromatic oils"
+              },
+              {
+                "label": "Length and price",
+                "value": "Per person: 1 hour IDR 159.000 · 1.5 hours IDR 239.000 · 2 hours IDR 330.000"
+              },
+              {
+                "label": "Packages",
+                "value": "From IDR 399.000 per person: Balinese massage with manicure and pedicure, cream bath or facial (four packages, see below)"
+              },
+              {
+                "label": "Where",
+                "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
+              },
+              {
+                "label": "Booking",
+                "value": "WhatsApp, 9am–11pm"
+              }
+            ]
+          }
+        },
+        {
           "type": "AboutIntro",
           "props": {
             "primaryImage": "/images/services/balinesemassage/balinesemassage-2.webp",
@@ -71,7 +99,8 @@
                       "1 Hr Balinese Massage",
                       "1 Hr Mani & Pedi",
                       "30 Mins Cream Bath"
-                    ]
+                    ],
+                    "suffix": "per person"
                   },
                   {
                     "price": "IDR 549.000",
@@ -80,7 +109,8 @@
                       "1 Hr Balinese Massage",
                       "1 Hr Mani & Pedi",
                       "1 Hr Bali Moon Facial"
-                    ]
+                    ],
+                    "suffix": "per person"
                   },
                   {
                     "price": "IDR 449.000",
@@ -89,7 +119,8 @@
                       "1 Hr Balinese Massage",
                       "30 Mins Cream Bath",
                       "1 Hr Bali Moon Facial"
-                    ]
+                    ],
+                    "suffix": "per person"
                   },
                   {
                     "price": "IDR 399.000",
@@ -98,7 +129,8 @@
                       "1 Hr Balinese Massage",
                       "30 Mins Manicure",
                       "30 Mins Pedicure"
-                    ]
+                    ],
+                    "suffix": "per person"
                   }
                 ],
                 "topContent": {
@@ -427,34 +459,6 @@
           ]
         }
       ]
-    },
-    {
-      "type": "QuickFacts",
-      "props": {
-        "text": "Balinese massage at Spa Bali Moon in Seminyak is a full-body massage with steady pressure, gentle stretching and aromatic oils. Sessions are 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person, at our spa or at your villa or hotel. It's the treatment we recommend most often for first-time guests.",
-        "items": [
-          {
-            "label": "Treatment",
-            "value": "Full-body massage with steady pressure, gentle stretching and aromatic oils"
-          },
-          {
-            "label": "Length and price",
-            "value": "Per person: 1 hour IDR 159.000 · 1.5 hours IDR 239.000 · 2 hours IDR 330.000"
-          },
-          {
-            "label": "Packages",
-            "value": "From IDR 399.000: Balinese massage with manicure and pedicure, cream bath or facial (four packages, see below)"
-          },
-          {
-            "label": "Where",
-            "value": "Spa Bali Moon, Seminyak, or at your villa or hotel"
-          },
-          {
-            "label": "Booking",
-            "value": "WhatsApp, 9am–11pm"
-          }
-        ]
-      }
     }
   ]
 }

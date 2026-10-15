@@ -93,7 +93,8 @@
                   "1 Hr Mani & Pedi",
                   "1 Hr Balinese Massage",
                   "30 Mins Cream Bath"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 549.000",
@@ -102,7 +103,8 @@
                   "1 Hr Mani & Pedi",
                   "1 Hr Balinese Massage",
                   "1 Hr Bali Moon Facial"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 299.000",
@@ -110,7 +112,8 @@
                 "treatments": [
                   "1 Hr Mani & Pedi",
                   "30 Mins Cream Bath"
-                ]
+                ],
+                "suffix": "per person"
               },
               {
                 "price": "IDR 399.000",
@@ -119,7 +122,8 @@
                   "30 Mins Pedicure",
                   "30 Mins Manicure",
                   "1 Hr Balinese Massage"
-                ]
+                ],
+                "suffix": "per person"
               }
             ],
             "topContent": {
