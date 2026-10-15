@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/cellulitemassage/cellulitemassage-1.webp",
+            "image": "/images/banners/anti-cellulite-massage.webp",
+            "imagePosition": "47% 50%",
             "subTitle": "Body Contouring",
             "titleSpan": "Cellulite Massage",
             "title": "in Seminyak, Bali"

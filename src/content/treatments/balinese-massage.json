@@ -19,7 +19,7 @@
             {
               "type": "PageBanner",
               "props": {
-                "image": "/images/services/balinesemassage/balinesemassage-1.webp",
+                "image": "/images/banners/balinese-massage.webp",
                 "shapeImage": "/images/shape/banner-two-shape.png",
                 "subTitle": "Ancient Healing",
                 "titleSpan": "Balinese Massage",

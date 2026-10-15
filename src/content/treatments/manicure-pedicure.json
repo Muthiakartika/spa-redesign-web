@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/manicurepedicure/manicurepedicure-1.webp",
+            "image": "/images/banners/manicure-pedicure.webp",
+            "imagePosition": "55% 50%",
             "subTitle": "Polish and Pamper",
             "titleSpan": "Manicure & Pedicure",
             "title": "in Seminyak, Bali"

@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/deeptissuemassage/deeptissuemassage-1.webp",
+            "image": "/images/banners/deep-tissue-massage.webp",
+            "imagePosition": "55% 50%",
             "subTitle": "Muscle Recovery",
             "titleSpan": "Deep Tissue Massage",
             "title": "in Seminyak, Bali"

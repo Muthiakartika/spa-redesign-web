@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/footmassage/footmassage-1.webp",
+            "image": "/images/banners/foot-massage.webp",
+            "imagePosition": "60% 50%",
             "subTitle": "Light Steps Ahead",
             "titleSpan": "Foot Massage",
             "title": "in Seminyak, Bali"

@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/nailart/nailart-1.webp",
+            "image": "/images/banners/nail-spa.webp",
+            "imagePosition": "60% 50%",
             "subTitle": "Creative Design",
             "titleSpan": "Nail Art & Gel Nails",
             "title": "in Seminyak"

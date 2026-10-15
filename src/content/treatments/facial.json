@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/balimoonfacial/balimoonfacial-1.webp",
+            "image": "/images/banners/facial.webp",
+            "imagePosition": "55% 50%",
             "subTitle": "Skin Rejuvenation",
             "titleSpan": "Facial",
             "title": "in Seminyak: Bali Moon Facial Treatments"

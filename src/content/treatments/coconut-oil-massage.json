@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/coconutoilmassage/coconutoilmassage-1.webp",
+            "image": "/images/banners/coconut-oil-massage.webp",
+            "imagePosition": "38% 50%",
             "subTitle": "Natural Nourishment",
             "titleSpan": "Virgin Cold Press",
             "title": "Coconut Oil Massage"

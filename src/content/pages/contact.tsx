@@ -10,7 +10,8 @@ export default function ContactPage() {
         titleSpan="Book Your Spa"
         title="Experience in Seminyak"
         buttonText="Contact Us"
-        image="/images/contact/contact-1.webp"
+        image="/images/banners/contact.webp"
+        imagePosition="40% 50%"
       />
       <ContactSection
         formSubTitle="Get in Touch"

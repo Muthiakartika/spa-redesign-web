@@ -89,6 +89,26 @@
   opacity: 0.45;
 }
 
+/* Inner-page banners (PageBanner, the owner's photos of 15 Oct): between 768
+   and 1440px the banner is only 0.9-1.7 times as wide as it is tall, so a
+   1920x850 photo shows 40-75% of its width. `imagePosition` keeps the subject
+   in view instead of live's centre. Phones get the `-sm` cut, made around
+   the subject. */
+@media (min-width: 768px) {
+  .banner-two-area .slide-bg[style*="--hero-pos"] {
+    background-position: var(--hero-pos);
+  }
+}
+/* The three outdoor photos (outcall's frangipani tree, villa's curtain, Kuta's
+   pool) are much lighter than the spa-room ones, and live's overlay is clear
+   at the top: a light tint over the whole photo keeps the white kicker and
+   title readable. */
+.p-outcall-home-service-massage .banner-two__slider .slide-bg::before,
+.p-villa-hotel-massage .banner-two__slider .slide-bg::before,
+.p-massage-kuta .banner-two__slider .slide-bg::before {
+  background: linear-gradient(180deg, rgba(28, 26, 29, 0.3), rgba(28, 26, 29, 0.75));
+}
+
 /* Homepage About card (and the /home-v2/ drafts): "Seminyak · Since 2009"
    larger than live's 12px (11px below 992px), which the owner found too small,
    and as written instead of live's spaced capitals (owner, 2 Oct: "no

@@ -17,7 +17,7 @@ export default function MassageKutaPage() {
         titleSpan="Massage in Kuta, Bali:"
         title="In-Spa and Outcall"
         buttonText="Book Now"
-        image="/images/services/massagekuta/massagekuta-1.webp"
+        image="/images/banners/massage-kuta.webp"
       />
       <AboutIntro
         removeBottomPadding

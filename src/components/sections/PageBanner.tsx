@@ -17,6 +17,12 @@ export type PageBannerProps = {
   text?: string;
   openingText?: string;
   image: string;
+  /**
+   * Where the photo's subject is, as a CSS background-position ("38% 50%"),
+   * for screens from 768px where the banner shows only part of the width.
+   * Phones get the `-sm` file, already cut around the subject.
+   */
+  imagePosition?: string;
   shapeImage?: string;
   buttonText?: string;
   buttonLink?: string;
@@ -38,6 +44,7 @@ export default function PageBanner({
   text = "",
   openingText = "",
   image,
+  imagePosition,
   shapeImage = "/images/shape/banner-two-shape.png",
   buttonText = "Book Now",
   buttonLink = whatsappChatUrl,
@@ -77,7 +84,13 @@ export default function PageBanner({
         >
           <SwiperSlide className="swiper-slide">
             <div
-              style={{ "--hero-lg": `url(${image})`, "--hero-sm": `url(${small})` } as React.CSSProperties}
+              style={
+                {
+                  "--hero-lg": `url(${image})`,
+                  "--hero-sm": `url(${small})`,
+                  ...(imagePosition && { "--hero-pos": imagePosition }),
+                } as React.CSSProperties
+              }
               className={`${S} slide-bg`}
             />
             <div className={`${S} container`}>

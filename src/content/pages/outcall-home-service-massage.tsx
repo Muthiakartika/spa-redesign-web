@@ -23,7 +23,7 @@ export default function OutcallPage() {
           title="Home Service to Your Villa or Hotel"
           text="Experience our traditional massage and spa treatments in the comfort of your home, hotel, or villa."
           openingText="OPENING TIMES: Open Daily: 9:00 - 23:00"
-          image="/images/homepage/homepage-28.webp"
+          image="/images/banners/outcall-home-service-massage.webp"
           // The homepage hero's two row buttons in place of the one "Book Now"
           // (7 Oct: the page's search traffic compares prices before booking),
           // in the see-through gold version (picked over the white one).

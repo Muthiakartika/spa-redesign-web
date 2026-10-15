@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/creambath/creambath-1.webp",
+            "image": "/images/banners/creambath.webp",
+            "imagePosition": "43% 50%",
             "subTitle": "Hair & Scalp Wellness",
             "titleSpan": "Hair Cream Bath",
             "title": "in Seminyak: Hair Spa & Creambath"

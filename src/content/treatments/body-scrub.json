@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/bodyscrub/bodyscrub-1.webp",
+            "image": "/images/banners/body-scrub.webp",
+            "imagePosition": "45% 50%",
             "subTitle": "Skin Renewal",
             "titleSpan": "Body Scrub",
             "title": "in Seminyak, Bali"

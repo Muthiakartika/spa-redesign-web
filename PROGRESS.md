@@ -1533,6 +1533,51 @@ Catatan pemilik setelah melihat admin baru:
    sebagai link; link ke situs lain tetap dijadikan teks biasa oleh
    `sanitizeHtml`, seperti sejak awal.
 
+## Foto banner baru dari pemilik (15 Oktober)
+
+Sumber: folder klien `1. Gambar 1` (31 JPEG, semuanya 1920×850). Dua di
+antaranya sudah terpasang dan tidak diubah: `Homepage New Test bigger` (=
+`home/homepage-banner.webp`, 8 Oktober) dan `Privacy Policy and Term
+conditions` (= `legal/privacy-terms.webp`, 30 September). Day Spa tidak
+mendapat foto baru dan tetap memakai banner lamanya.
+
+- **29 banner baru** di `public/images/banners/<nama>.webp` (1920×850, WebP
+  q80, 41–100 KB; outcall 189 KB karena dedaunan) untuk 23 halaman treatment,
+  `/contact/`, `/seminyak/` (`pricelist`), `/reservation/`, outcall, villa,
+  dan Kuta. Nama file baru, jadi cache `/images` (30 hari) tidak menahan
+  foto lama. File banner lama tidak dihapus: masih dipakai menu
+  (thumbnail outcall/villa/Kuta) dan oleh halaman treatment yang pernah
+  disimpan di admin (lihat di bawah).
+- **Versi HP `-sm`**: potongan 704×850 setinggi foto (bentuk 828×1000 yang
+  juga dibuat admin, tanpa diperbesar), dipusatkan pada subjek tiap foto
+  (wajah, tangan, lilin, botol, dll.), 21–68 KB. Dulu `-sm` hanya foto utuh
+  yang diperkecil ke 828×367, sehingga di HP (banner 312×582 sampai
+  759×642) tampil buram dan terpotong di tengah.
+- **Tablet/laptop:** antara 768 dan 1440px banner hanya 0,9–1,7 kali lebih
+  lebar dari tingginya, jadi foto 2,26:1 hanya tampil 40–75% lebarnya.
+  `PageBanner` punya prop baru `imagePosition` (CSS background-position,
+  mis. `"35% 50%"`, aturan di `custom.css`, hanya ≥768px) untuk foto yang
+  subjeknya tidak di tengah: 13 treatment, contact (40%), pricelist (70%),
+  reservation (35%). Di JSON treatment prop ini termasuk layout (bukan
+  field admin), jadi tetap ikut walau halaman diedit.
+- **Tiga foto outdoor lebih terang** (outcall: pohon kamboja di dinding
+  putih, villa: tirai putih, Kuta: kolam), jadi kicker dan judul putih kurang
+  terbaca di bagian atas yang overlay live-nya bening. Ketiganya mendapat
+  overlay `rgba(28,26,29,.3)` → `.75` (live: bening → .7), di `custom.css`.
+- **`/reservation/` kini punya banner** seperti `/contact/`: kicker "In-Spa
+  or Home Service", H1 "Reserve Your Massage at Spa Bali Moon" (mengikuti
+  `<title>` halaman), tombol "Book Now" ke WhatsApp. "Book Your Treatment"
+  turun dari H1 ke H2 (tampilan sama, `look-h2`). Teks banner usulan
+  sendiri, menunggu persetujuan pemilik.
+- **Sitemap:** 29 halaman itu memakai banner baru sebagai foto halamannya
+  dan lastmod 15 Oktober; `/reservation/` kini punya foto.
+- **Halaman treatment yang pernah disimpan di `/admin/treatments/`** menyimpan
+  path banner lama di Neon (`page_content`), dan nilai tersimpan menang atas
+  JSON. Halaman seperti itu tetap memakai banner lama sampai fotonya diganti
+  di editor atau "Restore original". Per 15 Oktober ke-24 halaman live masih
+  menampilkan banner bawaan, tapi itu tidak membuktikan halamannya belum
+  pernah disimpan.
+
 ## Draf: beranda v2 di `/home-v2/` (30 September)
 
 Duplikat beranda dengan layout sedikit diubah; isi, warna, huruf dan dekorasi

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
+import PageBanner from "@/components/sections/PageBanner";
 import { LotusIcon } from "@/components/ui/Lotus";
 
 const HOME_SERVICE = [
@@ -79,13 +80,22 @@ function Option({
 
 /**
  * /reservation/ — the live page: one "Book Your Treatment" band, no banner.
- * Live has no H1; since 5 October (owner) the band title is the H1, the two
- * booking routes H2 and their points H3, each keeping its old heading look
- * (look-h2/h3/h5 in src/styles/custom.css).
+ * Since 15 October it opens with a photo banner like /contact/ (the owner's
+ * Reservation photo), whose title is the H1; the band title is then an H2.
+ * Live has no H1. The two booking routes are H2 and their points H3 (owner,
+ * 5 Oct), each keeping its old heading look (look-h2/h3/h5 in
+ * src/styles/custom.css).
  */
 export default function ReservationPage() {
   return (
     <div className="page-wrapper lh p-reservation">
+      <PageBanner
+        subTitle="In-Spa or Home Service"
+        titleSpan="Reserve Your Massage"
+        title="at Spa Bali Moon"
+        image="/images/banners/reservation.webp"
+        imagePosition="35% 50%"
+      />
       <section className="book-treatment-section about-section section__decoration-top section__decoration-bottom bg-sub pt-130 pb-130">
         <div className="shape1 wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
           <img loading="lazy" decoding="async" src="/images/shape/service-shape-left.png" alt="shape" />
@@ -105,9 +115,9 @@ export default function ReservationPage() {
               <LotusIcon className="brand-lotus-icon-svg" />
               Your Spa Experience is One Click Away
             </div>
-            <h1 className="title look-h2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginBottom: "20px" }}>
+            <h2 className="title look-h2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms" style={{ marginBottom: "20px" }}>
               Book Your Treatment
-            </h1>
+            </h2>
             <p
               className="text wow fadeInUp"
               data-wow-delay="400ms"

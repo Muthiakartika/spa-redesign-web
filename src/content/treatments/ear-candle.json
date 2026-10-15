@@ -13,7 +13,8 @@
         {
           "type": "PageBanner",
           "props": {
-            "image": "/images/services/earcandle/earcandle-1.webp",
+            "image": "/images/banners/ear-candle.webp",
+            "imagePosition": "35% 50%",
             "subTitle": "Gentle Ear Care",
             "titleSpan": "Ear Candle Treatment",
             "title": "in Seminyak, Bali"

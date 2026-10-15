@@ -9,7 +9,7 @@ export const metadata: Metadata = buildMetadata({
   path: reservationPage.path,
 });
 
-/** /reservation/ — the live page (src/content/pages/reservation.tsx); its H1 is "Book Your Treatment" (live has none). */
+/** /reservation/ — the live page (src/content/pages/reservation.tsx) under a photo banner whose title is the H1 (live has none). */
 export default function ReservationPage() {
   return <Body />;
 }

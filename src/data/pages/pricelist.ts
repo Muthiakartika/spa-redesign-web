@@ -44,7 +44,8 @@ export const pricelistPage = {
     titleSpan: "Massage in Seminyak:",
     title: "Prices, Treatments & Packages",
     buttonText: "Book Now",
-    image: "/images/pricelist/pricelist-1.webp"
+    image: "/images/banners/pricelist.webp",
+    imagePosition: "70% 50%",
   },
 
   /** The "complete spa menu" block with its two photos. `firstStat`/`secondStat` break after the first words. */

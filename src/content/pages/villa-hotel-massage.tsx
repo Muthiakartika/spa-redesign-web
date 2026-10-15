@@ -17,7 +17,7 @@ export default function VillaHotelMassagePage() {
         titleSpan="Villa & Hotel Massage"
         title="in Seminyak, Bali"
         buttonText="Book Now"
-        image="/images/services/massagehotelvilla/massagehotelvilla-1.webp"
+        image="/images/banners/villa-hotel-massage.webp"
       />
       <AboutIntro
         removeBottomPadding
