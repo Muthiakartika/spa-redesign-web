@@ -1,7 +1,9 @@
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import { mobileMenuData } from "@/components/layout/mobileMenuData";
+import JsonLd from "@/components/seo/JsonLd";
 import HydrateLater from "@/components/ui/HydrateLater";
+import { spaSchema } from "@/lib/schema";
 
 /** Every page except the 404: header, the page inside <main>, footer. */
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
@@ -14,6 +16,8 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       >
         Skip to content
       </a>
+      {/* The spa's own structured data, on every page (AEO roadmap, 17 Oct). */}
+      <JsonLd data={spaSchema()} />
       <Header menu={await mobileMenuData()} />
       <main id="main-content">{children}</main>
       {/* Wakes up after the page above it (see HydrateLater). */}

@@ -4,7 +4,6 @@
 //
 // Page: https://spabalimoon.com/
 
-import { business } from "@/data/business";
 import { priceValue } from "@/lib/price";
 import { catalog, type CatalogItem } from "./home-catalog";
 
@@ -19,46 +18,8 @@ export const home = {
     title: "Seminyak Spa & Balinese Massage | Spa Bali Moon",
     description:
       "Balinese massage and spa in Seminyak since 2009, at our day spa or your villa/hotel. 23 treatments from IDR 69.000, couples packages, open daily 9am–11pm.",
-    /** The live homepage's JSON-LD (rating as shown on the live site), plus the address, hours and prices. */
-    schema: {
-      "@context": "https://schema.org",
-      "@type": "DaySpa",
-      name: "Spa Bali Moon",
-      url: "https://spabalimoon.com",
-      image: "https://spabalimoon.com/images/home/homepage-1.webp",
-      email: "info@spabalimoon.com",
-      areaServed: "Seminyak, Bali",
-      // Copy rewrite, 15 Oct: the local-business facts the page states, so
-      // search and AI answers read the same address, hours and prices.
-      telephone: business.phoneDisplay,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Jl. Pangkung Sari No. 30, Petitenget",
-        addressLocality: business.address.locality,
-        addressRegion: business.address.region,
-        postalCode: business.address.postalCode,
-        addressCountry: business.address.country,
-      },
-      // Where Google Maps places the spa (the /contact/ map).
-      geo: { "@type": "GeoCoordinates", latitude: -8.6780657, longitude: 115.1607164 },
-      openingHoursSpecification: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: business.openingHours.opens,
-        closes: business.openingHours.closes,
-      },
-      // Lowest and highest prices on the spa menu (the highest is for two guests).
-      priceRange: "IDR 69.000 – IDR 999.000",
-      currenciesAccepted: "IDR",
-      sameAs: [business.social.facebook, business.social.instagram],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.2,
-        reviewCount: 193,
-        bestRating: 5,
-        worstRating: 1,
-      },
-    },
+    // The spa's structured data (DaySpa) is built in src/lib/schema.ts and
+    // shown on every page since the AEO roadmap (17 Oct).
   },
 
   hero: {
@@ -220,48 +181,49 @@ export const home = {
       {
         question: "1. Do I need to make an appointment?",
         answer:
-          "Advance bookings are recommended so we can prepare your preferred therapist, treatment, and appointment time, especially during busy travel seasons.",
+          "Advance booking is recommended at Spa Bali Moon, although walk-ins are welcome at our Seminyak spa on Jl. Pangkung Sari No. 30. Booking ahead lets us prepare your preferred therapist, treatment and appointment time, especially during busy travel seasons. We are open daily 9am to 11pm; book on WhatsApp at +62 878-6317-5144.",
       },
       {
         question: "2. Can I enjoy the treatments without visiting the spa?",
         answer:
-          "Yes. Many of our massage and spa treatments are available as home service at villas, hotels and private residences around Seminyak, for an extra IDR 75.000 per therapist.",
+          "Yes. Many Spa Bali Moon massage and spa treatments are available as home service at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist, and the therapist brings the massage bed, fresh linen and oils.",
       },
       {
         question: "3. Which massage is best if I've never had one before?",
         answer:
-          "Balinese Massage is often recommended for first time guests because it combines relaxation, gentle stretching, and traditional massage techniques suitable for most people.",
+          "Balinese Massage is often recommended for first-time guests at Spa Bali Moon because it combines relaxation, gentle stretching and traditional massage techniques suitable for most people. A one-hour session costs IDR 159.000 per person. You can tell your therapist your preferred pressure at the start and adjust it at any point during the session.",
       },
       {
         question: "4. Can I combine different treatments in one visit?",
         answer:
-          "Absolutely. Many guests pair massage with facials, body scrubs, cream baths, manicure, pedicure, or waxing to create a more complete spa experience.",
+          "Absolutely. At Spa Bali Moon, many guests pair massage with facials, body scrubs, cream baths, manicure, pedicure or waxing to create a more complete spa experience. Ready-made spa packages start at IDR 299.000 per person; for example, a 1-hour Balinese massage with a 30-minute manicure and 30-minute pedicure is IDR 399.000 per person.",
       },
       {
         question: "5. How do I choose the right treatment?",
         answer:
-          "Tell us how you're feeling or what you'd like to achieve, whether that's relaxation, muscle recovery, skin care, or simply time to unwind. We'll happily recommend the most suitable treatment for you.",
+          "Tell the Spa Bali Moon team how you're feeling or what you'd like to achieve, whether that's relaxation, muscle recovery, skin care or time to unwind, and we'll happily recommend the most suitable treatment. Balinese Massage suits general relaxation, while Sports and Deep Tissue Massage suit muscle tightness. Ask us on WhatsApp at +62 878-6317-5144.",
       },
       {
         question: "6. Is Spa Bali Moon a licensed spa?",
         answer:
-          "Yes. We are an established spa operating from a physical location at Jl. Pangkung Sari No. 30, Seminyak, and have served guests in Bali since 2009. Our home service is delivered by the same therapists who work in our spa, and you are welcome to visit us in person before booking.",
+          "Yes. Spa Bali Moon is an established spa operating from a physical location at Jl. Pangkung Sari No. 30, Petitenget, Seminyak, and has served guests in Bali since 2009. Our home service is delivered by the same therapists who work in our spa, and you are welcome to visit us in person before booking.",
       },
       // Copy rewrite, 15 Oct: the questions people search, answered with
       // facts already on the site.
       {
         question: "7. How much does a massage cost in Seminyak?",
         answer:
-          "A one-hour Balinese massage at Spa Bali Moon costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and couple massages start at IDR 319.000 for two people. All prices are in Indonesian rupiah and are on our price list.",
+          "A one-hour Balinese massage at Spa Bali Moon in Seminyak costs IDR 159.000 per person. Traditional and back massage start at IDR 90.000 for 30 minutes, and couple massages start at IDR 319.000 for two. All prices, in Indonesian rupiah, are on our price list, and home service adds IDR 75.000 per therapist.",
       },
       {
         question: "8. Where is Spa Bali Moon?",
         answer:
-          "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Seminyak, Bali. We also come to your villa or hotel in Seminyak and nearby areas.",
+          "Spa Bali Moon is at Jl. Pangkung Sari No. 30, Petitenget, Seminyak, Bali, and is open daily from 9am to 11pm. Our therapists also come to your villa or hotel in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta for an extra IDR 75.000 per therapist, and further across Bali on request.",
       },
       {
         question: "9. What are your opening hours?",
-        answer: "We're open daily, 9am to 11pm. Book on WhatsApp at +62 878-6317-5144.",
+        answer:
+          "Spa Bali Moon is open daily from 9am to 11pm at Jl. Pangkung Sari No. 30, Petitenget, Seminyak. Home service at your villa or hotel and WhatsApp booking are available during the same hours, and walk-ins are welcome at the spa. To book ahead, message us on WhatsApp at +62 878-6317-5144.",
       },
     ],
   },

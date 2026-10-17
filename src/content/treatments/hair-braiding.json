@@ -24,11 +24,15 @@
     {
       "type": "QuickFacts",
       "props": {
-        "text": "Hair braiding at Spa Bali Moon in Seminyak starts at IDR 279.000 for short hair, IDR 379.000 for medium and IDR 469.000 for long hair. Appointments take 30 minutes to 2 hours depending on the style, at our spa or at your villa or hotel. Braids keep hair neat in Bali's heat and humidity, and they stay tidy for several days.",
+        "text": "Hair braiding at Spa Bali Moon in Seminyak costs IDR 279.000 for short hair, IDR 379.000 for medium and IDR 469.000 for long hair. Appointments take 30 minutes to 2 hours depending on the style, at our spa or at your villa or hotel. Styles include classic double Dutch, single Dutch, Dutch crown, cornrows, half-up Dutch braids, box braids, Dutch fishtail and braids with extensions.",
         "items": [
           {
             "label": "Treatment",
             "value": "Braids for the beach, events or everyday wear, with extensions available on selected styles"
+          },
+          {
+            "label": "Styles",
+            "value": "Classic double Dutch, single Dutch, Dutch crown, cornrows, half-up Dutch braids, box braids, Dutch fishtail and braids with extensions"
           },
           {
             "label": "Price by hair length",
@@ -149,14 +153,11 @@
     },
     {
       "type": "TreatmentTestimonials",
-      "props": {
-        "rightShapeSrc": null
-      }
+      "props": {}
     },
     {
       "type": "AboutSplit",
       "props": {
-        "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/hairbraiding/hairbraiding-7.webp",
         "subTitle": "",
@@ -253,39 +254,39 @@
             "items": [
               {
                 "question": "Is Hair Braiding suitable for all hair types?",
-                "answer": "Yes. Most hair types can be braided, and the technique is adjusted according to your hair's length, texture, and condition."
+                "answer": "Yes. Most hair types can be braided at Spa Bali Moon in Seminyak, and we adjust the hair braiding technique to your hair's length, texture and condition. Before we start, we talk through your preferred style, braid size and whether you'd like extensions. Prices follow hair length, from IDR 279.000 for short hair."
               },
               {
                 "question": "How long does Hair Braiding usually take?",
-                "answer": "Depending on the chosen style, appointments generally take between 30 minutes and 2 hours."
+                "answer": "Hair braiding at Spa Bali Moon takes between 30 minutes and 2 hours, depending on the style you choose. Short hair with a simple braid style suits a quick styling session. Book on WhatsApp, 9am to 11pm, for our Seminyak spa or your villa or hotel, and bring a reference photo if you have one."
               },
               {
                 "question": "Will braiding damage my hair?",
-                "answer": "When done correctly, braiding is considered a protective hairstyle. We avoid excessive tension to keep your scalp comfortable."
+                "answer": "No, not when hair braiding is done correctly. Braiding is considered a protective hairstyle that helps reduce tangling in Bali's wind and humidity. At Spa Bali Moon we prepare and section your hair first, use a comfortable braiding technique and avoid excessive tension to keep your scalp comfortable. We also share simple aftercare tips."
               },
               {
                 "question": "How long do braids usually last?",
-                "answer": "The lifespan depends on the braid style, daily activities, and aftercare. Many styles remain neat for several days or even longer."
+                "answer": "Many braid styles remain neat for several days or even longer. How long hair braiding from Spa Bali Moon lasts depends on the braid style, your daily activities and aftercare. Once your braids are finished, we share simple aftercare tips to help the style stay neat for longer in Bali's heat and humidity."
               },
               {
                 "question": "Can I bring a reference photo?",
-                "answer": "Absolutely. Reference photos help us better understand the style, braid pattern, and overall look you'd like to achieve."
+                "answer": "Absolutely. A reference photo helps Spa Bali Moon understand the style, braid pattern and overall look you'd like to achieve. Bring it to your hair braiding appointment or share it on WhatsApp when you book. Before braiding begins, we also discuss braid size, hair length and whether you'd like to include extensions."
               },
               {
                 "question": "Are hair extensions available?",
-                "answer": "Yes. Selected braid styles can be created with extensions for additional length or volume."
+                "answer": "Yes. At Spa Bali Moon in Seminyak, selected braid styles can be created with extensions for additional length or volume. We talk through extensions with you before braiding begins, together with your preferred style, braid size and hair length. For the extension price, message us on WhatsApp (+62 878-6317-5144), 9am to 11pm."
               },
               {
                 "question": "How much does hair braiding cost in Bali at Spa Bali Moon?",
-                "answer": "IDR 279.000 for short hair, IDR 379.000 for medium hair and IDR 469.000 for long hair. Extensions are available on selected styles; message us on WhatsApp for the price."
+                "answer": "IDR 279.000 for short hair, IDR 379.000 for medium hair and IDR 469.000 for long hair at Spa Bali Moon in Seminyak. Short covers bob or shoulder-length hair. Extensions are available on selected styles; message us on WhatsApp for the price. Home service at your villa or hotel adds IDR 75.000 per therapist."
               },
               {
                 "question": "Where can I get my hair braided in Seminyak?",
-                "answer": "At Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel. Book on WhatsApp, 9am to 11pm."
+                "answer": "At Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel, where home service adds IDR 75.000 per therapist. We have been in business since 2009 and are open daily, 9am to 11pm. Book your hair braiding on WhatsApp, +62 878-6317-5144, and bring a reference photo if you have one."
               },
               {
                 "question": "Which braid styles do you offer?",
-                "answer": "Classic double Dutch, single Dutch, Dutch crown, cornrows, half-up Dutch braids, box braids, Dutch fishtail and braids with extensions. You can also bring a reference photo."
+                "answer": "Spa Bali Moon offers classic double Dutch, single Dutch, Dutch crown, cornrows, half-up Dutch braids, box braids, Dutch fishtail and braids with extensions. You can also bring a reference photo. Each style can be adapted to suit your hair, outfit and plans, and hair braiding prices follow hair length, from IDR 279.000 to IDR 469.000."
               }
             ]
           }

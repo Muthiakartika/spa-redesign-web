@@ -13,7 +13,7 @@ const waxingSalon: Treatment = {
   shortDescription: "A professional hair removal treatment using olive oil hot wax for smooth skin.",
   cardImage: { src: "/images/beauty/cards/waxing.webp", alt: "Waxing", width: 630, height: 580 },
   seo: {
-    title: "Waxing Seminyak - Brazilian & Full Body Wax Bali",
+    title: "Waxing Seminyak - Brazilian & Full Body Wax - Spa Bali Moon",
     description: "Waxing in Seminyak, Bali: from brows to full body, in a relaxing spa setting. Book at Spa Bali Moon.",
   },
   hero: {

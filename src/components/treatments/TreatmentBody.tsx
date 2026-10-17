@@ -13,6 +13,7 @@ import SessionOptions from "@/components/sections/SessionOptions";
 import TreatmentLinks from "@/components/sections/TreatmentLinks";
 import TreatmentPricing from "@/components/sections/TreatmentPricing";
 import TreatmentTestimonials from "@/components/sections/TreatmentTestimonials";
+import VisitUs from "@/components/sections/VisitUs";
 import DecorationMotion from "@/components/ui/DecorationMotion";
 import FloralDecoration from "@/components/ui/FloralDecoration";
 import { isJsx, type TreeNode, type TreeValue } from "@/lib/treatments/tree";
@@ -37,6 +38,8 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   TreatmentLinks,
   TreatmentPricing,
   TreatmentTestimonials,
+  // Added by the page template (app/(site)/seminyak/[slug]/page.tsx), not saved in the tree.
+  VisitUs,
 };
 
 function prop(value: TreeValue): unknown {

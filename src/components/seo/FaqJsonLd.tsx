@@ -1,3 +1,5 @@
+import JsonLd from "./JsonLd";
+
 /**
  * FAQPage structured data for a page's questions (copy rewrite, 15 Oct: the
  * answers are written to stand alone, so search and AI answers can quote
@@ -14,10 +16,5 @@ export default function FaqJsonLd({ items }: { items: { question: string; answer
       acceptedAnswer: { "@type": "Answer", text: answer },
     })),
   };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\u003c") }}
-    />
-  );
+  return <JsonLd data={data} />;
 }

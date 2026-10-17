@@ -1,4 +1,5 @@
 import { Fragment, type ReactNode } from "react";
+import SectionShapes from "@/components/ui/SectionShapes";
 
 export type QuickFact = { label: string; value: string };
 
@@ -36,14 +37,20 @@ export default function QuickFacts({
   text,
   items = [],
   updated,
+  leftShapeSrc,
+  rightShapeSrc,
 }: {
   text?: ReactNode;
   items?: QuickFact[];
   /** When the page last changed (ISO), shown under the facts. */
   updated?: string;
+  /** Corner decorations (components/ui/SectionShapes.tsx). */
+  leftShapeSrc?: string | null;
+  rightShapeSrc?: string | null;
 }) {
   return (
     <section className="quick-facts">
+      <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className="container">
         <div className="quick-facts__inner">
           {text ? (

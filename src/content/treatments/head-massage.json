@@ -145,14 +145,11 @@
     },
     {
       "type": "TreatmentTestimonials",
-      "props": {
-        "rightShapeSrc": null
-      }
+      "props": {}
     },
     {
       "type": "AboutSplit",
       "props": {
-        "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/headmassage/headmassage-7.webp",
         "subTitle": "",
@@ -248,35 +245,35 @@
             "items": [
               {
                 "question": "Can a Head Massage help with stress?",
-                "answer": "Many guests choose Head Massage because the slow, repetitive techniques promote relaxation and help reduce feelings of physical and mental tension."
+                "answer": "Many guests choose a head massage at Spa Bali Moon because its slow, repetitive techniques promote relaxation and help reduce feelings of physical and mental tension. The therapist works across the scalp, temples, neck and upper shoulders. Sessions in Seminyak are 1 hour (IDR 159.000), 1.5 hours (IDR 239.000) or 2 hours (IDR 330.000) per person."
               },
               {
                 "question": "Is oil always used during the treatment?",
-                "answer": "Not necessarily. Depending on your preference and the treatment style, the massage can be performed with or without massage oil."
+                "answer": "Not necessarily. A head massage at Spa Bali Moon can be performed with or without massage oil, depending on your preference and the treatment style. Say which you prefer during the brief consultation before treatment. Sessions start at IDR 159.000 per person for 1 hour, at our Seminyak spa or at your villa or hotel."
               },
               {
                 "question": "Can Head Massage help after long hours at a computer?",
-                "answer": "Yes. Prolonged screen time often creates tension around the neck, shoulders, and scalp. Head Massage focuses on these areas to improve overall comfort."
+                "answer": "Yes. Prolonged screen time often creates tension around the neck, shoulders and scalp, and a head massage at Spa Bali Moon focuses on these areas to improve overall comfort. Your therapist uses rhythmic movements across the scalp, circular pressure around the temples and massage of the neck and upper shoulders, with pressure adjusted to your comfort."
               },
               {
                 "question": "Is Head Massage suitable before sleeping?",
-                "answer": "Many guests enjoy receiving a Head Massage in the evening because the relaxing techniques help the body unwind before rest."
+                "answer": "Yes, many guests enjoy a head massage at Spa Bali Moon in the evening because the relaxing techniques help the body unwind before rest. Our Seminyak spa is open daily until 11pm, and home service at your villa or hotel adds IDR 75.000 per therapist. Sessions start at IDR 159.000 per person for 1 hour."
               },
               {
                 "question": "Can I receive Head Massage at my hotel or villa?",
-                "answer": "Yes. Professional home service is available throughout Seminyak and nearby areas for guests who prefer treatment in their accommodation."
+                "answer": "Yes. Spa Bali Moon offers head massage as professional home service throughout Seminyak and nearby areas for guests who prefer treatment in their accommodation. Home service adds IDR 75.000 per therapist to the treatment price of IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours or IDR 330.000 for 2 hours per person."
               },
               {
                 "question": "Does head massage help hair growth?",
-                "answer": "Head massage may support scalp circulation and relaxation, but there is limited evidence that it directly promotes hair growth. It can still be a soothing addition to your hair and scalp care routine."
+                "answer": "There is limited evidence that head massage directly promotes hair growth. It may support scalp circulation and relaxation, and it can be a soothing addition to your hair and scalp care routine. At Spa Bali Moon in Seminyak, a head massage covers the scalp, temples, neck and upper shoulders, from IDR 159.000 per person for 1 hour."
               },
               {
                 "question": "Why does a head massage feel so good?",
-                "answer": "A head massage can feel good because it helps relax the scalp, neck, and surrounding muscles. The gentle pressure and rhythmic movements can also help reduce tension and create a calming, relaxing feeling."
+                "answer": "A head massage can feel good because it helps relax the scalp, neck and surrounding muscles, and the gentle pressure and rhythmic movements can help reduce tension and create a calming feeling. At Spa Bali Moon in Seminyak, your therapist adjusts the pressure throughout and finishes with gentle movements; 1 hour costs IDR 159.000 per person."
               },
               {
                 "question": "How much does a head massage cost in Seminyak?",
-                "answer": "IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
+                "answer": "A head massage at Spa Bali Moon in Seminyak costs IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person. Home service at your villa or hotel adds IDR 75.000 per therapist. You can pay by Visa, Mastercard or cash, and book on WhatsApp, 9am to 11pm daily."
               }
             ]
           }

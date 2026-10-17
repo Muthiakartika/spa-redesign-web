@@ -16,6 +16,7 @@ const same = (a: string, b: string) => a.replace(/\/?$/, "/") === b.replace(/\/?
 /** Each menu item's icon and one line about it. */
 const ABOUT: Record<string, { icon: MenuIconName; note: (data: MobileMenuData) => string }> = {
   Home: { icon: "lotus", note: () => "Our day spa in Seminyak" },
+  About: { icon: "info", note: () => "Our story, therapists and products" },
   Pricelist: { icon: "tag", note: () => "Every treatment and price" },
   Treatments: {
     icon: "stones",

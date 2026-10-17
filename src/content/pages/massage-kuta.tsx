@@ -14,38 +14,38 @@ const FAQ = [
   {
     question: "What type of massage is best after a long day in Kuta?",
     answer:
-      "Balinese Massage is a popular choice for general relaxation because it combines flowing massage movements, gentle stretching, and acupressure. Guests who prefer firmer pressure may prefer Traditional Massage, while Sports Massage is suitable after more physically demanding activities.",
+      "After a long day in Kuta, Balinese Massage is a popular choice for general relaxation, combining flowing movements, gentle stretching and acupressure. Guests who like firmer pressure may prefer Traditional Massage, while Sports Massage suits physically demanding days. Spa Bali Moon therapists can come to your Kuta hotel or villa from our Seminyak spa.",
   },
   {
     question: "Can I get a massage after surfing or spending time at the beach?",
     answer:
-      "Yes. Sports Massage is often chosen after surfing, exercise, or other physical activities because it focuses on areas affected by repetitive movement and muscle fatigue. A gentler treatment may be more suitable if the body feels particularly sensitive or exhausted.",
+      "Yes. Sports Massage is often chosen after surfing, exercise or other physical activities because it focuses on areas affected by repetitive movement and muscle fatigue. A gentler treatment may be more suitable if the body feels particularly sensitive or exhausted. In Kuta, Spa Bali Moon therapists come to your hotel or villa.",
   },
   {
     question: "Do you offer massage at hotels and villas near Kuta?",
     answer:
-      "Yes. Selected massage and spa treatments can be arranged as home service at hotels, villas, and private accommodations in nearby areas. Availability and travel fees depend on the location and therapist availability.",
+      "Yes. Spa Bali Moon offers selected massage and spa treatments as home service at hotels, villas and private accommodation in Kuta and nearby areas. Prices match our Seminyak spa, plus IDR 75.000 per therapist. Availability and any extra travel cost depend on your location and are confirmed on WhatsApp before you book.",
   },
   {
     question: "How long do massage sessions usually last?",
     answer:
-      "Sessions run from 30 minutes to 2 hours, depending on the treatment. Balinese massage, for example, is available for 1, 1.5 or 2 hours (IDR 159.000, IDR 239.000 and IDR 330.000 per person).",
+      "Massage sessions at Spa Bali Moon run from 30 minutes to 2 hours, depending on the treatment. Balinese massage, for example, is available for 1, 1.5 or 2 hours (IDR 159.000, IDR 239.000 and IDR 330.000 per person). In Kuta, where our therapists come to you, outcall adds IDR 75.000 per therapist.",
   },
   {
     question: "Can I combine a massage with another spa treatment?",
     answer:
-      "Yes. Guests can combine selected treatments such as massage, facials, body scrubs, Cream Bath, Manicure and Pedicure, and other beauty services. Our team can help recommend combinations based on the experience you are looking for.",
+      "Yes. Spa Bali Moon guests can combine selected treatments such as massage, facials, body scrubs, Cream Bath, Manicure and Pedicure, and other beauty services. Ready-made spa packages start at IDR 299.000 per person. Our team can recommend combinations based on the experience you are looking for; message us on WhatsApp at +62 878-6317-5144.",
   },
   {
     question: "What should I prepare before my massage?",
     answer:
-      "Comfortable clothing and a little time to relax are usually all you need. For certain treatments, your therapist may provide specific guidance before the session to help you enjoy the treatment comfortably.",
+      "Comfortable clothing and a little time to relax are usually all you need before a Spa Bali Moon massage. For outcall in Kuta, the therapist brings the massage bed, fresh linen, towels and oils, so you do not need to supply anything. For certain treatments, your therapist may give specific guidance before the session.",
   },
   // Copy rewrite, 15 Oct.
   {
     question: "How much does a massage in Kuta cost?",
     answer:
-      "Prices are the same as in our Seminyak spa. A one-hour Balinese massage is IDR 159.000 per person, and traditional massage starts at IDR 90.000 for 30 minutes. Outcall adds IDR 75.000 per therapist; for locations further out we confirm any extra travel cost on WhatsApp before you book.",
+      "A Spa Bali Moon outcall massage in Kuta costs the same as in our Seminyak spa, plus IDR 75.000 per therapist. A one-hour Balinese massage is IDR 159.000 per person, and traditional massage starts at IDR 90.000 for 30 minutes. For locations further out, we confirm any extra travel cost on WhatsApp before you book.",
   },
 ];
 

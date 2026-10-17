@@ -144,3 +144,287 @@
     height: calc(var(--floral) * 150 / 230);
   }
 }
+
+/* EVERY SECTION, ON LAPTOPS TOO (owner, 17 Oct: every section should have
+   its decorations, and they must show on a laptop: 1280px, a 1920px screen
+   at 150%). The rules above, and the treatment pages' own live rules, left
+   most decorations out below 1400-1500px, so such a laptop saw none on a
+   treatment page. There, from 1200px, every section now has its leaves or
+   flowers again, still never on text: smaller on laptops (1200-1699px), or
+   moved to a corner that is empty at that width. The sections that had none
+   (quick facts, FAQ, "Visit us", the day spa's treatment links, the closing
+   banner) get theirs from components/ui/SectionShapes.tsx; the page
+   template (app/(site)/seminyak/[slug]/page.tsx) picks their images and
+   marks the page .treatment-page. Checked with the same pixel check on all
+   24 treatment pages at 1200, 1280, 1366, 1440, 1536, 1600, 1680, 1700,
+   1800 and 1920px. Below 1200px the rules above still apply. */
+
+/* The new corner decorations. */
+:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section, .day-spa-links):has(> .shape1, > .shape2) {
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+}
+:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section, .day-spa-links) > :is(.shape1, .shape2) {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+:is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section, .day-spa-links) > :is(.shape1, .shape2) img {
+  display: block;
+  height: auto;
+}
+
+/* Quick facts: flowers under the opening paragraph, a leaf above the card. */
+.quick-facts > .shape1 {
+  left: 0;
+  bottom: -30px;
+}
+.quick-facts > .shape1 img {
+  width: 220px;
+}
+.quick-facts > .shape2 {
+  top: 10px;
+  right: 0;
+}
+.quick-facts > .shape2 img {
+  width: 230px;
+}
+
+/* FAQ: a spa bowl over the photo's lower corner (above the photo, which
+   sits at z-index 2), a leaf beside the heading. Balinese massage keeps its
+   own spa bowl on the right (live). */
+.faq-section > .shape1 {
+  left: 0;
+  bottom: 60px;
+  z-index: 3;
+}
+.faq-section > .shape1 img {
+  width: 190px;
+}
+.faq-section > .shape2 {
+  top: 40px;
+  right: 0;
+  transform: scaleX(-1);
+}
+.faq-section > .shape2 img {
+  width: 190px;
+}
+.balinese-massage-faq .faq-section > .shape2 {
+  display: none;
+}
+
+/* "Visit us": a frangipani over the photo's lower corner, a leaf over the
+   card's top corner. */
+.visit-us > .shape1 {
+  left: 0;
+  bottom: 40px;
+  z-index: 2;
+}
+.visit-us > .shape1 img {
+  width: 260px;
+}
+.visit-us > .shape2 {
+  top: 20px;
+  right: 0;
+  z-index: 2;
+}
+.visit-us > .shape2 img {
+  width: 220px;
+}
+
+/* Day spa's treatment links: a fern low on the left, flowers high on the
+   right. */
+.day-spa-links > .shape1 {
+  left: 0;
+  bottom: 20px;
+}
+.day-spa-links > .shape1 img {
+  width: 200px;
+}
+.day-spa-links > .shape2 {
+  top: 30px;
+  right: 0;
+}
+.day-spa-links > .shape2 img {
+  width: 230px;
+}
+
+/* Closing banner: petals over its top corner, a spa bowl over its lower
+   one, as Balinese massage has (which keeps its own). */
+.reserve-cta-section > .shape1 {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.reserve-cta-section > .shape1 img {
+  width: 200px;
+}
+.reserve-cta-section > .shape2 {
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transform: scaleX(-1);
+}
+.reserve-cta-section > .shape2 img {
+  width: 200px;
+}
+.balinese-massage-paper-section .reserve-cta-section > .shape2 {
+  display: none;
+}
+@media (max-width: 1199px) {
+  :is(.quick-facts, .visit-us, .faq-section, .reserve-cta-section, .day-spa-links) > :is(.shape1, .shape2) {
+    display: none;
+  }
+}
+
+/* Treatment pages from 1200px: the decorations the rules above (and the
+   Balinese massage page's live rules) leave out there show again. */
+@media (min-width: 1200px) {
+  .treatment-page section > :is(.shape1, .shape2),
+  .treatment-page section.about-section > :is(.shape1, .shape2),
+  .treatment-page section > :is(.shape1, .shape2) .floral-decoration__flowers,
+  .treatment-page .balinese-massage-faq > .balinese-massage-faq-shape,
+  .treatment-page .balinese-massage-paper-section > .balinese-massage-cta-shape {
+    display: block;
+  }
+}
+
+/* Treatment pages on laptops (1200-1699px). The live per-page rules size
+   and place these with ids and inline styles, hence !important. The
+   content is 1140px wide up to 1399px and 1320px from 1400px. */
+@media (min-width: 1200px) and (max-width: 1699px) {
+  :root {
+    --deco-content: 1140px;
+  }
+  .treatment-page section > :is(.shape1, .shape2) img {
+    max-width: none !important;
+    height: auto !important;
+  }
+  .treatment-page section > :is(.shape1, .shape2) .floral-decoration__flowers {
+    --floral: 180px;
+    width: var(--floral) !important;
+    height: calc(var(--floral) * 245 / 230) !important;
+  }
+  .treatment-page section > :is(.shape1, .shape2) .floral-decoration__clustered {
+    height: calc(var(--floral) * 210 / 230) !important;
+  }
+  .treatment-page section > :is(.shape1, .shape2) .floral-decoration__petals {
+    width: calc(var(--floral) * 170 / 230) !important;
+    height: calc(var(--floral) * 100 / 230) !important;
+  }
+  .treatment-page section > :is(.shape1, .shape2) .floral-decoration__blossoms {
+    width: var(--floral) !important;
+    height: calc(var(--floral) * 150 / 230) !important;
+  }
+
+  /* Intro: the fern over the photo, the stones under the text. Day spa's
+     leaf on the right would reach its last feature; its fern stays. */
+  .treatment-page .about-section-two > .shape1 img {
+    width: 190px !important;
+  }
+  .treatment-page .about-section-two > .shape2 img {
+    width: 170px !important;
+  }
+  .treatment-page .about-section-two > .shape2.treatment-leaf-position--right {
+    display: none;
+  }
+
+  /* Prices: smaller trays. Without session cards above the packages, the
+     top one moves down onto the first package photo, clear of the heading
+     and its text (which take the top corners there). */
+  .treatment-page .pricing-section-three > .shape1 img {
+    width: 170px !important;
+  }
+  .treatment-page .pricing-section-three:has(> .container > .section-header__flex:first-child) > .shape1 {
+    top: 400px !important;
+    left: -20px !important;
+    z-index: 1 !important;
+  }
+  .treatment-page .pricing-section-three > .shape2 img {
+    width: 220px !important;
+  }
+
+  /* Reviews: the frangipani and the spa tray, smaller. */
+  .treatment-page .testimonial-section-two > .shape1 img {
+    width: 230px !important;
+  }
+  .treatment-page .testimonial-section-two > .shape2 img {
+    width: 300px !important;
+  }
+
+  /* About sections with the text on the left: the leaf leaves the corner
+     under the list for the empty one under the photo, turned to face in. */
+  .treatment-page .about-section:has(> .container > .row > .content-column:first-child) > .shape1 {
+    right: 0 !important;
+    bottom: 30px !important;
+    left: auto !important;
+    scale: -1 1;
+  }
+  .treatment-page .about-section:has(> .container > .row > .content-column:first-child) > .shape1 img {
+    width: 150px !important;
+  }
+  /* … with the photo on the left: the flowers leave the heading for the
+     empty corner beside the list. */
+  .treatment-page .about-section:has(> .container > .row > .image-column:first-child) > .shape2 {
+    top: auto !important;
+    bottom: 0 !important;
+  }
+  .treatment-page .about-section:has(> .container > .row > .image-column:first-child) > .shape2 > div {
+    transform: none !important;
+  }
+
+  /* Related treatments: a smaller tray, half off the screen edge. */
+  .treatment-page .service-section-two > .shape1 {
+    left: calc((100vw - var(--deco-content)) / 2 - 98px) !important;
+  }
+  .treatment-page .service-section-two > .shape1 img {
+    width: 120px !important;
+  }
+
+  /* FAQ: the bowl moves up onto the photo's top corner (the questions
+     below leave it no room); "Visit us" (here and on the About page): a
+     smaller leaf, higher, clear of the heading. */
+  .treatment-page .faq-section > .shape1 {
+    top: 60px !important;
+    bottom: auto !important;
+    left: 0 !important;
+  }
+  .treatment-page .faq-section > .shape1 img {
+    width: 190px !important;
+  }
+  .visit-us > .shape1 img {
+    width: 220px !important;
+  }
+  .visit-us > .shape2 {
+    top: 0 !important;
+  }
+  .visit-us > .shape2 img {
+    width: 120px !important;
+  }
+
+  /* Day spa's treatment links: a smaller fern, up in the empty corner
+     beside the centred heading, clear of the links. */
+  .treatment-page .day-spa-links > .shape1 {
+    top: 0 !important;
+    bottom: auto !important;
+  }
+  .treatment-page .day-spa-links > .shape1 img {
+    width: 140px !important;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1699px) {
+  :root {
+    --deco-content: 1320px;
+  }
+}
+/* From 1400px the FAQ heading sits beside the photo and a long one reaches
+   the right edge: a smaller leaf, higher. */
+@media (min-width: 1400px) {
+  .faq-section > .shape2 {
+    top: -10px;
+  }
+  .faq-section > .shape2 img {
+    width: 110px;
+  }
+}

@@ -190,14 +190,11 @@
     },
     {
       "type": "TreatmentTestimonials",
-      "props": {
-        "rightShapeSrc": null
-      }
+      "props": {}
     },
     {
       "type": "AboutSplit",
       "props": {
-        "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/waxing/waxing-11.webp",
         "subTitle": "",
@@ -293,31 +290,31 @@
             "items": [
               {
                 "question": "How long does waxing results usually last?",
-                "answer": "Waxing results can last several weeks depending on your natural hair growth cycle. With regular sessions, many guests notice that hair grows back softer and finer over time."
+                "answer": "Waxing results can last several weeks, depending on your natural hair growth cycle, because waxing removes hair from the root and keeps skin smoother for longer than shaving. With regular sessions, many guests notice hair grows back softer and finer over time. At Spa Bali Moon in Seminyak, prices start at IDR 99.000 for under arms."
               },
               {
                 "question": "Is waxing painful?",
-                "answer": "Waxing may feel slightly uncomfortable, especially during the first session, but professional techniques and suitable wax products help make the process more comfortable."
+                "answer": "Waxing may feel slightly uncomfortable, especially during the first session, but professional techniques and suitable wax products help make it more comfortable. At Spa Bali Moon in Seminyak, we use Mancine Strawberry Hard Wax for delicate areas and olive oil strip wax for larger areas, adjust technique to your skin sensitivity and check your comfort throughout."
               },
               {
                 "question": "Should I shave before my waxing appointment?",
-                "answer": "No. Shaving is not necessary before waxing. Hair should be long enough for the wax to grip properly, usually around 1/4 inch."
+                "answer": "No. You do not need to shave before waxing at Spa Bali Moon. Hair should be long enough for the wax to grip properly, usually around 1/4 inch. Your therapist prepares the skin before waxing and gives aftercare guidance afterwards. Waxing is available at our Seminyak spa or at your villa or hotel; book on WhatsApp."
               },
               {
                 "question": "Can I get Brazilian waxing at Spa Bali Moon?",
-                "answer": "Yes. Brazilian waxing is available in a private treatment setting with careful techniques to maintain comfort and discretion."
+                "answer": "Yes. Brazilian waxing at Spa Bali Moon in Seminyak costs IDR 350.000 and is done in a private treatment setting with careful techniques to maintain comfort and discretion. For delicate areas we use Mancine Strawberry Hard Wax, and your therapist checks your comfort throughout. Book on WhatsApp at +62 878-6317-5144, daily 9am to 11pm."
               },
               {
                 "question": "What should I avoid after waxing?",
-                "answer": "After waxing, it is recommended to avoid hot showers, intense sun exposure, and strong exfoliation for a short period to allow the skin to remain calm."
+                "answer": "After waxing, avoid hot showers, intense sun exposure and strong exfoliation for a short period so the skin can remain calm. At Spa Bali Moon in Seminyak, your therapist finishes every waxing treatment with simple aftercare instructions. If you are waxing before a beach day in Bali, keep the sun-exposure advice in mind and follow those instructions."
               },
               {
                 "question": "Is waxing suitable for men?",
-                "answer": "Yes. Spa Bali Moon provides waxing options for men, including areas such as the back and Manzilian, with techniques adjusted for comfort."
+                "answer": "Yes. Spa Bali Moon in Seminyak provides waxing options for men, including areas such as the back and Manzilian, with techniques adjusted for comfort and skin sensitivity. Back waxing is from IDR 139.000 and full back is IDR 299.000. Treatments take place in a private setting at our spa, or at your villa or hotel."
               },
               {
                 "question": "How much does waxing cost in Seminyak?",
-                "answer": "Under arms is IDR 99.000, half legs IDR 149.000, arms IDR 159.000, full back IDR 299.000, full legs IDR 299.000 and Brazilian wax IDR 350.000 at Spa Bali Moon. Back waxing starts from IDR 139.000. Home service adds IDR 75.000 per therapist."
+                "answer": "Waxing at Spa Bali Moon in Seminyak costs IDR 99.000 for under arms, IDR 149.000 for half legs, IDR 159.000 for arms, IDR 299.000 for full back or full legs and IDR 350.000 for a Brazilian. Back waxing starts from IDR 139.000. Home service at your villa or hotel adds IDR 75.000 per therapist."
               }
             ]
           }

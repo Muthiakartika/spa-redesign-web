@@ -126,14 +126,11 @@
     },
     {
       "type": "TreatmentTestimonials",
-      "props": {
-        "rightShapeSrc": null
-      }
+      "props": {}
     },
     {
       "type": "AboutSplit",
       "props": {
-        "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/earcandle/earcandle-5.webp",
         "subTitle": "",
@@ -229,35 +226,35 @@
             "items": [
               {
                 "question": "What is Ear Candle treatment?",
-                "answer": "Ear Candle is a wellness treatment using a hollow candle placed at the outer ear area to create gentle warmth and relaxation. It is commonly offered as a spa experience rather than a medical procedure."
+                "answer": "Ear candle is a 30-minute relaxation treatment at Spa Bali Moon in Seminyak. A hollow candle placed at the outer ear creates gentle warmth, with light massage around the ears, temples, jaw and neck. It is offered as a spa experience, not a medical procedure, and it is not a way to clean your ears."
               },
               {
                 "question": "Does Ear Candle remove earwax?",
-                "answer": "No. Ear candling is a relaxation treatment and does not remove earwax. If you think your ears are blocked, see a doctor."
+                "answer": "No. Ear candling at Spa Bali Moon is a relaxation treatment and does not remove earwax, so it is not a way to clean your ears. If you think your ears are blocked, or you have any ear problem, see a doctor instead. Our 30-minute session offers gentle warmth and light massage, purely for relaxation."
               },
               {
                 "question": "Is Ear Candle safe?",
-                "answer": "When performed properly by trained therapists, the candle remains outside the ear canal and the session is carefully monitored for comfort and safety."
+                "answer": "When performed properly by trained therapists, the ear candle stays outside the ear canal and the session is carefully monitored for comfort and safety. At Spa Bali Moon, your therapist supervises the flame throughout the 30-minute session. It is a relaxation treatment, not ear cleaning, so anyone with an ear problem should see a doctor."
               },
               {
                 "question": "How long does Ear Candle treatment take?",
-                "answer": "The session is 30 minutes."
+                "answer": "An ear candle treatment at Spa Bali Moon takes 30 minutes and costs IDR 159.000 per person. The session includes gentle warmth from a hollow candle at the outer ear and light massage around the ears, temples, jaw and neck. You can have it at our Seminyak spa or at your villa or hotel."
               },
               {
                 "question": "Can I enjoy Ear Candle after travelling or flying?",
-                "answer": "Yes. Many guests choose this treatment after flights or long journeys as a relaxing way to unwind during their Bali holiday."
+                "answer": "Yes. Many guests choose an ear candle treatment at Spa Bali Moon after flights or long journeys as a relaxing way to unwind during their Bali holiday. It is for relaxation only: it does not remove earwax, so if your ears feel blocked after flying, see a doctor. The session is 30 minutes, IDR 159.000 per person."
               },
               {
                 "question": "Can Ear Candle be combined with other spa treatments?",
-                "answer": "Yes. Many guests combine Ear Candle with massages or other wellness treatments for a more complete relaxation session."
+                "answer": "Yes. At Spa Bali Moon, many guests combine an ear candle treatment with a massage or other wellness treatment for a more complete relaxation session. Ear candle takes 30 minutes and costs IDR 159.000 per person, at our Seminyak spa or at your villa or hotel. Book the combination on WhatsApp, 9am to 11pm."
               },
               {
                 "question": "How much does an ear candle treatment cost in Seminyak?",
-                "answer": "IDR 159.000 per person for the 30-minute session at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
+                "answer": "An ear candle treatment at Spa Bali Moon in Seminyak costs IDR 159.000 per person for the 30-minute session. Home service at your villa or hotel adds IDR 75.000 per therapist. Our spa is at Jl. Pangkung Sari No. 30, open daily 9am to 11pm, and accepts Visa, Mastercard or cash."
               },
               {
                 "question": "Where can I get an ear candle treatment in Seminyak?",
-                "answer": "At Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel. Book on WhatsApp, 9am to 11pm."
+                "answer": "You can get an ear candle treatment at Spa Bali Moon, Jl. Pangkung Sari No. 30, Seminyak, or at your villa or hotel, where home service adds IDR 75.000 per therapist. The 30-minute session costs IDR 159.000 per person. We have been in business since 2009 and are open daily, 9am to 11pm. Book on WhatsApp, +62 878-6317-5144."
               }
             ]
           }

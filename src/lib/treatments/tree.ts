@@ -125,3 +125,26 @@ export function withProps(tree: TreeNode, type: string, props: Record<string, Tr
   });
   return visit(tree);
 }
+
+/** Whether an element, or anything inside it, is of one of the given types. */
+function contains(node: TreeNode, types: string[]): boolean {
+  return types.includes(node.type) || (node.children ?? []).some((c) => typeof c !== "string" && contains(c, types));
+}
+
+/**
+ * A copy of the tree with `node` added just before the section that holds an
+ * element of one of `types` (at the level where that section sits beside its
+ * neighbours). Unchanged when no such section exists.
+ */
+export function insertBefore(tree: TreeNode, types: string[], node: TreeNode): TreeNode {
+  const children = tree.children ?? [];
+  const index = children.findIndex((c) => typeof c !== "string" && contains(c, types));
+  if (index === -1) return tree;
+  const holder = children[index] as TreeNode;
+  // Go down while the section is the only real element on its level.
+  const elements = children.filter((c) => typeof c !== "string");
+  if (elements.length === 1 && !types.includes(holder.type)) {
+    return { ...tree, children: children.map((c, i) => (i === index ? insertBefore(holder, types, node) : c)) };
+  }
+  return { ...tree, children: [...children.slice(0, index), node, ...children.slice(index)] };
+}

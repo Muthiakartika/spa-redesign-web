@@ -7,38 +7,66 @@ import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
 import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
 import ServiceSlider from "@/components/sections/ServiceSlider";
+import Link from "next/link";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
+import JsonLd from "@/components/seo/JsonLd";
+import { homeServiceAreas, homeServiceSchema } from "@/lib/schema";
 
-/** The page's questions, also given to search engines as FAQPage data. */
+/**
+ * The page's questions, also given to search engines as FAQPage data.
+ * AEO roadmap R36 (17 Oct): every answer 40 to 60 words and complete on its
+ * own, plus areas, tipping, hotel rules and couples in the villa.
+ */
 const FAQ = [
   {
     question: "How do I book a hotel or villa massage in Seminyak?",
     answer:
-      "Browse our treatment menu, choose your preferred service and duration, then contact us via WhatsApp with your accommodation details and preferred appointment time.",
+      "Book on WhatsApp at +62 878-6317-5144, open daily from 9am to 11pm. Send your hotel or villa name, your room number, the treatment and length you would like, the number of guests and your preferred time. We confirm availability and the total price, including the IDR 75.000 home service fee per therapist, before your therapist sets off.",
   },
   {
     question: "How long does it take for the therapist to arrive?",
     answer:
-      "Our therapists typically arrive within 30 to 60 minutes, depending on your location, traffic, and availability at the time of booking.",
+      "Our therapists typically arrive within 30 to 60 minutes at hotels and villas in Seminyak and nearby areas, depending on your location, traffic and therapist availability at the time of booking. If you need a set time, such as after dinner or before an early start, message us earlier in the day and we will confirm the arrival time.",
   },
   {
     question: "Can I book a massage for more than one person?",
     answer:
-      "Yes. Couples, families and groups can book several treatments at once, subject to therapist availability. Message us in advance with the number of guests.",
+      "Yes. Couples, families and groups can book several treatments at once at their hotel or villa, subject to therapist availability. Each therapist adds IDR 75.000 to the treatment prices, so two therapists add IDR 150.000. Message us in advance on WhatsApp with the number of guests and treatments, and we will confirm how many therapists can come.",
   },
   {
     question: "Can I book more than just a massage?",
     answer:
-      "Yes. Selected spa treatments, including facials, body scrubs, Sports Massage, reflexology, cream baths, manicures, and pedicures, may also be arranged as home service.",
+      "Yes. Selected spa treatments can also be arranged in your room, including facials, body scrubs, Sports Massage, reflexology, cream baths, manicures and pedicures. They cost the same as at our Seminyak spa, plus IDR 75.000 per therapist. Tell us on WhatsApp which treatments you would like, and we will confirm what can be done at your villa or hotel.",
   },
   {
     question: "Is there an additional fee for home service?",
     answer:
-      "Yes. An additional outcall fee of IDR 75.000 per therapist applies for home service appointments in Seminyak and nearby areas.",
+      "Yes. An outcall fee of IDR 75.000 per therapist is added to the treatment price for hotels and villas in Seminyak and nearby areas. The treatment itself costs the same as at our spa, so a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 in your room. Two therapists add IDR 150.000.",
   },
   {
     question: "How can I pay for my in-room treatment?",
-    answer: "Payment options include cash, bank transfer, Visa, and Mastercard, subject to availability.",
+    answer:
+      "Payment options include cash, bank transfer, Visa and Mastercard, subject to availability, so please tell us on WhatsApp how you would like to pay when you book. All prices are in Indonesian rupiah (IDR), and the home service fee of IDR 75.000 per therapist is added to the treatment price shown on our price list.",
+  },
+  {
+    question: "Which areas do you cover for villa and hotel massage?",
+    answer:
+      "Our therapists come to hotels and villas in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta, close to our spa on Jl. Pangkung Sari. For Kuta, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar or Ubud, message us your location on WhatsApp and we will confirm availability and any extra travel cost before you book.",
+  },
+  {
+    question: "Should I tip the therapist?",
+    answer:
+      "Tipping is not required and is never added to your bill. If you enjoyed your in-room massage, a tip is appreciated but entirely up to you, and our therapists are paid either way. The price we confirm on WhatsApp, the treatment plus IDR 75.000 per therapist, is the full price of your villa or hotel booking.",
+  },
+  {
+    question: "Do hotels allow outside massage therapists?",
+    answer:
+      "Some hotels and resorts restrict outside therapists, particularly larger properties with their own spa, so please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your hotel does not allow home service, you are welcome at our Seminyak spa at Jl. Pangkung Sari No. 30, open daily from 9am to 11pm.",
+  },
+  {
+    question: "Can we have a couples massage in our villa?",
+    answer:
+      "Yes. Two therapists can give you a couples massage side by side in your villa or hotel room, bringing the massage beds, linen and oils. A one-hour couple Balinese massage is IDR 319.000 for two, plus IDR 150.000 home service fee for the two therapists. Tell us when you book so both therapists arrive together.",
   },
 ];
 
@@ -46,13 +74,24 @@ const FAQ = [
 export default function VillaHotelMassagePage() {
   return (
     <div className="page-wrapper lh p-villa-hotel-massage">
+      <JsonLd
+        data={homeServiceSchema({
+          path: "/villa-hotel-massage/",
+          name: "Villa & Hotel Massage in Seminyak",
+          description:
+            "In-room massage for guests staying at hotels and villas in Seminyak: a Spa Bali Moon therapist usually arrives within 30 to 60 minutes. Spa prices plus IDR 75.000 per therapist.",
+          areas: homeServiceAreas.near,
+        })}
+      />
       <FaqJsonLd items={FAQ} />
       <PageBanner
-        subTitle="In-Room Spa Service"
+        subTitle="For Hotel & Villa Guests"
         titleSpan="Villa & Hotel Massage"
-        title="in Seminyak, Bali"
-        // The quick answer under the H1 (copy rewrite, 15 Oct).
-        text="In-villa and hotel massage at Spa Bali Moon: a therapist comes to your room in Seminyak and nearby areas, usually within 30 to 60 minutes of booking. Treatments cost the same as in the spa, plus IDR 75.000 per therapist. Open daily 9am–11pm."
+        title="for Guests Staying in Seminyak"
+        // The quick answer under the H1 (copy rewrite, 15 Oct). AEO roadmap
+        // R34 (17 Oct): this page is for guests staying at a hotel or villa in
+        // Seminyak; home service anywhere in Bali is the outcall page.
+        text="Staying at a hotel or villa in Seminyak? A Spa Bali Moon therapist comes to your room, usually within 30 to 60 minutes of booking, with the massage bed, linen and oils. Treatments cost the same as in the spa, plus IDR 75.000 per therapist, and couples can have two therapists side by side. Open daily 9am–11pm."
         buttonText="Book Now"
         image="/images/banners/villa-hotel-massage.webp"
       />
@@ -123,7 +162,17 @@ export default function VillaHotelMassagePage() {
         // No small heading: without one the section showed the default "About".
         subTitle=""
         title={<>{"Booking Your Hotel & Villa Massage"}</>}
-        text="Reserving is simple — send us your hotel or villa address and preferred time, and our therapist will arrive ready to help you relax. A travel fee of IDR 75.000 per therapist applies for home and hotel visits."
+        text={
+          <>
+            Reserving is simple — send us your hotel or villa address and preferred time, and our therapist will arrive
+            ready to help you relax. A travel fee of IDR 75.000 per therapist applies for home and hotel visits. Staying
+            outside Seminyak? See our{" "}
+            <Link prefetch={false} href="/outcall-home-service-massage/">
+              home service across Bali
+            </Link>
+            .
+          </>
+        }
         featuresLeft={["Quick WhatsApp booking", "Flexible appointment times", "Same-day reservations"]}
         featuresRight={["Transparent pricing", "Cash & card accepted", "English-speaking team"]}
         image="/images/services/massagehotelvilla/massagehotelvilla-6.webp"

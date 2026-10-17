@@ -13,7 +13,7 @@ const earCandle: Treatment = {
   shortDescription: "A traditional ear candle treatment focused on comfort and gentle relaxation.",
   cardImage: { src: "/images/beauty/cards/earcandle.webp", alt: "Ear Candle", width: 630, height: 580 },
   seo: {
-    title: "Ear Candle Bali - Ear Candling in Seminyak",
+    title: "Ear Candle Treatment in Seminyak, Bali - Spa Bali Moon",
     description: "Ear candle treatment in Seminyak, Bali: a warm, relaxing ear candling session. Book at Spa Bali Moon.",
   },
   hero: {

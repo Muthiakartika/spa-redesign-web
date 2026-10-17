@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import GuidePost from "@/components/sections/GuidePost";
 import PageTitle from "@/components/sections/PageTitle";
+import JsonLd from "@/components/seo/JsonLd";
+import GuideAnswer from "@/components/sections/GuideAnswer";
+import { guideAnswers } from "@/data/guide/answers";
 import { getGuideArticle, getPublishedPost, getPublishedPosts } from "@/lib/blog/posts";
 import { sanitizeHtml } from "@/lib/blog/sanitize";
+import { articleSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -37,9 +41,22 @@ export default async function GuideArticlePage({ params }: Props) {
   const article = await getGuideArticle(slug);
   if (!article) notFound();
   const { post, recentPosts, prevPost, nextPost, morePosts } = article;
+  // Two sentences naming the spa, with the price and the treatment page (AEO roadmap, 17 Oct).
+  const answer = guideAnswers[post.slug];
 
   return (
     <div className={`page-wrapper lh p-guide-${post.slug}`}>
+      <JsonLd
+        data={articleSchema({
+          slug: post.slug,
+          title: post.title,
+          description: post.seo_description || post.excerpt,
+          image: post.cover_image,
+          author: post.author,
+          publishedAt: post.published_at,
+          updatedAt: post.updated_at,
+        })}
+      />
       <PageTitle pageName={post.title} backgroundImage={post.cover_image ?? undefined} />
       <GuidePost
         post={{ ...post, content_html: sanitizeHtml(post.content_html) }}
@@ -47,6 +64,7 @@ export default async function GuideArticlePage({ params }: Props) {
         prevPost={prevPost}
         nextPost={nextPost}
         morePosts={morePosts}
+        answer={answer ? <GuideAnswer text={answer} /> : undefined}
       />
     </div>
   );

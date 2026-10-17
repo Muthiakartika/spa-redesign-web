@@ -155,14 +155,11 @@
     },
     {
       "type": "TreatmentTestimonials",
-      "props": {
-        "rightShapeSrc": null
-      }
+      "props": {}
     },
     {
       "type": "AboutSplit",
       "props": {
-        "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/traditionalmassage/traditionalmassage-7.webp",
         "subTitle": "",
@@ -258,27 +255,27 @@
             "items": [
               {
                 "question": "What is Traditional Massage?",
-                "answer": "Traditional Massage is a hands-on massage technique that uses firm pressure, kneading, and focused movements to help release muscle tension and improve body comfort."
+                "answer": "Traditional massage is a hands-on massage technique that uses firm pressure, kneading and focused movements to help release muscle tension and improve body comfort. At Spa Bali Moon in Seminyak, it is a full-body massage with warm oil. Sessions run from 30 minutes (IDR 90.000 per person, our lowest-priced massage) to 2 hours (IDR 339.000)."
               },
               {
                 "question": "What is the difference between Traditional Massage and Balinese Massage?",
-                "answer": "Traditional Massage usually uses firmer and more direct pressure for muscle release, while Balinese Massage combines flowing strokes, stretching, and relaxation-focused techniques."
+                "answer": "Traditional massage usually uses firmer and more direct pressure for muscle release, while Balinese massage combines flowing strokes, stretching and relaxation-focused techniques. At Spa Bali Moon in Seminyak, 1 hour of traditional massage costs IDR 169.000 per person and 1 hour of Balinese massage IDR 159.000. Both are also available at your villa or hotel."
               },
               {
                 "question": "Is Traditional Massage painful?",
-                "answer": "The pressure may feel strong, especially around tense areas, but it should remain comfortable. Our therapists adjust intensity based on your preference."
+                "answer": "Traditional massage can feel strong, especially around tense areas, but the pressure should remain comfortable. At Spa Bali Moon in Seminyak, therapists check your comfort as they move from one area to another and adjust the intensity to your preference, so tell them straight away if anything feels too strong."
               },
               {
                 "question": "Is Traditional Massage suitable for first-time guests?",
-                "answer": "Yes. First-time guests can enjoy this treatment because the pressure can be modified according to individual comfort levels."
+                "answer": "Yes. First-time guests can enjoy traditional massage at Spa Bali Moon because the pressure can be modified according to individual comfort levels, and therapists check your comfort as the session progresses. A 30-minute session costs IDR 90.000 per person, our lowest-priced massage, while 1 hour (IDR 169.000) suits mild muscle stiffness."
               },
               {
                 "question": "Should I choose Traditional Massage or Deep Tissue Massage?",
-                "answer": "Traditional Massage is ideal for guests wanting firm full-body pressure and general muscle relief. Deep Tissue Massage is more targeted toward deeper layers and specific long-term tension areas."
+                "answer": "Choose traditional massage if you want firm full-body pressure and general muscle relief; deep tissue massage is more targeted toward deeper layers and specific long-term tension areas. At Spa Bali Moon in Seminyak, 1 hour costs IDR 169.000 per person for traditional massage and IDR 269.000 for deep tissue massage."
               },
               {
                 "question": "How much does a traditional massage cost in Seminyak?",
-                "answer": "IDR 90.000 for 30 minutes, IDR 169.000 for 1 hour, IDR 259.000 for 1.5 hours and IDR 339.000 for 2 hours per person at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
+                "answer": "A traditional massage at Spa Bali Moon in Seminyak costs IDR 90.000 for 30 minutes, IDR 169.000 for 1 hour, IDR 259.000 for 1.5 hours and IDR 339.000 for 2 hours per person. The 30-minute session is our lowest-priced massage. Home service at your villa or hotel adds IDR 75.000 per therapist."
               }
             ]
           }

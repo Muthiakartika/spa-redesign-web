@@ -19,7 +19,7 @@ const coconutOilMassage: Treatment = {
     height: 580,
   },
   seo: {
-    title: "Virgin Coconut Oil Massage in Bali – Hydrate & Relax",
+    title: "Virgin Coconut Oil Massage in Seminyak - Spa Bali Moon",
     description: "Indulge in a virgin coconut oil massage at Spa Bali Moon. Deeply hydrating, naturally soothing, and perfect for tropical skin renewal in Seminyak.",
   },
   hero: {

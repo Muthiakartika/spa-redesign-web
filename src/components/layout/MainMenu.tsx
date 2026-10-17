@@ -29,6 +29,12 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
           Home
         </Link>
       </li>
+      {/* AEO roadmap R14 (17 Oct): the About page. */}
+      <li className={`jsx-nav${isCurrent("/about/") ? " is-active" : ""}`}>
+        <Link prefetch={false} href="/about/">
+          About
+        </Link>
+      </li>
       <li className="jsx-nav">
         <Link prefetch={false} href="/seminyak/">
           Pricelist

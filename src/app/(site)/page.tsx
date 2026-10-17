@@ -28,10 +28,7 @@ export const metadata: Metadata = buildMetadata({ title: home.seo.title, descrip
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(home.seo.schema).replace(/</g, "\\u003c") }}
-      />
+      {/* The spa's DaySpa data is in the site layout, on every page (17 Oct). */}
       <FaqJsonLd items={home.faq.items} />
       <HomeLayout
         className="home-v3"

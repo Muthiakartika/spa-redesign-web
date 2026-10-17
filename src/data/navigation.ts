@@ -21,6 +21,8 @@ export type MainNavItem = NavItem & { dropdown?: "treatments" | "blog" | "outcal
 /** Main menu (desktop header and mobile menu), in the live website's order. */
 export const mainNav: MainNavItem[] = [
   { label: "Home", href: "/" },
+  // AEO roadmap R14 (17 Oct): the About page, linked from the header and footer.
+  { label: "About", href: "/about/" },
   { label: "Pricelist", href: "/seminyak/" },
   // The live site's "Treatments" item only opens the dropdown (it has no page of its own).
   { label: "Treatments", href: "/seminyak/", dropdown: "treatments" },

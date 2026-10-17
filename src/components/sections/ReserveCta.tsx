@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import LazyBackground from "@/components/ui/LazyBackground";
 import { LotusIcon } from "@/components/ui/Lotus";
+import SectionShapes from "@/components/ui/SectionShapes";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 /** Hand-drawn white frame line, as styled inline on the live site. */
@@ -23,6 +24,9 @@ export type ReserveCtaProps = {
   standardSpacing?: boolean;
   topSpacing?: number;
   bottomSpacing?: number;
+  /** Corner decorations (components/ui/SectionShapes.tsx). */
+  leftShapeSrc?: string | null;
+  rightShapeSrc?: string | null;
 };
 
 /**
@@ -38,6 +42,8 @@ export default function ReserveCta({
   standardSpacing = false,
   topSpacing = 70,
   bottomSpacing = 70,
+  leftShapeSrc,
+  rightShapeSrc,
 }: ReserveCtaProps) {
   const reserve = { title, text, closingText, backgroundImage };
   return (
@@ -45,6 +51,7 @@ export default function ReserveCta({
         style={{ padding: standardSpacing ? undefined : `${topSpacing}px 0 ${bottomSpacing}px`, overflow: "hidden" }}
         className={`jsx-cta reserve-cta-section${standardSpacing ? " pt-100 pb-100" : ""}`}
       >
+        <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
         <div className="jsx-cta container">
           {/* The banner sits at the bottom of the page, so its photo waits
               until the reader scrolls near it (LazyBackground). */}

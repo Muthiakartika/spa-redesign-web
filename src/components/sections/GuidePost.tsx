@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 
 // The database answers null for empty columns, so null is accepted throughout.
 export type GuidePostSummary = {
@@ -51,8 +51,11 @@ export default function GuidePost({
   prevPost = null,
   nextPost = null,
   morePosts = [],
+  answer,
 }: {
   post: GuidePostFull;
+  /** The short answer above the article text (GuideAnswer, src/data/guide/answers.ts). */
+  answer?: ReactNode;
   recentPosts?: GuidePostSummary[];
   prevPost?: GuidePostSummary | null;
   nextPost?: GuidePostSummary | null;
@@ -111,6 +114,10 @@ export default function GuidePost({
                         </span>
                       </li>
                     )}
+                    {/* The author, shown since the AEO roadmap (17 Oct); the articles are the spa's own. */}
+                    <li className={S}>
+                      <i className={`${S} fas fa-user-circle`} /> By {post.author || "Spa Bali Moon"}
+                    </li>
                     {post.show_date !== false && post.published_at && (
                       <li className={S}>
                         <i className={`${S} fas fa-calendar-alt`} />{" "}
@@ -129,6 +136,7 @@ export default function GuidePost({
                     )}
                   </ul>
                   {/* No title here: the banner's h1 is the article's only title (owner, 12 Oct). */}
+                  {answer}
                   <div dangerouslySetInnerHTML={{ __html: post.content_html || "" }} className={`${S} blog-details__rich`} />
                 </div>
                 {tags.length > 0 && (

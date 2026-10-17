@@ -8,9 +8,12 @@ import { menuTabs } from "@/components/pricelist/menuTabs";
 import HomeServiceInfo from "@/components/sections/HomeServiceInfo";
 import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
+import ServiceAreas from "@/components/sections/ServiceAreas";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
+import JsonLd from "@/components/seo/JsonLd";
 import RowButton from "@/components/ui/RowButton";
 import { business } from "@/data/business";
+import { homeServiceAreas, homeServiceSchema } from "@/lib/schema";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 /** The page's questions, also given to search engines as FAQPage data. */
@@ -28,12 +31,12 @@ const FAQ = [
   {
     question: "What does the therapist bring?",
     answer:
-      "A portable massage bed, freshly laundered linens and towels, professional massage oils, and any equipment specific to your chosen treatment. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else.",
+      "A Spa Bali Moon outcall therapist brings a portable massage bed, freshly laundered linens and towels, professional massage oils, and any equipment specific to your chosen treatment. Nothing is reused between guests. You do not need to supply towels, sheets, or anything else; just leave a space of roughly two by two metres.",
   },
   {
     question: "How long does setup take?",
     answer:
-      "Around five to ten minutes on arrival, and a similar time to pack down afterwards. Your treatment time begins once setup is complete, so a booked 60-minute massage is a full 60 minutes of treatment.",
+      "Setup takes around five to ten minutes when your therapist arrives, and a similar time to pack down afterwards. Your treatment time begins once setup is complete, so a booked 60-minute massage at your villa or hotel is a full 60 minutes of treatment, at the spa price plus IDR 75.000 per therapist.",
   },
   {
     question: "Which areas do you cover for home service?",
@@ -59,7 +62,7 @@ const FAQ = [
   {
     question: "Can I book an outcall massage on the same day?",
     answer:
-      "Often, yes, depending on therapist availability. Send your location and preferred time on WhatsApp and we'll confirm.",
+      "Often, yes, depending on therapist availability. Send your location and preferred time on WhatsApp at +62 878-6317-5144, between 9am and 11pm, and we'll confirm when a therapist can arrive. In Seminyak and nearby areas therapists usually arrive within 30 to 60 minutes; for a fixed time or several therapists, book earlier in the day.",
   },
 ];
 
@@ -67,14 +70,26 @@ const FAQ = [
 export default function OutcallPage() {
   return (
     <div className="page-wrapper lh p-outcall-home-service-massage">
+      <JsonLd
+        data={homeServiceSchema({
+          path: "/outcall-home-service-massage/",
+          name: "Outcall Massage in Bali",
+          description:
+            "Home service massage across Bali: a Spa Bali Moon therapist comes to your home, villa or hotel. Spa prices plus IDR 75.000 per therapist.",
+          areas: [...homeServiceAreas.near, ...homeServiceAreas.further],
+        })}
+      />
       <FaqJsonLd items={FAQ} />
       <div className="outcall-page">
         <PageBanner
-          subTitle="Outcall Spa Service"
+          subTitle="Home Service Across Bali"
           titleSpan="Outcall Massage in Bali:"
-          title="Home Service to Your Villa or Hotel"
-          // The opening, answer first (copy rewrite, 15 Oct).
-          text="Outcall massage at Spa Bali Moon: a therapist comes to your villa, hotel or home in Seminyak and nearby areas, with everything the session needs. Treatments cost the same as in our spa, plus IDR 75.000 per therapist. Open daily 9am–11pm."
+          title="Areas, Prices & How It Works"
+          // The opening, answer first (copy rewrite, 15 Oct; areas, what the
+          // therapist brings and booking time added, AEO roadmap R34-R35, 17 Oct).
+          // This page is home service anywhere; the villa page is for guests
+          // staying in Seminyak.
+          text="Spa Bali Moon's outcall therapists come to your home, villa or hotel in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta, and further across Bali on request. Treatments cost the same as in our spa, plus IDR 75.000 per therapist, and the therapist brings the massage bed, fresh linen and oils. Same-day bookings are often possible. Open daily 9am–11pm."
           openingText="OPENING TIMES: Open Daily: 9:00 - 23:00"
           image="/images/banners/outcall-home-service-massage.webp"
           // The homepage hero's two row buttons in place of the one "Book Now"
@@ -771,6 +786,7 @@ export default function OutcallPage() {
           />
         </div>
         <HomeServiceInfo plain />
+        <ServiceAreas />
         <div className="outcall-closing-panel section__decoration-top section__decoration-bottom bg-sub pb-100">
           <FaqSection
             subTitle="Frequently Asked Questions"

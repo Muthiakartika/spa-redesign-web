@@ -611,6 +611,54 @@
 .blog-details__meta + .blog-details__rich {
   margin-top: 24px;
 }
+/* The short answer above a guide article's text (AEO roadmap, 17 Oct), as
+   a magazine's standfirst: no box, "THE SHORT ANSWER" in small gold
+   capitals, the answer in larger light serif type, a hairline under it. */
+.guide-answer {
+  margin: 10px 0 32px;
+  padding: 0 0 28px;
+  border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.45);
+}
+.guide-answer p {
+  margin: 0;
+}
+.guide-answer .guide-answer__label {
+  margin-bottom: 10px;
+  font-family: var(--text-font);
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.guide-answer .guide-answer__text {
+  font-family: var(--title-font);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--headings-color);
+}
+.guide-answer a {
+  color: var(--theme-color1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 767px) {
+  .guide-answer .guide-answer__text {
+    font-size: 19px;
+  }
+}
+/* The words on an FAQ photo stay on one line (live.css); on a phone a long
+   one ("Book Your Massage in Seminyak Today") ran past the photo's edge and
+   was cut off. There it may wrap (17 Oct). */
+@media (max-width: 575px) {
+  .faq-section .image-column .inner-column .title {
+    right: 20px;
+    white-space: normal;
+    line-height: 1.15;
+  }
+}
 /* The theme's line heights (65px for h2) are for one-line section titles;
    an article heading that wraps keeps its lines together. */
 .blog-details__rich h2 {
@@ -873,6 +921,468 @@
   .quick-facts__row {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+/* "Visit us" on the treatment pages and the About page (AEO roadmap,
+   17 Oct), after luxury spa sites (Four Seasons Sayan): on white (a dark
+   band was turned down), the heading centred in light serif type, the facts
+   as label and value rows on gold hairlines, small gold capitals, one gold
+   button. White, not paper, so the torn edge of the paper section above it
+   still shows. */
+.visit-us {
+  padding: 120px 0;
+  background-color: var(--theme-color-white);
+}
+.visit-us__band {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+.visit-us__kicker,
+.price-table__kicker {
+  margin: 0 0 18px;
+  font-family: var(--text-font);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.visit-us__band .title {
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: var(--headings-color);
+}
+.visit-us__lead {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+.visit-us__rows {
+  margin: 44px 0 0;
+  text-align: left;
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.35);
+}
+.visit-us__line {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 4px 32px;
+  padding: 19px 0;
+  border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.22);
+}
+.visit-us__line dt {
+  padding-top: 5px;
+  font-family: var(--text-font);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8f8a83;
+}
+.visit-us__line dd {
+  margin: 0;
+  font-family: var(--title-font);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--headings-color);
+}
+.visit-us__line a {
+  display: inline;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--theme-color1);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+.visit-us__line a:hover {
+  color: var(--theme-color1);
+}
+.visit-us__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px 34px;
+  margin-top: 42px;
+}
+.visit-us__btn {
+  display: inline-block;
+  padding: 18px 36px;
+  border-radius: 40px;
+  font-family: var(--text-font);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--theme-color1);
+  transition: background-color 0.3s;
+}
+.visit-us__btn:hover,
+.visit-us__btn:focus-visible {
+  color: #fff;
+  background-color: #9a7428;
+}
+.visit-us__more {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--theme-color1);
+  font-family: var(--text-font);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--headings-color);
+}
+.visit-us__more:hover {
+  color: var(--theme-color1);
+}
+/* Split (the default): a large card on white, a spa photo filling its left
+   half beside a warm paper panel with the same rows, left-aligned. White
+   around it, because the paper section above ends in a white torn edge. */
+.visit-us--split {
+  padding: 100px 0;
+}
+.visit-us__split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: min(1290px, calc(100% - 64px));
+  min-height: 680px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: var(--theme-light-background);
+}
+.visit-us__split-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visit-us__split-body {
+  align-self: center;
+  max-width: 720px;
+  padding: 90px clamp(32px, 5vw, 80px);
+}
+.visit-us__split-body .visit-us__line {
+  grid-template-columns: 124px minmax(0, 1fr);
+  gap: 4px 24px;
+}
+.visit-us__split-body .title {
+  margin-bottom: 20px;
+  font-size: clamp(32px, 3.1vw, 46px);
+  font-weight: 300;
+  line-height: 1.18;
+  color: var(--headings-color);
+}
+.visit-us__split-body .visit-us__lead {
+  max-width: none;
+  margin: 0;
+}
+.visit-us__split-body .visit-us__actions {
+  justify-content: flex-start;
+}
+@media (max-width: 991px) {
+  .visit-us__split {
+    grid-template-columns: minmax(0, 1fr);
+    width: calc(100% - 32px);
+    min-height: 0;
+  }
+  .visit-us__split-photo img {
+    height: 380px;
+  }
+  .visit-us__split-body {
+    max-width: none;
+    padding: 64px 24px 72px;
+  }
+}
+@media (max-width: 767px) {
+  .visit-us {
+    padding: 80px 0;
+  }
+  .visit-us.visit-us--split {
+    padding: 60px 0;
+  }
+  .visit-us__split {
+    width: calc(100% - 24px);
+    border-radius: 18px;
+  }
+  .visit-us__split-body .visit-us__actions {
+    align-items: flex-start;
+  }
+  .visit-us__line {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 15px 0;
+  }
+  .visit-us__line dd {
+    font-size: 17px;
+  }
+  .visit-us__actions {
+    flex-direction: column;
+  }
+}
+
+/* Shared by the price menu (/seminyak/) and the areas table (outcall page):
+   the centred heading, the text under it and the note after the tables. */
+.price-table__header {
+  max-width: 820px;
+  margin: 0 auto 50px;
+}
+.price-table__header .title {
+  font-weight: 300;
+}
+.price-table__text {
+  max-width: 720px;
+  margin: 16px auto 0;
+}
+.price-table__text a {
+  color: var(--theme-color1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.price-table__note {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+.price-table__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.price-table__table caption {
+  caption-side: top;
+  text-align: left;
+  font-family: var(--title-font);
+  color: var(--headings-color);
+}
+.price-table__table thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* /seminyak/: every timed price as a printed spa menu (AEO roadmap R21,
+   17 Oct): two columns, each treatment's name and short description, then
+   only the lengths it has on a dotted line to the price. The <table> keeps
+   its markup (and roles, see PriceTable.tsx); CSS grid lays it out, so
+   phones need no sideways scrolling. */
+.price-list .price-table__scroll {
+  max-width: 1170px;
+  margin: 0 auto 64px;
+}
+.price-list .price-table__table,
+.price-list .price-table__table caption {
+  display: block;
+}
+.price-list .price-table__table caption {
+  padding: 0 0 18px;
+  font-size: 26px;
+  border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.5);
+}
+.price-list .price-table__table tbody {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 72px;
+}
+.price-list .price-table__table tbody tr {
+  display: block;
+  padding: 26px 0 20px;
+  border-bottom: 1px solid #ece7de;
+}
+.price-list .price-table__table tbody th {
+  display: block;
+  padding: 0 0 12px;
+  text-align: left;
+  font-weight: 400;
+}
+.price-table__name {
+  display: block;
+  font-family: var(--title-font);
+  font-size: 21px;
+  line-height: 1.35;
+  color: var(--headings-color);
+}
+.price-table__name a {
+  color: inherit;
+  text-decoration: none;
+}
+.price-table__name a:hover {
+  color: var(--theme-color1);
+}
+.price-table__desc {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--text-font);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+.price-list .price-table__table tbody td {
+  display: flex;
+  align-items: baseline;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+.price-list .price-table__table tbody td::before {
+  content: attr(data-label);
+  order: 0;
+  font-family: var(--text-font);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.price-list .price-table__table tbody td::after {
+  content: "";
+  flex: 1;
+  order: 1;
+  margin: 0 12px;
+  border-bottom: 1px dotted rgba(var(--theme-color1-rgb), 0.6);
+  transform: translateY(-4px);
+}
+.price-list .price-table__table tbody td > * {
+  order: 2;
+}
+.price-list .price-table__table tbody td.is-empty {
+  display: none;
+}
+.price-table__cur {
+  font-family: var(--text-font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #8f8a83;
+}
+.price-table__amount {
+  font-family: var(--title-font);
+  font-size: 18px;
+  color: var(--headings-color);
+}
+@media (max-width: 991px) {
+  .price-list .price-table__table tbody {
+    column-gap: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .price-list .price-table__table tbody {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Outcall page: the areas home service reaches (AEO roadmap R37, 17 Oct).
+   No card: each zone a row on a hairline, "ZONE 01" in small capitals over
+   the areas, the fee and arrival time beside them. On phones each row
+   stacks, its column labels repeated. */
+.service-areas .price-table__scroll {
+  max-width: 980px;
+  margin: 0 auto 36px;
+}
+.service-areas .price-table__table {
+  counter-reset: zone;
+}
+.service-areas .price-table__table caption {
+  padding: 0 0 16px;
+  font-size: 22px;
+}
+.service-areas .price-table__table thead {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+}
+.service-areas .price-table__table thead th {
+  padding: 0 24px 12px 0;
+  border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.5);
+  text-align: left;
+  font-family: var(--text-font);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8f8a83;
+}
+.service-areas .price-table__table tbody tr {
+  counter-increment: zone;
+}
+.service-areas .price-table__table tbody th,
+.service-areas .price-table__table tbody td {
+  padding: 26px 24px 26px 0;
+  border-bottom: 1px solid #ece7de;
+  text-align: left;
+  vertical-align: top;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+.service-areas .price-table__table tbody th {
+  min-width: 220px;
+  font-family: var(--title-font);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--headings-color);
+}
+.service-areas .price-table__table tbody th::before {
+  content: "Zone 0" counter(zone);
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--text-font);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+@media (max-width: 767px) {
+  .service-areas .price-table__table,
+  .service-areas .price-table__table caption,
+  .service-areas .price-table__table tbody,
+  .service-areas .price-table__table tr,
+  .service-areas .price-table__table th,
+  .service-areas .price-table__table td {
+    display: block;
+  }
+  .service-areas .price-table__table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .service-areas .price-table__table tbody tr {
+    padding: 22px 0;
+    border-bottom: 1px solid #ece7de;
+  }
+  .service-areas .price-table__table tbody th,
+  .service-areas .price-table__table tbody td {
+    min-width: 0;
+    padding: 0 0 12px;
+    border: 0;
+  }
+  .service-areas .price-table__table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--text-font);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8f8a83;
+  }
+}
+
+/* The package cards' treatment name links to its page. */
+.package-card__link {
+  color: inherit;
+}
+.package-card__link:hover {
+  color: var(--theme-color1);
 }
 
 /* Treatment pages, Kuta and villa: the review slider's heading and the link

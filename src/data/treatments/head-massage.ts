@@ -13,7 +13,7 @@ const headMassage: Treatment = {
   shortDescription: "A focused head massage that helps release built-up stress and quiet the mind.",
   cardImage: { src: "/images/treatments/cards/headmassage.webp", alt: "Head Massage", width: 630, height: 580 },
   seo: {
-    title: "Head Massage Seminyak - Scalp & Head Massage Bali",
+    title: "Head & Scalp Massage in Seminyak - Spa Bali Moon",
     description: "Head massage in Seminyak, Bali: a relaxing scalp and head massage by skilled therapists. Book at Spa Bali Moon.",
   },
   hero: {

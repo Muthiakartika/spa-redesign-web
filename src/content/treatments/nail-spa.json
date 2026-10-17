@@ -150,14 +150,11 @@
     },
     {
       "type": "TreatmentTestimonials",
-      "props": {
-        "rightShapeSrc": null
-      }
+      "props": {}
     },
     {
       "type": "AboutSplit",
       "props": {
-        "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/nailart/nailart-7.webp",
         "subTitle": "",
@@ -252,31 +249,31 @@
             "items": [
               {
                 "question": "Is Gel Nail Art better than regular nail polish?",
-                "answer": "Gel Nail Art generally lasts longer and keeps its shine better than traditional nail polish, making it a popular choice for holidays and special occasions."
+                "answer": "Gel nail art generally lasts longer and keeps its shine better than traditional nail polish, which makes it a popular choice for holidays and special occasions. Gel typically lasts two to three weeks. At Spa Bali Moon in Seminyak, nail gel is IDR 219.000 for hands or feet, and a manicure with colour IDR 159.000, per person."
               },
               {
                 "question": "Can I bring my own nail design reference?",
-                "answer": "Yes. You're welcome to show inspiration photos so our nail artists can recreate a similar style that suits your nails."
+                "answer": "Yes. At Spa Bali Moon in Seminyak, you're welcome to show inspiration photos so our nail artists can recreate a similar style that suits your nails, preferred colours and occasion. Most nail art appointments take 45 to 90 minutes, depending on the design, and prices start at IDR 159.000 per person for a manicure with colour."
               },
               {
                 "question": "Will gel nails damage my natural nails?",
-                "answer": "When applied and removed correctly, gel products can be used while maintaining the health of your natural nails. Our team follows gentle application techniques throughout the treatment."
+                "answer": "When applied and removed correctly, gel products can be used while maintaining the health of your natural nails. At Spa Bali Moon in Seminyak, our team follows gentle application techniques, from nail preparation and cuticle care to UV or LED curing and a protective top coat. Gel removal for hands and feet costs IDR 98.000 per person."
               },
               {
                 "question": "How long does a Nail Art appointment take?",
-                "answer": "The duration depends on the design complexity, but most appointments take between 45 and 90 minutes."
+                "answer": "Most nail art appointments at Spa Bali Moon take between 45 and 90 minutes, depending on the complexity of the design. For gel nail art, the process covers nail preparation and shaping, cuticle care, gel application, a hand-created design, UV or LED curing and a protective top coat. Bring a reference photo if you have one."
               },
               {
                 "question": "How long will Gel Nail Art last?",
-                "answer": "Many guests enjoy beautiful results for around two to three weeks, depending on nail growth and daily activities."
+                "answer": "Gel nail art from Spa Bali Moon typically lasts around two to three weeks, depending on nail growth and daily activities. The gel is cured under UV or LED light and finished with a protective top coat. Nail gel costs IDR 219.000 per person for hands or feet, or IDR 438.000 for both."
               },
               {
                 "question": "What is nail art?",
-                "answer": "Nail art is the decoration of fingernails or toenails using colours, patterns, designs, or other decorative details. It can be added to natural nails or applied over gel or polish."
+                "answer": "Nail art is the decoration of fingernails or toenails using colours, patterns, designs or other decorative details, added to natural nails or applied over gel or polish. At Spa Bali Moon in Seminyak, popular styles include minimalist designs, French tips, chrome finishes and floral patterns. Prices start at IDR 159.000 per person for a manicure with colour."
               },
               {
                 "question": "How much does gel nail art cost in Seminyak?",
-                "answer": "A manicure with colour is IDR 159.000, a pedicure with colour IDR 169.000 and nail gel IDR 219.000 for hands or feet at Spa Bali Moon. Gel on both hands and feet is IDR 438.000."
+                "answer": "Nail gel costs IDR 219.000 per person for hands or feet at Spa Bali Moon in Seminyak, or IDR 438.000 for both. A manicure with colour is IDR 159.000 and a pedicure with colour IDR 169.000. Home service at your villa or hotel adds IDR 75.000 per therapist. Gel typically lasts two to three weeks."
               }
             ]
           }

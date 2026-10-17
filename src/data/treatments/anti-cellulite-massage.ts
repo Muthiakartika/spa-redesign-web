@@ -13,7 +13,7 @@ const antiCelluliteMassage: Treatment = {
   shortDescription: "A targeted full-body massage designed to stimulate circulation and improve skin tone.",
   cardImage: { src: "/images/treatments/cards/cellulitemassage.webp", alt: "Cellulite Massage", width: 630, height: 580 },
   seo: {
-    title: "Cellulite Massage Bali - Anti-Cellulite Massage Seminyak",
+    title: "Anti-Cellulite Massage in Seminyak, Bali - Spa Bali Moon",
     description: "Cellulite massage in Seminyak, Bali: a firming massage to boost circulation and smooth skin texture. Book at Spa Bali Moon.",
   },
   hero: {

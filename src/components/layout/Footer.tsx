@@ -168,7 +168,13 @@ export default function Footer() {
                 height="100"
               />
             </Link>
-            <p className="site-footer__about">{business.aboutText}</p>
+            <p className="site-footer__about">
+              {business.aboutText}{" "}
+              {/* AEO roadmap R14 (17 Oct). */}
+              <Link prefetch={false} href="/about/" className="site-footer__about-link">
+                About Spa Bali Moon
+              </Link>
+            </p>
             <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="btn-two site-footer__cta">
               <i className="fa-brands fa-whatsapp" aria-hidden="true" />
               Book on WhatsApp

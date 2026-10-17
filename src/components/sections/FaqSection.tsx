@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import { useState, type ReactNode } from "react";
 import { LotusIcon } from "@/components/ui/Lotus";
+import SectionShapes from "@/components/ui/SectionShapes";
 
 export type FaqItem = { question: string; answer: string };
 
@@ -28,6 +29,8 @@ export default function FaqSection({
   removeTopPadding = false,
   paperDecoration = false,
   imageTitleAsHeading = false,
+  leftShapeSrc,
+  rightShapeSrc,
 }: {
   imageTitle?: string;
   subTitle?: string;
@@ -42,6 +45,9 @@ export default function FaqSection({
   /** The words on the photo are a <div class="look-h2"> (same look), so the
    *  section has one H2 (owner, 5 Oct); `true` keeps them an h2, as /seminyak/. */
   imageTitleAsHeading?: boolean;
+  /** Corner decorations (components/ui/SectionShapes.tsx). */
+  leftShapeSrc?: string | null;
+  rightShapeSrc?: string | null;
 }) {
   const twoColumns = columns === 2;
   const half = Math.ceil(items.length / 2);
@@ -53,6 +59,7 @@ export default function FaqSection({
 
   return (
     <section className={`${S} ${className}`}>
+      <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className={`${S} outer-box`}>
         <div className={`${S} row g-4`}>
           {showImage && (

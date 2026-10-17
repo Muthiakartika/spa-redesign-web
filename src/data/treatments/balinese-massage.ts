@@ -13,7 +13,7 @@ const balineseMassage: Treatment = {
   shortDescription: "A calming full-body massage with steady pressure, gentle stretches, and aromatic oils.",
   cardImage: { src: "/images/treatments/cards/balinesemassage.webp", alt: "Balinese Massage", width: 630, height: 580 },
   seo: {
-    title: "Balinese Massage in Seminyak – Traditional Healing",
+    title: "Balinese Massage in Seminyak, Bali - Spa Bali Moon",
     description: "Balinese massage in Seminyak, Bali: long strokes, gentle pressure and warm oils for deep relaxation. Book in-spa or at your villa.",
   },
   hero: {

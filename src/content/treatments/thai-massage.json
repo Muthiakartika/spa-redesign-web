@@ -202,14 +202,11 @@
     },
     {
       "type": "TreatmentTestimonials",
-      "props": {
-        "rightShapeSrc": null
-      }
+      "props": {}
     },
     {
       "type": "AboutSplit",
       "props": {
-        "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/thaimassage/thaimassage-8.webp",
         "subTitle": "",
@@ -304,43 +301,43 @@
             "items": [
               {
                 "question": "What is Traditional Thai Massage?",
-                "answer": "Traditional Thai Massage is a traditional bodywork technique that combines pressure, stretching, and movement. It focuses on improving body comfort, flexibility, and relaxation through structured techniques."
+                "answer": "Traditional Thai Massage is an oil-free bodywork technique that combines pressure, assisted stretching and movement to improve body comfort, flexibility and relaxation. At Spa Bali Moon in Seminyak, the therapist uses hands, thumbs, palms and elbows for pressure while guiding you through stretches. Sessions run 30 minutes, 1 hour or 1.5 hours, from IDR 133.000 per person."
               },
               {
                 "question": "Is Thai Massage suitable for beginners?",
-                "answer": "Yes. Beginners can enjoy Thai Massage as our therapists can adjust the intensity and stretching movements based on your comfort level."
+                "answer": "Yes. Beginners can enjoy Thai Massage at Spa Bali Moon because our therapists adjust the intensity and stretching movements to your comfort level. Wear comfortable clothing you can move in, as the oil-free massage includes stretching. Sessions are 30 minutes (IDR 133.000), 1 hour (IDR 259.000) or 1.5 hours (IDR 379.000) per person."
               },
               {
                 "question": "What should I wear during a Thai Massage session?",
-                "answer": "Wear comfortable clothing you can move in, because the treatment includes stretching and guided movements. Unlike oil massage, Thai Massage does not require direct skin contact for the entire session."
+                "answer": "Wear comfortable clothing you can move in, because Thai Massage at Spa Bali Moon includes stretching and guided movements. Unlike oil massage, it is performed without oil and does not require direct skin contact for the entire session. The same applies at our Seminyak spa and when you book home service at your villa or hotel."
               },
               {
                 "question": "Is Thai Massage good after a long flight or travel?",
-                "answer": "Yes. Many travellers choose Thai Massage after long journeys because the stretching techniques can help the body feel less restricted and more comfortable."
+                "answer": "Yes. Many travellers choose Thai Massage at Spa Bali Moon after long journeys because the stretching techniques can help the body feel less restricted and more comfortable. Your therapist can focus on areas that feel stiff after travelling, such as the back and shoulders. Home service at your villa or hotel adds IDR 75.000 per therapist."
               },
               {
                 "question": "Is Thai Massage Dangerous?",
-                "answer": "Thai massage is generally safe when performed by a trained therapist, but it may not be suitable for everyone. People with certain injuries, medical conditions, or recent surgeries should consult a healthcare professional before having a session."
+                "answer": "Thai massage is generally safe when performed by a trained therapist, but it may not be suitable for everyone. People with certain injuries, medical conditions, or recent surgeries should consult a healthcare professional before having a session. At Spa Bali Moon, tell your therapist about any health concerns first so the pressure and stretching can be adjusted."
               },
               {
                 "question": "Is Thai Massage Painful?",
-                "answer": "Thai massage can feel firm or intense because it involves pressure and assisted stretching. It should not cause sharp or severe pain, and your therapist can adjust the pressure and movements to your comfort level."
+                "answer": "Thai massage can feel firm or intense, but it should not cause sharp or severe pain. At Spa Bali Moon, the treatment combines pressure from hands, thumbs, palms and elbows with assisted stretching. Your therapist can adjust the pressure and movements to your comfort level, so let them know straight away if anything feels too strong."
               },
               {
                 "question": "Can I combine Thai Massage with other spa treatments?",
-                "answer": "Yes. Many guests combine Thai Massage with facial, manicure, cream bath, or body treatments for a more complete spa experience."
+                "answer": "Yes. Spa Bali Moon has four Thai Massage packages, each including 1 hour of Thai Massage. Package C adds a Bali Moon Facial (IDR 449.000), Package A a facial and manicure (IDR 549.000), Package D a cream bath and body scrub (IDR 539.000), and Package B a cream bath and facial (IDR 649.000), all per person."
               },
               {
                 "question": "How much does Thai massage cost in Seminyak?",
-                "answer": "IDR 133.000 for 30 minutes, IDR 259.000 for 1 hour and IDR 379.000 for 1.5 hours per person at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
+                "answer": "IDR 133.000 for 30 minutes, IDR 259.000 for 1 hour and IDR 379.000 for 1.5 hours per person at Spa Bali Moon. Home service at your villa or hotel adds IDR 75.000 per therapist. Thai Massage packages with a facial, manicure, cream bath or body scrub cost IDR 449.000 to IDR 649.000 per person."
               },
               {
                 "question": "How long is a Thai massage?",
-                "answer": "Sessions run 30 minutes, 1 hour or 1.5 hours. Thirty minutes suits tight spots when you're short of time; one hour or more covers the whole body."
+                "answer": "Thai massage at Spa Bali Moon runs 30 minutes, 1 hour or 1.5 hours. Thirty minutes suits tight spots when you're short of time; 1 hour gives a more complete body treatment with extra attention to stiff areas, and 1.5 hours is an extended full-body session with more time for mobility work."
               },
               {
                 "question": "Where can I get a Thai massage in Seminyak?",
-                "answer": "Spa Bali Moon offers it at our spa in Seminyak (Jl. Pangkung Sari No. 30) and at your villa or hotel. Book on WhatsApp, 9am to 11pm."
+                "answer": "Spa Bali Moon offers Thai massage at our spa in Seminyak (Jl. Pangkung Sari No. 30) and at your villa or hotel, where home service adds IDR 75.000 per therapist. We have been in business since 2009 and are open daily, 9am to 11pm. Book on WhatsApp, +62 878-6317-5144."
               }
             ]
           }

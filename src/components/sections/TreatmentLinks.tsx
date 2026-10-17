@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import SectionShapes from "@/components/ui/SectionShapes";
 import { treatmentMenu } from "@/data/navigation";
 
 /**
@@ -17,14 +18,20 @@ export default function TreatmentLinks({
   text,
   exclude,
   only,
+  leftShapeSrc,
+  rightShapeSrc,
 }: {
   title: ReactNode;
   text: ReactNode;
   exclude?: string;
   only?: string[];
+  /** Corner decorations (components/ui/SectionShapes.tsx). */
+  leftShapeSrc?: string | null;
+  rightShapeSrc?: string | null;
 }) {
   return (
     <section className="day-spa-links pt-100 pb-100">
+      <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className="container">
         <div className="section-header center mb-40">
           <h2 className="title">{title}</h2>

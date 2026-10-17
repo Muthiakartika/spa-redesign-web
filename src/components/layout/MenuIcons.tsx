@@ -1,9 +1,23 @@
 import { LotusPaths } from "@/components/ui/Lotus";
 
-export type MenuIconName = "lotus" | "tag" | "stones" | "home" | "calendar" | "book" | "chat" | "mail" | "clock";
+export type MenuIconName = "lotus" | "tag" | "stones" | "home" | "calendar" | "book" | "chat" | "mail" | "clock" | "info" | "pin";
 
 /** One line icon per menu item, drawn alike (24px grid, 1.5 stroke, round). */
 const PATHS: Record<Exclude<MenuIconName, "lotus">, React.ReactNode> = {
+  // A place: the "Visit us" options (17 Oct).
+  pin: (
+    <>
+      <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" />
+      <circle cx="12" cy="10" r="2.3" />
+    </>
+  ),
+  // The About page (17 Oct).
+  info: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v5.5M12 7.6v.1" />
+    </>
+  ),
   tag: (
     <>
       <path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z" />

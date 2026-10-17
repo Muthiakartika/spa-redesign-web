@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import MenuDurations from "@/components/home/MenuDurations";
 import PackageGroups from "@/components/pricelist/PackageGroups";
+import PriceTable from "@/components/pricelist/PriceTable";
 import { menuTabs } from "@/components/pricelist/menuTabs";
 import FaqSection from "@/components/sections/FaqSection";
 import PackageIntro from "@/components/sections/PackageIntro";
@@ -49,6 +50,11 @@ export default function PricelistPage() {
           sticky
         />
       </div>
+      <PriceTable
+        {...page.priceTable}
+        massages={page.priceList.tabs.find((t) => t.label === "Massage")?.services ?? []}
+        couples={page.priceList.tabs.find((t) => t.label === "For Couples")?.services ?? []}
+      />
       <PackageIntro {...page.packagesIntro} />
       <PackageGroups groups={page.packageGroups} icons={page.packageIcons} />
       <Testimonials />

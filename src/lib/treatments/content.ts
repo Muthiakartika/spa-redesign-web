@@ -34,6 +34,9 @@ export function ensurePageContentTable() {
 const missingTable = (e: unknown) => (e as { code?: string })?.code === "42P01";
 
 /**
+ * Saves made in /admin/ before the AEO roadmap changes (17 Oct 2026; before
+ * that, the copy rewrite of 15 Oct) are not used. No page had been saved
+ * between the two (the staging pages all still showed the 15 Oct date).
  * Saves made in /admin/ before the copy rewrite (15 Oct 2026) are not used:
  * the rewrite changed the text and the sections of every treatment page, and
  * a saved copy wins over both (or, once the sections differ, is shown as it
@@ -43,7 +46,7 @@ const missingTable = (e: unknown) => (e as { code?: string })?.code === "42P01";
  * later save is used as usual. The old rows stay in the table and are
  * replaced by the page's next save.
  */
-const SAVED_BEFORE_IGNORED = "2026-10-15T08:04:00Z";
+const SAVED_BEFORE_IGNORED = "2026-10-17T02:00:00Z";
 
 /** When the built-in pages were last changed: the copy rewrite. Shown as "Last updated". */
 export const BUILT_IN_UPDATED_AT = SAVED_BEFORE_IGNORED;

@@ -3,6 +3,18 @@ import Link from "next/link";
 import type { PackageGroup } from "@/data/pages/pricelist";
 import { displayPrice } from "@/lib/price";
 
+/** The treatment page each group's cards link to (AEO roadmap R25, 17 Oct). */
+const PAGE_OF_CARD: Record<string, string> = {
+  "Balinese Massage": "/seminyak/balinese-massage/",
+  "Thai Massage": "/seminyak/thai-massage/",
+  "Cream Bath": "/seminyak/creambath/",
+  "Body Scrub": "/seminyak/body-scrub/",
+  "Hot Stone": "/seminyak/hot-stone-massage/",
+  "Bali Moon Facial": "/seminyak/facial/",
+  "Mani Pedi": "/seminyak/manicure-pedicure/",
+  "Couple Massage": "/seminyak/couple-spa/",
+};
+
 /**
  * The eight package groups on the price list, sorted by title as live. Each
  * is a "pricing-section-five" band; the first gets the torn top edge and the
@@ -17,6 +29,7 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
         const last = s === sorted.length - 1;
         const edges = `${first ? "section__decoration-top" : ""} ${last ? "section__decoration-bottom" : ""}`.trim();
         const icon = icons[group.cardTitle];
+        const page = PAGE_OF_CARD[group.cardTitle];
         return (
           <section
             key={s}
@@ -50,7 +63,14 @@ export default function PackageGroups({ groups, icons }: { groups: PackageGroup[
                         <img loading="lazy" decoding="async" src={icon} alt={`${group.cardTitle} icon`} />
                       </div>
                       <h3>
-                        {group.cardTitle} <br /> Package {String.fromCharCode(65 + i)}
+                        {page ? (
+                          <Link prefetch={false} href={page} className="package-card__link">
+                            {group.cardTitle}
+                          </Link>
+                        ) : (
+                          group.cardTitle
+                        )}{" "}
+                        <br /> Package {String.fromCharCode(65 + i)}
                       </h3>
                       <h4 className="price">
                         {displayPrice(pack.price)}

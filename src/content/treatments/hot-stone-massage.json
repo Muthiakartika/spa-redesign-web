@@ -201,14 +201,11 @@
     },
     {
       "type": "TreatmentTestimonials",
-      "props": {
-        "rightShapeSrc": null
-      }
+      "props": {}
     },
     {
       "type": "AboutSplit",
       "props": {
-        "leftShapeSrc": null,
         "rightShapeSrc": "/images/shape/about-right-shape.png",
         "image": "/images/services/hotstonemassage/hotstonemassage-8.webp",
         "subTitle": "",
@@ -304,31 +301,31 @@
             "items": [
               {
                 "question": "Are the stones very hot?",
-                "answer": "No. The stones are heated to a comfortable therapeutic temperature and are always tested before being placed on the body. Your therapist will also adjust the warmth according to your comfort level."
+                "answer": "No. At Spa Bali Moon, the basalt stones for hot stone massage are heated to a comfortable therapeutic temperature and always tested before being placed on the body. Your therapist checks the temperature throughout the session and adjusts the warmth to your comfort level, so tell them if anything feels too warm."
               },
               {
                 "question": "What type of stones are used?",
-                "answer": "Most professional Hot Stone Massage treatments use smooth basalt stones because they naturally retain heat for longer, allowing warmth to be distributed evenly throughout the massage."
+                "answer": "Spa Bali Moon uses smooth basalt stones for Hot Stone Massage because basalt naturally retains heat for longer, spreading warmth evenly through the massage. Larger stones are generally used on broader areas and smaller ones for focused warmth, with common placements on the back, shoulders, neck, legs, arms, hands and feet."
               },
               {
                 "question": "Is Hot Stone Massage better than a regular massage?",
-                "answer": "They offer different experiences. A traditional massage relies entirely on manual techniques, while Hot Stone Massage combines massage with therapeutic heat to help muscles relax before deeper work begins."
+                "answer": "Neither is better; they offer different experiences. A regular massage relies entirely on manual techniques, while Hot Stone Massage at Spa Bali Moon combines massage with heated basalt stones, so muscles soften before deeper work begins and tension releases without excessive pressure. It suits guests who prefer warmth to stronger pressure."
               },
               {
                 "question": "Can this treatment help after travelling?",
-                "answer": "Yes. Many guests choose Hot Stone Massage after long flights, sightseeing, or active holidays because the warmth helps ease muscular tension and encourages relaxation."
+                "answer": "Yes. Many guests choose Hot Stone Massage at Spa Bali Moon after long flights, sightseeing or active holidays, because the warmth of the heated basalt stones helps ease muscular tension and encourages relaxation. Sessions start at IDR 250.000 per person for 1 hour, at our Seminyak spa or at your villa or hotel."
               },
               {
                 "question": "Can I receive Hot Stone Massage at my villa or hotel?",
-                "answer": "Yes. Our therapists provide professional home service throughout Seminyak and nearby areas, bringing all necessary equipment for a comfortable treatment."
+                "answer": "Yes. Spa Bali Moon therapists provide Hot Stone Massage as a home service at villas and hotels throughout Seminyak and nearby areas, bringing all the necessary equipment for a comfortable treatment. Home service adds IDR 75.000 per therapist to the usual price, from IDR 250.000 per person for 1 hour. Book on WhatsApp."
               },
               {
                 "question": "What is a hot stone massage?",
-                "answer": "Hot stone massage uses smooth, heated stones placed on selected areas of the body alongside massage techniques. The warmth helps relax the muscles while the massage creates a deeper sense of relaxation."
+                "answer": "Hot stone massage is a full-body massage that uses smooth, heated basalt stones placed on selected areas of the body alongside massage techniques. The warmth helps relax the muscles while the massage creates a deeper sense of relaxation. At Spa Bali Moon in Seminyak, sessions are 1 hour, 1.5 hours or 2 hours."
               },
               {
                 "question": "How much does a hot stone massage cost in Seminyak?",
-                "answer": "IDR 250.000 for 1 hour, IDR 380.000 for 1.5 hours and IDR 495.000 for 2 hours per person at Spa Bali Moon. Home service adds IDR 75.000 per therapist."
+                "answer": "A hot stone massage at Spa Bali Moon in Seminyak costs IDR 250.000 for 1 hour, IDR 380.000 for 1.5 hours and IDR 495.000 for 2 hours per person. Four packages from IDR 449.000 per person add a body scrub, cream bath, facial or pedicure. Home service at your villa or hotel adds IDR 75.000 per therapist."
               }
             ]
           }

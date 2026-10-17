@@ -1,6 +1,29 @@
 import type { MenuTab } from "@/components/home/MenuDurations";
 import type { CatalogOption } from "@/data/pages/home-catalog";
 import type { PriceOption, PricedService } from "@/data/pages/pricelist";
+import { priceList } from "@/data/pricelist";
+
+/** Names a price page writes differently from src/data/pricelist.ts. */
+const PAGE_OF_NAME: Record<string, string> = {
+  "Sports Massage": "sport-massage",
+  "Couple Package A": "couple-spa",
+  "Couple Package B": "couple-spa",
+  "Couple Package C": "couple-spa",
+  "Couple Package D": "couple-spa",
+};
+
+/**
+ * The treatment page of a price row, by the name the price page gives it
+ * (AEO roadmap R25, 17 Oct: the price hub links to every treatment page).
+ * Undefined for treatments without a page of their own (aromatherapy, back
+ * massage, …).
+ */
+export function treatmentHref(name: string): string | undefined {
+  const slug =
+    PAGE_OF_NAME[name] ??
+    priceList.find((p) => p.pricelistName === name || p.homeServiceName === name || p.homeName === name)?.pageSlug;
+  return slug ? `/seminyak/${slug}/` : undefined;
+}
 
 /**
  * A duration followed by the treatment again ("1 Hour · Balinese Massage ·
@@ -46,6 +69,7 @@ export function menuTabs(tabs: { label: string; services: PricedService[] }[], p
       items: tab.services.map((service) => ({
         id: `${id}-${service.id}`,
         name: service.name,
+        href: treatmentHref(service.name),
         image: service.image,
         desc: service.desc ?? "",
         options: details(service, (service.options ?? []).map(toOption)),
