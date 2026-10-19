@@ -1,6 +1,6 @@
 -- Database (Neon Postgres) for the admin at /admin/: articles, edited
 -- treatment pages and redirects.
--- `npm run blog:setup` runs this file and then loads the seven built-in
+-- `npm run blog:setup` runs this file and then loads the nine built-in
 -- articles. It is safe to run again: nothing is dropped or overwritten.
 -- (One statement per `;`-terminated block; the setup script splits on that.)
 

@@ -1626,6 +1626,40 @@ mendapat foto baru dan tetap memakai banner lamanya.
   tetap, foto hasil upload tetap. Diuji dengan halaman tersimpan tiruan
   (path lama + teks diedit): gagal tanpa perbaikan, lolos dengannya.
 
+## Blog disamakan dengan live: 9 artikel + redirect (19 Oktober)
+
+Staging belum punya database, jadi blog-nya masih 7 artikel versi September
+dari `seed-posts.json`. Di live (database Neon), pemilik sudah mengubah
+artikel lewat admin pada 12–14 Oktober.
+
+- **`seed-posts.json` kini berisi 9 artikel live**, diambil dari halaman live
+  (payload RSC) dengan id, tanggal, `show_date`, SEO, dan isi yang persis
+  sama. Ada 3 artikel baru: `8-back-massage-techniques-and-how-to-perform-each`,
+  `balinese-vs-thai-massage`, dan `jet-lag-recovery-best-treatments-after-a-long-flight`
+  (artikel baru yang menggantikan `best-massages-after-a-long-flight`, yang sudah
+  dihapus di live). Empat artikel lain berganti slug, judul, dan isi; Thai
+  massage berganti judul dan isi. Cover 3 artikel baru memakai URL R2
+  (`images.spabalimoon.com/blog/…`), sama dengan live.
+- **Redirect:** 4 slug lama → slug baru ditambahkan ke `liveRedirects`, sama
+  dengan daftar `/admin/redirects/` live
+  (`images.spabalimoon.com/site/redirects.json`, 4 baris). CSV Cloudflare juga
+  dibuat ulang. Slug lama lymphatic
+  (`lymphatic-drainage-massage-benefits-techniques-what-to-expect`) **404 di
+  live** karena redirect-nya tidak ada. Atas permintaan pemilik, staging
+  diberi redirect ke `lymphatic-drainage-massage-all-you-need-to-know`.
+  **Di live masih perlu ditambahkan** lewat `/admin/redirects/`.
+- `answers.ts` (kotak jawaban AEO) dan link `/guide/` di halaman treatment
+  Balinese dan Lymphatic dipindah ke slug baru. Dua artikel baru belum punya
+  kotak jawaban.
+- `npm run blog:setup` kini ikut mengisi `show_date` (jet lag dan Balinese:
+  tanggal disembunyikan, sama dengan live).
+- Diverifikasi terhadap live: `<title>`, meta, canonical, og, H1, isi
+  artikel, daftar `/guide/`, dan sitemap sama; 16 dari 20 URL redirect yang
+  dicek juga sama. Perbedaan yang tersisa sudah ada sebelumnya: tanggal "Updated" (fitur AEO staging), serta
+  `/news|blog/best-massage-after-flight/` dan `…/a-practical-guide-to-slimming-massage/`
+  yang di staging langsung ke slug akhir (1 hop), sedangkan di live lewat slug
+  lama (2 hop).
+
 ## Draf: beranda v2 di `/home-v2/` (30 September)
 
 Duplikat beranda dengan layout sedikit diubah; isi, warna, huruf dan dekorasi

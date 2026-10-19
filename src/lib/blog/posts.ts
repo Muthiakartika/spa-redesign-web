@@ -7,7 +7,7 @@ import type { Post, PostInput, PostRow, PostSummary } from "./types";
 /**
  * Reading and writing guide articles. The rows live in the Neon database
  * (edited in /admin/). Until .env.local has DATABASE_URL, the public pages
- * fall back to the seven articles in src/data/guide/seed-posts.json, the same
+ * fall back to the nine articles in src/data/guide/seed-posts.json, the same
  * rows `npm run blog:setup` loads into a fresh database, so the site never
  * shows an empty blog just because the database is not set up yet.
  */

@@ -14,7 +14,7 @@ export default function AdminNotice({ setup }: { setup: BlogSetup }) {
         {!setup.database && (
           <>
             The blog database is not connected yet. Add <code>DATABASE_URL</code> (Neon) to <code>.env.local</code>,
-            then run <code>npm run blog:setup</code>. Until then the public blog shows the seven built-in articles.{" "}
+            then run <code>npm run blog:setup</code>. Until then the public blog shows the nine built-in articles.{" "}
           </>
         )}
         {!setup.storage && (

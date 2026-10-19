@@ -7,22 +7,23 @@
  * The texts are the drafts in migration/copy-rewrite-2026-10.md. They live
  * here, not in the article body in the database, so no article needs to be
  * edited in /admin/ for them; an article without an entry shows no box
- * (IV Drip, and any new article until a line is added here).
+ * (IV Drip, the two articles added on live on 14 Oct 2026, and any new article
+ * until a line is added here).
  *
  * Write a link as [words](/address/). Prices: keep them equal to the price list.
  */
 export const guideAnswers: Record<string, string> = {
-  "best-massages-after-a-long-flight":
+  "jet-lag-recovery-best-treatments-after-a-long-flight":
     "At Spa Bali Moon in Seminyak, a [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) is often chosen after a long flight, from IDR 300.000 per person for one hour. For a full-body massage, a one-hour [Balinese massage](/seminyak/balinese-massage/) is IDR 159.000.",
-  "what-is-a-balinese-massage":
+  "what-is-balinese-massage":
     "At Spa Bali Moon in Seminyak, a [Balinese massage](/seminyak/balinese-massage/) is IDR 159.000 for 1 hour, IDR 239.000 for 1.5 hours and IDR 330.000 for 2 hours per person, at our spa or at your villa or hotel. It is the treatment we recommend most often for first-time guests.",
   "what-is-thai-massage":
     "At Spa Bali Moon in Seminyak, [Thai massage](/seminyak/thai-massage/) is IDR 133.000 for 30 minutes, IDR 259.000 for 1 hour and IDR 379.000 for 1.5 hours per person. It is oil-free, so wear comfortable clothing you can move in.",
-  "understanding-of-facial-massage":
+  "facial-massage-for-relaxation":
     "At Spa Bali Moon in Seminyak, every [Bali Moon Facial](/seminyak/facial/) includes an Argan Oil lymphatic facial massage. The Tea Tree Facial is IDR 196.000 and the Gold Facial IDR 269.000 per person.",
-  "understanding-slimming-massage":
+  "what-is-a-slimming-massage":
     "At Spa Bali Moon in Seminyak, the closest treatment is the [cellulite massage](/seminyak/anti-cellulite-massage/), a firm massage on the thighs, hips, buttocks and abdomen from IDR 350.000 per person for one hour. For a gentler option, [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) with slimming cream starts at IDR 300.000.",
-  "lymphatic-drainage-massage-benefits-techniques-what-to-expect":
+  "lymphatic-drainage-massage-all-you-need-to-know":
     "At Spa Bali Moon in Seminyak, a [lymphatic drainage massage](/seminyak/lymphatic-drainage-massage/) is a slow, very light massage from IDR 300.000 per person for one hour, at our spa or at your villa or hotel. It is a relaxation treatment, not a medical one.",
 };
 

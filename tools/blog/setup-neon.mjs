@@ -1,7 +1,7 @@
 /**
  * Prepare the blog database on Neon:
  *   1. create the `posts` table and its indexes (db/schema.sql), then
- *   2. load the seven built-in guide articles (src/data/guide/seed-posts.json)
+ *   2. load the nine built-in guide articles (src/data/guide/seed-posts.json)
  *      with their original ids and dates.
  *
  *   npm run blog:setup
@@ -29,16 +29,16 @@ const statements = read("../../db/schema.sql")
 for (const statement of statements) await sql.query(statement);
 console.log(`Schema ready (${statements.length} statements).`);
 
-// 2. The seven built-in articles.
+// 2. The nine built-in articles.
 const posts = JSON.parse(read("../../src/data/guide/seed-posts.json"));
 let added = 0;
 for (const p of posts) {
   const rows = await sql`
     INSERT INTO posts (id, slug, title, excerpt, cover_image, content_html, category, tags, author, status,
-                       seo_title, seo_description, published_at, created_at, updated_at)
+                       seo_title, seo_description, show_date, published_at, created_at, updated_at)
     VALUES (${p.id}, ${p.slug}, ${p.title}, ${p.excerpt}, ${p.cover_image}, ${p.content_html}, ${p.category},
-            ${p.tags}, ${p.author}, ${p.status}, ${p.seo_title}, ${p.seo_description}, ${p.published_at},
-            ${p.created_at}, ${p.updated_at})
+            ${p.tags}, ${p.author}, ${p.status}, ${p.seo_title}, ${p.seo_description}, ${p.show_date !== false},
+            ${p.published_at}, ${p.created_at}, ${p.updated_at})
     ON CONFLICT DO NOTHING
     RETURNING id`;
   added += rows.length;

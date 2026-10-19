@@ -145,6 +145,17 @@ export const liveRedirects: OldUrlRedirect[] = [
   { from: "/blog/a-practical-guide-to-slimming-massage/", to: "/guide/what-is-a-slimming-massage/" },
   { from: "/news/:slug/", to: "/guide/:slug/" },
   { from: "/blog/:slug/", to: "/guide/:slug/" },
+
+  // Guide articles the owner renamed on live (12–14 Oct 2026). Live answers these from
+  // its /admin/redirects/ list (images.spabalimoon.com/site/redirects.json, checked
+  // 19 Oct 2026); this site has no database yet, so they are built in here.
+  // The lymphatic one is missing from live's list (live answers 404 there); added here
+  // at the owner's request, 19 Oct 2026.
+  { from: "/guide/lymphatic-drainage-massage-benefits-techniques-what-to-expect/", to: "/guide/lymphatic-drainage-massage-all-you-need-to-know/" },
+  { from: "/guide/best-massages-after-a-long-flight/", to: "/guide/jet-lag-recovery-best-treatments-after-a-long-flight/" },
+  { from: "/guide/understanding-of-facial-massage/", to: "/guide/facial-massage-for-relaxation/" },
+  { from: "/guide/understanding-slimming-massage/", to: "/guide/what-is-a-slimming-massage/" },
+  { from: "/guide/what-is-a-balinese-massage/", to: "/guide/what-is-balinese-massage/" },
 ];
 
 /**
