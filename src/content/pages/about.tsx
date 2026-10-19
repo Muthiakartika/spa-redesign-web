@@ -84,7 +84,7 @@ export default function AboutPage() {
       <AboutSplit
         subTitle="Our Therapists"
         title={<>Who Are Spa Bali Moon&apos;s Therapists?</>}
-        text="Our therapists are experienced Balinese therapists, trained to deliver massage and spa treatments with attention and care. Before each session they ask about the pressure you like and any areas that need extra attention, and they adjust the pressure as they work, gentle through to firm."
+        text="Our therapists are trained Balinese therapists who ask about your preferred pressure and focus areas before every session, then adjust as they work. Here is what you can expect from our team:"
         featuresLeft={[
           "Experienced Balinese therapists",
           "Traditional & modern massage treatments",
@@ -126,7 +126,7 @@ export default function AboutPage() {
         badgeTopText="Fresh For"
         badgeBottomText="Every Guest"
         title={<>How Does Spa Bali Moon Keep Treatments Clean?</>}
-        text="Every appointment is prepared with clean linen, sanitised equipment and quality massage oils. At the spa, each treatment includes clean towels and a private treatment room. For home service, the therapist brings freshly laundered linen and towels, and nothing is reused between guests."
+        text="We prepare every appointment with hygiene in mind, whether you visit the spa or book home service. Here is how we keep each treatment clean:"
         featuresLeft={["Clean towels for every guest", "Sanitised equipment", "Private treatment rooms"]}
         featuresRight={["Fresh linen brought to your villa", "Nothing reused between guests", "Quality massage oils"]}
         buttonText="Book Now"

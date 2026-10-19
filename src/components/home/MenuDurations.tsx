@@ -223,6 +223,41 @@ function childNotes(item: MenuItem, durations: number[] | null): Note[] {
   });
 }
 
+/**
+ * A treatment's name in two lines on phones (owner, 19 Oct: the names broke
+ * differently from phone to phone, one line on an iPhone 14 Pro and on a
+ * Galaxy A21s, two on narrower phones). Split where the two halves are
+ * closest in length, or at " - " ("Balinese Massage - Relaxing"), whose dash
+ * phones leave out. The <br> only shows on phones (spa-menu.css), so the
+ * name is one line from 768px; the text search engines read is unchanged.
+ * A <br>, not two block spans: a name in blocks inside its link takes its
+ * baseline from the last line, and the price lines up with the first.
+ */
+function TitleLines({ name }: { name: string }) {
+  const dash = name.indexOf(" - ");
+  let first: string;
+  let second: string;
+  if (dash > 0) {
+    first = name.slice(0, dash);
+    second = name.slice(dash + 3);
+  } else {
+    const words = name.split(" ");
+    if (words.length < 2) return <>{name}</>;
+    let best = 1;
+    const longer = (i: number) => Math.max(words.slice(0, i).join(" ").length, words.slice(i).join(" ").length);
+    for (let i = 2; i < words.length; i++) if (longer(i) < longer(best)) best = i;
+    first = words.slice(0, best).join(" ");
+    second = words.slice(best).join(" ");
+  }
+  return (
+    <>
+      {first}
+      {dash > 0 && <span className="v2-tdash"> -</span>} <br className="v2-tbr" />
+      {second}
+    </>
+  );
+}
+
 function DurationRow({
   item,
   durations,
@@ -266,10 +301,10 @@ function DurationRow({
   const photo = <img loading="lazy" decoding="async" src={item.image} alt={item.name} />;
   const name = item.href ? (
     <Link prefetch={false} href={item.href}>
-      {item.name}
+      <TitleLines name={item.name} />
     </Link>
   ) : (
-    item.name
+    <TitleLines name={item.name} />
   );
 
   return (

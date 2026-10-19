@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- the site serves its photos as plain <img> */
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import SectionShapes from "@/components/ui/SectionShapes";
 import { business } from "@/data/business";
 import { whatsappChatUrl } from "@/lib/whatsapp";
@@ -26,6 +27,9 @@ const villaLinks = (
   </>
 );
 
+/** A fact's link in the columns look, drawn as a small button. `plain`: no arrow (the phone number). */
+type FactLink = { href: string; label: ReactNode; external?: boolean; plain?: boolean };
+
 /**
  * `treatment` is how the heading names it: "Where Can I Book {treatment} in
  * Seminyak?", e.g. "Balinese Massage", "a Facial".
@@ -45,6 +49,15 @@ const villaLinks = (
  *  light  the heading centred on white (17 Oct; a dark band was turned down)
  * A frangipani and a leaf hang over the card's corners, as on the theme's
  * other sections (owner, 17 Oct).
+ *
+ * `look="columns"` (all treatment pages; owner, 19 Oct: the plain rows said
+ * too much, white tiles looked templated, and a card over the photo hid the
+ * therapist; of three tries the owner kept this): no photo, a paper-coloured
+ * panel with the heading and the answer centred, then the four facts in
+ * columns between gold hairlines, each under its gold icon in a white
+ * circle (address, hours, booking, villa fee); the price list link goes
+ * beside the button, where "Get directions" was (the address keeps that
+ * link). Two columns on tablets, one on phones.
  */
 export default function VisitUs({
   treatment,
@@ -52,6 +65,7 @@ export default function VisitUs({
   homeService = true,
   variant = "split",
   photo = "/images/services/dayspaseminyak/dayspa-2.webp",
+  look = "rows",
   leftShapeSrc = "/images/shape/testimonial-two-shape-left.png",
   rightShapeSrc = "/images/shape/leaf/2a.png",
 }: {
@@ -62,6 +76,8 @@ export default function VisitUs({
   variant?: "split" | "light";
   /** The split look's photo; the About page, which shows the default one higher up, passes another. */
   photo?: string;
+  /** How the facts are set: label and value rows, or columns without the photo (see above). */
+  look?: "rows" | "columns";
   /** Corner decorations (components/ui/SectionShapes.tsx); `null` leaves a side empty. */
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
@@ -93,7 +109,7 @@ export default function VisitUs({
       body: (
         <>
           WhatsApp{" "}
-          <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer">
+          <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" style={{ whiteSpace: "nowrap" }}>
             {business.phoneDisplay}
           </a>
         </>
@@ -107,6 +123,49 @@ export default function VisitUs({
         </Link>
       ),
     },
+  ];
+  const columns = look === "columns";
+  // The columns look: each fact under its icon, its links as small buttons
+  // (owner, 19 Oct: buttons, not underlined links), the price list beside
+  // "Book on WhatsApp".
+  const facts: { label: string; icon: MenuIconName; text: ReactNode; links?: FactLink[] }[] = [
+    {
+      label: "Address",
+      icon: "pin",
+      text: business.address.full,
+      links: [{ href: business.mapsUrl, label: "Get directions", external: true }],
+    },
+    { label: "Open daily", icon: "clock", text: "9am – 11pm" },
+    {
+      label: "Booking",
+      icon: "chat",
+      text: "WhatsApp",
+      links: [
+        {
+          href: whatsappChatUrl,
+          label: (
+            <>
+              <i className="fa-brands fa-whatsapp" aria-hidden="true" /> {business.phoneDisplay}
+            </>
+          ),
+          external: true,
+          plain: true,
+        },
+      ],
+    },
+    ...(homeService
+      ? [
+          {
+            label: "In your villa",
+            icon: "home" as const,
+            text: `+${fee} per therapist`,
+            links: [
+              { href: "/villa-hotel-massage/", label: "Villa & hotel massage" },
+              { href: "/outcall-home-service-massage/", label: "Home service in Bali" },
+            ],
+          },
+        ]
+      : []),
   ];
 
   const content = (
@@ -124,21 +183,70 @@ export default function VisitUs({
           "."
         )}
       </p>
-      <dl className="visit-us__rows">
-        {rows.map((r) => (
-          <div key={r.label} className="visit-us__line">
-            <dt>{r.label}</dt>
-            <dd>{r.body}</dd>
-          </div>
-        ))}
-      </dl>
+      {columns ? (
+        <dl className="visit-us__tiles">
+          {facts.map((fact) => (
+            <div key={fact.label} className="visit-us__tile">
+              <dt>
+                <MenuIcon name={fact.icon} className="visit-us__tile-icon" />
+                {fact.label}
+              </dt>
+              <dd>
+                {fact.text}
+                {fact.links ? (
+                  <span className="visit-us__pills">
+                    {fact.links.map((link) => {
+                      const label = (
+                        <>
+                          {link.label}
+                          {link.plain ? null : <span aria-hidden="true"> →</span>}
+                        </>
+                      );
+                      return link.external ? (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="visit-us__pill"
+                        >
+                          {label}
+                        </a>
+                      ) : (
+                        <Link key={link.href} prefetch={false} href={link.href} className="visit-us__pill">
+                          {label}
+                        </Link>
+                      );
+                    })}
+                  </span>
+                ) : null}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      ) : (
+        <dl className="visit-us__rows">
+          {rows.map((r) => (
+            <div key={r.label} className="visit-us__line">
+              <dt>{r.label}</dt>
+              <dd>{r.body}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
       <div className="visit-us__actions">
         <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="visit-us__btn">
           Book on WhatsApp
         </a>
-        <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer" className="visit-us__more">
-          Get directions <span aria-hidden="true">→</span>
-        </a>
+        {columns ? (
+          <Link prefetch={false} href="/seminyak/" className="visit-us__btn visit-us__btn--outline">
+            Full price list
+          </Link>
+        ) : (
+          <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer" className="visit-us__more">
+            Get directions <span aria-hidden="true">→</span>
+          </a>
+        )}
       </div>
     </>
   );
@@ -155,19 +263,21 @@ export default function VisitUs({
   }
 
   return (
-    <section className="visit-us visit-us--split">
+    <section className={`visit-us visit-us--split${columns ? " visit-us--columns" : ""}`}>
       <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className="visit-us__split">
-        <div className="visit-us__split-photo">
-          <img
-            loading="lazy"
-            decoding="async"
-            src={photo}
-            alt={`A massage at ${business.name} in Seminyak`}
-            width={578}
-            height={601}
-          />
-        </div>
+        {columns ? null : (
+          <div className="visit-us__split-photo">
+            <img
+              loading="lazy"
+              decoding="async"
+              src={photo}
+              alt={`A massage at ${business.name} in Seminyak`}
+              width={578}
+              height={601}
+            />
+          </div>
+        )}
         <div className="visit-us__split-body">{content}</div>
       </div>
     </section>

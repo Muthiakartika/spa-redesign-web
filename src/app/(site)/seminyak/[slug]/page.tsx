@@ -4,6 +4,7 @@ import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import TreatmentBody from "@/components/treatments/TreatmentBody";
 import { treatments } from "@/data/treatments";
+import { priceTiles, type PriceTiles } from "@/lib/priceTiles";
 import { treatmentSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { getTreatmentContent } from "@/lib/treatments/content";
@@ -57,6 +58,53 @@ const SHAPES: Record<string, { leftShapeSrc: string; rightShapeSrc: string }> = 
   },
 };
 
+/*
+ * Every treatment page shows the new look of the sections added in October
+ * (owner, 19 Oct: they said too much in plain rows, then "looks flat, made
+ * by AI"; tried on the Balinese page, then given to all): the session
+ * prices in the banner (PageBanner `prices`), the other quick facts as a
+ * short list that opens like an FAQ beside the opening sentence (QuickFacts
+ * look="faq") and "Visit us" in columns without the photo (look="columns").
+ */
+
+/** The props of the first element of a type in the tree. */
+function propsOf(tree: TreeNode, type: string): TreeNode["props"] | undefined {
+  if (tree.type === type) return tree.props;
+  for (const child of tree.children ?? []) {
+    const found = typeof child === "string" ? undefined : propsOf(child, type);
+    if (found) return found;
+  }
+  return undefined;
+}
+
+/**
+ * The quick facts' price line for the banner: the first fact that lists two
+ * to four prices ("Per person: 1 hour IDR 159.000 · …"; waxing's seven stay
+ * in the list). Its caption is the line's own ("Per person") or else the
+ * fact's label ("Balinese, for two", "Price by hair length"); a note in
+ * brackets after a name stays in the list ("Tea Tree Facial (oily or
+ * blemish-prone skin)" -> "Tea Tree Facial").
+ */
+function bannerPrices(tree: TreeNode): { label: string; prices: PriceTiles } | undefined {
+  const items = propsOf(tree, "QuickFacts")?.items;
+  if (!Array.isArray(items)) return undefined;
+  for (const item of items) {
+    if (!item || typeof item !== "object" || Array.isArray(item)) continue;
+    const { label, value } = item as { label?: unknown; value?: unknown };
+    if (typeof label !== "string" || typeof value !== "string") continue;
+    const prices = priceTiles(value);
+    if (!prices || prices.tiles.length > 4) continue;
+    return {
+      label,
+      prices: {
+        caption: prices.caption ?? label,
+        tiles: prices.tiles.map((tile) => ({ ...tile, length: tile.length.replace(/\s*\([^)]*\)\s*$/, "") })),
+      },
+    };
+  }
+  return undefined;
+}
+
 /** The banner photo, for the Service data. */
 function bannerImage(tree: TreeNode): string | undefined {
   if (tree.type === "PageBanner" && typeof tree.props?.image === "string") return tree.props.image;
@@ -99,13 +147,20 @@ export default async function TreatmentPage({ params }: Props) {
   const names = NAMES[slug] ?? { heading: content.name, service: content.name };
   // The quick facts end with the date the page last changed; "Visit us"
   // (AEO roadmap, 17 Oct) sits before the related treatments.
+  // The banner shows the session prices when the quick facts list them;
+  // the quick facts then leave that fact (and the opening's price sentence) out.
+  const banner = bannerPrices(content.tree);
   const decorated = Object.entries(SHAPES).reduce(
     (t, [type, props]) => withProps(t, type, props),
-    withProps(content.tree, "QuickFacts", { updated: content.updatedAt }),
+    withProps(
+      banner ? withProps(content.tree, "PageBanner", { prices: banner.prices }) : content.tree,
+      "QuickFacts",
+      { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
+    ),
   );
   const visited = insertBefore(decorated, ["ServiceSlider", "TreatmentLinks"], {
     type: "VisitUs",
-    props: { treatment: names.heading },
+    props: { treatment: names.heading, look: "columns" },
   });
   // "treatment-page" scopes the laptop decoration rules (decorations.css).
   const className = typeof visited.props?.className === "string" ? visited.props.className : "";

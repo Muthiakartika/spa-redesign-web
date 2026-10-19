@@ -1660,6 +1660,115 @@ artikel lewat admin pada 12–14 Oktober.
   yang di staging langsung ke slug akhir (1 hop), sedangkan di live lewat slug
   lama (2 hop).
 
+## Price list di HP, section baru, About (19 Oktober)
+
+- **Price list** (beranda, `/seminyak/`, outcall), HP di bawah 768px: nama
+  treatment 2 kata atau lebih kini selalu 2 baris, sama di semua HP
+  (sebelumnya 1 baris di iPhone 14 Pro / Galaxy A21s, 2 baris di HP yang
+  lebih sempit). `TitleLines` di `MenuDurations.tsx` memecah nama di titik
+  yang paling seimbang, atau di " - " (tanda "-" disembunyikan di HP); `<br>`
+  hanya tampil di HP, jadi teks yang dibaca mesin pencari tetap sama. Nama
+  tebal (600), harga 400 dan sedikit lebih besar. Ukuran keduanya ikut lebar
+  layar (nama 16,5–20px, harga 18–20px; 20px mulai ±390px), sehingga nama
+  terpanjang ("Virgin Cold-Press / Coconut Oil Massage", "Couple Warm Candle /
+  Oil Massages") tetap 2 baris dari 320px. Harga sejajar dengan baris pertama
+  nama (baseline, juga di desktop; link nama dibuat inline karena
+  `live.css` menjadikan semua link inline-block). "2 pax" diberi jarak.
+  Ukuran harga di desktop tidak berubah.
+- **Hero beranda:** quick facts yang tadinya satu baris panjang bertitik kini
+  dipecah (pemilik): kedua harga jadi subheading kecil di bawah H1, satu per
+  baris, angkanya emas (berdua lebih lebar dari kolom teks 600px); alamat
+  dan jam buka berikon emas di bawah tiga fitur, di atas garis emas tipis
+  (tengah di tablet/HP). "Book on WhatsApp +62…" dihapus karena tombol
+  WhatsApp memuat nomor yang sama.
+- **Tampilan baru untuk section Oktober, kini di semua 24 halaman treatment**
+  (dicoba dulu di Balinese, lalu diterapkan ke semua atas permintaan pemilik;
+  `app/(site)/seminyak/[slug]/page.tsx`):
+  - *Harga di banner* (pemilik: "seperti beranda, info penting di banner"):
+    baris harga quick facts ("Per person: 1 hour IDR 159.000 · …") dibaca
+    template (`src/lib/priceTiles.ts`) dan tampil di bawah H1 banner sebagai
+    strip kaca gelap bertepi emas (`PageBanner` prop `prices`), tiga durasi
+    berdampingan, "Per person" di bawahnya. Aturan untuk 24 halaman: fakta
+    pertama yang berisi 2–4 harga masuk banner (keterangannya dari awalan
+    "Per person:" atau dari label fakta, mis. "Balinese, for two", "Price
+    by hair length"; catatan dalam kurung dibuang, mis. "Tea Tree Facial");
+    Waxing (7 harga) dan 6 halaman tanpa daftar harga per durasi (Body
+    Scrub, Creambath, Day Spa, Ear Candle, Nail Spa, Sunburn) tanpa strip,
+    harganya tetap di daftar dan paragraf.
+  - *Quick facts gaya FAQ sederhana* (`QuickFacts look="faq"`; pemilik: kartu
+    tile + ikon "kelihatan flat, seperti buatan AI"): tanpa kartu, fakta
+    lain bernomor emas seperti FAQ beranda, satu terbuka (yang pertama),
+    `<details name>` asli sehingga jalan tanpa script dan isinya tetap di
+    HTML. Harga tidak diulang (sudah di banner dan di paragraf pembuka).
+    Paragraf pembuka (`SplitLead`): garis emas pendek, kalimat pertama
+    (apa treatment-nya) dalam serif besar, sisanya (durasi, harga, tempat)
+    dalam huruf isi dengan harga berwarna emas; teksnya tetap sama persis,
+    satu paragraf. Dari tiga pilihan yang dicoba di halaman (A dua kolom di
+    latar putih, B satu kolom di tengah di latar krem, C foto + kartu
+    melayang), pemilik memilih **B**: satu kolom di tengah di atas warna
+    kertas (`bg-sub`) dengan tepi sobek tema di atas dan bawah, seperti
+    section harga dan FAQ. Lalu dari tiga opsi berikutnya (D empat kolom,
+    E dua kolom, G tab) pemilik memilih **E** untuk layar ≥992px: kutipan
+    di kiri garis emas vertikal, daftar di kanan (section ±713px di
+    desktop); di bawah 992px tetap B. Section di HP 393px: ±1.160 → ±850px.
+    Karena harga sudah di banner, kalimat yang mendaftar harga sesi
+    ("Sessions are 1 hour (IDR 159.000), …") tidak ditampilkan di
+    paragraf ini (pemilik: "di hero ada harga, scroll sedikit ada harga
+    lagi"). Teks di admin tidak berubah; harga tetap ada di banner, section
+    harga, dan FAQ. Bila kalimat pertama justru daftar harga (Hair
+    Braiding), kalimat berikutnya yang jadi kutipan. Paragraf utuh (dengan
+    kalimat harga) sempat dicoba lagi, lalu pemilik memilih kembali ke
+    versi ini karena harganya sudah ada di banner. Kalimat dipisah di
+    ". " sebelum huruf besar, kecuali setelah singkatan ("Jl.", "No.").
+    Kutipan yang panjang dibuat lebih kecil (>140 karakter 28px, >190
+    karakter 25px di desktop) supaya setinggi daftar di sebelahnya.
+  - *Visit us* `look="columns"`: dari tiga opsi yang dicoba (foto sebagai
+    latar + kartu, empat kolom tanpa foto, foto + daftar ringkas) pemilik
+    sempat memilih foto + kartu, lalu menggantinya karena terapis di foto
+    tertutup. Yang dipakai: **empat kolom tanpa foto** di panel krem; judul
+    dan jawaban di tengah, lalu Alamat, Jam buka, Booking dan Villa dalam 4
+    kolom di antara garis emas, tiap kolom dengan ikon emas di lingkaran
+    putih; tombol WhatsApp dan "Full price list" (tombol bergaris) di
+    tengah. Link yang tadinya bergaris bawah kini tombol kecil (pemilik):
+    "Get directions", nomor WhatsApp (dengan ikon), "Villa & hotel
+    massage" dan "Home service in Bali". Empat kolom mulai 1200px, 2×2 di
+    768–1199px (di laptop kecil tombolnya tidak muat di empat kolom), satu
+    kolom di HP. Foto section ini tidak dimuat lagi (lebih ringan).
+    Section di desktop ±1.200 → ±1.000px.
+- **Untuk semua halaman:** baris "Visit us" tampilan lama kini satu kolom di HP
+  (aturan 124px panel split sebelumnya mengalahkan aturan HP, sehingga isinya
+  terjepit); jam "9am–11pm" di quick facts tidak terpotong di tanda "–".
+- **About:** dua paragraf dari dokumen pemilik (tab "rewrite about SBM":
+  therapist dan kebersihan), tanpa kata yatim di baris terakhir. Tab
+  "Revision Waxing" di dokumen yang sama **belum** diterapkan (pemilik minta
+  About saja).
+- **Hasil review UI/UX beranda (5 perbaikan, sisanya menunggu pemilik):**
+  - *Header 1200–1599px:* sejak "About" masuk menu (17 Okt), header pecah
+    jadi 2 baris di 1200–1279px dan 1400–1535px (di 1440px tombol "Book an
+    Appointment" dan search turun ke bawah logo, header 156px). Jarak menu
+    kini menyusut lebih dulu (24–40px), di 1400–1599px juga jarak tepi,
+    logo (240 → 210px) dan tombol; header satu baris 106px dari 1200px.
+    Di bawah 1200px header memang 2 baris (logo, lalu menu).
+  - *Jarak tepi konten dari 1400px:* `.container` live sampai 1434px, jadi
+    di laptop 1440px konten hanya 12px dari tepi; kini minimal 48px.
+  - *Emas untuk teks:* emas situs #B88C35 hanya 2,75:1 di atas krem (standar
+    teks kecil 4,5:1). Emas lebih gelap khusus teks (#8A6623, 4,7:1) sempat
+    dicoba untuk harga dan tombol durasi, tapi **dibatalkan atas permintaan
+    pemilik**: semua teks tetap memakai emas baru #B88C35.
+  - *Judul beranda tanpa kapital otomatis* ("Book a Spa or Massage…", bukan
+    "Book A Spa Or…"), sama seperti H1.
+  - *H1 selalu 3 baris:* "Seminyak Spa & / Balinese Massage / at Spa Bali
+    Moon" ("at" kini membuka baris terakhir; teks H1 tetap sama), maksimal
+    72px mulai 1200px (live 80px, yang membuat "Balinese" sendirian).
+  - *Tombol durasi 44px* (sebelumnya 42px, di HP 40px); paragraf hero di HP
+    jarak baris 24px (sebelumnya 29px).
+  - Belum, menunggu pemilik: price list di beranda HP dipendekkan (±5 layar)
+    dan rating Google di testimoni.
+- Dicek: `tsc` dan eslint bersih; beranda, `/seminyak/`, outcall, Balinese,
+  About dan Facial pada 320–1440px tanpa scroll horizontal atau elemen yang
+  keluar; console bersih. Warning hydration di log dev berasal dari atribut
+  `data-tag-assistant-prod-present` (Google Tag Assistant), bukan dari kode.
+
 ## Draf: beranda v2 di `/home-v2/` (30 September)
 
 Duplikat beranda dengan layout sedikit diubah; isi, warna, huruf dan dekorasi

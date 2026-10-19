@@ -23,17 +23,25 @@ export const home = {
   },
 
   hero: {
-    title: "Seminyak Spa & Balinese Massage at",
-    highlightedTitle: "Spa Bali Moon",
+    // The H1 reads "Seminyak Spa & Balinese Massage at Spa Bali Moon"; "at"
+    // opens the last line (the highlighted part is a line of its own), so it
+    // never stands alone on a line (19 Oct).
+    title: "Seminyak Spa & Balinese Massage",
+    highlightedTitle: "at Spa Bali Moon",
     text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, facials, and beauty services at our Seminyak spa, with home service also available for hotels and villas in nearby areas.",
-    /** The quick facts under the opening (copy rewrite, 15 Oct), one line on wide screens. */
-    facts: [
-      "Jl. Pangkung Sari No. 30, Seminyak",
-      "Open daily 9am–11pm",
-      "Treatments from IDR 69.000 per person",
-      "Home service: add IDR 75.000 per therapist",
-      "Book on WhatsApp +62 878-6317-5144",
-    ],
+    /*
+     * The quick facts of the copy rewrite (15 Oct), in two places since
+     * 19 Oct (owner): the prices as a small subheading under the title, the
+     * address and hours under the three features, each with its menu icon
+     * (src/components/layout/MenuIcons.tsx). "Book on WhatsApp +62 878-6317-
+     * 5144" left the facts (owner: the homepage said too much there): the
+     * WhatsApp button shows that number.
+     */
+    prices: ["Treatments from IDR 69.000 per person", "Home service: add IDR 75.000 per therapist"],
+    visit: [
+      { icon: "pin", text: "Jl. Pangkung Sari No. 30, Seminyak" },
+      { icon: "clock", text: "Open daily 9am–11pm" },
+    ] as const,
   },
 
   steps: {

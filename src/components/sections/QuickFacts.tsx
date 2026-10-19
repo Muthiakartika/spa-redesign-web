@@ -12,8 +12,11 @@ const formatDate = (iso: string) =>
  * parts, not inside "IDR / 580.000". Long parts may still wrap (phones).
  */
 function FactValue({ value }: { value: string }) {
-  // "IDR" never ends a line without its amount.
-  const parts = value.replace(/IDR /g, "IDR\u00a0").split(" · ");
+  // "IDR" never ends a line without its amount, nor "9am–" without "11pm".
+  const parts = value
+    .replace(/IDR /g, "IDR ")
+    .replace(/(\d(?:am|pm)?)–(\d)/g, "$1\u2060–\u2060$2")
+    .split(" · ");
   // The dot stays with the part before it; the line may break after it.
   return parts.map((part, i) => (
     <Fragment key={i}>
@@ -27,6 +30,82 @@ function FactValue({ value }: { value: string }) {
 }
 
 /**
+ * The faq look's opening paragraph (owner, 19 Oct: "the text part too"): the
+ * first sentence, which says what the treatment is, in the large serif under
+ * a short gold line; the rest after it in the body type. With `skipPrices`
+ * (the banner shows the session prices) a sentence listing those prices is
+ * left out (owner, 19 Oct: "prices in the hero, then again a little lower";
+ * the full text was tried again the same day, and the owner kept this);
+ * the price section and the FAQ further down still give them in words.
+ */
+function SplitLead({ text, skipPrices }: { text: string; skipPrices: boolean }) {
+  // A sentence ends at ".", "!" or "?" before a capital, not after an
+  // abbreviation ("Jl. Pangkung Sari No. 30").
+  const sentences = text.split(/(?<=[.!?])(?<!\b(?:Jl|Jln|No|St|Dr|Mr|Mrs|Ms|approx)\.)\s+(?=[A-Z])/);
+  // Hair braiding opens with its prices: then the next sentence leads.
+  const kept = sentences.filter((sentence) => !skipPrices || (sentence.match(/IDR\s[\d.]+/g) ?? []).length < 2);
+  const [first, ...others] = kept.length ? kept : sentences;
+  const rest = others.join(" ");
+  // A long opening sentence is set a step smaller, so it keeps to about the
+  // list's height beside it (24 pages: 46 to 202 characters).
+  const size = first.length > 190 ? " quick-facts__lead--longer" : first.length > 140 ? " quick-facts__lead--long" : "";
+  return (
+    <p className={`quick-facts__lead quick-facts__lead--split${size}`}>
+      <span className="quick-facts__lead-first">{first}</span>
+      {rest ? (
+        <>
+          {" "}
+          <span className="quick-facts__lead-rest">
+            {rest.split(/(IDR [\d.]+)/).map((part, i) =>
+              // "IDR" never ends a line without its amount.
+              i % 2 ? <strong key={i}>{part.replace("IDR ", "IDR\u00a0")}</strong> : part
+            )}
+          </span>
+        </>
+      ) : null}
+    </p>
+  );
+}
+
+/**
+ * The "faq" look (owner, 19 Oct: the card of price tiles and icon rows looked
+ * flat and machine-made; "like the homepage, where the important part is in
+ * the banner", and the rest "FAQ style but simpler"): the lengths and prices
+ * go to the page banner (PageBanner `prices`, set by the page template), and
+ * the other facts become a short numbered list that opens one fact at a
+ * time, the first open. Native <details>, so it works without script and
+ * every answer stays in the HTML for search engines and AI answers.
+ */
+function FaqList({ items, updated, skip }: { items: QuickFact[]; updated?: string; skip?: string }) {
+  const rows = items.filter((item) => item.label !== skip);
+  return (
+    <div className="quick-facts__faq">
+      <p className="quick-facts__label">Quick facts</p>
+      {rows.map((item, i) => (
+        // One `name`: opening a fact closes the one that was open.
+        <details key={item.label} className="quick-facts__item" name="quick-facts" open={i === 0}>
+          <summary>
+            <span className="quick-facts__num" aria-hidden="true">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <span className="quick-facts__q">{item.label}</span>
+            <span className="quick-facts__chev" aria-hidden="true" />
+          </summary>
+          <p className="quick-facts__a">
+            <FactValue value={item.value} />
+          </p>
+        </details>
+      ))}
+      {updated ? (
+        <p className="quick-facts__updated">
+          Last updated <time dateTime={updated}>{formatDate(updated)}</time>
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+/**
  * The answer-first block under a treatment page's banner (copy rewrite,
  * 15 Oct): an opening paragraph that names the spa, Seminyak, the price and
  * the options, then the quick facts (treatment, length and price, where,
@@ -37,6 +116,8 @@ export default function QuickFacts({
   text,
   items = [],
   updated,
+  look = "rows",
+  bannerPriceLabel,
   leftShapeSrc,
   rightShapeSrc,
 }: {
@@ -44,19 +125,36 @@ export default function QuickFacts({
   items?: QuickFact[];
   /** When the page last changed (ISO), shown under the facts. */
   updated?: string;
+  /** "faq": a numbered list that opens (FaqList); set by the page template. */
+  look?: "rows" | "faq";
+  /** The fact the page banner shows as prices (page template): left out of the list, and the opening's price sentence with it. */
+  bannerPriceLabel?: string;
   /** Corner decorations (components/ui/SectionShapes.tsx). */
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
 }) {
   return (
-    <section className="quick-facts">
+    // The faq look sits on the paper colour with the theme's torn edges, as
+    // the price and FAQ sections do (option B, owner, 19 Oct).
+    <section
+      className={
+        look === "faq"
+          ? "quick-facts quick-facts--faq bg-sub section__decoration-top section__decoration-bottom"
+          : "quick-facts"
+      }
+    >
       <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className="container">
         <div className="quick-facts__inner">
-          {text ? (
+          {text && look === "faq" && typeof text === "string" ? (
+            <SplitLead text={text} skipPrices={Boolean(bannerPriceLabel)} />
+          ) : text ? (
             <p className="quick-facts__lead">{typeof text === "string" ? text.replace(/IDR /g, "IDR ") : text}</p>
           ) : null}
-          {items.length > 0 && (
+          {items.length > 0 && look === "faq" ? (
+            <FaqList items={items} updated={updated} skip={bannerPriceLabel} />
+          ) : null}
+          {items.length > 0 && look !== "faq" && (
             <div className="quick-facts__card">
               <p className="quick-facts__label">Quick facts</p>
               <dl className="quick-facts__list">

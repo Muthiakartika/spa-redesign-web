@@ -178,7 +178,7 @@
   background-color: #fff;
 }
 .lh .v2-duration__switch button {
-  min-height: 42px;
+  min-height: 44px; /* a finger's 44px (was 42px; 40px on phones), 19 Oct */
   padding: 8px 18px;
   border: 0;
   border-radius: 999px;
@@ -200,10 +200,17 @@
 .lh .v2-duration__switch button[aria-pressed="true"] {
   box-shadow: inset 0 0 0 1px var(--theme-color1);
 }
+/* The price sits on the line of the name's first line, not halfway down a
+   two-line name (owner, 19 Oct). */
 .lh .v2-menu--durations .treatment-catalog__heading {
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
   row-gap: 4px;
+}
+/* live.css makes every link an inline-block, whose baseline is its last
+   line: the name's link stays inline, so the name's baseline is its first. */
+.lh .v2-menu--durations .treatment-catalog__heading .title a {
+  display: inline;
 }
 .lh .v2-dprice {
   display: inline-flex;
@@ -216,13 +223,58 @@
 /* Prices are written in full with the currency (owner, 14 Oct: "IDR 250.000",
    was "250K"), so they are smaller than the 26px above: the largest size at
    which each price still fits beside its treatment's name, measured on the
-   three price lists at every width. The line height stays (rows keep theirs). */
+   three price lists at every width. Phones 2px more since 19 Oct (owner: "a
+   little bigger"), the name taking two lines beside it. The line height
+   stays (rows keep theirs). */
 .lh .v2-menu--durations .v2-price__amount {
   font-size: 18px;
 }
-@media (min-width: 768px) and (max-width: 991px), (min-width: 1400px) {
+@media (max-width: 991px), (min-width: 1400px) {
   .lh .v2-menu--durations .v2-price__amount {
     font-size: 20px;
+  }
+}
+/* Phones: every name of two words or more in two lines, the same on every
+   phone (TitleLines in MenuDurations.tsx), its weight up so it reads as a
+   heading beside the gold price; the name gives way (it never pushes the
+   price under it), and the price's line is the name's, so the two share a
+   first line exactly.
+   Name and price grow with the screen, 20px from about 390px: the longest
+   names ("Virgin Cold-Press / Coconut Oil Massage", "Couple Warm Candle /
+   Oil Massages") keep their two lines from 320px up, with a few pixels to
+   spare (measured on the three price lists, 19 Oct). The price stays at
+   least the 18px it was. */
+@media (max-width: 767px) {
+  .lh .v2-menu--durations .treatment-catalog__heading {
+    flex-wrap: nowrap;
+    column-gap: 10px;
+  }
+  .lh .v2-menu--durations .treatment-catalog__heading .title {
+    font-size: clamp(16.5px, calc(6.12vw - 3.4px), 20px);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+  /* live.css hides every <br> below 1400px. */
+  .lh .v2-menu--durations .v2-tbr {
+    display: inline;
+  }
+  .lh .v2-menu--durations .v2-tdash {
+    display: none;
+  }
+  /* 400, not the cards' 300: the name beside it is bold now. */
+  .lh .v2-menu--durations .v2-price__amount {
+    font-size: clamp(18px, calc(6.12vw - 3.4px), 20px);
+    font-weight: 400;
+    line-height: 25px;
+  }
+  /* "2 pax" sat 4px into the 34px price line; this one is 25px. */
+  .lh .v2-menu--durations .v2-price__pax {
+    margin-top: 3px;
+  }
+}
+@media (min-width: 768px) {
+  .lh .v2-menu--durations .v2-tbr {
+    display: none;
   }
 }
 /* A new price fades up when the duration changes. */
@@ -270,7 +322,6 @@
     margin-bottom: 40px;
   }
   .lh .v2-duration__switch button {
-    min-height: 40px;
     padding: 8px 14px;
   }
 }
@@ -368,5 +419,14 @@ body:has(.v2-duration--sticky.is-stuck) .header-three-area.menu-fixed {
 @media (max-width: 767px) {
   .lh .v2-menu--durations .treatment-catalog__content {
     padding-right: 16px;
+  }
+}
+
+/* The narrowest phones (320px, the first iPhone SE): the prices come in a
+   little less, so the longest names keep their two lines. After the phone
+   padding above, which this one takes in. */
+@media (max-width: 339px) {
+  .lh .v2-menu--durations .treatment-catalog__content {
+    padding-right: 4px;
   }
 }

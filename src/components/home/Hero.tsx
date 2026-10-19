@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
-import { Fragment } from "react";
 import { ICON_BOXES } from "@/components/home/icons";
+import { MenuIcon } from "@/components/layout/MenuIcons";
 import { LotusIcon } from "@/components/ui/Lotus";
 import RowButton from "@/components/ui/RowButton";
 import { business } from "@/data/business";
@@ -55,24 +55,24 @@ export default function Hero() {
             <h1 className="title">
               {hero.title} <span>{hero.highlightedTitle}</span>
             </h1>
-            <p className="v2-hero__text">{hero.text}</p>
-            {/* Quick facts under the opening (copy rewrite, 15 Oct). Each fact
-                stays on one line; the line breaks between them. */}
-            <p className="v2-hero__facts">
-              {hero.facts.map((fact, i) => (
-                <Fragment key={fact}>
-                  {i > 0 ? (
-                    <>
-                      {" "}
-                      <span className="v2-hero__facts-dot" aria-hidden="true">
-                        ·
-                      </span>{" "}
-                    </>
-                  ) : null}
-                  <span className="v2-hero__fact">{fact}</span>
-                </Fragment>
+            {/* The prices as a small subheading under the title (owner,
+                19 Oct), one per line, the amounts in gold. */}
+            <p className="v2-hero__prices">
+              {hero.prices.map((price, i) => (
+                <span key={price} className="v2-hero__price">
+                  {i > 0 ? " " : null}
+                  {price.split(/(IDR [\d.]+)/).map((part, j) =>
+                    j % 2 ? (
+                      // "IDR" never ends a line without its amount.
+                      <strong key={j}>{part.replace("IDR ", "IDR\u00a0")}</strong>
+                    ) : (
+                      part
+                    )
+                  )}
+                </span>
               ))}
             </p>
+            <p className="v2-hero__text">{hero.text}</p>
             <div className="v2-hero__actions">
               <RowButton href={whatsappChatUrl} icon="whatsapp" label="Book on WhatsApp" note={business.phoneDisplay} />
               <RowButton href="/seminyak/" icon="tag" label="View Price List" note="Every treatment and price" />
@@ -87,6 +87,15 @@ export default function Hero() {
                     <strong>{f.title}</strong>
                     <span>{f.text}</span>
                   </span>
+                </li>
+              ))}
+            </ul>
+            {/* Where and when, under the features (owner, 19 Oct). */}
+            <ul className="v2-hero__visit">
+              {hero.visit.map((fact) => (
+                <li key={fact.text} className="v2-hero__fact">
+                  <MenuIcon name={fact.icon} className="v2-hero__fact-icon" />
+                  <span>{fact.text}</span>
                 </li>
               ))}
             </ul>

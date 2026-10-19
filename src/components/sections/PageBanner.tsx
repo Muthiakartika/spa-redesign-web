@@ -7,6 +7,7 @@ import type { Swiper as SwiperInstance } from "swiper";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { LotusPaths25 } from "@/components/ui/Lotus";
+import type { PriceTiles } from "@/lib/priceTiles";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 export type PageBannerProps = {
@@ -28,6 +29,12 @@ export type PageBannerProps = {
   buttonLink?: string;
   /** Buttons in place of the one "Book Now" (the outcall page's row buttons). */
   actions?: ReactNode;
+  /**
+   * The session lengths and prices under the title, on a glass strip (owner,
+   * 19 Oct: "like the homepage, where the important part is in the banner").
+   * Read from the page's quick facts by the treatment page template.
+   */
+  prices?: PriceTiles;
 };
 
 const S = "jsx-page-banner";
@@ -49,6 +56,7 @@ export default function PageBanner({
   buttonText = "Book Now",
   buttonLink = whatsappChatUrl,
   actions,
+  prices,
 }: PageBannerProps) {
   const small = image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
 
@@ -108,6 +116,21 @@ export default function PageBanner({
                 <h1 data-animation="fadeInUp" data-delay=".5s" className={`${S} title`}>
                   <span className={S}>{titleSpan}</span> {title}
                 </h1>
+                {prices && (
+                  <div className={`${S} banner-prices`}>
+                    <ul className={`${S} banner-prices__list`}>
+                      {prices.tiles.map((tile) => (
+                        <li key={tile.length} className={`${S} banner-prices__item`}>
+                          <span className={`${S} banner-prices__length`}>{tile.length}</span>{" "}
+                          <span className={`${S} banner-prices__amount`}>
+                            <span className={`${S} banner-prices__cur`}>IDR</span> {tile.amount}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                    {prices.caption && <p className={`${S} banner-prices__caption`}>{prices.caption}</p>}
+                  </div>
+                )}
                 {/* "IDR" never ends a line without its amount. */}
                 {text && <p className={`${S} text`}>{text.replace(/IDR /g, "IDR ")}</p>}
                 {actions ? (
