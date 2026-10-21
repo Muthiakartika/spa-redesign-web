@@ -75,4 +75,8 @@ function dropStyle(tagName: string, attribs: sanitizeHtmlLib.Attributes) {
 
 /** Safe on sanitised HTML: every <table …> there was written by sanitize-html, so tags are balanced. */
 const wrapTables = (html: string) =>
-  html.replace(/<table\b/g, '<div class="post-table"><table').replace(/<\/table>/g, "</table></div>");
+  // A table already inside a wrapper (an article saved from this page's own output) is left as it is:
+  // wrapping it again drew two borders, one inside the other (owner, 21 Oct).
+  html.replace(/(<div class="post-table">)?(<table\b[\s\S]*?<\/table>)(<\/div>)?/g, (all, open, table, close) =>
+    open && close ? all : `<div class="post-table">${table}</div>`
+  );

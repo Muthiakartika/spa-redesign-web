@@ -14,6 +14,9 @@ export type AboutIntroProps = {
   feature2Text?: ReactNode;
   primaryImage?: string;
   secondaryImage?: string;
+  /** What the photos show, for screen readers and search (default: "Spa treatment" / "Spa treatment detail"). */
+  primaryAlt?: string;
+  secondaryAlt?: string;
   showBrandCard?: boolean;
   removeBottomPadding?: boolean;
   leftShapeSrc?: string | null;
@@ -36,6 +39,8 @@ export default function AboutIntro({
   feature2Text = "Proin efficitur, mauris vel condimentum pulvinar, velit orci consectetur ligula, eget egestas.",
   primaryImage = "/images/about/about-two-image.png",
   secondaryImage = "/images/about/about-two-image2.png",
+  primaryAlt = "Spa treatment",
+  secondaryAlt = "Spa treatment detail",
   showBrandCard = false,
   removeBottomPadding = false,
   leftShapeSrc,
@@ -74,7 +79,7 @@ export default function AboutIntro({
               <div className="inner-column">
                 <div className="image-box">
                   <div className="image" data-depth="0.03">
-                    <img loading="lazy" decoding="async" src={primaryImage} alt="Spa treatment" />
+                    <img loading="lazy" decoding="async" src={primaryImage} alt={primaryAlt} />
                   </div>
                   <img
                     loading="lazy"
@@ -82,7 +87,7 @@ export default function AboutIntro({
                     data-depth="0.05"
                     className="circle-image"
                     src={secondaryImage}
-                    alt="Spa treatment detail"
+                    alt={secondaryAlt}
                   />
                 </div>
                 <Link href="/seminyak" className={`circle-btn${showBrandCard ? " circle-btn--replaced" : ""}`}>

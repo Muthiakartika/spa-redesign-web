@@ -136,7 +136,10 @@ export const liveRedirects: OldUrlRedirect[] = [
   // (url-map section E), so they would only redirect into a 404.
 
   // Old blog addresses. The two renamed articles stay above the ":slug" rules.
-  { from: "/iv-drip-bali/", to: "/guide/iv-drip/" },
+  // The IV drip article was rewritten and moved on live (14 Oct 2026); live still sends /iv-drip-bali/ to the old
+  // /guide/iv-drip/, which is a 404 there. Both go to the new address here.
+  { from: "/iv-drip-bali/", to: "/guide/before-you-book-iv-drip-therapy/" },
+  { from: "/guide/iv-drip/", to: "/guide/before-you-book-iv-drip-therapy/" },
   { from: "/news-grid/", to: "/guide/" },
   { from: "/local-health-wellness-news/", to: "/guide/" },
   { from: "/news/best-massage-after-flight/", to: "/guide/jet-lag-recovery-best-treatments-after-a-long-flight/" },

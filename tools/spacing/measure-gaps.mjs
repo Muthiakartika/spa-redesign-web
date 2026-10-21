@@ -22,8 +22,9 @@ const require = createRequire(new URL("package.json", ROOT));
 const puppeteer = require("puppeteer-core");
 
 const base = process.argv[2] || "http://localhost:3100";
-const sitemap = await readFile(new URL("src/app/sitemap.xml", ROOT), "utf8");
-let paths = [...new Set([...sitemap.matchAll(/<loc>https:\/\/spabalimoon\.com([^<]*)<\/loc>/g)].map((m) => m[1]))];
+// The pages are listed in src/data/sitemap.ts (src/app/sitemap.xml is a route folder now).
+const sitemap = await readFile(new URL("src/data/sitemap.ts", ROOT), "utf8");
+let paths = [...new Set([...sitemap.matchAll(/loc: "https:\/\/spabalimoon\.com([^"]*)"/g)].map((m) => m[1]))];
 paths.push("/this-page-does-not-exist/");
 if (process.env.ONLY) paths = process.env.ONLY.split(",");
 const widths = (process.env.WIDTHS || "1440,390").split(",").map(Number);

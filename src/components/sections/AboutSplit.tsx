@@ -14,6 +14,8 @@ export type AboutSplitProps = {
   buttonText?: ReactNode;
   buttonLink?: string;
   image?: string;
+  /** What the photo shows (default "Spa treatment"). */
+  imageAlt?: string;
   treatmentLayout?: boolean;
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
@@ -46,6 +48,7 @@ export default function AboutSplit({
   buttonText,
   buttonLink = "/seminyak",
   image = "/images/about/about-image.png",
+  imageAlt = "Spa treatment",
   treatmentLayout = false,
   leftShapeSrc,
   rightShapeSrc,
@@ -142,7 +145,7 @@ export default function AboutSplit({
               >
                 {/* Without its badge the photo loses the notch the badge sat in. */}
                 <div className={showBadge ? "image-box" : "image-box image-box--plain"}>
-                  <img loading="lazy" decoding="async" src={image} alt="Spa treatment" />
+                  <img loading="lazy" decoding="async" src={image} alt={imageAlt} />
                 </div>
                 {showBadge && (
                   <div className="info info--gold">

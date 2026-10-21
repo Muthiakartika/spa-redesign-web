@@ -93,7 +93,7 @@
     id: "cellulite-massage",
     category: "massage",
     pageSlug: "anti-cellulite-massage",
-    image: { src: "/images/treatments/cards/cellulitemassage.webp", alt: "Cellulite Massage", width: 630, height: 580 },
+    image: { src: "/images/treatments/cards/cellulitemassage-warm.webp", alt: "Cellulite Massage", width: 630, height: 580 },
     // PRICE-06: the live site changed these on 2026-09-25 (1.5 Hours 450K → 520K, new 2 Hours 695K).
     options: [
       { label: "1 Hour", price: 350_000 },
@@ -227,7 +227,7 @@
     id: "lymphatic-massage",
     category: "massage",
     pageSlug: "lymphatic-drainage-massage",
-    image: { src: "/images/treatments/cards/lymphaticmassage.webp", alt: "Lymphatic Massage", width: 630, height: 580 },
+    image: { src: "/images/treatments/cards/lymphaticmassage-warm.webp", alt: "Lymphatic Massage", width: 630, height: 580 },
     options: [
       { label: "1 Hour", price: 300_000 },
       { label: "1.5 Hours", price: 440_000 },
@@ -313,7 +313,7 @@
     id: "shiatsu-massage",
     category: "massage",
     pageSlug: "shiatsu-massage",
-    image: { src: "/images/treatments/cards/shiatsumassage.webp", alt: "Shiatsu Massage", width: 630, height: 580 },
+    image: { src: "/images/treatments/cards/shiatsumassage-warm.webp", alt: "Shiatsu Massage", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 119_000 },
       { label: "1 Hour", price: 219_000 },
@@ -365,7 +365,7 @@
     id: "thai-massage",
     category: "massage",
     pageSlug: "thai-massage",
-    image: { src: "/images/treatments/cards/thaimassage.webp", alt: "Thai Massage", width: 630, height: 580 },
+    image: { src: "/images/treatments/cards/thaimassage-warm.webp", alt: "Thai Massage", width: 630, height: 580 },
     options: [
       { label: "30 Minutes", price: 133_000 },
       { label: "1 Hour", price: 259_000 },
@@ -383,7 +383,7 @@
     category: "massage",
     pageSlug: "coconut-oil-massage",
     image: {
-      src: "/images/treatments/cards/coconutoilmassage.webp",
+      src: "/images/treatments/cards/coconutoilmassage-warm.webp",
       alt: "Virgin Cold-Press Coconut Oil Massage",
       width: 630,
       height: 580,
@@ -526,7 +526,7 @@
     id: "cream-bath",
     category: "beauty",
     pageSlug: "creambath",
-    image: { src: "/images/beauty/cards/creambath.webp", alt: "Hair Cream Bath", width: 630, height: 580 },
+    image: { src: "/images/treatments/cards/creambath-warm.webp", alt: "Hair Cream Bath", width: 630, height: 580 },
     options: [
       { label: "Ginseng", price: 165_000 },
       { label: "Avocado", price: 165_000 },
@@ -576,7 +576,7 @@
     id: "manicure-pedicure",
     category: "beauty",
     pageSlug: "manicure-pedicure",
-    image: { src: "/images/beauty/cards/manicurepedicure.webp", alt: "Manicure Pedicure", width: 630, height: 580 },
+    image: { src: "/images/treatments/cards/manicurepedicure-warm.webp", alt: "Manicure Pedicure", width: 630, height: 580 },
     options: [
       { label: "Manicure & Pedicure", price: 238_000 },
       { label: "Manicure", price: 99_000 },
@@ -627,7 +627,7 @@
     id: "couple-balinese-massage",
     category: "couple",
     pageSlug: "couple-spa",
-    image: { src: "/images/treatments/cards/couplebalinesemassage.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
+    image: { src: "/images/services/couplemassage/couplemassage-8-warm.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
     options: [
       {
         label: "1 Hour · Balinese Massage · 2 Pax",
@@ -661,7 +661,7 @@
     category: "couple",
     pageSlug: "couple-spa",
     image: {
-      src: "/images/treatments/cards/coupletraditionalmassage.webp",
+      src: "/images/services/couplemassage/couplemassage-10-warm.webp",
       alt: "Couple Traditional Massage",
       width: 630,
       height: 580,
@@ -698,7 +698,7 @@
     category: "couple",
     pageSlug: "couple-spa",
     image: {
-      src: "/images/treatments/cards/coupledeeptissumassage.webp",
+      src: "/images/services/couplemassage/couplemassage-4-warm.webp",
       alt: "Couple Deep Tissue Massage",
       width: 630,
       height: 580,
@@ -728,7 +728,7 @@
     id: "couple-warm-candle-massage",
     category: "couple",
     pageSlug: "couple-spa",
-    image: { src: "/images/treatments/cards/couplewarmcandle.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
+    image: { src: "/images/services/couplemassage/couplemassage-5-warm.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
     options: [
       {
         label: "1 Hour · Warm Candle Massage · 2 Pax",

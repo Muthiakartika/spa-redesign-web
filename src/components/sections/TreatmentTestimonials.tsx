@@ -6,7 +6,8 @@ import type { Swiper as SwiperInstance } from "swiper";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ReviewText from "@/components/ui/ReviewText";
-import { googleReviewsUrl, treatmentPageReviews as testimonials } from "@/data/testimonials";
+import { googleReviewsUrl, treatmentPageReviews } from "@/data/testimonials";
+import type { Testimonial } from "@/data/types";
 
 /** Gold quote mark above each review. */
 const Quote = () => (
@@ -31,7 +32,13 @@ const Quote = () => (
 export default function TreatmentTestimonials({
   paperDecoration = true,
   rightShapeSrc = "/images/shape/testimonial-two-shape-right.png",
+  title = "Reviews of Spa Bali Moon",
+  reviews = treatmentPageReviews,
+  moreLabel = "Read more reviews on Google",
 }: {
+  title?: string;
+  reviews?: Testimonial[];
+  moreLabel?: string;
   paperDecoration?: boolean;
   /** `null` hides the right-hand leaf. */
   rightShapeSrc?: string | null;
@@ -86,14 +93,14 @@ export default function TreatmentTestimonials({
       </div>
       <div className="container">
         <div className="section-header center treatment-reviews__header">
-          <h2 className="title">Reviews of Spa Bali Moon</h2>
+          <h2 className="title">{title}</h2>
         </div>
         <div className="outer-box">
           <Swiper
             modules={[Autoplay]}
             slidesPerView={1}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
-            loop={testimonials.length > 1}
+            loop={reviews.length > 1}
             autoHeight
             onSwiper={(s) => {
               swiperRef.current = s;
@@ -105,7 +112,7 @@ export default function TreatmentTestimonials({
             data-wow-delay="200ms"
             data-wow-duration="1500ms"
           >
-            {testimonials.map((t, i) => (
+            {reviews.map((t, i) => (
               <SwiperSlide key={`${t.name}-${i}`} className="swiper-slide testimonial-block-two">
                 <div className="inner-box">
                   <div className="icon">
@@ -128,7 +135,7 @@ export default function TreatmentTestimonials({
         </div>
         <p className="treatment-reviews__more">
           <a href={googleReviewsUrl} target="_blank" rel="noopener noreferrer">
-            Read more reviews on Google
+            {moreLabel}
             <i className="fa-regular fa-arrow-right-long" aria-hidden="true" />
           </a>
         </p>

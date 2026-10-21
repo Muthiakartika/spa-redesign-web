@@ -12,7 +12,7 @@ const creambath: Treatment = {
   cardName: "Hair Cream Bath",
   category: "beauty",
   shortDescription: "A nourishing hair treatment that cleanses, conditions, and relaxes the scalp.",
-  cardImage: { src: "/images/beauty/cards/creambath.webp", alt: "Hair Cream Bath", width: 630, height: 580 },
+  cardImage: { src: "/images/treatments/cards/creambath-warm.webp", alt: "Hair Cream Bath", width: 630, height: 580 },
   seo: {
     title: "Cream Bath Seminyak - Hair Spa & Creambath - Spa Bali Moon",
     description: "Cream bath hair spa in Seminyak, Bali: a nourishing scalp and hair treatment with hair mask options. Book at Spa Bali Moon.",
@@ -32,7 +32,7 @@ const creambath: Treatment = {
       ],
       images: [
         { src: "/images/beauty/creambath/creambath-2.webp", alt: "Spa treatment", width: 578, height: 601 },
-        { src: "/images/beauty/cards/creambath.webp", alt: "Spa treatment detail", width: 630, height: 580 },
+        { src: "/images/treatments/cards/creambath-warm.webp", alt: "Spa treatment detail", width: 630, height: 580 },
       ],
       highlights: [
         {

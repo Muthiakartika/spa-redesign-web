@@ -65,7 +65,7 @@ export default function MainMenu({ posts }: { posts: MobileMenuEntry[] }) {
       </li>
       <li className={`jsx-nav outcall-menu-item${inOutcall ? " is-active" : ""}`}>
         <Link prefetch={false} href="/outcall-home-service-massage/">
-          Outcall <i className="jsx-nav fa-solid fa-angle-down" />
+          Home Service <i className="jsx-nav fa-solid fa-angle-down" />
         </Link>
         <ul className="jsx-nav sub-menu outcall-dropdown-menu">
           {outcallMenu.map((o) => (

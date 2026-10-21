@@ -1,7 +1,11 @@
 import { Fragment, type ReactNode } from "react";
 import SectionShapes from "@/components/ui/SectionShapes";
 
-export type QuickFact = { label: string; value: string };
+/**
+ * `figure` and `detail`: the fact as the "glance" look sets it, a large
+ * figure ("2009") over its words ("in Seminyak, Bali"; `value` if left out).
+ */
+export type QuickFact = { label: string; value: string; figure?: string; detail?: string };
 
 /** "October 15, 2026", as the guide articles print dates (Bali time). */
 const formatDate = (iso: string) =>
@@ -106,6 +110,59 @@ function FaqList({ items, updated, skip }: { items: QuickFact[]; updated?: strin
 }
 
 /**
+ * The "glance" look (About page, 19 Oct): the facts that have a figure in a
+ * row of large serif figures between gold hairlines, each under its label
+ * and over its words; the other facts as small label and value pairs under
+ * the row.
+ */
+function Glance({ items }: { items: QuickFact[] }) {
+  const figures = items.filter((item) => item.figure);
+  const others = items.filter((item) => !item.figure);
+  return (
+    <div className="quick-facts__glance">
+      <p className="quick-facts__label">Quick facts</p>
+      <dl className="quick-facts__figures">
+        {figures.map((item) => {
+          // "IDR 75.000": the currency small beside the amount.
+          const amount = /^IDR (.+)$/.exec(item.figure!);
+          return (
+            <div key={item.label} className="quick-facts__figure">
+              <dt>{item.label}</dt>
+              <dd>
+                <span className="quick-facts__big">
+                  {amount ? (
+                    <>
+                      <span className="quick-facts__cur">IDR</span> {amount[1]}
+                    </>
+                  ) : (
+                    item.figure
+                  )}
+                </span>{" "}
+                <span className="quick-facts__small">
+                  <FactValue value={item.detail ?? item.value} />
+                </span>
+              </dd>
+            </div>
+          );
+        })}
+      </dl>
+      {others.length > 0 ? (
+        <dl className="quick-facts__more">
+          {others.map((item) => (
+            <div key={item.label} className="quick-facts__more-row">
+              <dt>{item.label}</dt>
+              <dd>
+                <FactValue value={item.value} />
+              </dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
+    </div>
+  );
+}
+
+/**
  * The answer-first block under a treatment page's banner (copy rewrite,
  * 15 Oct): an opening paragraph that names the spa, Seminyak, the price and
  * the options, then the quick facts (treatment, length and price, where,
@@ -120,33 +177,37 @@ export default function QuickFacts({
   bannerPriceLabel,
   leftShapeSrc,
   rightShapeSrc,
+  children,
 }: {
   text?: ReactNode;
   items?: QuickFact[];
   /** When the page last changed (ISO), shown under the facts. */
   updated?: string;
-  /** "faq": a numbered list that opens (FaqList); set by the page template. */
-  look?: "rows" | "faq";
+  /** "faq": a numbered list that opens (FaqList); set by the page template. "glance": large figures (Glance). */
+  look?: "rows" | "faq" | "glance";
   /** The fact the page banner shows as prices (page template): left out of the list, and the opening's price sentence with it. */
   bannerPriceLabel?: string;
   /** Corner decorations (components/ui/SectionShapes.tsx). */
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
+  /** Added at the end of the block by the page template (the sentence that links to the outcall page). */
+  children?: ReactNode;
 }) {
+  const paper = look === "faq" || look === "glance";
   return (
-    // The faq look sits on the paper colour with the theme's torn edges, as
-    // the price and FAQ sections do (option B, owner, 19 Oct).
+    // The faq and glance looks sit on the paper colour with the theme's torn
+    // edges, as the price and FAQ sections do (option B, owner, 19 Oct).
     <section
       className={
-        look === "faq"
-          ? "quick-facts quick-facts--faq bg-sub section__decoration-top section__decoration-bottom"
+        paper
+          ? `quick-facts quick-facts--${look} bg-sub section__decoration-top section__decoration-bottom`
           : "quick-facts"
       }
     >
       <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className="container">
         <div className="quick-facts__inner">
-          {text && look === "faq" && typeof text === "string" ? (
+          {text && paper && typeof text === "string" ? (
             <SplitLead text={text} skipPrices={Boolean(bannerPriceLabel)} />
           ) : text ? (
             <p className="quick-facts__lead">{typeof text === "string" ? text.replace(/IDR /g, "IDR ") : text}</p>
@@ -154,7 +215,8 @@ export default function QuickFacts({
           {items.length > 0 && look === "faq" ? (
             <FaqList items={items} updated={updated} skip={bannerPriceLabel} />
           ) : null}
-          {items.length > 0 && look !== "faq" && (
+          {items.length > 0 && look === "glance" ? <Glance items={items} /> : null}
+          {items.length > 0 && look === "rows" && (
             <div className="quick-facts__card">
               <p className="quick-facts__label">Quick facts</p>
               <dl className="quick-facts__list">
@@ -174,6 +236,7 @@ export default function QuickFacts({
               ) : null}
             </div>
           )}
+          {children}
         </div>
       </div>
     </section>

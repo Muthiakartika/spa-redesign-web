@@ -13,7 +13,7 @@ const coconutOilMassage: Treatment = {
   category: "massage",
   shortDescription: "A nourishing full-body massage using pure coconut oil to promote deep relaxation.",
   cardImage: {
-    src: "/images/treatments/cards/coconutoilmassage.webp",
+    src: "/images/treatments/cards/coconutoilmassage-warm.webp",
     alt: "Virgin Cold-Press Coconut Oil Massage",
     width: 630,
     height: 580,
@@ -42,7 +42,7 @@ const coconutOilMassage: Treatment = {
           width: 578,
           height: 601,
         },
-        { src: "/images/treatments/cards/coconutoilmassage.webp", alt: "Spa treatment detail", width: 630, height: 580 },
+        { src: "/images/treatments/cards/coconutoilmassage-warm.webp", alt: "Spa treatment detail", width: 630, height: 580 },
       ],
       highlights: [
         { title: "Cold-Pressed Oil", text: "Retains the natural qualities of fresh coconut through minimal processing." },

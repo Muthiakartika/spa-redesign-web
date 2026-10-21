@@ -29,12 +29,16 @@ export type PageBannerProps = {
   buttonLink?: string;
   /** Buttons in place of the one "Book Now" (the outcall page's row buttons). */
   actions?: ReactNode;
+  /** Small badges under the buttons (the outcall page: since 2009, what is included, the fee, the hours). */
+  chips?: string[];
   /**
    * The session lengths and prices under the title, on a glass strip (owner,
    * 19 Oct: "like the homepage, where the important part is in the banner").
    * Read from the page's quick facts by the treatment page template.
    */
   prices?: PriceTiles;
+  /** Written after each price: "/ pax", or "/ 2 pax" on the couples page. */
+  priceUnit?: string;
 };
 
 const S = "jsx-page-banner";
@@ -56,7 +60,9 @@ export default function PageBanner({
   buttonText = "Book Now",
   buttonLink = whatsappChatUrl,
   actions,
+  chips,
   prices,
+  priceUnit,
 }: PageBannerProps) {
   const small = image.replace(/(\.[a-z0-9]+)$/i, "-sm$1");
 
@@ -121,14 +127,17 @@ export default function PageBanner({
                     <ul className={`${S} banner-prices__list`}>
                       {prices.tiles.map((tile) => (
                         <li key={tile.length} className={`${S} banner-prices__item`}>
-                          <span className={`${S} banner-prices__length`}>{tile.length}</span>{" "}
+                          <span className={`${S} banner-prices__length`}>
+                            {tile.length}
+                            {priceUnit ? <span className={`${S} banner-prices__unit`}> {priceUnit.toUpperCase()}</span> : null}
+                          </span>{" "}
                           <span className={`${S} banner-prices__amount`}>
                             <span className={`${S} banner-prices__cur`}>IDR</span> {tile.amount}
                           </span>
                         </li>
                       ))}
                     </ul>
-                    {prices.caption && <p className={`${S} banner-prices__caption`}>{prices.caption}</p>}
+                    {/* The caption ("Per person", "Balinese, for two") is no longer shown: "/ pax" and "/ 2 pax" say it (owner, 21 Oct). */}
                   </div>
                 )}
                 {/* "IDR" never ends a line without its amount. */}
@@ -150,6 +159,15 @@ export default function PageBanner({
                       <i className={`${S} fa-regular icon_second fa-arrow-right-long`} />
                     </span>
                   </Link>
+                )}
+                {chips && chips.length > 0 && (
+                  <ul className={`${S} banner-chips`}>
+                    {chips.map((chip) => (
+                      <li key={chip} className={`${S} banner-chips__item`}>
+                        {chip}
+                      </li>
+                    ))}
+                  </ul>
                 )}
                 {openingText && <p className={`${S} opening-times`}>{openingText}</p>}
               </div>

@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { LotusIcon } from "@/components/ui/Lotus";
 import { home } from "@/data/pages/home";
+import { linkedText } from "@/lib/linkedText";
 
 const S = "jsx-faq";
 
@@ -90,7 +91,7 @@ export default function Faq({ arrow = "circle" }: { arrow?: "circle" | "line" })
                           aria-hidden={!isOpen}
                         >
                           <div className="v2-faq__answer-inner">
-                            <p>{item.answer}</p>
+                            <p>{linkedText(item.answer)}</p>
                           </div>
                         </div>
                       </div>

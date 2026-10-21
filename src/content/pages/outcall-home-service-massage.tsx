@@ -1,32 +1,50 @@
+import Link from "next/link";
 import PageBanner from "@/components/sections/PageBanner";
 import AboutIntro from "@/components/sections/AboutIntro";
 import Funfacts from "@/components/sections/Funfacts";
 import AboutSplit from "@/components/sections/AboutSplit";
-import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
 import MenuDurations from "@/components/home/MenuDurations";
 import { menuTabs } from "@/components/pricelist/menuTabs";
+import {
+  GroupMassage,
+  HomeServiceAreas,
+  HomeServicePrices,
+  HomeVsSpa,
+  HowItWorks,
+  LicensedSpa,
+} from "@/components/outcall/OutcallSections";
 import HomeServiceInfo from "@/components/sections/HomeServiceInfo";
+import TreatmentTestimonials from "@/components/sections/TreatmentTestimonials";
 import FaqSection from "@/components/sections/FaqSection";
 import ReserveCta from "@/components/sections/ReserveCta";
-import ServiceAreas from "@/components/sections/ServiceAreas";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import RowButton from "@/components/ui/RowButton";
+import { homeServiceReviews } from "@/data/testimonials";
 import { business } from "@/data/business";
 import { homeServiceAreas, homeServiceSchema } from "@/lib/schema";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
-/** The page's questions, also given to search engines as FAQPage data. */
+/**
+ * The page's questions, also given to search engines as FAQPage data. A
+ * [words](/address/) in an answer is a link (lib/linkedText.tsx).
+ *
+ * Rebuilt from the 20 Oct dev brief (outcall-page-dev-brief.md, S13): the
+ * first seven questions as the brief words them, the cost question as the
+ * brief words it, the same-day question as it stood, then the late-night,
+ * couples and professional questions. The female or male therapist and how do I pay questions (C9, C7) were added
+ * once the owner confirmed them.
+ */
 const FAQ = [
   {
     question: "What is an outcall massage?",
     answer:
-      "An outcall massage is a professional treatment delivered by a therapist who travels to you, rather than you visiting the spa. Our therapists come to your villa, hotel room, or private residence with everything needed for the session. It is also known as home service or mobile massage.",
+      "An outcall massage is a professional treatment delivered by a therapist who travels to you, rather than you visiting the spa. Our therapists come to your villa, hotel room, or private residence with everything needed for the session. It is also known as home service, home massage, mobile massage or massage on call.",
   },
   {
     question: "Do I need to prepare anything?",
     answer:
-      "No. Our therapists bring the massage bed, clean linens, towels, and oils. All you need is a space of roughly two by two metres and a bedroom, terrace, or living area all work well. If you have a preference for where the session takes place, tell us when you book.",
+      "No. Our therapists bring the massage bed, clean linens, towels, and oils. All you need is a space of roughly two by two metres; a bedroom, terrace or living area all work well. If you have a preference for where the session takes place, tell us when you book.",
   },
   {
     question: "What does the therapist bring?",
@@ -41,39 +59,78 @@ const FAQ = [
   {
     question: "Which areas do you cover for home service?",
     answer:
-      "Our spa is in Seminyak, and home service is available across Seminyak, Kerobokan, Petitenget, Canggu, and North Kuta. We also travel to Kuta, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar, and Ubud, subject to therapist availability and travel time. Message us with your location and we will confirm.",
+      "Our spa is in Seminyak, and home service is available across Seminyak, Kerobokan, Petitenget, Canggu, and North Kuta. We also travel to Kuta, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar, and Ubud, subject to therapist availability and travel time. Message us with your location and we will confirm. See [our home service areas](#areas) for more detail.",
   },
   {
     question: "What if my hotel doesn't allow outside therapists?",
     answer:
-      "Some hotels and resorts restrict external therapists, particularly larger properties with their own spa. Please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your property does not permit home service, you are very welcome at our Seminyak spa instead.",
+      "Some hotels and resorts restrict external therapists, particularly larger properties with their own spa. Please check with reception before booking. Private villas and guesthouses rarely have this restriction. If your property does not permit home service, you are very welcome at [our Seminyak spa](/seminyak/day-spa/) instead.",
   },
   {
     question: "Which massage is best after a long flight?",
     answer:
-      "A one-hour Balinese or aromatherapy massage suits most guests arriving in Bali. Both use steady, flowing pressure rather than deep work, which helps with circulation and sleep after a long journey. Foot reflexology is a good shorter option if your legs and feet feel swollen.",
+      "A one-hour Balinese or aromatherapy massage suits most guests arriving in Bali. Both use steady, flowing pressure rather than deep work, which helps with circulation and sleep after a long journey. Foot reflexology is a good shorter option if your legs and feet feel swollen. Read more in our [jet lag recovery guide](/guide/jet-lag-recovery-best-treatments-after-a-long-flight/).",
   },
-  // Copy rewrite, 15 Oct.
   {
-    question: "How much does outcall massage cost in Bali?",
+    question: "How much does a home service massage cost in Seminyak?",
     answer:
-      "Treatments cost the same as in the spa, plus IDR 75.000 per therapist. For example, a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 at your villa, per person. A couple booking with two therapists pays IDR 150.000 in outcall fees.",
+      "The treatment price plus IDR 75.000 per therapist. A 60-minute Balinese massage at your villa in Seminyak is IDR 159.000 + IDR 75.000 = IDR 234.000. Couples treatments use two therapists, so the fee is IDR 150.000. See [home service prices](#home-service-prices).",
   },
+  // Copy rewrite, 15 Oct (kept: it is the page's one answer about how soon a therapist arrives).
   {
     question: "Can I book an outcall massage on the same day?",
     answer:
       "Often, yes, depending on therapist availability. Send your location and preferred time on WhatsApp at +62 878-6317-5144, between 9am and 11pm, and we'll confirm when a therapist can arrive. In Seminyak and nearby areas therapists usually arrive within 30 to 60 minutes; for a fixed time or several therapists, book earlier in the day.",
   },
+  {
+    question: "Can I book a late-night massage at my villa?",
+    // C8 (the latest start time for a 60-minute treatment) is added here once the owner confirms it.
+    answer: "Yes. Home service runs daily until 11pm.",
+  },
+  {
+    question: "Can we book a couples massage at our villa or hotel?",
+    answer:
+      "Yes. Two therapists arrive together and set up side by side, so you're both treated at the same time. Couples massage starts from IDR 319.000 for 60 minutes, plus IDR 75.000 per therapist.",
+  },
+  {
+    question: "Can I ask for a female or male therapist?",
+    answer:
+      "Yes. Tell us your preference when you book and we'll arrange a female or male therapist.",
+  },
+  {
+    question: "How do I pay for a home service massage?",
+    answer:
+      "You pay your therapist after the treatment, in cash or by card. Your therapist brings a card machine, and we accept Visa and Mastercard.",
+  },
+  {
+    question: "Is your outcall massage a professional service?",
+    answer:
+      "Yes. We are a licensed day spa in Seminyak, open since 2009, and we offer professional relaxation and therapeutic massage only. Our team confirms every home service booking on WhatsApp.",
+  },
 ];
 
-/** /outcall-home-service-massage/ — generated from the live page's component tree, section for section. */
+/** The four badges under the hero buttons. */
+const HERO_CHIPS = [
+  "Since 2009 · Seminyak spa",
+  "Table, linen & oils included",
+  "IDR 75.000 per therapist",
+  "Open daily 9am – 11pm",
+];
+
+/**
+ * /outcall-home-service-massage/ — rebuilt from the 20 Oct dev brief
+ * (outcall-page-dev-brief.md): section order S01 to S14 as there. S11 (guest
+ * reviews) is not shown: it waits for genuine Google reviews that mention a
+ * villa, hotel or home visit (C12); the brief says to leave it out until then.
+ */
 export default function OutcallPage() {
   return (
     <div className="page-wrapper lh p-outcall-home-service-massage">
       <JsonLd
         data={homeServiceSchema({
           path: "/outcall-home-service-massage/",
-          name: "Outcall Massage in Bali",
+          name: "Outcall & Home Service Massage",
+          serviceType: "Outcall massage",
           description:
             "Home service massage across Bali: a Spa Bali Moon therapist comes to your home, villa or hotel. Spa prices plus IDR 75.000 per therapist.",
           areas: [...homeServiceAreas.near, ...homeServiceAreas.further],
@@ -81,17 +138,13 @@ export default function OutcallPage() {
       />
       <FaqJsonLd items={FAQ} />
       <div className="outcall-page">
+        {/* S01 · Hero */}
         <PageBanner
-          subTitle="Home Service Across Bali"
-          titleSpan="Outcall Massage in Bali:"
-          title="Areas, Prices & How It Works"
-          // The opening, answer first (copy rewrite, 15 Oct; areas, what the
-          // therapist brings and booking time added, AEO roadmap R34-R35, 17 Oct).
-          // This page is home service anywhere; the villa page is for guests
-          // staying in Seminyak.
-          text="Spa Bali Moon's outcall therapists come to your home, villa or hotel in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta, and further across Bali on request. Treatments cost the same as in our spa, plus IDR 75.000 per therapist, and the therapist brings the massage bed, fresh linen and oils. Same-day bookings are often possible. Open daily 9am–11pm."
-          openingText="OPENING TIMES: Open Daily: 9:00 - 23:00"
-          image="/images/banners/outcall-home-service-massage.webp"
+          subTitle="Home service from our Seminyak spa"
+          titleSpan="Outcall & Home Service Massage"
+          title="in Seminyak, Bali"
+          text="Since 2009, Spa Bali Moon has sent therapists from our Seminyak spa to villas, hotels and homes across Bali. Book a home massage, from Balinese and deep tissue to couples and four-hand massage, and we bring the massage table, fresh linen and oils. Home service fee: IDR 75.000 per therapist. Open daily, 9am to 11pm."
+          image="/images/banners/homeservice-hero.webp"
           // The homepage hero's two row buttons in place of the one "Book Now"
           // (7 Oct: the page's search traffic compares prices before booking),
           // in the see-through gold version (picked over the white one).
@@ -105,30 +158,36 @@ export default function OutcallPage() {
                 className="row-btn--glass"
               />
               <RowButton
-                href="#outcall-prices"
+                href="#home-service-prices"
                 icon="tag"
-                label="View Price List"
-                note="Home service prices"
+                label="See home service prices"
                 className="row-btn--glass"
               />
             </>
           }
+          chips={HERO_CHIPS}
         />
+        {/* S02 · Home Service Massage Prices in Seminyak */}
+        <HomeServicePrices />
+        {/* S03 · Outcall Balinese Massage from Our Seminyak Spa */}
+        <div className="outcall-intro-panel">
         <AboutIntro
           subTitle="Spa Bali Moon in Seminyak, Bali"
-          title={<>Outcall Balinese Massage in Bali</>}
-          text="A Balinese massage at your villa or hotel: steady pressure, gentle stretching and aromatic oils, in a place where you're already comfortable. Choose a single treatment or a package, and send us your location and time on WhatsApp."
+          title={<>Outcall Balinese Massage from Our Seminyak Spa</>}
+          text="Get an authentic Balinese massage without leaving your villa. Our therapists come from our Seminyak spa with everything needed for a quiet, well-prepared session that fits around your day in Bali. Choose a single treatment or a package, and we'll tailor the pressure and focus to you."
           feature1Title="Easy Booking via WhatsApp"
           feature1Text={
             <>
-              Check <a href="#outcall-prices">available treatments</a> and arrange your spa
-              session easily through WhatsApp.
+              Check <a href="#price-list">available treatments</a> and arrange your spa session easily through
+              WhatsApp.
             </>
           }
           feature2Title="Spa Treatments at Your Place"
           feature2Text="Select your preferred treatment and book a spa session delivered to your location."
-          primaryImage="/images/outcall/outcall-2.webp"
-          secondaryImage="/images/outcall/outcall-3.webp"
+          primaryImage="/images/outcall/homeservice-2.webp"
+          primaryAlt="Outcall massage on a villa terrace: therapist giving a back massage beside a private pool"
+          secondaryImage="/images/outcall/homeservice-3.webp"
+          secondaryAlt="Close-up of a therapist's hands during an oil back massage"
           showBrandCard
           removeBottomPadding
         />
@@ -140,55 +199,84 @@ export default function OutcallPage() {
             { title: "Open Daily", text: "9am - 11pm" },
           ]}
         />
-        <div className="outcall-treatment-panel section__decoration-top section__decoration-bottom bg-sub">
+        </div>
+        {/* S04 · How Our Outcall Massage Works */}
+        <HowItWorks />
+        {/* S05 · Home Massage & Body Treatments We Bring to You */}
+        <div className="outcall-treatment-panel">
           <AboutSplit
             treatmentLayout
             subTitle="Spa & Beauty Service"
-            title={<>{"Outcall Massage & Body Treatments"}</>}
-            text="Enjoy professional massage and body treatments in the comfort of your villa, hotel, or accommodation. Choose from our selection of treatments:"
+            title={<>{"Home Massage & Body Treatments We Bring to You"}</>}
+            text="Every treatment below is available as a home massage or body treatment at your villa, hotel or home, in Seminyak and across Bali:"
             featuresLeft={[
-              "Couple Massage — Relax side by side while sharing a massage experience together.",
-              "Shiatsu — Release muscle tension using gentle Japanese pressure-point techniques.",
-              "Thai Massage — Improve flexibility and posture with assisted stretching and acupressure.",
-              "Cream Bath — Revitalize your hair while supporting softness and freshness.",
+              <TreatmentItem key="couple" href="/seminyak/couple-spa/" name="Couple Massage">
+                Relax side by side while sharing a massage experience together.
+              </TreatmentItem>,
+              <TreatmentItem key="shiatsu" href="/seminyak/shiatsu-massage/" name="Shiatsu">
+                Release muscle tension using gentle Japanese pressure-point techniques.
+              </TreatmentItem>,
+              <TreatmentItem key="thai" href="/seminyak/thai-massage/" name="Thai Massage">
+                Improve flexibility and posture with assisted stretching and acupressure.
+              </TreatmentItem>,
+              <TreatmentItem key="cream" href="/seminyak/creambath/" name="Cream Bath">
+                Revitalize your hair while supporting softness and freshness.
+              </TreatmentItem>,
             ]}
             featuresRight={[
-              "Body Scrub — Softly exfoliate the skin and promote smoothness.",
-              "Mani-Pedi — Maintain clean and well-groomed hands and feet with professional care.",
-              "Hot Stone — Soothe muscle tension using warm stones for deeper relaxation.",
-              "Facial Care — Cleanse and refresh the skin to restore a healthy appearance.",
+              <TreatmentItem key="scrub" href="/seminyak/body-scrub/" name="Body Scrub">
+                Softly exfoliate the skin and promote smoothness.
+              </TreatmentItem>,
+              <TreatmentItem key="mani" href="/seminyak/manicure-pedicure/" name="Mani-Pedi">
+                Maintain clean and well-groomed hands and feet with professional care.
+              </TreatmentItem>,
+              <TreatmentItem key="stone" href="/seminyak/hot-stone-massage/" name="Hot Stone">
+                Soothe muscle tension using warm stones for deeper relaxation.
+              </TreatmentItem>,
+              <TreatmentItem key="facial" href="/seminyak/facial/" name="Facial Care">
+                Cleanse and refresh the skin to restore a healthy appearance.
+              </TreatmentItem>,
             ]}
             buttonText="Book Now"
             buttonLink="https://wa.me/6287863175144"
             image="/images/homepage/homepage-3.webp"
+            imageAlt="Therapist pouring massage oil into their hand"
           />
         </div>
-        <AboutSplitAlt
-          paperDecoration={false}
-          treatmentLayout
-          subTitle="Reserve Your Home Service Massage"
-          badgeTopText="Home Spa"
-          badgeBottomText="Booking"
-          title={<>Book Home Service Massage in Bali</>}
-          text="Enjoy professional Balinese massage and spa treatments at your home, hotel, or villa throughout the day. With flexible appointment times and responsive booking support, the process is simple and convenient. When booking a home service, you can expect:"
-          featuresLeft={[
-            "Individual and group bookings",
-            "Flexible appointment times",
-            "Treatments at your hotel, villa, or home",
-          ]}
-          featuresRight={["Clear treatment prices", "Responsive booking support", "Quick availability confirmation"]}
-          buttonText="Book Now"
-          buttonLink="https://wa.me/6287863175144"
-          image="/images/outcall/outcall-4.webp"
-        />
+        {/* S06 · Home Service Areas Around Seminyak */}
+        <HomeServiceAreas />
+        {/* S07 · Home Service or Our Seminyak Day Spa? */}
+        <HomeVsSpa />
+        {/* S08 · Couples, Families & Villa Group Massage */}
+        <GroupMassage />
+        {/* S09 · Why Choose Our Home Service Massage */}
+        <div className="outcall-why-panel">
+          <HomeServiceInfo plain />
+        </div>
+        {/* S10 · A Licensed Seminyak Spa, Coming to You */}
+        <div className="oc-paper-band bg-sub section__decoration-top section__decoration-bottom">
+          <LicensedSpa plain />
+        {/* S11 · What Guests Say About Our Home Service: the owner's four home service reviews, word for word.
+            No Review schema (brief). Shares one paper band with S10, so the colours keep alternating
+            into the price list (white) and the FAQ. */}
+          <TreatmentTestimonials
+            paperDecoration={false}
+            title="What Guests Say About Our Home Service"
+            reviews={homeServiceReviews}
+            moreLabel="Read all our reviews on Google"
+          />
+        </div>
+        {/* S12 · Outcall Massage Price List */}
         {/* The homepage price list (prices by duration), on the owner's request
             (1 Oct); the tabs and prices are this page's, as on live. */}
-        <div id="outcall-prices">
+        <div id="price-list">
           <MenuDurations
             subTitle="Prices"
-            title="Outcall Massage Treatments We Offer"
+            title="Outcall Massage Price List"
+            intro="Treatment prices below are the same as at our Seminyak spa. Home service adds IDR 75.000 per therapist."
             spacing="pt-130 pb-130"
             sticky
+            paper={false}
             tabs={menuTabs([
               {
                 label: "Most Popular",
@@ -209,7 +297,7 @@ export default function OutcallPage() {
                     id: "popular-cream-bath",
                     name: "Cream Bath",
                     desc: "Caring for the hair and scalp through cleansing, conditioning, and relaxation.",
-                    image: "/images/listmenu/creambath.webp",
+                    image: "/images/treatments/cards/creambath-warm.webp",
                     options: [
                       { time: "Ginseng", price: "165.000" },
                       { time: "Avocado", price: "165.000" },
@@ -234,7 +322,7 @@ export default function OutcallPage() {
                     id: "popular-lymphatic",
                     name: "Lymphatic Massage",
                     desc: "Applied gently to support natural drainage and promote healthy circulation.",
-                    image: "/images/listmenu/lymphaticmassage%20.webp",
+                    image: "/images/treatments/cards/lymphaticmassage-warm.webp",
                     options: [
                       { time: "1 Hour", price: "300.000" },
                       { time: "1.5 Hours", price: "440.000" },
@@ -245,7 +333,7 @@ export default function OutcallPage() {
                     id: "popular-manicure-pedicure",
                     name: "Manicure Pedicure",
                     desc: "Providing complete hand and foot care with a clean and polished finish.",
-                    image: "/images/listmenu/manicurepedicure.webp",
+                    image: "/images/treatments/cards/manicurepedicure-warm.webp",
                     options: [
                       { time: "Manicure & Pedicure", price: "238.000" },
                       { time: "Manicure", price: "99.000" },
@@ -283,7 +371,7 @@ export default function OutcallPage() {
                     id: "popular-thai",
                     name: "Thai Massage",
                     desc: "Performed without oil, combining assisted stretches and rhythmic pressure techniques.",
-                    image: "/images/listmenu/thaimassage.webp",
+                    image: "/images/treatments/cards/thaimassage-warm.webp",
                     options: [
                       { time: "30 Minutes", price: "133.000" },
                       { time: "1 Hour", price: "259.000" },
@@ -341,7 +429,7 @@ export default function OutcallPage() {
                     id: "massage-cellulite",
                     name: "Cellulite Massage",
                     desc: "Targeting specific areas to help stimulate circulation and support skin firmness.",
-                    image: "/images/listmenu/cellulitemassage.webp",
+                    image: "/images/treatments/cards/cellulitemassage-warm.webp",
                     options: [
                       { time: "1 Hour", price: "350.000" },
                       { time: "1.5 Hours", price: "520.000" },
@@ -352,7 +440,7 @@ export default function OutcallPage() {
                     id: "massage-couple",
                     name: "Couple Massage",
                     desc: "Designed for two to relax together while easing the body and sharing a calm moment.",
-                    image: "/images/listmenu/couplemassage.webp",
+                    image: "/images/services/couplemassage/couplemassage-3-warm.webp",
                     options: [],
                     children: [
                       {
@@ -484,7 +572,7 @@ export default function OutcallPage() {
                     id: "massage-lymphatic",
                     name: "Lymphatic Massage",
                     desc: "Applied gently to support natural drainage and promote healthy circulation.",
-                    image: "/images/listmenu/lymphaticmassage%20.webp",
+                    image: "/images/treatments/cards/lymphaticmassage-warm.webp",
                     options: [
                       { time: "1 Hour", price: "300.000" },
                       { time: "1.5 Hours", price: "440.000" },
@@ -516,7 +604,7 @@ export default function OutcallPage() {
                     id: "massage-shiatsu",
                     name: "Shiatsu Massage",
                     desc: "Using Japanese pressure-point techniques without oil to help ease body tension.",
-                    image: "/images/listmenu/shiatsumassage.webp",
+                    image: "/images/treatments/cards/shiatsumassage-warm.webp",
                     options: [
                       { time: "30 Minutes", price: "119.000" },
                       { time: "1 Hour", price: "219.000" },
@@ -539,7 +627,7 @@ export default function OutcallPage() {
                     id: "massage-thai",
                     name: "Thai Massage",
                     desc: "Performed without oil, combining assisted stretches and rhythmic pressure techniques.",
-                    image: "/images/listmenu/thaimassage.webp",
+                    image: "/images/treatments/cards/thaimassage-warm.webp",
                     options: [
                       { time: "30 Minutes", price: "133.000" },
                       { time: "1 Hour", price: "259.000" },
@@ -550,7 +638,7 @@ export default function OutcallPage() {
                     id: "massage-coconut-oil",
                     name: "Virgin Cold-Press Coconut Oil Massage",
                     desc: "Using pure coconut oil to help nourish the skin and promote deep relaxation.",
-                    image: "/images/listmenu/coconutoilmassage.webp",
+                    image: "/images/treatments/cards/coconutoilmassage-warm.webp",
                     options: [
                       { time: "1 Hour", price: "300.000" },
                       { time: "1.5 Hours", price: "440.000" },
@@ -639,7 +727,7 @@ export default function OutcallPage() {
                     id: "beauty-cream-bath",
                     name: "Cream Bath",
                     desc: "Caring for the hair and scalp through cleansing, conditioning, and relaxation.",
-                    image: "/images/listmenu/creambath.webp",
+                    image: "/images/treatments/cards/creambath-warm.webp",
                     options: [
                       { time: "Ginseng", price: "165.000" },
                       { time: "Avocado", price: "165.000" },
@@ -671,7 +759,7 @@ export default function OutcallPage() {
                     id: "beauty-manicure-pedicure",
                     name: "Manicure Pedicure",
                     desc: "Providing complete hand and foot care with a clean and polished finish.",
-                    image: "/images/listmenu/manicurepedicure.webp",
+                    image: "/images/treatments/cards/manicurepedicure-warm.webp",
                     options: [
                       { time: "Manicure & Pedicure", price: "238.000" },
                       { time: "Manicure", price: "99.000" },
@@ -707,7 +795,7 @@ export default function OutcallPage() {
                     id: "couple-balinese",
                     name: "Couple Balinese Massage",
                     desc: "Designed for two to relax together while easing the body and sharing a calm moment.",
-                    image: "/images/listmenu/couplebalinesemassage.webp",
+                    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
                     options: [
                       { time: "1 Hour – Balinese Massage · 2 pax", price: "319.000" },
                       { time: "1.5 Hours – Balinese Massage · 2 pax", price: "479.000" },
@@ -718,7 +806,7 @@ export default function OutcallPage() {
                     id: "couple-deep-tissue",
                     name: "Couple Deep Tissue Massage",
                     desc: "Delivered with deeper pressure for two, aimed at easing tight muscles and improving comfort.",
-                    image: "/images/listmenu/coupledeeptissumassage.webp",
+                    image: "/images/services/couplemassage/couplemassage-4-warm.webp",
                     options: [
                       { time: "1 Hour – Deep Tissue Massage · 2 pax", price: "539.000" },
                       { time: "1.5 Hours – Deep Tissue Massage · 2 pax", price: "719.000" },
@@ -728,7 +816,7 @@ export default function OutcallPage() {
                     id: "couple-traditional",
                     name: "Couple Traditional Massage",
                     desc: "Applied with firmer pressure to help reduce tension while relaxing together.",
-                    image: "/images/listmenu/coupletraditionalmassage.webp",
+                    image: "/images/services/couplemassage/couplemassage-10-warm.webp",
                     options: [
                       { time: "1 Hour – Traditional Massage · 2 pax", price: "339.000" },
                       { time: "1.5 Hours – Traditional Massage · 2 pax", price: "519.000" },
@@ -739,7 +827,7 @@ export default function OutcallPage() {
                     id: "couple-warm-candle",
                     name: "Couple Massage Warm Candle",
                     desc: "Using gently warmed candle oils to create comfort and a deeper sense of relaxation for couples.",
-                    image: "/images/listmenu/couplewarmcandle.webp",
+                    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
                     options: [
                       { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539.000" },
                       { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799.000" },
@@ -756,28 +844,28 @@ export default function OutcallPage() {
                     name: "Couple Massage Package A",
                     desc: "",
                     // One photo per package, as on /seminyak/ (live repeats A=B and C=D).
-                    image: "/images/listmenu/couplemassagepackage.webp",
+                    image: "/images/services/couplemassage/couplemassage-2-warm.webp",
                     options: [{ time: "1.5 Hours – Balinese Massage + Ear Candle · 2 pax", price: "639.000" }],
                   },
                   {
                     id: "couple-package-b",
                     name: "Couple Massage Package B",
                     desc: "",
-                    image: "/images/listmenu/couplebalinesemassage.webp",
+                    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
                     options: [{ time: "2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax", price: "709.000" }],
                   },
                   {
                     id: "couple-package-c",
                     name: "Couple Massage Package C",
                     desc: "",
-                    image: "/images/listmenu/couplewarmcandle.webp",
+                    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
                     options: [{ time: "1.5 Hours – Warm Candle + Ear Candle · 2 pax", price: "849.000" }],
                   },
                   {
                     id: "couple-package-d",
                     name: "Couple Massage Package D",
                     desc: "",
-                    image: "/images/listmenu/couplemassage.webp",
+                    image: "/images/services/couplemassage/couplemassage-3-warm.webp",
                     options: [{ time: "2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax", price: "929.000" }],
                   },
                 ],
@@ -785,12 +873,11 @@ export default function OutcallPage() {
             ], ["Most Popular"])}
           />
         </div>
-        <HomeServiceInfo plain />
-        <ServiceAreas />
-        <div className="outcall-closing-panel section__decoration-top section__decoration-bottom bg-sub pb-100">
+        {/* S13 · FAQs, S14 · closing banner */}
+        <div className="outcall-closing-panel pb-100">
           <FaqSection
             subTitle="Frequently Asked Questions"
-            title={<>Outcall Massage Bali: FAQs</>}
+            title={<>Outcall &amp; Home Service Massage FAQs</>}
             items={FAQ}
             showImage={false}
             columns={2}
@@ -805,5 +892,22 @@ export default function OutcallPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+/**
+ * One treatment of the home service list: its name a link to its page, then
+ * what it is for. One <span>, because the list item lays out its children in a
+ * row (tick, then text).
+ */
+function TreatmentItem({ href, name, children }: { href: string; name: string; children: string }) {
+  return (
+    <span>
+      <Link prefetch={false} href={href}>
+        {name}
+      </Link>
+      {" — "}
+      {children}
+    </span>
   );
 }

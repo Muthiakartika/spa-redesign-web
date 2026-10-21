@@ -11,7 +11,7 @@ const manicurePedicure: Treatment = {
   name: "Manicure Pedicure",
   category: "beauty",
   shortDescription: "A complete hand and foot treatment finished neatly with polish.",
-  cardImage: { src: "/images/beauty/cards/manicurepedicure.webp", alt: "Manicure Pedicure", width: 630, height: 580 },
+  cardImage: { src: "/images/treatments/cards/manicurepedicure-warm.webp", alt: "Manicure Pedicure", width: 630, height: 580 },
   seo: {
     title: "Manicure & Pedicure in Seminyak - Spa Bali Moon",
     description: "Manicure and pedicure in Seminyak, Bali: shaping, polish and nourishing care for hands and feet. Book at Spa Bali Moon.",
@@ -31,7 +31,7 @@ const manicurePedicure: Treatment = {
       ],
       images: [
         { src: "/images/beauty/manicure-pedicure/manicurepedicure-2.webp", alt: "Spa treatment", width: 578, height: 601 },
-        { src: "/images/beauty/cards/manicurepedicure.webp", alt: "Spa treatment detail", width: 630, height: 580 },
+        { src: "/images/treatments/cards/manicurepedicure-warm.webp", alt: "Spa treatment detail", width: 630, height: 580 },
       ],
       highlights: [
         { title: "Healthy Nails", text: "Professional care helps maintain clean, tidy, and well-shaped nails." },

@@ -22,7 +22,7 @@ const ABOUT: Record<string, { icon: MenuIconName; note: (data: MobileMenuData) =
     icon: "stones",
     note: (d) => `${d.treatments.reduce((n, g) => n + g.items.length, 0)} massages and beauty treatments`,
   },
-  Outcall: { icon: "home", note: () => "Massage at your villa or hotel" },
+  "Home Service": { icon: "home", note: () => "Outcall massage at your villa, hotel or home" },
   Reservation: { icon: "calendar", note: () => "Book your visit" },
   Blog: { icon: "book", note: () => "Guides to our treatments" },
   Contact: { icon: "chat", note: () => "Find us and get in touch" },
@@ -235,9 +235,9 @@ export default function MobileMenu({
       )}
       {subPanel(
         "outcall",
-        "Outcall",
+        "Home Service",
         <ul className="mnav__entries">{rows(data.outcall, "outcall")}</ul>,
-        { label: "Home service massage", href: "/outcall-home-service-massage/" },
+        { label: "Home massage in Seminyak & Bali", href: "/outcall-home-service-massage/" },
       )}
       {subPanel(
         "blog",

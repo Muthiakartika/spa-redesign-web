@@ -109,13 +109,20 @@ export default function Steps() {
             ))}
           </div>
         </div>
-        <p className="step-outcall">
-          Prefer to stay in? We also offer{" "}
-          <Link prefetch={false} href="/outcall-home-service-massage/">
-            outcall and home service massage in Bali
+        {/* 20 Oct dev brief, Task 5b: a small band in place of the one line. Bold text, not a heading,
+            so the homepage does not compete with the outcall page for the term. */}
+        <div className="step-outcall-band">
+          <p className="step-outcall-band__title">
+            <strong>Prefer a massage at your villa?</strong>
+          </p>
+          <p className="step-outcall-band__text">
+            Our therapists bring the table, fresh linen and oils to villas, hotels and homes in Seminyak, Canggu and
+            across Bali, for IDR 75.000 per therapist.
+          </p>
+          <Link prefetch={false} href="/outcall-home-service-massage/" className="btn-two step-outcall-band__button">
+            Outcall &amp; home service massage
           </Link>
-          .
-        </p>
+        </div>
       </div>
     </section>
   );

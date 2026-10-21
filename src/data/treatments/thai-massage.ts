@@ -11,7 +11,7 @@ const thaiMassage: Treatment = {
   name: "Thai Massage",
   category: "massage",
   shortDescription: "An oil-free full-body massage combining assisted stretches and rhythmic pressure.",
-  cardImage: { src: "/images/treatments/cards/thaimassage.webp", alt: "Thai Massage", width: 630, height: 580 },
+  cardImage: { src: "/images/treatments/cards/thaimassage-warm.webp", alt: "Thai Massage", width: 630, height: 580 },
   seo: {
     title: "Thai Massage in Seminyak & Bali - Spa Bali Moon",
     description: "Thai massage in Seminyak, Bali: traditional stretching and pressure techniques by trained therapists. Book in-spa or at your villa.",
@@ -31,7 +31,7 @@ const thaiMassage: Treatment = {
       ],
       images: [
         { src: "/images/treatments/thai-massage/thaimassage-2.webp", alt: "Spa treatment", width: 578, height: 601 },
-        { src: "/images/treatments/cards/thaimassage.webp", alt: "Spa treatment detail", width: 630, height: 580 },
+        { src: "/images/treatments/cards/thaimassage-warm.webp", alt: "Spa treatment detail", width: 630, height: 580 },
       ],
       highlights: [
         {

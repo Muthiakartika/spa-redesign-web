@@ -84,7 +84,7 @@ export const business = {
 
   /** Short "About Us" text used in the footer and the mobile menu. */
   aboutText:
-    "Spa Bali Moon offers high-quality traditional massages and spa therapies, with outcall and home services by skilled therapists specializing in Balinese Body Massage.",
+    "Spa Bali Moon is a Seminyak day spa offering traditional Balinese massage and spa treatments since 2009, with outcall and home service massage across Bali.",
 } as const;
 
 /** Years in business, e.g. 17 in 2026. Used for the "17 + Years Experience" badge (CONTENT-10). */

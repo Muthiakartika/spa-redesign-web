@@ -52,10 +52,13 @@ export default function GuidePost({
   nextPost = null,
   morePosts = [],
   answer,
+  closing,
 }: {
   post: GuidePostFull;
   /** The short answer above the article text (GuideAnswer, src/data/guide/answers.ts). */
   answer?: ReactNode;
+  /** A line after the article text (the sentence that links to the outcall page, src/data/guide/homeServiceLines.ts). */
+  closing?: ReactNode;
   recentPosts?: GuidePostSummary[];
   prevPost?: GuidePostSummary | null;
   nextPost?: GuidePostSummary | null;
@@ -138,6 +141,7 @@ export default function GuidePost({
                   {/* No title here: the banner's h1 is the article's only title (owner, 12 Oct). */}
                   {answer}
                   <div dangerouslySetInnerHTML={{ __html: post.content_html || "" }} className={`${S} blog-details__rich`} />
+                  {closing}
                 </div>
                 {tags.length > 0 && (
                   <div className={`${S} blog-details__bottom`}>

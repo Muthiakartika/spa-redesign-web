@@ -28,7 +28,7 @@ export const home = {
     // never stands alone on a line (19 Oct).
     title: "Seminyak Spa & Balinese Massage",
     highlightedTitle: "at Spa Bali Moon",
-    text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, facials, and beauty services at our Seminyak spa, with home service also available for hotels and villas in nearby areas.",
+    text: "Since 2009, Spa Bali Moon has provided professional Balinese massage and spa treatments in Seminyak, Bali. Our experienced therapists offer traditional massage, body treatments, facials, and beauty services at our Seminyak spa, with [home service](/outcall-home-service-massage/) also available for hotels and villas in nearby areas.",
     /*
      * The quick facts of the copy rewrite (15 Oct), in two places since
      * 19 Oct (owner): the prices as a small subheading under the title, the
@@ -194,7 +194,7 @@ export const home = {
       {
         question: "2. Can I enjoy the treatments without visiting the spa?",
         answer:
-          "Yes. Many Spa Bali Moon massage and spa treatments are available as home service at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist, and the therapist brings the massage bed, fresh linen and oils.",
+          "Yes. Many Spa Bali Moon massage and spa treatments are available as [home service](/outcall-home-service-massage/) at villas, hotels and private residences in Seminyak, Petitenget, Kerobokan, Canggu and North Kuta. Treatments cost the same as in our spa, plus IDR 75.000 per therapist, and the therapist brings the massage bed, fresh linen and oils.",
       },
       {
         question: "3. Which massage is best if I've never had one before?",
@@ -262,7 +262,7 @@ const SLIDES = [
   },
   {
     name: "Cream Bath",
-    image: "/images/listmenu/creambath.webp",
+    image: "/images/treatments/cards/creambath-warm.webp",
     icon: "/images/spa/CreamBath.svg",
   },
   {
@@ -307,7 +307,7 @@ const SLIDES = [
   },
   {
     name: "Lymphatic Massage",
-    image: "/images/listmenu/lymphaticmassage%20.webp",
+    image: "/images/treatments/cards/lymphaticmassage-warm.webp",
     icon: "/images/spa/Lymphatic.svg",
   },
   {
@@ -317,7 +317,7 @@ const SLIDES = [
   },
   {
     name: "Cellulite Massage",
-    image: "/images/listmenu/cellulitemassage.webp",
+    image: "/images/treatments/cards/cellulitemassage-warm.webp",
     icon: "/images/spa/cellulite.svg",
   },
   {
@@ -327,17 +327,17 @@ const SLIDES = [
   },
   {
     name: "Manicure Pedicure",
-    image: "/images/listmenu/manicurepedicure.webp",
+    image: "/images/treatments/cards/manicurepedicure-warm.webp",
     icon: "/images/spa/Manicure.svg",
   },
   {
     name: "Thai Massage",
-    image: "/images/listmenu/thaimassage.webp",
+    image: "/images/treatments/cards/thaimassage-warm.webp",
     icon: "/images/spa/thai.svg",
   },
   {
     name: "Couple Massage",
-    image: "/images/listmenu/couplemassage.webp",
+    image: "/images/services/couplemassage/couplemassage-3-warm.webp",
     icon: "/images/spa/Couple.svg",
   },
   {
@@ -347,7 +347,7 @@ const SLIDES = [
   },
   {
     name: "Nail Art",
-    image: "/images/listmenu/manicurepedicure.webp",
+    image: "/images/treatments/cards/manicurepedicure-warm.webp",
     icon: "/images/spa/NailArt.svg",
   },
   {
@@ -357,17 +357,17 @@ const SLIDES = [
   },
   {
     name: "Coconut Oil Massage",
-    image: "/images/listmenu/coconutoilmassage.webp",
+    image: "/images/treatments/cards/coconutoilmassage-warm.webp",
     icon: "/images/spa/CoconutOil.svg",
   },
   {
     name: "Hair Braiding",
-    image: "/images/listmenu/creambath.webp",
+    image: "/images/treatments/cards/creambath-warm.webp",
     icon: "/images/spa/HairBraiding.svg",
   },
   {
     name: "Shiatsu Massage",
-    image: "/images/listmenu/shiatsumassage.webp",
+    image: "/images/treatments/cards/shiatsumassage-warm.webp",
     icon: "/images/spa/Shiatsu.svg",
   },
 ];

@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import { useState, type ReactNode } from "react";
 import { LotusIcon } from "@/components/ui/Lotus";
+import { linkedText } from "@/lib/linkedText";
 import SectionShapes from "@/components/ui/SectionShapes";
 
 export type FaqItem = { question: string; answer: string };
@@ -148,7 +149,7 @@ function Accordion({ items, defaultOpen }: { items: FaqItem[]; defaultOpen: numb
             </h3>
             <div className={`accordion-collapse collapse ${isOpen ? "show" : ""}`}>
               <div className="accordion-body">
-                <p>{item.answer}</p>
+                <p>{linkedText(item.answer)}</p>
               </div>
             </div>
           </div>

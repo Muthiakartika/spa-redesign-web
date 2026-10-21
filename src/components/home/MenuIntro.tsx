@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { home } from "@/data/pages/home";
 import { catalog, catalogCategories, type CatalogCategory, type CatalogItem } from "@/data/pages/home-catalog";
 import "@/styles/spa-menu.css";
@@ -24,12 +25,15 @@ export default function MenuIntro<T extends string = CatalogCategory>({
   onCategory,
   subTitle,
   title,
+  intro,
   tabs = catalogCategories as { id: T; label: string }[],
 }: {
   category: T;
   onCategory: (id: T) => void;
   subTitle?: string;
   title?: string;
+  /** A line under the heading (the outcall page's price list). */
+  intro?: ReactNode;
   tabs?: { id: T; label: string }[];
 }) {
   const { catalog: text } = home;
@@ -38,6 +42,7 @@ export default function MenuIntro<T extends string = CatalogCategory>({
       <div className="jsx-catalog section-header mb-60 center">
         <div className="jsx-catalog sub-title look-h4">{subTitle ?? text.subTitle}</div>
         <h2 className="jsx-catalog title">{title ?? text.title}</h2>
+        {intro ? <p className="jsx-catalog menu-intro-text">{intro}</p> : null}
       </div>
       <div aria-label="Home service fee" className="jsx-catalog treatment-catalog__fee">
         <strong className="jsx-catalog">{text.fee.label}</strong>

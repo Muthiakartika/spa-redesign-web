@@ -41,7 +41,7 @@ const FAQ = [
   {
     question: "Is there an additional fee for home service?",
     answer:
-      "Yes. An outcall fee of IDR 75.000 per therapist is added to the treatment price for hotels and villas in Seminyak and nearby areas. The treatment itself costs the same as at our spa, so a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 in your room. Two therapists add IDR 150.000.",
+      "Yes. An outcall fee of IDR 75.000 per therapist is added to the treatment price for hotels and villas in Seminyak and nearby areas. The treatment itself costs the same as at our spa, so a one-hour Balinese massage is IDR 159.000 in the spa and IDR 234.000 in your room. Two therapists add IDR 150.000. Staying in a private home, or outside Seminyak? See our [outcall and home service massage across Bali](/outcall-home-service-massage/).",
   },
   {
     question: "How can I pay for my in-room treatment?",

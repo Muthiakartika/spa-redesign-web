@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import GuideArchive from "@/components/sections/GuideArchive";
+import JsonLd from "@/components/seo/JsonLd";
 import { blogArchivePage } from "@/data/pages/blog";
 import { getPublishedPosts } from "@/lib/blog/posts";
+import { blogIndexSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // Built once and kept until an article is saved in /admin/ (which rebuilds it),
@@ -15,7 +17,20 @@ export const metadata: Metadata = buildMetadata({
   path: blogArchivePage.path,
 });
 
-/** /guide/ — every published article, newest first. */
+/** /guide/ — every published article, newest first, with the Blog structured data. */
 export default async function GuideArchivePage() {
-  return <GuideArchive posts={await getPublishedPosts()} />;
+  const posts = await getPublishedPosts();
+  return (
+    <>
+      <JsonLd
+        data={blogIndexSchema({
+          path: blogArchivePage.path,
+          name: "Bali Spa & Massage Guides",
+          description: blogArchivePage.seo.description,
+          posts,
+        })}
+      />
+      <GuideArchive posts={posts} />
+    </>
+  );
 }

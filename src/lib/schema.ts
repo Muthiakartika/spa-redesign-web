@@ -185,11 +185,14 @@ export function homeServiceSchema({
   name,
   description,
   areas,
+  serviceType = "Home service massage",
 }: {
   path: string;
   name: string;
   description: string;
   areas: string[];
+  /** What the Service is called in search (the outcall page: "Outcall massage"). */
+  serviceType?: string;
 }) {
   const url = absoluteUrl(path);
   return {
@@ -199,7 +202,7 @@ export function homeServiceSchema({
         "@type": "Service",
         "@id": `${url}#service`,
         name,
-        serviceType: "Home service massage",
+        serviceType,
         description,
         url,
         provider,
@@ -216,6 +219,68 @@ export function homeServiceSchema({
       breadcrumb([
         { name: "Home", path: "/" },
         { name, path },
+      ]),
+    ],
+  };
+}
+
+/** Who wrote a guide article: the spa for its own articles ("Admin" is the blog's default byline), else a person. */
+const authorOf = (author?: string | null) => {
+  const byline = author?.trim();
+  return !byline || byline === business.name || /^admin$/i.test(byline)
+    ? provider
+    : { "@type": "Person", name: byline };
+};
+
+/** The guide index (/guide/): a Blog with its articles, and where it sits in the site. */
+export function blogIndexSchema({
+  path,
+  name,
+  description,
+  posts,
+}: {
+  path: string;
+  name: string;
+  description: string;
+  posts: { slug: string; title: string; excerpt?: string | null; cover_image?: string | null; author?: string | null; published_at?: string | null }[];
+}) {
+  const url = absoluteUrl(path);
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": `${url}#blog`,
+        name,
+        description,
+        url,
+        inLanguage: "en",
+        publisher: provider,
+        blogPost: posts.map((post) => ({
+          "@type": "BlogPosting",
+          "@id": `${absoluteUrl(`/guide/${post.slug}/`)}#article`,
+          headline: post.title,
+          url: absoluteUrl(`/guide/${post.slug}/`),
+          ...(post.excerpt ? { description: post.excerpt } : {}),
+          ...(post.cover_image ? { image: absoluteUrl(post.cover_image) } : {}),
+          ...(post.published_at ? { datePublished: post.published_at } : {}),
+          author: authorOf(post.author),
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${url}#list`,
+        name: `${name}: all articles`,
+        itemListElement: posts.map((post, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: absoluteUrl(`/guide/${post.slug}/`),
+          name: post.title,
+        })),
+      },
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Guide", path },
       ]),
     ],
   };
@@ -241,7 +306,6 @@ export function articleSchema({
 }) {
   const path = `/guide/${slug}/`;
   const url = absoluteUrl(path);
-  const byline = author?.trim() || business.name;
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -256,7 +320,7 @@ export function articleSchema({
         ...(publishedAt ? { datePublished: publishedAt } : {}),
         ...(updatedAt || publishedAt ? { dateModified: updatedAt || publishedAt } : {}),
         // The articles are written by the spa; a person's name, when one is set in the admin, is shown as such.
-        author: byline === business.name ? provider : { "@type": "Person", name: byline },
+        author: authorOf(author),
         publisher: provider,
       },
       breadcrumb([

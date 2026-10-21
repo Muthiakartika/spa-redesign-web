@@ -6,7 +6,7 @@
  * Always write internal links WITH a trailing slash, e.g. "/contact/" (the site uses them everywhere).
  *
  * The header menu is copied from the live website (spabalimoon.com, checked 2026-09-24):
- * Home · Pricelist · Treatments (dropdown) · Outcall · Reservation · Blog (dropdown) · Contact
+ * Home · Pricelist · Treatments (dropdown) · Outcall (labelled "Home Service" since the 20 Oct dev brief) · Reservation · Blog (dropdown) · Contact
  * + search + "Book an Appointment". This replaces the shorter menu approved on 2026-09-23 (URL-02).
  */
 
@@ -26,7 +26,8 @@ export const mainNav: MainNavItem[] = [
   { label: "Pricelist", href: "/seminyak/" },
   // The live site's "Treatments" item only opens the dropdown (it has no page of its own).
   { label: "Treatments", href: "/seminyak/", dropdown: "treatments" },
-  { label: "Outcall", href: "/outcall-home-service-massage/", dropdown: "outcall" },
+  // 20 Oct dev brief, Task 4: "Home Service", the words the page ranks for. The page and its address are unchanged.
+  { label: "Home Service", href: "/outcall-home-service-massage/", dropdown: "outcall" },
   { label: "Reservation", href: "/reservation/" },
   { label: "Blog", href: "/guide/", dropdown: "blog" },
   { label: "Contact", href: "/contact/" },
@@ -39,9 +40,9 @@ export const mainNav: MainNavItem[] = [
  */
 export const outcallMenu: (NavItem & { note: string; image: string })[] = [
   {
-    label: "Home Service Massage",
+    label: "Outcall & Home Service Massage",
     href: "/outcall-home-service-massage/",
-    note: "Outcall massage anywhere in Bali",
+    note: "From our Seminyak spa to your villa",
     image: "/images/homepage/homepage-28.webp",
   },
   {
@@ -91,27 +92,33 @@ export const treatmentMenu: (NavItem & { keywords: string })[] = [
 /**
  * Blog dropdown: the articles come from the blog database with the titles set
  * in /admin/, newest first (getBlogMenu in src/lib/blog/posts.ts). These slugs
- * stay out of it: "IV Drip Therapy in Bali" (/guide/iv-drip/), which the owner
+ * stay out of it: "IV Drip Therapy - What to Know Before You Book?" (/guide/before-you-book-iv-drip-therapy/), which the owner
  * took out of the menu on 2 Oct ("we can take that one out of the menu"). The
  * article itself stays, on /guide/, in search and in the sitemap.
  */
-export const blogMenuHidden: string[] = ["iv-drip"];
+export const blogMenuHidden: string[] = ["before-you-book-iv-drip-therapy"];
 
 /* ---------------------------------- Footer --------------------------------- */
 
-/** Footer column "Home Services" (heading links to the Home Service page, as on the old site). */
+/**
+ * Footer card "Home Services" (20 Oct dev brief, Task 4): a plain heading, no
+ * longer a link; the Home Service page is the first item, and "Massage
+ * Seminyak" moved to the day spa card (footerDaySpaPages).
+ */
 export const footerHomeServices = {
   label: "Home Services",
-  href: "/outcall-home-service-massage/",
   items: [
-    { label: "Massage Hotel & Villa", href: "/villa-hotel-massage/" },
-    { label: "Massage Seminyak", href: "/" },
+    { label: "Outcall & Home Service Massage", href: "/outcall-home-service-massage/" },
+    { label: "Villa & Hotel Massage", href: "/villa-hotel-massage/" },
     { label: "Massage Kuta", href: "/massage-kuta/" },
   ] as NavItem[],
 };
 
 /** Footer column "Our Day Spa" (heading links to the Day Spa page, as on the old site). */
 export const footerDaySpaLink: NavItem = { label: "Our Day Spa", href: "/seminyak/day-spa/" };
+
+/** Pages listed in the day spa card: the Seminyak homepage, which was "Massage Seminyak" under Home Services. */
+export const footerDaySpaPages: NavItem[] = [{ label: "Seminyak Spa & Massage", href: "/" }];
 
 /** Links in the very bottom line of the footer. */
 export const legalLinks: NavItem[] = [

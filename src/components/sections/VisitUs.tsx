@@ -58,6 +58,9 @@ type FactLink = { href: string; label: ReactNode; external?: boolean; plain?: bo
  * circle (address, hours, booking, villa fee); the price list link goes
  * beside the button, where "Get directions" was (the address keeps that
  * link). Two columns on tablets, one on phones.
+ *
+ * `look="photo"` (About page, 19 Oct): the same facts and buttons, two by
+ * two, beside the split look's photo, so the therapist stays in view.
  */
 export default function VisitUs({
   treatment,
@@ -76,8 +79,8 @@ export default function VisitUs({
   variant?: "split" | "light";
   /** The split look's photo; the About page, which shows the default one higher up, passes another. */
   photo?: string;
-  /** How the facts are set: label and value rows, or columns without the photo (see above). */
-  look?: "rows" | "columns";
+  /** How the facts are set: label and value rows, columns without the photo, or those facts beside it (see above). */
+  look?: "rows" | "columns" | "photo";
   /** Corner decorations (components/ui/SectionShapes.tsx); `null` leaves a side empty. */
   leftShapeSrc?: string | null;
   rightShapeSrc?: string | null;
@@ -125,7 +128,8 @@ export default function VisitUs({
     },
   ];
   const columns = look === "columns";
-  // The columns look: each fact under its icon, its links as small buttons
+  const tiles = columns || look === "photo";
+  // The columns and photo looks: each fact under its icon, its links as small buttons
   // (owner, 19 Oct: buttons, not underlined links), the price list beside
   // "Book on WhatsApp".
   const facts: { label: string; icon: MenuIconName; text: ReactNode; links?: FactLink[] }[] = [
@@ -133,13 +137,15 @@ export default function VisitUs({
       label: "Address",
       icon: "pin",
       text: business.address.full,
-      links: [{ href: business.mapsUrl, label: "Get directions", external: true }],
+      // The columns look (every treatment page) leaves "Get directions" out (owner, 21 Oct).
+      links: columns ? undefined : [{ href: business.mapsUrl, label: "Get directions", external: true }],
     },
     { label: "Open daily", icon: "clock", text: "9am – 11pm" },
     {
       label: "Booking",
       icon: "chat",
-      text: "WhatsApp",
+      // The columns look shows only the phone number button, not the word "WhatsApp" (owner, 21 Oct).
+      text: columns ? null : "WhatsApp",
       links: [
         {
           href: whatsappChatUrl,
@@ -160,7 +166,8 @@ export default function VisitUs({
             icon: "home" as const,
             text: `+${fee} per therapist`,
             links: [
-              { href: "/villa-hotel-massage/", label: "Villa & hotel massage" },
+              // The columns look keeps only the home service link ("Villa & hotel massage" left out, owner, 21 Oct).
+              ...(columns ? [] : [{ href: "/villa-hotel-massage/", label: "Villa & hotel massage" }]),
               { href: "/outcall-home-service-massage/", label: "Home service in Bali" },
             ],
           },
@@ -183,7 +190,7 @@ export default function VisitUs({
           "."
         )}
       </p>
-      {columns ? (
+      {tiles ? (
         <dl className="visit-us__tiles">
           {facts.map((fact) => (
             <div key={fact.label} className="visit-us__tile">
@@ -235,10 +242,13 @@ export default function VisitUs({
         </dl>
       )}
       <div className="visit-us__actions">
-        <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="visit-us__btn">
-          Book on WhatsApp
-        </a>
-        {columns ? (
+        {/* The columns look has no "Book on WhatsApp" button: the phone number in the facts is the link (owner, 21 Oct). */}
+        {columns ? null : (
+          <a href={whatsappChatUrl} target="_blank" rel="noopener noreferrer" className="visit-us__btn">
+            Book on WhatsApp
+          </a>
+        )}
+        {tiles ? (
           <Link prefetch={false} href="/seminyak/" className="visit-us__btn visit-us__btn--outline">
             Full price list
           </Link>
@@ -263,7 +273,7 @@ export default function VisitUs({
   }
 
   return (
-    <section className={`visit-us visit-us--split${columns ? " visit-us--columns" : ""}`}>
+    <section className={`visit-us visit-us--split${look === "rows" ? "" : ` visit-us--${look}`}`}>
       <SectionShapes left={leftShapeSrc} right={rightShapeSrc} />
       <div className="visit-us__split">
         {columns ? null : (

@@ -59,12 +59,28 @@ export default function AboutPage() {
       />
       <QuickFacts
         text={`For ${years} years, Spa Bali Moon has offered traditional Balinese massage and spa care in Seminyak. Guests visit our day spa or book the same treatments at their villa, hotel or home, at the same prices plus a home service fee.`}
+        look="faq"
         items={[
-          { label: "Founded", value: `${business.foundedYear}, in Seminyak, Bali` },
+          {
+            label: "Founded",
+            value: `${business.foundedYear}, in Seminyak, Bali`,
+            figure: `${business.foundedYear}`,
+            detail: "in Seminyak, Bali",
+          },
+          {
+            label: "Treatments",
+            value: "23 massage, facial, body and beauty treatments · from IDR 69.000 per person",
+            figure: "23",
+            detail: "massage, facial, body and beauty treatments, from IDR 69.000 per person",
+          },
+          { label: "Opening hours", value: "Open daily, 9am–11pm", figure: "9am–11pm", detail: "Open daily" },
+          {
+            label: "Home service",
+            value: "At your villa, hotel or home · IDR 75.000 per therapist",
+            figure: "IDR 75.000",
+            detail: "per therapist, at your villa, hotel or home",
+          },
           { label: "Address", value: business.address.full },
-          { label: "Opening hours", value: "Open daily, 9am–11pm" },
-          { label: "Treatments", value: "23 massage, facial, body and beauty treatments · from IDR 69.000 per person" },
-          { label: "Home service", value: "At your villa, hotel or home · IDR 75.000 per therapist" },
           { label: "Payment", value: "Visa, Mastercard or cash" },
           { label: "Booking", value: `WhatsApp ${business.phoneDisplay}, 9am–11pm` },
         ]}
@@ -133,7 +149,12 @@ export default function AboutPage() {
         buttonLink={whatsappChatUrl}
         image="/images/services/dayspaseminyak/dayspa-6.webp"
       />
-      <VisitUs treatment="a treatment" title="Where Is Spa Bali Moon?" photo="/images/banners/contact.webp" />
+      <VisitUs
+        treatment="a treatment"
+        title="Where Is Spa Bali Moon?"
+        photo="/images/banners/contact.webp"
+        look="columns"
+      />
       <div className="location-faq-paper section__decoration-top section__decoration-bottom bg-sub pb-100">
         <FaqSection
           largeTopPadding

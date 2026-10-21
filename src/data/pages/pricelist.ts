@@ -67,6 +67,8 @@ export const pricelistPage = {
   priceList: {
     subTitle: "Best Price",
     title: "How Much Does a Massage Cost in Seminyak?",
+    // The text of the removed "Prices at a Glance" table section (owner, 21 Oct), without "in one table".
+    text: "Every massage price at Spa Bali Moon, in Indonesian rupiah. Prices are the same at our Seminyak spa and at your villa or hotel, where home service adds IDR 75.000 per therapist.",
     note: "Home service available — extra IDR 75.000 per therapist.",
     tabs: [
     {
@@ -170,7 +172,7 @@ export const pricelistPage = {
             }
           ],
           id: 12,
-          image: "/images/listmenu/cellulitemassage.webp"
+          image: "/images/treatments/cards/cellulitemassage-warm.webp"
         },
         {
           name: "Deep Tissue Massage",
@@ -322,7 +324,7 @@ export const pricelistPage = {
             }
           ],
           id: 21,
-          image: "/images/listmenu/lymphaticmassage%20.webp"
+          image: "/images/treatments/cards/lymphaticmassage-warm.webp"
         },
         {
           name: "Organic Warm Candle Oil Massage",
@@ -382,7 +384,7 @@ export const pricelistPage = {
             }
           ],
           id: 24,
-          image: "/images/listmenu/shiatsumassage.webp"
+          image: "/images/treatments/cards/shiatsumassage-warm.webp"
         },
         {
           name: "Sports Massage",
@@ -442,7 +444,7 @@ export const pricelistPage = {
             }
           ],
           id: 27,
-          image: "/images/listmenu/thaimassage.webp"
+          image: "/images/treatments/cards/thaimassage-warm.webp"
         },
         {
           name: "Virgin Cold-Press Coconut Oil Massage",
@@ -462,7 +464,7 @@ export const pricelistPage = {
             }
           ],
           id: 28,
-          image: "/images/listmenu/coconutoilmassage.webp"
+          image: "/images/treatments/cards/coconutoilmassage-warm.webp"
         }
       ]
     },
@@ -615,7 +617,7 @@ export const pricelistPage = {
             }
           ],
           id: 10,
-          image: "/images/listmenu/creambath.webp"
+          image: "/images/treatments/cards/creambath-warm.webp"
         },
         {
           name: "Ear Candle",
@@ -667,7 +669,7 @@ export const pricelistPage = {
             }
           ],
           id: 22,
-          image: "/images/listmenu/manicurepedicure.webp"
+          image: "/images/treatments/cards/manicurepedicure-warm.webp"
         },
         {
           name: "Waxing",
@@ -728,7 +730,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-1",
-          image: "/images/listmenu/couplebalinesemassage.webp"
+          image: "/images/services/couplemassage/couplemassage-8-warm.webp"
         },
         {
           name: "Couple Traditional Massage",
@@ -748,7 +750,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-2",
-          image: "/images/listmenu/coupletraditionalmassage.webp"
+          image: "/images/services/couplemassage/couplemassage-10-warm.webp"
         },
         {
           name: "Couple Deep Tissue Massage",
@@ -764,7 +766,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-3",
-          image: "/images/listmenu/coupledeeptissumassage.webp"
+          image: "/images/services/couplemassage/couplemassage-4-warm.webp"
         },
         {
           name: "Couple Warm Candle Oil Massages",
@@ -784,7 +786,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-4",
-          image: "/images/listmenu/couplewarmcandle.webp"
+          image: "/images/services/couplemassage/couplemassage-5-warm.webp"
         }
       ]
     },
@@ -803,7 +805,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-package-a",
-          image: "/images/listmenu/couplemassagepackage.webp"
+          image: "/images/services/couplemassage/couplemassage-2-warm.webp"
         },
         {
           name: "Couple Package B",
@@ -815,7 +817,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-package-b",
-          image: "/images/listmenu/couplebalinesemassage.webp"
+          image: "/images/services/couplemassage/couplemassage-8-warm.webp"
         },
         {
           name: "Couple Package C",
@@ -827,7 +829,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-package-c",
-          image: "/images/listmenu/couplewarmcandle.webp"
+          image: "/images/services/couplemassage/couplemassage-5-warm.webp"
         },
         {
           name: "Couple Package D",
@@ -839,7 +841,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-package-d",
-          image: "/images/listmenu/couplemassage.webp"
+          image: "/images/services/couplemassage/couplemassage-3-warm.webp"
         }
       ]
     }

@@ -95,6 +95,11 @@
   font-size: 15px;
   line-height: 24px;
 }
+/* The currency small beside the amount, so the amount reads first. */
+.lh .v2-menu .v2-price__cur {
+  font-size: 0.7em;
+  letter-spacing: 0.08em;
+}
 .lh .v2-menu .v2-price__amount {
   color: var(--theme-color1);
   font-family: var(--title-font);

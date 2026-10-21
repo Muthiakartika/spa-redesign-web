@@ -7,17 +7,19 @@
  */
 export type SitemapEntry = { loc: string; lastmod: string; image?: string };
 
+// 21 Oct (outcall dev brief): the home, outcall, villa, Kuta and price list pages changed; the treatment pages'
+// sentence is added by their template and their "last updated" date is left as it was.
 export const sitemapPages: SitemapEntry[] = [
-  { loc: "https://spabalimoon.com/", lastmod: "2026-10-15T00:00:00+00:00" },
+  { loc: "https://spabalimoon.com/", lastmod: "2026-10-21T00:00:00+00:00" },
   // AEO roadmap R14 (17 Oct).
   { loc: "https://spabalimoon.com/about/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/services/dayspaseminyak/dayspa-1.webp" },
   { loc: "https://spabalimoon.com/contact/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/contact.webp" },
   { loc: "https://spabalimoon.com/guide/", lastmod: "2026-07-06T08:14:14+00:00", image: "https://spabalimoon.com/images/blog/blog-1.webp" },
-  { loc: "https://spabalimoon.com/massage-kuta/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/massage-kuta.webp" },
-  { loc: "https://spabalimoon.com/outcall-home-service-massage/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/outcall-home-service-massage.webp" },
+  { loc: "https://spabalimoon.com/massage-kuta/", lastmod: "2026-10-21T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/massage-kuta.webp" },
+  { loc: "https://spabalimoon.com/outcall-home-service-massage/", lastmod: "2026-10-21T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/homeservice-hero.webp" },
   { loc: "https://spabalimoon.com/privacy-policy/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/bg/page-title-bg.jpg" },
   { loc: "https://spabalimoon.com/reservation/", lastmod: "2026-10-15T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/reservation.webp" },
-  { loc: "https://spabalimoon.com/seminyak/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/pricelist.webp" },
+  { loc: "https://spabalimoon.com/seminyak/", lastmod: "2026-10-21T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/pricelist.webp" },
   { loc: "https://spabalimoon.com/seminyak/anti-cellulite-massage/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/anti-cellulite-massage.webp" },
   { loc: "https://spabalimoon.com/seminyak/balinese-massage/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/balinese-massage.webp" },
   { loc: "https://spabalimoon.com/seminyak/body-scrub/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/body-scrub.webp" },
@@ -43,5 +45,5 @@ export const sitemapPages: SitemapEntry[] = [
   { loc: "https://spabalimoon.com/seminyak/traditional-massage/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/traditional-massage.webp" },
   { loc: "https://spabalimoon.com/seminyak/waxing-salon/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/waxing-salon.webp" },
   { loc: "https://spabalimoon.com/terms-and-conditions/", lastmod: "2026-03-24T07:00:23+00:00", image: "https://spabalimoon.com/images/bg/page-title-bg.jpg" },
-  { loc: "https://spabalimoon.com/villa-hotel-massage/", lastmod: "2026-10-17T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/villa-hotel-massage.webp" },
+  { loc: "https://spabalimoon.com/villa-hotel-massage/", lastmod: "2026-10-21T00:00:00+00:00", image: "https://spabalimoon.com/images/banners/villa-hotel-massage.webp" },
 ];

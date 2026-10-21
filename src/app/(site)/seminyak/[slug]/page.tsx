@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import FaqJsonLd from "@/components/seo/FaqJsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import TreatmentBody from "@/components/treatments/TreatmentBody";
+import { homeServiceLines } from "@/data/homeServiceLines";
 import { treatments } from "@/data/treatments";
 import { priceTiles, type PriceTiles } from "@/lib/priceTiles";
 import { treatmentSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 import { getTreatmentContent } from "@/lib/treatments/content";
-import { faqItems, insertBefore, withProps, type TreeNode } from "@/lib/treatments/tree";
+import { appendChild, faqItems, insertBefore, withProps, type TreeNode } from "@/lib/treatments/tree";
 
 /**
  * Treatment pages: /seminyak/balinese-massage/, /seminyak/facial/, …
@@ -153,7 +154,13 @@ export default async function TreatmentPage({ params }: Props) {
   const decorated = Object.entries(SHAPES).reduce(
     (t, [type, props]) => withProps(t, type, props),
     withProps(
-      banner ? withProps(content.tree, "PageBanner", { prices: banner.prices }) : content.tree,
+      banner
+        ? withProps(content.tree, "PageBanner", {
+            prices: banner.prices,
+            // "/ pax" after each price, "/ 2 pax" on the couples page (owner, 21 Oct).
+            priceUnit: slug === "couple-spa" ? "/ 2 pax" : "/ pax",
+          })
+        : content.tree,
       "QuickFacts",
       { updated: content.updatedAt, look: "faq", ...(banner ? { bannerPriceLabel: banner.label } : {}) },
     ),
@@ -162,9 +169,16 @@ export default async function TreatmentPage({ params }: Props) {
     type: "VisitUs",
     props: { treatment: names.heading, look: "columns" },
   });
+  // One sentence that links to the outcall page, at the end of the quick facts block, inside its
+  // section, so it adds no gap of its own between two sections (20 Oct dev brief, Task 6; the
+  // sentences are in src/data/homeServiceLines.ts).
+  const homeServiceLine = homeServiceLines[slug];
+  const linked = homeServiceLine
+    ? appendChild(visited, "QuickFacts", { type: "HomeServiceLine", props: { text: homeServiceLine, inline: true } })
+    : visited;
   // "treatment-page" scopes the laptop decoration rules (decorations.css).
-  const className = typeof visited.props?.className === "string" ? visited.props.className : "";
-  const tree = { ...visited, props: { ...visited.props, className: `${className} treatment-page`.trim() } };
+  const className = typeof linked.props?.className === "string" ? linked.props.className : "";
+  const tree = { ...linked, props: { ...linked.props, className: `${className} treatment-page`.trim() } };
   return (
     <>
       <JsonLd

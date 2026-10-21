@@ -148,3 +148,37 @@ export function insertBefore(tree: TreeNode, types: string[], node: TreeNode): T
   }
   return { ...tree, children: [...children.slice(0, index), node, ...children.slice(index)] };
 }
+
+/**
+ * A copy of the tree with `node` added as the last child of the first element of
+ * `type` (it comes after that element's own children). Unchanged when there is none.
+ */
+export function appendChild(tree: TreeNode, type: string, node: TreeNode): TreeNode {
+  let done = false;
+  const visit = (n: TreeNode): TreeNode => {
+    if (!done && n.type === type) {
+      done = true;
+      return { ...n, children: [...(n.children ?? []), node] };
+    }
+    if (!n.children) return n;
+    return { ...n, children: n.children.map((c) => (typeof c === "string" || done ? c : visit(c))) };
+  };
+  return visit(tree);
+}
+
+/**
+ * A copy of the tree with `node` added just after the section that holds an
+ * element of one of `types`, found as insertBefore finds it. Unchanged when no
+ * such section exists.
+ */
+export function insertAfter(tree: TreeNode, types: string[], node: TreeNode): TreeNode {
+  const children = tree.children ?? [];
+  const index = children.findIndex((c) => typeof c !== "string" && contains(c, types));
+  if (index === -1) return tree;
+  const holder = children[index] as TreeNode;
+  const elements = children.filter((c) => typeof c !== "string");
+  if (elements.length === 1 && !types.includes(holder.type)) {
+    return { ...tree, children: children.map((c, i) => (i === index ? insertAfter(holder, types, node) : c)) };
+  }
+  return { ...tree, children: [...children.slice(0, index + 1), node, ...children.slice(index + 1)] };
+}

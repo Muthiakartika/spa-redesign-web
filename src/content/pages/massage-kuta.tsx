@@ -24,7 +24,7 @@ const FAQ = [
   {
     question: "Do you offer massage at hotels and villas near Kuta?",
     answer:
-      "Yes. Spa Bali Moon offers selected massage and spa treatments as home service at hotels, villas and private accommodation in Kuta and nearby areas. Prices match our Seminyak spa, plus IDR 75.000 per therapist. Availability and any extra travel cost depend on your location and are confirmed on WhatsApp before you book.",
+      "Yes. Spa Bali Moon offers selected massage and spa treatments as home service at hotels, villas and private accommodation in Kuta and nearby areas. Prices match our Seminyak spa, plus IDR 75.000 per therapist. Availability and any extra travel cost depend on your location and are confirmed on WhatsApp before you book. See our [home service massage](/outcall-home-service-massage/) page for prices and areas.",
   },
   {
     question: "How long do massage sessions usually last?",

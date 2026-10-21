@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState, type FormEvent, type ReactNode } from "react";
 import { MenuIcon, type MenuIconName } from "@/components/layout/MenuIcons";
 import { business } from "@/data/business";
-import { footerDaySpaLink, footerHomeServices, legalLinks } from "@/data/navigation";
+import { footerDaySpaLink, footerDaySpaPages, footerHomeServices, legalLinks } from "@/data/navigation";
 import { sitemapPages } from "@/data/sitemap";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
@@ -29,7 +29,7 @@ const PAGE_UPDATED = new Map(
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 
-/** Instagram and Facebook, drawn like the other line icons. */
+/** Instagram, drawn like the other line icons (Facebook left out, owner, 21 Oct). */
 const SOCIAL = [
   {
     label: "Instagram",
@@ -41,11 +41,6 @@ const SOCIAL = [
         <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" />
       </>
     ),
-  },
-  {
-    label: "Facebook",
-    href: business.social.facebook,
-    icon: <path d="M14.5 8.5h2.5V5h-2.5A3.5 3.5 0 0 0 11 8.5V11H8.5v3.5H11V21h3.5v-6.5H17l.5-3.5h-3V9a.5.5 0 0 1 .5-.5z" />,
   },
 ];
 
@@ -246,6 +241,15 @@ export default function Footer() {
                   </dd>
                 </div>
               </dl>
+              <ul className="site-footer__links">
+                {footerDaySpaPages.map((item) => (
+                  <li key={item.label}>
+                    <Link prefetch={false} href={item.href}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </Card>
             <Card icon="chat" title="Contact Us">
               <dl className="site-footer__fields">
@@ -259,14 +263,7 @@ export default function Footer() {
                 </div>
               </dl>
             </Card>
-            <Card
-              icon="home"
-              title={
-                <Link prefetch={false} href={footerHomeServices.href}>
-                  {footerHomeServices.label}
-                </Link>
-              }
-            >
+            <Card icon="home" title={footerHomeServices.label}>
               <ul className="site-footer__links">
                 {footerHomeServices.items.map((item) => (
                   <li key={item.label}>

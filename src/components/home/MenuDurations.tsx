@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element -- the live site serves these as plain <img> */
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import MenuIntro, { halves, menuItems } from "@/components/home/MenuIntro";
 import { displayPrice, durationLabel, durationOf, priceValue, startingOption } from "@/components/home/price";
 import { catalogCategories, type CatalogCategory, type CatalogItem, type CatalogOption } from "@/data/pages/home-catalog";
@@ -75,16 +75,22 @@ function byPrice(options: CatalogOption[]) {
 export default function MenuDurations({
   subTitle,
   title,
+  intro,
   tabs: tabsProp,
   sticky = false,
   spacing = "pt-170 pb-170",
+  paper = true,
 }: {
   subTitle?: string;
   title?: string;
+  /** A line under the heading. */
+  intro?: ReactNode;
   tabs?: MenuTab[];
   sticky?: boolean;
   /** The section's live padding classes (the price pages keep their pt-130 pb-130). */
   spacing?: string;
+  /** false: on the plain page colour, without the paper's torn edges (the outcall page alternates). */
+  paper?: boolean;
 }) {
   const tabs = useMemo(
     () =>
@@ -143,7 +149,7 @@ export default function MenuDurations({
 
   return (
     <section
-      className={`jsx-catalog package-section treatment-catalog section__decoration-top section__decoration-bottom bg-sub ${spacing} v2-menu v2-menu--durations${
+      className={`jsx-catalog package-section treatment-catalog${paper ? " section__decoration-top section__decoration-bottom bg-sub" : ""} ${spacing} v2-menu v2-menu--durations${
         sticky ? " v2-menu--sticky" : ""
       }`}
     >
@@ -151,7 +157,7 @@ export default function MenuDurations({
         <img loading="lazy" decoding="async" src="/images/shape/banner-five-shape1.png" alt="" className="jsx-catalog sway_Y__animationY" />
       </div>
       <div className="jsx-catalog container">
-        <MenuIntro category={category} onCategory={setCategory} subTitle={subTitle} title={title} tabs={tabs} />
+        <MenuIntro category={category} onCategory={setCategory} subTitle={subTitle} title={title} intro={intro} tabs={tabs} />
         {timed && (
           <div
             ref={barRef}
@@ -194,6 +200,19 @@ export default function MenuDurations({
 
 type Price = { minutes: number | null; amount: string | null; from: boolean };
 type Note = { text: string; minutes: number | null };
+
+/** "IDR 250.000" -> a small "IDR" and the amount, so the amount stands out (owner, 21 Oct). */
+function amountWithSmallCurrency(amount: string | null) {
+  if (amount === null) return "—";
+  const m = /^(from\s+)?IDR\s+(.*)$/i.exec(amount);
+  if (!m) return amount;
+  return (
+    <>
+      {m[1]}
+      <span className="v2-price__cur">IDR</span> {m[2]}
+    </>
+  );
+}
 
 /** A row's price for one duration: its own, or (a row that only lists
  *  treatments under it) the lowest of theirs, as "from". */
@@ -329,7 +348,7 @@ function DurationRow({
               <span key={p.minutes ?? "price"} className="v2-price__line" hidden={p !== current}>
                 {p.minutes !== null && <span className="v2-sr">{durationLabel(p.minutes)}: </span>}
                 {p.from && <span className="v2-price__note">from</span>}
-                <span className="v2-price__amount">{p.amount ?? "—"}</span>
+                <span className="v2-price__amount">{amountWithSmallCurrency(p.amount)}</span>
               </span>
             ))}
             {current.amount === null ? (

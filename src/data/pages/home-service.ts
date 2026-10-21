@@ -14,8 +14,9 @@
 export const homeServicePage = {
   path: "/outcall-home-service-massage/",
   seo: {
-    title: "Outcall Massage Bali - Home Service Massage - Spa Bali Moon",
-    description: "Outcall massage across Bali, from Seminyak and Canggu to Ubud: a therapist comes to your home, villa or hotel. Spa prices plus IDR 75.000 per therapist.",
+    // 20 Oct dev brief, Task 1 (61 and 154 characters). The title is used as it is (lib/seo.ts: title.absolute), so the brand appears once.
+    title: "Outcall & Home Service Massage Seminyak, Bali | Spa Bali Moon",
+    description: "Outcall and home massage from our Seminyak spa since 2009. Balinese, deep tissue & couples massage at your villa, hotel or home in Bali. Book on WhatsApp.",
   },
   hero: {
     eyebrow: "Outcall Spa Service",
@@ -174,7 +175,7 @@ export const homeServicePage = {
     coupleMassageGroup: {
       name: "Couple Massage",
       description: "Designed for two to relax together while easing the body and sharing a calm moment.",
-      image: { src: "/images/treatments/cards/couplemassage.webp", alt: "Couple Massage", width: 630, height: 580 },
+      image: { src: "/images/services/couplemassage/couplemassage-3-warm.webp", alt: "Couple Massage", width: 630, height: 580 },
       itemIds: [
         "couple-balinese-massage",
         "couple-traditional-massage",
@@ -192,22 +193,22 @@ export const homeServicePage = {
       "Package A": {
         heading: "Couple Massage Package A",
         label: "1.5 Hours – Balinese Massage + Ear Candle · 2 pax",
-        image: { src: "/images/treatments/cards/couplebalinesemassage.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
+        image: { src: "/images/services/couplemassage/couplemassage-8-warm.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
       },
       "Package B": {
         heading: "Couple Massage Package B",
         label: "2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax",
-        image: { src: "/images/treatments/cards/couplebalinesemassage.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
+        image: { src: "/images/services/couplemassage/couplemassage-8-warm.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
       },
       "Package C": {
         heading: "Couple Massage Package C",
         label: "1.5 Hours – Warm Candle + Ear Candle · 2 pax",
-        image: { src: "/images/treatments/cards/couplewarmcandle.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
+        image: { src: "/images/services/couplemassage/couplemassage-5-warm.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
       },
       "Package D": {
         heading: "Couple Massage Package D",
         label: "2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax",
-        image: { src: "/images/treatments/cards/couplewarmcandle.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
+        image: { src: "/images/services/couplemassage/couplemassage-5-warm.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
       },
     },
   },

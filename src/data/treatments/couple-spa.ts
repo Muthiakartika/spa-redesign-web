@@ -12,7 +12,7 @@ const coupleSpa: Treatment = {
   cardName: "Couple Massage Balinese",
   category: "couple",
   shortDescription: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
-  cardImage: { src: "/images/treatments/cards/couplemassage.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
+  cardImage: { src: "/images/services/couplemassage/couplemassage-3-warm.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
   seo: {
     title: "Couples Massage Bali - Couple Spa Seminyak - Spa Bali Moon",
     description: "Couples massage in Bali: warm candle massage with facial, natural scrub and Balinese massage. Book at our Seminyak spa or in your villa.",
@@ -31,8 +31,8 @@ const coupleSpa: Treatment = {
         "A Couple Massage is a shared spa experience where two guests receive treatments side by side, each with their own therapist. While it's popular with couples, it's also suitable for friends and family members who want to relax together. Each guest can choose their preferred pressure, creating a personalised treatment within the same relaxing environment.",
       ],
       images: [
-        { src: "/images/treatments/couple-spa/couplemassage-2.webp", alt: "Spa treatment", width: 578, height: 601 },
-        { src: "/images/treatments/cards/couplemassage.webp", alt: "Spa treatment detail", width: 630, height: 580 },
+        { src: "/images/services/couplemassage/couplemassage-2-warm.webp", alt: "Spa treatment", width: 578, height: 601 },
+        { src: "/images/services/couplemassage/couplemassage-3-warm.webp", alt: "Spa treatment detail", width: 630, height: 580 },
       ],
       highlights: [
         {
@@ -193,10 +193,10 @@ const coupleSpa: Treatment = {
         "Every couple enjoys relaxation differently, which is why we offer several massage styles for two. Whether you prefer gentle Balinese techniques, deeper muscle work, or a warm candle ritual, each experience is designed to help you slow down and enjoy quality time together.",
       ],
       images: [
-        { src: "/images/treatments/couple-spa/couplemassage-4.webp", alt: "image", width: 1050, height: 484 },
-        { src: "/images/treatments/couple-spa/couplemassage-5.webp", alt: "image", width: 1050, height: 484 },
-        { src: "/images/treatments/couple-spa/couplemassage-6.webp", alt: "image", width: 1050, height: 484 },
-        { src: "/images/treatments/couple-spa/couplemassage-7.webp", alt: "image", width: 1050, height: 484 },
+        { src: "/images/services/couplemassage/couplemassage-4-warm.webp", alt: "image", width: 1050, height: 484 },
+        { src: "/images/services/couplemassage/couplemassage-5-warm.webp", alt: "image", width: 1050, height: 484 },
+        { src: "/images/services/couplemassage/couplemassage-6-warm.webp", alt: "image", width: 1050, height: 484 },
+        { src: "/images/services/couplemassage/couplemassage-7-warm.webp", alt: "image", width: 1050, height: 484 },
       ],
       packageGroup: "couples",
     },
@@ -226,7 +226,7 @@ const coupleSpa: Treatment = {
         "Creates a relaxing shared experience",
       ],
       button: { label: "Book Now" },
-      image: { src: "/images/treatments/couple-spa/couplemassage-8.webp", alt: "Spa treatment", width: 570, height: 496 },
+      image: { src: "/images/services/couplemassage/couplemassage-8-warm.webp", alt: "Spa treatment", width: 570, height: 496 },
       imageBadge: ["17 + Years", "Experience"],
     },
     {
@@ -264,7 +264,7 @@ const coupleSpa: Treatment = {
         "Suitable for special occasions or everyday relaxation",
       ],
       button: { label: "Book Now" },
-      image: { src: "/images/treatments/couple-spa/couplemassage-10.webp", alt: "Spa treatment", width: 570, height: 496 },
+      image: { src: "/images/services/couplemassage/couplemassage-10-warm.webp", alt: "Spa treatment", width: 570, height: 496 },
       imageCaption: ["Two in", "Harmony"],
     },
   ],

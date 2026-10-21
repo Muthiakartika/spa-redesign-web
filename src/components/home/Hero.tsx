@@ -5,6 +5,7 @@ import { LotusIcon } from "@/components/ui/Lotus";
 import RowButton from "@/components/ui/RowButton";
 import { business } from "@/data/business";
 import { home } from "@/data/pages/home";
+import { linkedText } from "@/lib/linkedText";
 import { whatsappChatUrl } from "@/lib/whatsapp";
 
 /** Three facts from the hero and about copy, each with a gold line icon. */
@@ -72,7 +73,7 @@ export default function Hero() {
                 </span>
               ))}
             </p>
-            <p className="v2-hero__text">{hero.text}</p>
+            <p className="v2-hero__text">{linkedText(hero.text)}</p>
             <div className="v2-hero__actions">
               <RowButton href={whatsappChatUrl} icon="whatsapp" label="Book on WhatsApp" note={business.phoneDisplay} />
               <RowButton href="/seminyak/" icon="tag" label="View Price List" note="Every treatment and price" />

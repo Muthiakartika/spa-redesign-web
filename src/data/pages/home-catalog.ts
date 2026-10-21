@@ -157,7 +157,7 @@ export const catalog: CatalogItem[] = [
     name: "Cellulite Massage",
     category: "massage",
     href: "/seminyak/anti-cellulite-massage/",
-    image: "/images/listmenu/cellulitemassage.webp",
+    image: "/images/treatments/cards/cellulitemassage-warm.webp",
     desc: "A targeted full-body massage designed to stimulate circulation and improve skin tone.",
     options: [
       { label: "1 Hour", price: "IDR 350.000" },
@@ -171,7 +171,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/coupledeeptissumassage.webp",
+    image: "/images/services/couplemassage/couplemassage-4-warm.webp",
     desc: "A deeper-pressure massage for two, focused on easing tight muscles and improving comfort.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 539.000" },
@@ -184,7 +184,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/couplebalinesemassage.webp",
+    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
     desc: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 319.000" },
@@ -198,7 +198,7 @@ export const catalog: CatalogItem[] = [
     category: "couple-package",
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/couplebalinesemassage.webp",
+    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
       { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 639.000", details: ["30 Minutes Ear Candle"] },
@@ -210,7 +210,7 @@ export const catalog: CatalogItem[] = [
     category: "couple-package",
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/couplebalinesemassage.webp",
+    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
       { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 709.000", details: ["1 Hour Bali Moon Facial"] },
@@ -222,7 +222,7 @@ export const catalog: CatalogItem[] = [
     category: "couple-package",
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/couplewarmcandle.webp",
+    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
     desc: "1 Hour – Warm Candle",
     options: [
       { label: "1 Hour Warm Candle · 2 pax", price: "IDR 849.000", details: ["30 Minutes Ear Candle"] },
@@ -234,7 +234,7 @@ export const catalog: CatalogItem[] = [
     category: "couple-package",
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/couplewarmcandle.webp",
+    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
     desc: "1 Hour – Warm Candle",
     options: [
       { label: "1 Hour Warm Candle · 2 pax", price: "IDR 929.000", details: ["1 Hour Bali Moon Facial"] },
@@ -246,7 +246,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/coupletraditionalmassage.webp",
+    image: "/images/services/couplemassage/couplemassage-10-warm.webp",
     desc: "A side-by-side massage with firmer pressure to help release tension together.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 339.000" },
@@ -260,7 +260,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/listmenu/couplewarmcandle.webp",
+    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
     desc: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 539.000" },
@@ -371,7 +371,7 @@ export const catalog: CatalogItem[] = [
     name: "Hair Cream Bath",
     category: "beauty",
     href: "/seminyak/creambath/",
-    image: "/images/listmenu/creambath.webp",
+    image: "/images/treatments/cards/creambath-warm.webp",
     desc: "A nourishing hair treatment that cleanses, conditions, and relaxes the scalp.",
     options: [
       { label: "Ginseng", price: "IDR 165.000" },
@@ -425,7 +425,7 @@ export const catalog: CatalogItem[] = [
     name: "Lymphatic Massage",
     category: "massage",
     href: "/seminyak/lymphatic-drainage-massage/",
-    image: "/images/listmenu/lymphaticmassage%20.webp",
+    image: "/images/treatments/cards/lymphaticmassage-warm.webp",
     desc: "A gentle full-body massage that supports drainage and healthy circulation.",
     options: [
       { label: "1 Hour", price: "IDR 300.000" },
@@ -438,7 +438,7 @@ export const catalog: CatalogItem[] = [
     name: "Manicure Pedicure",
     category: "beauty",
     href: "/seminyak/manicure-pedicure/",
-    image: "/images/listmenu/manicurepedicure.webp",
+    image: "/images/treatments/cards/manicurepedicure-warm.webp",
     desc: "A complete hand and foot treatment finished neatly with polish.",
     options: [
       { label: "Manicure & Pedicure", price: "IDR 238.000" },
@@ -469,7 +469,7 @@ export const catalog: CatalogItem[] = [
     name: "Shiatsu Massage",
     category: "massage",
     href: "/seminyak/shiatsu-massage/",
-    image: "/images/listmenu/shiatsumassage.webp",
+    image: "/images/treatments/cards/shiatsumassage-warm.webp",
     desc: "An oil-free full-body massage using Japanese pressure-point techniques to ease tension.",
     options: [
       { label: "30 Minutes", price: "IDR 119.000" },
@@ -494,7 +494,7 @@ export const catalog: CatalogItem[] = [
     name: "Thai Massage",
     category: "massage",
     href: "/seminyak/thai-massage/",
-    image: "/images/listmenu/thaimassage.webp",
+    image: "/images/treatments/cards/thaimassage-warm.webp",
     desc: "An oil-free full-body massage combining assisted stretches and rhythmic pressure.",
     options: [
       { label: "30 Minutes", price: "IDR 133.000" },
@@ -521,7 +521,7 @@ export const catalog: CatalogItem[] = [
     name: "Virgin Cold-Press Coconut Oil Massage",
     category: "massage",
     href: "/seminyak/coconut-oil-massage/",
-    image: "/images/listmenu/coconutoilmassage.webp",
+    image: "/images/treatments/cards/coconutoilmassage-warm.webp",
     desc: "A nourishing full-body massage using pure coconut oil to promote deep relaxation.",
     options: [
       { label: "1 Hour", price: "IDR 300.000" },

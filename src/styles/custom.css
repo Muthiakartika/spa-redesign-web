@@ -1198,6 +1198,159 @@
   }
 }
 
+/* The "glance" look (About page, 19 Oct; QuickFacts.tsx): on the paper
+   colour, the opening centred as in the faq look, then the facts that have a
+   figure in a row of large serif figures between gold hairlines (four
+   columns, two by two below 992px), the others as one centred line of small
+   gold labels and their values. */
+.quick-facts.quick-facts--glance {
+  padding: 130px 0;
+}
+.quick-facts--glance .quick-facts__inner {
+  display: block;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+}
+.quick-facts--glance .quick-facts__lead {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.quick-facts--glance .quick-facts__lead--split::before {
+  margin: 0 auto 26px;
+}
+.quick-facts--glance .quick-facts__lead-rest {
+  margin: 20px auto 0;
+}
+.quick-facts__glance {
+  margin-top: 64px;
+}
+.quick-facts__glance .quick-facts__label {
+  margin: 0 0 18px;
+}
+.quick-facts__figures {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+  border-bottom: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+}
+.quick-facts__figure {
+  padding: 34px 20px 32px;
+}
+.quick-facts__figure + .quick-facts__figure {
+  border-left: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+}
+.quick-facts__figure dt {
+  margin-bottom: 14px;
+  font-family: var(--text-font);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8f8a83;
+}
+.quick-facts__figure dd {
+  margin: 0;
+}
+.quick-facts__big {
+  display: block;
+  font-family: var(--title-font);
+  font-size: clamp(36px, 3.3vw, 46px);
+  font-variant-numeric: lining-nums;
+  line-height: 1.1;
+  white-space: nowrap;
+  color: var(--headings-color);
+}
+.quick-facts__cur {
+  margin-right: 2px;
+  font-family: var(--text-font);
+  font-size: 0.4em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  vertical-align: 0.95em;
+  color: var(--theme-color1);
+}
+.quick-facts__small {
+  display: block;
+  max-width: 230px;
+  margin: 12px auto 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+.quick-facts__more {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 14px 40px;
+  margin: 0;
+  padding-top: 28px;
+}
+.quick-facts__more-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.quick-facts__more-row dt {
+  font-family: var(--text-font);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--theme-color1);
+}
+.quick-facts__more-row dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+@media (max-width: 991px) {
+  .quick-facts__figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .quick-facts__figure:nth-child(3) {
+    border-left: 0;
+  }
+  .quick-facts__figure:nth-child(n + 3) {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+  }
+  .quick-facts__more {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .quick-facts.quick-facts--glance {
+    padding: 100px 0;
+  }
+  .quick-facts__glance {
+    margin-top: 44px;
+  }
+  .quick-facts__figure {
+    padding: 24px 10px 22px;
+  }
+  .quick-facts__figure dt {
+    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+  .quick-facts__big {
+    font-size: clamp(25px, 7.6vw, 30px);
+  }
+  .quick-facts__small {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .quick-facts__more {
+    padding-top: 24px;
+  }
+}
+
 /* Treatment page banner: the session prices on a strip of dark glass with a
    gold edge under the title (owner, 19 Oct: "like the homepage, where the
    important part is in the banner"; PageBanner `prices`). */
@@ -1668,6 +1821,75 @@
   .visit-us--columns .visit-us__split-body .visit-us__actions {
     align-items: center;
     margin-top: 32px;
+  }
+}
+
+/* "Visit us", look="photo" (About page, 19 Oct; VisitUs.tsx): the split card
+   keeps its photo, so the therapist stays in view; beside it the heading and
+   the facts as in the columns look, each gold icon beside its label, two by
+   two (one under the other at 992-1199px, where the panel is narrow), then
+   the two buttons. */
+.visit-us--photo .visit-us__split {
+  min-height: 0;
+}
+@media (min-width: 992px) {
+  .visit-us--photo .visit-us__split {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+  .visit-us--photo .visit-us__split-body {
+    max-width: none;
+    padding: 84px clamp(32px, 4.6vw, 72px) 80px;
+  }
+}
+.visit-us--photo .visit-us__tiles {
+  margin-top: 36px;
+}
+.visit-us--photo .visit-us__tile dt {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.visit-us--photo .visit-us__tile-icon {
+  flex-basis: 40px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+@media (min-width: 1200px), (min-width: 768px) and (max-width: 991px) {
+  .visit-us--photo .visit-us__tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .visit-us--photo .visit-us__tile {
+    padding: 24px 24px 24px 0;
+  }
+  .visit-us--photo .visit-us__tile:nth-child(even) {
+    padding: 24px 0 24px 24px;
+  }
+  .visit-us--photo .visit-us__tile:nth-child(3) {
+    border-left: 0;
+  }
+  .visit-us--photo .visit-us__tile:nth-child(n + 3) {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .visit-us--photo .visit-us__tiles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .visit-us--photo .visit-us__tile {
+    padding: 20px 0;
+  }
+  .visit-us--photo .visit-us__tile + .visit-us__tile {
+    border-top: 1px solid rgba(var(--theme-color1-rgb), 0.28);
+    border-left: 0;
+  }
+  .visit-us--photo .visit-us__tile dd {
+    padding-left: 52px;
+  }
+}
+@media (max-width: 767px) {
+  .visit-us--photo .visit-us__split-body {
+    padding: 48px 18px 44px;
   }
 }
 

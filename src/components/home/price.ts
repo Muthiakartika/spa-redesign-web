@@ -27,6 +27,5 @@ export function durationOf(label: string): number | null {
   return /^min/i.test(m[2]) ? n : n * 60;
 }
 
-/** 30 -> "30 Mins", 60 -> "1 Hr", 90 -> "1.5 Hrs": the package cards' units. */
-export const durationLabel = (minutes: number) =>
-  minutes < 60 ? `${minutes} Mins` : `${minutes / 60} ${minutes === 60 ? "Hr" : "Hrs"}`;
+/** 30 -> "30 Mins", 60 -> "60 Mins", 90 -> "90 Mins", 120 -> "120 Mins": always minutes (owner, 21 Oct). */
+export const durationLabel = (minutes: number) => `${minutes} Mins`;

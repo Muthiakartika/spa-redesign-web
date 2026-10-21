@@ -5,8 +5,10 @@ import PageTitle from "@/components/sections/PageTitle";
 import JsonLd from "@/components/seo/JsonLd";
 import GuideAnswer from "@/components/sections/GuideAnswer";
 import { guideAnswers } from "@/data/guide/answers";
+import { guideHomeServiceLines } from "@/data/guide/homeServiceLines";
 import { getGuideArticle, getPublishedPost, getPublishedPosts } from "@/lib/blog/posts";
 import { sanitizeHtml } from "@/lib/blog/sanitize";
+import { linkedText } from "@/lib/linkedText";
 import { articleSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
@@ -43,6 +45,8 @@ export default async function GuideArticlePage({ params }: Props) {
   const { post, recentPosts, prevPost, nextPost, morePosts } = article;
   // Two sentences naming the spa, with the price and the treatment page (AEO roadmap, 17 Oct).
   const answer = guideAnswers[post.slug];
+  // One sentence that links to the outcall page, after the text (20 Oct dev brief, Task 7).
+  const homeServiceLine = guideHomeServiceLines[post.slug];
 
   return (
     <div className={`page-wrapper lh p-guide-${post.slug}`}>
@@ -65,6 +69,7 @@ export default async function GuideArticlePage({ params }: Props) {
         nextPost={nextPost}
         morePosts={morePosts}
         answer={answer ? <GuideAnswer text={answer} /> : undefined}
+        closing={homeServiceLine ? <p className="guide-home-service-line">{linkedText(homeServiceLine)}</p> : undefined}
       />
     </div>
   );

@@ -5,6 +5,7 @@ import AboutSplit from "@/components/sections/AboutSplit";
 import AboutSplitAlt from "@/components/sections/AboutSplitAlt";
 import FaqSection from "@/components/sections/FaqSection";
 import Funfacts from "@/components/sections/Funfacts";
+import HomeServiceLine from "@/components/sections/HomeServiceLine";
 import PageBanner from "@/components/sections/PageBanner";
 import QuickFacts from "@/components/sections/QuickFacts";
 import ReserveCta from "@/components/sections/ReserveCta";
@@ -28,6 +29,7 @@ const COMPONENTS: Record<string, ComponentType<any>> = {
   FaqSection,
   FloralDecoration,
   Funfacts,
+  HomeServiceLine,
   // A link inside a paragraph (lib/treatments/fields.ts: textarea fields).
   Link,
   PageBanner,

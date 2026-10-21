@@ -18,6 +18,7 @@ import "../styles/footer.css";
 import "../styles/row-button.css";
 import "../styles/spacing.css";
 import "../styles/decorations.css";
+import "../styles/outcall.css";
 
 /**
  * Defaults for search engines and social sharing. The title and description
