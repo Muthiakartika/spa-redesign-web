@@ -110,6 +110,13 @@
     box-shadow: none;
   }
 }
+/* Closed (it is inert then), the menu's 460-odd elements are left out of
+   rendering (PageSpeed, 21 Oct): every page styled and laid them out off
+   screen before its first paint. Opening drops `inert` in the same render
+   that starts the slide, and closing keeps it until the slide has ended. */
+.mnav.sidebar-area.offcanvas[inert] {
+  content-visibility: hidden;
+}
 html.mnav-open,
 html.mnav-open body {
   overflow: hidden;

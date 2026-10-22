@@ -102,3 +102,102 @@
     text-align: center;
   }
 }
+
+/* ------------------------------------------------------------------------
+   Speed (PageSpeed, 21 Oct): every section under the hero is drawn only
+   when it nears the screen. Before its first paint a slow phone used to lay
+   out the whole page, about 2,600 boxes, which held up the hero; with this
+   it lays out the hero and the header. Nothing looks different (compared
+   pixel by pixel at 412 and 1440px): the sections keep their decorations,
+   which sit inside them, and the browser draws each one before it scrolls
+   into view.
+
+   Until a section is first drawn, its height is --cv-h below: its real
+   height with every image loaded, less its padding, on phones and tablets,
+   then from 992 and from 1200px. So the scrollbar and a jump down the page
+   land where they should; `auto` keeps the real height from then on.
+   Re-measure when a section changes a lot.
+   ------------------------------------------------------------------------ */
+.home-v2.home-v3 > :not(.v2-hero) {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto var(--cv-h, 1000px);
+}
+.home-v2.home-v3 > .step-section {
+  --cv-h: 1000px;
+}
+.home-v2.home-v3 > .homepage-about-paper-section {
+  --cv-h: 1480px;
+}
+.home-v2.home-v3 > .v2-alltreat {
+  --cv-h: 860px;
+}
+.home-v2.home-v3 > .treatment-catalog {
+  --cv-h: 4180px;
+}
+.home-v2.home-v3 > .testimonial-section-two {
+  --cv-h: 280px;
+}
+.home-v2.home-v3 > .homepage-pricing-section {
+  --cv-h: 1350px;
+}
+.home-v2.home-v3 > .homepage-services-section {
+  --cv-h: 1250px;
+}
+.home-v2.home-v3 > .homepage-faq-section {
+  --cv-h: 1410px;
+}
+.home-v2.home-v3 > .homepage-closing-section {
+  --cv-h: 775px;
+}
+@media (min-width: 992px) {
+  .home-v2.home-v3 > .step-section {
+    --cv-h: 820px;
+  }
+  .home-v2.home-v3 > .homepage-about-paper-section {
+    --cv-h: 1460px;
+  }
+  .home-v2.home-v3 > .v2-alltreat {
+    --cv-h: 1010px;
+  }
+  .home-v2.home-v3 > .treatment-catalog {
+    --cv-h: 2590px;
+  }
+  .home-v2.home-v3 > .testimonial-section-two {
+    --cv-h: 285px;
+  }
+  .home-v2.home-v3 > .homepage-pricing-section {
+    --cv-h: 1700px;
+  }
+  .home-v2.home-v3 > .homepage-services-section {
+    --cv-h: 910px;
+  }
+  .home-v2.home-v3 > .homepage-faq-section {
+    --cv-h: 1530px;
+  }
+  .home-v2.home-v3 > .homepage-closing-section {
+    --cv-h: 760px;
+  }
+}
+@media (min-width: 1200px) {
+  .home-v2.home-v3 > .step-section {
+    --cv-h: 700px;
+  }
+  .home-v2.home-v3 > .homepage-about-paper-section {
+    --cv-h: 1000px;
+  }
+  .home-v2.home-v3 > .v2-alltreat {
+    --cv-h: 895px;
+  }
+  .home-v2.home-v3 > .treatment-catalog {
+    --cv-h: 2160px;
+  }
+  .home-v2.home-v3 > .homepage-pricing-section {
+    --cv-h: 1135px;
+  }
+  .home-v2.home-v3 > .homepage-services-section {
+    --cv-h: 830px;
+  }
+  .home-v2.home-v3 > .homepage-faq-section {
+    --cv-h: 1230px;
+  }
+}

@@ -1769,6 +1769,58 @@ artikel lewat admin pada 12–14 Oktober.
   keluar; console bersih. Warning hydration di log dev berasal dari atribut
   `data-tag-assistant-prod-present` (Google Tag Assistant), bukan dari kode.
 
+## PageSpeed beranda: Agentic Browsing + mobile (21 Oktober, belum di-deploy)
+
+Patokan PSI live (Lighthouse 13.5, mobile): Performance 80 (FCP 2,4 s, LCP
+3,9 s, SI 4,7 s, TBT 130 ms, CLS 0), Accessibility 93, Agentic Browsing 1/2.
+
+- **Agentic Browsing 1/2 → lolos semua.** Satu-satunya yang gagal adalah
+  audit `agent-accessibility-tree` (aturan axe `aria-hidden-focus`): jawaban
+  FAQ yang tertutup diberi `aria-hidden` padahal link di dalamnya masih bisa
+  di-Tab. Kini `inert` (`src/components/home/Faq.tsx`). `llms.txt` belum ada
+  (audit N/A); CLS 0 tetap lolos.
+- **Section di bawah hero memakai `content-visibility: auto`**
+  (`home-v3.css`, tinggi perkiraan per section di `--cv-h`). Sebelum paint
+  pertama, ponsel tidak lagi me-layout ±2.600 elemen. Hal yang sama berlaku
+  untuk footer (semua halaman, `footer.css`) dan laci menu HP yang tertutup
+  (`content-visibility: hidden` saat `inert`, `mobile-nav.css`).
+  - `ScrollRow` dan `MenuDurations` tidak mengukur geometri selama
+    section-nya belum digambar (`checkVisibility`). Sebelumnya bacaan itu
+    memaksa layout seluruh section sebelum paint pertama.
+- **Font Latin dipecah dua** (`tools/fonts/split-latin.py`): "core" berisi
+  semua karakter yang dipakai teks situs (dicek di 44 halaman, 412 dan
+  1440px), dan "more" berisi sisanya, yang hanya diunduh bila dibutuhkan.
+  Preload turun dari 119 KB menjadi 73 KB (Literata 89 → 57 KB, Mulish
+  30 → 16 KB). Fitur angka tabular/pecahan yang tidak dipakai ikut dibuang.
+  File sumber lama tetap ada di `public/webfonts` sebagai input skrip.
+- **Path SVG ikon dipadatkan** ke presisi 0,01 unit (`icons.tsx`,
+  `Steps.tsx`, `TestimonialCard.tsx`, `About.tsx`). HTML beranda turun dari
+  69 KB menjadi 47 KB (brotli). Ikon tetap SVG inline, jadi semua aturan
+  hover/active tetap berlaku.
+- **Logo preloader punya file sendiri**, `sbm-preloader.webp` (10 KB, dari
+  sebelumnya 20 KB): lebarnya 540 px, warnanya satu warna emas lama, dan
+  alpha-nya dikompres. Filter #gold-b mewarnai ulang dari bentuknya
+  (selektornya ditambahkan di `gold.css`).
+
+Diukur lokal (`next start` + proxy brotli, 5 run, median): Performance 81 →
+87; FCP 2,01 → 1,84 s; LCP 4,46 → 3,85 s; SI 3,40 → 1,84 s; TBT ~45 ms; CLS
+0. Accessibility 97 → 96 karena audit `tabindex` jadi N/A (elemennya di
+section yang belum digambar), bukan karena ada yang gagal baru. Tampilan
+dibandingkan piksel per piksel dengan live (beranda, `/contact/`,
+`/seminyak/`, 412 dan 1440px): yang berbeda hanya antialiasing ikon dan
+slide testimoni yang kebetulan tampil. Menu HP, FAQ, baris treatment, dan
+switch durasi sticky dicek ulang dan berperilaku sama dengan live.
+
+Yang masih menahan LCP di simulasi Lighthouse: semua byte yang selesai
+sebelum paint pertama ikut berebut bandwidth dengan foto hero, terutama JS
+framework (±110 KB) yang tidak bisa dibuang. Dua hal di luar kode:
+- **Cloudflare Web Analytics** menyisipkan `beacon.min.js` (`type=module`,
+  prioritas High, origin lain) ke setiap HTML. Uji dengan beacon tiruan:
+  FCP +150 ms, sekitar −1 poin. Matikan penyisipan otomatisnya di dashboard
+  Cloudflare, atau pasang beacon lewat `next/script` `lazyOnload`.
+- **Preloader**: tanpa preloader sama sekali, LCP lokal −0,2 s (88).
+  Pemilik memilih mempertahankannya pada 2 Oktober.
+
 ## Draf: beranda v2 di `/home-v2/` (30 September)
 
 Duplikat beranda dengan layout sedikit diubah; isi, warna, huruf dan dekorasi

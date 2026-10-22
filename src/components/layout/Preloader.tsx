@@ -36,11 +36,16 @@ export default function Preloader() {
     <div id="preloader" className="lh">
       <div className="animation-preloader">
         <div className="preloader-mark">
+          {/* Its own copy of the lotus logo (PageSpeed, 21 Oct: 20 -> 10 KB,
+              which on a slow phone shares the line with the hero photo):
+              540px wide, three times the logo's width on a phone, in the old
+              gold with a compressed alpha. The #gold-b filter repaints it
+              from its shape alone (gold.css), so it looks the same. */}
           <img
             className="preloader-logo"
             fetchPriority="high"
             decoding="async"
-            src="/images/logo/sbm.webp"
+            src="/images/logo/sbm-preloader.webp"
             alt="Spa Bali Moon logo"
             width="280"
             height="219"

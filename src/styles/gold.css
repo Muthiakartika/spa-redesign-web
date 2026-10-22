@@ -64,6 +64,7 @@
   img:is(
     [src*="/images/logo/SMBtitle" i],
     [src*="/images/logo/sbm.webp" i],
+    [src*="/images/logo/sbm-preloader.webp" i],
     [src*="/images/icon/lotus.svg" i],
     [src*="/images/spa/" i],
     [src*="/images/icon/icon-spa/" i]

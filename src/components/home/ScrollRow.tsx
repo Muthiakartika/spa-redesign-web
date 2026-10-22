@@ -100,6 +100,11 @@ export default function ScrollRow({ className, below, indicator = "dots", label,
     // "forced reflow", about 100ms on a slow phone).
     const resize = new ResizeObserver(() => {
       cancelAnimationFrame(frame);
+      // Not drawn yet (on the homepage its section waits off screen,
+      // content-visibility in home-v3.css): reading its geometry now would
+      // make the browser lay that section out before the first paint
+      // (PageSpeed, 21 Oct). The observer reports again once it is drawn.
+      if (track.checkVisibility?.({ contentVisibilityAuto: true }) === false) return;
       setPos(current());
     });
     resize.observe(track);

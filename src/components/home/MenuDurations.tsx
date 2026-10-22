@@ -116,17 +116,24 @@ export default function MenuDurations({
     const section = bar?.closest("section");
     if (!sticky || !bar || !section) return;
     const header = document.querySelector<HTMLElement>("header.header-area");
-    let stickAt = 0;
+    // Until the list is first drawn (on the homepage it waits off screen,
+    // content-visibility in home-v3.css), reading the bar's box or its `top`
+    // would make the browser lay the whole list out there and then, before
+    // the first paint (PageSpeed, 21 Oct). The bar cannot be pinned then.
+    const drawn = () => bar.checkVisibility?.({ contentVisibilityAuto: true }) !== false;
+    let stickAt: number | null = null;
     let frame = 0;
     const check = () => {
       frame = 0;
+      if (!drawn()) return setStuck(false);
+      stickAt ??= parseFloat(getComputedStyle(bar).top) || 0;
       const box = bar.getBoundingClientRect();
       const under = header ? header.getBoundingClientRect().bottom : 0;
       setStuck(box.top <= stickAt + 0.5 && box.bottom > under + 1);
     };
     const layout = () => {
       section.style.setProperty("--v2-stick-top", `${header ? header.getBoundingClientRect().height : 0}px`);
-      stickAt = parseFloat(getComputedStyle(bar).top) || 0;
+      stickAt = null;
       check();
     };
     const onScroll = () => {

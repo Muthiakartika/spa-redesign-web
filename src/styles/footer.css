@@ -22,6 +22,20 @@
   overflow: hidden;
   background-color: var(--theme-color-white);
 }
+/* Drawn only when it nears the screen (PageSpeed, 21 Oct), so a page's first
+   paint does not wait for its layout or for the icon fonts it uses. It
+   already clips what overflows it, so nothing looks different. Until it is
+   first drawn its height is the one below, less its padding: phones and
+   tablets, then from 1200px, where the brand column sits beside the cards. */
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 1250px;
+}
+@media (min-width: 1200px) {
+  .site-footer {
+    contain-intrinsic-block-size: auto 730px;
+  }
+}
 .site-footer > .container {
   position: relative;
   z-index: 1;

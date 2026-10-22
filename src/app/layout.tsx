@@ -49,10 +49,11 @@ export const viewport: Viewport = {
  * the live 404 page has neither header nor footer.
  */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // The live site preloads the Latin subsets of its two families. Literata's
-  // is the trimmed copy live.css now uses (see its @font-face).
-  preload("/webfonts/literata-latin-opsz12-72.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
-  preload("/webfonts/1Ptvg83HX_SGhgqk3wotYKNnBQ.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+  // The live site preloads the Latin subsets of its two families. Both are
+  // now the "core" part of those files, every character the site's text
+  // uses (21 Oct: 119 -> 73 KB; see the @font-face rules in live.css).
+  preload("/webfonts/literata-latin-opsz12-72-core.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+  preload("/webfonts/mulish-latin-core.woff2", { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
 
   return (
     // `gold-b`: the owner's gold #B88C35 on every page (1 Oct). Remove the

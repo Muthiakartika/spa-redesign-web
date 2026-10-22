@@ -83,12 +83,16 @@ export default function Faq({ arrow = "circle" }: { arrow?: "circle" | "line" })
                             )}
                           </button>
                         </h3>
+                        {/* A closed answer is inert, not just aria-hidden: the
+                            links in it stayed reachable with Tab while unseen,
+                            which PageSpeed's Agentic Browsing check fails
+                            (aria-hidden-focus, 21 Oct). It stays in the HTML. */}
                         <div
                           id={`v2-faq-a${i}`}
                           className="v2-faq__answer"
                           role="region"
                           aria-labelledby={`v2-faq-q${i}`}
-                          aria-hidden={!isOpen}
+                          inert={!isOpen}
                         >
                           <div className="v2-faq__answer-inner">
                             <p>{linkedText(item.answer)}</p>
