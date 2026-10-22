@@ -730,7 +730,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-1",
-          image: "/images/services/couplemassage/couplemassage-8-warm.webp"
+          image: "/images/listmenu/couplebalinesemassage.webp"
         },
         {
           name: "Couple Traditional Massage",
@@ -750,7 +750,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-2",
-          image: "/images/services/couplemassage/couplemassage-10-warm.webp"
+          image: "/images/listmenu/coupletraditionalmassage.webp"
         },
         {
           name: "Couple Deep Tissue Massage",
@@ -766,7 +766,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-3",
-          image: "/images/services/couplemassage/couplemassage-4-warm.webp"
+          image: "/images/listmenu/coupledeeptissumassage.webp"
         },
         {
           name: "Couple Warm Candle Oil Massages",
@@ -786,7 +786,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-4",
-          image: "/images/services/couplemassage/couplemassage-5-warm.webp"
+          image: "/images/listmenu/couplewarmcandle.webp"
         }
       ]
     },
@@ -805,7 +805,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-package-a",
-          image: "/images/services/couplemassage/couplemassage-2-warm.webp"
+          image: "/images/listmenu/couplemassagepackage.webp"
         },
         {
           name: "Couple Package B",
@@ -817,7 +817,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-package-b",
-          image: "/images/services/couplemassage/couplemassage-8-warm.webp"
+          image: "/images/listmenu/couplemassagepackage.webp"
         },
         {
           name: "Couple Package C",
@@ -829,7 +829,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-package-c",
-          image: "/images/services/couplemassage/couplemassage-5-warm.webp"
+          image: "/images/listmenu/couplemassagepackage.webp"
         },
         {
           name: "Couple Package D",
@@ -841,7 +841,7 @@ export const pricelistPage = {
             }
           ],
           id: "couple-package-d",
-          image: "/images/services/couplemassage/couplemassage-3-warm.webp"
+          image: "/images/listmenu/couplemassagepackage.webp"
         }
       ]
     }

@@ -171,7 +171,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/services/couplemassage/couplemassage-4-warm.webp",
+    image: "/images/listmenu/coupledeeptissumassage.webp",
     desc: "A deeper-pressure massage for two, focused on easing tight muscles and improving comfort.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 539.000" },
@@ -184,7 +184,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
+    image: "/images/listmenu/couplebalinesemassage.webp",
     desc: "A side-by-side massage using steady pressure and flowing movements for shared relaxation.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 319.000" },
@@ -198,7 +198,7 @@ export const catalog: CatalogItem[] = [
     category: "couple-package",
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
-    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
+    image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
       { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 639.000", details: ["30 Minutes Ear Candle"] },
@@ -210,7 +210,7 @@ export const catalog: CatalogItem[] = [
     category: "couple-package",
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
-    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
+    image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Balinese Massage",
     options: [
       { label: "1 Hour Balinese Massage · 2 pax", price: "IDR 709.000", details: ["1 Hour Bali Moon Facial"] },
@@ -222,7 +222,7 @@ export const catalog: CatalogItem[] = [
     category: "couple-package",
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
-    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
+    image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Warm Candle",
     options: [
       { label: "1 Hour Warm Candle · 2 pax", price: "IDR 849.000", details: ["30 Minutes Ear Candle"] },
@@ -234,7 +234,7 @@ export const catalog: CatalogItem[] = [
     category: "couple-package",
     categories: ["couple-package"],
     href: "/seminyak/couple-spa/",
-    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
+    image: "/images/listmenu/couplemassagepackage.webp",
     desc: "1 Hour – Warm Candle",
     options: [
       { label: "1 Hour Warm Candle · 2 pax", price: "IDR 929.000", details: ["1 Hour Bali Moon Facial"] },
@@ -246,7 +246,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/services/couplemassage/couplemassage-10-warm.webp",
+    image: "/images/listmenu/coupletraditionalmassage.webp",
     desc: "A side-by-side massage with firmer pressure to help release tension together.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 339.000" },
@@ -260,7 +260,7 @@ export const catalog: CatalogItem[] = [
     category: "couple",
     categories: ["couple"],
     href: "/seminyak/couple-spa/",
-    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
+    image: "/images/listmenu/couplewarmcandle.webp",
     desc: "A comforting couple’s massage using gently heated candle oils to soften muscles and create a sense of calm.",
     options: [
       { label: "1 Hour · 2 pax", price: "IDR 539.000" },

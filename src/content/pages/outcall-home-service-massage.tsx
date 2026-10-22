@@ -795,7 +795,7 @@ export default function OutcallPage() {
                     id: "couple-balinese",
                     name: "Couple Balinese Massage",
                     desc: "Designed for two to relax together while easing the body and sharing a calm moment.",
-                    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
+                    image: "/images/listmenu/couplebalinesemassage.webp",
                     options: [
                       { time: "1 Hour – Balinese Massage · 2 pax", price: "319.000" },
                       { time: "1.5 Hours – Balinese Massage · 2 pax", price: "479.000" },
@@ -806,7 +806,7 @@ export default function OutcallPage() {
                     id: "couple-deep-tissue",
                     name: "Couple Deep Tissue Massage",
                     desc: "Delivered with deeper pressure for two, aimed at easing tight muscles and improving comfort.",
-                    image: "/images/services/couplemassage/couplemassage-4-warm.webp",
+                    image: "/images/listmenu/coupledeeptissumassage.webp",
                     options: [
                       { time: "1 Hour – Deep Tissue Massage · 2 pax", price: "539.000" },
                       { time: "1.5 Hours – Deep Tissue Massage · 2 pax", price: "719.000" },
@@ -816,7 +816,7 @@ export default function OutcallPage() {
                     id: "couple-traditional",
                     name: "Couple Traditional Massage",
                     desc: "Applied with firmer pressure to help reduce tension while relaxing together.",
-                    image: "/images/services/couplemassage/couplemassage-10-warm.webp",
+                    image: "/images/listmenu/coupletraditionalmassage.webp",
                     options: [
                       { time: "1 Hour – Traditional Massage · 2 pax", price: "339.000" },
                       { time: "1.5 Hours – Traditional Massage · 2 pax", price: "519.000" },
@@ -827,7 +827,7 @@ export default function OutcallPage() {
                     id: "couple-warm-candle",
                     name: "Couple Massage Warm Candle",
                     desc: "Using gently warmed candle oils to create comfort and a deeper sense of relaxation for couples.",
-                    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
+                    image: "/images/listmenu/couplewarmcandle.webp",
                     options: [
                       { time: "1 Hour – Warm Candle Massage · 2 pax", price: "539.000" },
                       { time: "1.5 Hours – Warm Candle Massage · 2 pax", price: "799.000" },
@@ -844,28 +844,28 @@ export default function OutcallPage() {
                     name: "Couple Massage Package A",
                     desc: "",
                     // One photo per package, as on /seminyak/ (live repeats A=B and C=D).
-                    image: "/images/services/couplemassage/couplemassage-2-warm.webp",
+                    image: "/images/listmenu/couplemassagepackage.webp",
                     options: [{ time: "1.5 Hours – Balinese Massage + Ear Candle · 2 pax", price: "639.000" }],
                   },
                   {
                     id: "couple-package-b",
                     name: "Couple Massage Package B",
                     desc: "",
-                    image: "/images/services/couplemassage/couplemassage-8-warm.webp",
+                    image: "/images/listmenu/couplemassagepackage.webp",
                     options: [{ time: "2.5 Hours – Balinese Massage + Bali Moon Facial · 2 pax", price: "709.000" }],
                   },
                   {
                     id: "couple-package-c",
                     name: "Couple Massage Package C",
                     desc: "",
-                    image: "/images/services/couplemassage/couplemassage-5-warm.webp",
+                    image: "/images/listmenu/couplemassagepackage.webp",
                     options: [{ time: "1.5 Hours – Warm Candle + Ear Candle · 2 pax", price: "849.000" }],
                   },
                   {
                     id: "couple-package-d",
                     name: "Couple Massage Package D",
                     desc: "",
-                    image: "/images/services/couplemassage/couplemassage-3-warm.webp",
+                    image: "/images/listmenu/couplemassagepackage.webp",
                     options: [{ time: "2.5 Hours – Warm Candle + Bali Moon Facial · 2 pax", price: "929.000" }],
                   },
                 ],

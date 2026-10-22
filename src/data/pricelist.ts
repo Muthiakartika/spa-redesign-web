@@ -627,7 +627,7 @@
     id: "couple-balinese-massage",
     category: "couple",
     pageSlug: "couple-spa",
-    image: { src: "/images/services/couplemassage/couplemassage-8-warm.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
+    image: { src: "/images/listmenu/couplebalinesemassage.webp", alt: "Couple Massage Balinese", width: 630, height: 580 },
     options: [
       {
         label: "1 Hour · Balinese Massage · 2 Pax",
@@ -661,7 +661,7 @@
     category: "couple",
     pageSlug: "couple-spa",
     image: {
-      src: "/images/services/couplemassage/couplemassage-10-warm.webp",
+      src: "/images/listmenu/coupletraditionalmassage.webp",
       alt: "Couple Traditional Massage",
       width: 630,
       height: 580,
@@ -698,7 +698,7 @@
     category: "couple",
     pageSlug: "couple-spa",
     image: {
-      src: "/images/services/couplemassage/couplemassage-4-warm.webp",
+      src: "/images/listmenu/coupledeeptissumassage.webp",
       alt: "Couple Deep Tissue Massage",
       width: 630,
       height: 580,
@@ -728,7 +728,7 @@
     id: "couple-warm-candle-massage",
     category: "couple",
     pageSlug: "couple-spa",
-    image: { src: "/images/services/couplemassage/couplemassage-5-warm.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
+    image: { src: "/images/listmenu/couplewarmcandle.webp", alt: "Couple Warm Candle Massage", width: 630, height: 580 },
     options: [
       {
         label: "1 Hour · Warm Candle Massage · 2 Pax",
